@@ -14,3 +14,8 @@
 .dataTables_scrollBody{
     overflow: visible !important;
 }
+
+ th, td { white-space: nowrap; }
+.control-label{
+    max-width: 100px;
+}
