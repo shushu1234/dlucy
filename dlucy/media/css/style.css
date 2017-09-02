@@ -1937,7 +1937,7 @@ General list for item with image
 Custom tables
 ***/
 .table.table-full-width {
-  width: 100% !important;
+  /*width: 100% !important;*/
 }
 
 .table .m-btn {

@@ -78,6 +78,7 @@ var TableAdvanced = function () {
             "sScrollX": "100%",
             "sScrollY": "300",
             "bScrollCollapse": true,
+            bFilter: false,
         });
 
         jQuery('#sample_1_wrapper .dataTables_filter input').addClass("m-wrap small"); // modify table search input

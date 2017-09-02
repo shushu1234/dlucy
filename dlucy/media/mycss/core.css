@@ -23,6 +23,7 @@
 @import url("../css/datepicker.css");
 
 @import url("../css/bootstrap-modal.css");
+@import url("../css/DT_bootstrap.css");
 
 .header {
     margin: 0 auto !important;
@@ -39,9 +40,17 @@
 .dataTables_scroll{
     overflow: scroll !important;
 }
+.dataTables_scrollHead{
+    overflow: visible !important;
+}
 .dataTables_scrollBody{
     overflow: visible !important;
 }
+
+.dataTables_scrollHeadInner{
+    width: 100% !important;
+}
+
 th, td {
     white-space: nowrap;
 }
@@ -57,4 +66,8 @@ th, td {
 
 .mycontainer{
     width: 1265px;
+}
+
+.pagination{
+    text-align: right;
 }
