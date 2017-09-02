@@ -398,7 +398,7 @@ input[type="color"].m-wrap {
 	color: #333333; 		
   outline: 0;
   height: 20px;
-	padding: 6px 6px !important;
+	padding: 6px 6px ;
   line-height: 20px;
   font-size: 14px;
   font-weight: normal;

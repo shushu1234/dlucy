@@ -26,7 +26,29 @@
     <link rel="shortcut icon" href="media/image/favicon.ico"/>
 
     <!-- 本页样式结束 -->
-
+    <style>
+        @media screen {
+            #printSection {
+                display: none;
+            }
+        }
+        @media print {
+            body * {
+                visibility:hidden;
+            }
+            #printSection, #printSection * {
+                visibility:visible;
+            }
+            #printSection {
+                position:absolute;
+                left:0;
+                top:0;
+            }
+        }
+        .edittr >td{
+            padding-top: 20px;
+        }
+    </style>
 
 </head>
 
@@ -242,64 +264,64 @@
 
                                         <div class="modal-body">
 
-                                            <p>请确认信息:</p>
-                                            <table>
-                                                <tr>
-                                                    <td id="td-order"></td>
-                                                    <td></td>
-                                                    <td id="td-boxnum"></td>
+                                                <p>请确认信息:</p>
+                                                <table>
+                                                    <tr>
+                                                        <td id="td-order"></td>
+                                                        <td></td>
+                                                        <td id="td-boxnum"></td>
 
-                                                    <td id="td-boxtype"></td>
+                                                        <td id="td-boxtype"></td>
 
-                                                    <td id="td-goodsname"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-clientname"></td>
-                                                    <td></td>
-                                                    <td id="td-port"></td>
+                                                        <td id="td-goodsname"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td-clientname"></td>
+                                                        <td></td>
+                                                        <td id="td-port"></td>
 
-                                                    <td id="td-tradetype"></td>
+                                                        <td id="td-tradetype"></td>
 
-                                                    <td id="td-billcycle"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><br></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="5">==================提货信息==================</td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-pickaddr" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-pickdate" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-pickperson" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-picktel" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><br></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4">==================收货信息==================</td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recaddr" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recdate" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recperson" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-rectel" colspan="5"></td>
-                                                </tr>
+                                                        <td id="td-billcycle"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">==================提货信息==================</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td-pickaddr" colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td-pickdate" colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td-pickperson" colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td-picktel" colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">==================收货信息==================</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td-recaddr" colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td-recdate" colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td-recperson" colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td-rectel" colspan="5"></td>
+                                                    </tr>
 
-                                            </table>
+                                                </table>
                                         </div>
 
                                         <div class="modal-footer">
@@ -310,6 +332,8 @@
                                             <button class="btn green" data-toggle="modal" href="#static2"
                                                     id="btn-submit" onclick="checkAll()">继续提交
                                             </button>
+
+
                                         </div>
 
                                     </div>
@@ -328,6 +352,7 @@
                                         </div>
 
                                     </div>
+
                                 </div>
 
                             </form>
@@ -488,6 +513,118 @@
         </div>
 
     </div>
+    <div id="printmodal" class="modal hide fade container" tabindex="-1" style="overflow: scroll" >
+
+        <div class="modal-body" id="printcontent" style="width:1280px;">
+
+
+            <!-- BEGIN BORDERED TABLE PORTLET-->
+
+            <div class="portlet box " >
+
+                <div class="portlet-body">
+
+                    <table class="table table-bordered table-hover">
+
+                        <tbody>
+
+                        <tr>
+
+                            <td colspan="14" ><h1>天津市胜腾货运有限公司</h1></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td colspan="14" style="text-align: center"><span style="font-size: 20px;font-weight: 200">送货明细</span></td>
+
+                        </tr>
+
+
+
+                        <tr>
+
+                            <td colspan="2">TO:</td>
+                            <td colspan="6">基础预设下拉菜单选择</td>
+                            <td colspan="2">走船时间:</td>
+                            <td colspan="6">2017-9-11</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td colspan="2">FM:</td>
+                            <td colspan="12">天津胜腾</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td colspan="1">预计到港日</td>
+                            <td colspan="1">指令号</td>
+                            <td colspan="1">船名航次</td>
+                            <td colspan="2">运单号</td>
+                            <td colspan="1">箱号</td>
+                            <td colspan="1">封号</td>
+                            <td colspan="2">收货地址</td>
+                            <td colspan="1">联系人</td>
+                            <td colspan="2">联系电话</td>
+                            <td colspan="1">拖车费(元)</td>
+                            <td colspan="1">备注</td>
+
+                        </tr>
+
+                        <tr class="edittr">
+
+                            <td colspan="1" >2017-10-11</td>
+                            <td colspan="1" >D00012</td>
+                            <td colspan="1" >新海欣1647S</td>
+                            <td colspan="2">XHX1647TJSH120</td>
+                            <td colspan="1">BEAU2555237</td>
+                            <td colspan="1">5558455</td>
+                            <td colspan="2">琴谱区嘉松中路1289号</td>
+                            <td colspan="1">吴迪</td>
+                            <td colspan="2">12345678911/87654321123</td>
+                            <td colspan="1"><input type="text" class="m-wrap" data-tabindex="1" style="border: none;text-align: center;padding: 0px;word-wrap:break-word;word-break:break-all;"></td>
+                            <td colspan="1"><input type="text" class="m-wrap" data-tabindex="1" style="border: none;text-align: center;padding: 0px;word-wrap:break-word;word-break:break-all;"></td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="7" style="text-align: left">服务电话:022-59853734</td>
+
+                            <td colspan="6" style="text-align: left;border-left: none">传真:022-66175318</td>
+
+
+                            <td colspan="1" style="text-align: left;border-left: none">制单日期:2017-9-11</td>
+
+                        </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!-- END BORDERED TABLE PORTLET-->
+
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button type="button" data-dismiss="modal" class="btn" id="btn-return">
+                返回
+            </button>
+            <button type="button" data-dismiss="modal" class="btn" id="Print">
+                打印
+            </button>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -553,7 +690,7 @@
 
 <script src="media/js/app.js"></script>
 
-<script src="media/js/jinduchaxun.js"></script>
+<script src="media/js/songhuoqueren.js"></script>
 
 <script src="media/js/form-validation.js"></script>
 <script src="media/js/form-components.js"></script>
@@ -983,6 +1120,27 @@
     $("#info-rectel").change(function () {
         $("#group-rectel").removeClass("error");
     });
+
+
+    document.getElementById("Print").onclick = function () {
+        printElement(document.getElementById("printcontent"));
+    };
+
+    function printElement(elem) {
+        var domClone = elem.cloneNode(true);
+
+        var $printSection = document.getElementById("printSection");
+
+        if (!$printSection) {
+            var $printSection = document.createElement("div");
+            $printSection.id = "printSection";
+            document.body.appendChild($printSection);
+        }
+
+        $printSection.innerHTML = "";
+        $printSection.appendChild(domClone);
+        window.print();
+    }
 </script>
 
 <!-- 本页JS脚本结束 -->

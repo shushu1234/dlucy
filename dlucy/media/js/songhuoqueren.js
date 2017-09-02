@@ -92,16 +92,18 @@ var TableAdvanced = function () {
         
         $('#sample_1').on('click', ' tbody td .row-details', function () {
             var nTr = $(this).parents('tr')[0];
-            if (oTable.fnIsOpen(nTr)) {
-                /* This row is already open - close it */
-                $(this).addClass("row-details-close").removeClass("row-details-open");
-                oTable.fnClose(nTr);
-            }
-            else {
-                /* Open this row */
-                $(this).addClass("row-details-open").removeClass("row-details-close");
-                oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
-            }
+            // if (oTable.fnIsOpen(nTr)) {
+            //     /* This row is already open - close it */
+            //     $(this).addClass("row-details-close").removeClass("row-details-open");
+            //     oTable.fnClose(nTr);
+            // }
+            // else {
+            //     /* Open this row */
+            //     $(this).addClass("row-details-open").removeClass("row-details-close");
+            //     oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
+            // }
+            $('#printmodal').modal('show');
+
         });
         var nTr;
         $('#sample_1').on('click', ' tbody td .row-delete', function () {
