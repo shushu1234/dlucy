@@ -71,3 +71,8 @@ th, td {
 .pagination{
     text-align: right;
 }
+
+.statusok{
+    color: #CCCCCC!important;
+    /*background-color: #CCCCCC!important;*/
+}

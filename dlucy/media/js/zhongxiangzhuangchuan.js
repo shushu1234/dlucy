@@ -4,14 +4,14 @@ var TableAdvanced = function () {
 
         /* Formating function for row details */
         function fnFormatDetails(oTable, nTr) {
-            // //alert(nTr);
+            //alert(nTr);
             // var aData = oTable.fnGetData(nTr);
             // var sOut = '<table>';
             // sOut += '<tr><td colspan="2">==========================提货进度==========================</td></tr>';
             // sOut += '<tr><td>已提数量:</td><td>' + aData[19] + '</td></tr>';
             // sOut += '<tr><td>当日提货数量:</td><td>' + aData[20] + '</td></tr>';
             // sOut += '</table>';
-            //
+
             // return sOut;
         }
 
@@ -56,6 +56,7 @@ var TableAdvanced = function () {
                 null,
                 null,
 
+                null,
                 null,
 
 

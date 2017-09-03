@@ -71,27 +71,25 @@
             <div class="navbar hor-menu  hidden-tablet">
                 <div class="navbar-inner">
                     <ul class="nav">
+                        <li class="active">
 
+                            <a href="jinduchaxun.html">送货确认
+
+                                <span class="selected"></span>
+                            </a>
+
+                        </li>
                         <li >
 
                             <a href="kehuweituo.html">
 
                                 客户委托
 
-
-
                             </a>
 
                         </li>
 
-                        <li class="active">
 
-                            <a href="jinduchaxun.html">进度查询
-
-                                <span class="selected"></span>
-                            </a>
-
-                        </li>
                         <li>
 
                             <a href="#">提货方</a>
@@ -175,202 +173,9 @@
         <div class="container-fluid">
 
             <!-- 页面内容开始-->
-            <div class="row-fluid">
-
-                <div class="span12">
 
 
-                    <!-- 客户信息开始-->
-
-                    <div class="portlet box blue">
-
-                        <div class="portlet-title" style="margin-top: 50px">
-
-                            <div class="caption"><i class="icon-user"></i>查询条件</div>
-
-                            <div class="tools">
-                            </div>
-
-                        </div>
-
-                        <div class="portlet-body form">
-
-                            <!-- 客户信息 FORM 开始-->
-
-                            <form action="#" class="form-horizontal" style="background-color: aliceblue"
-                                  onSubmit="return checkAll()">
-                                <input value="0" id="info-id" type="hidden">
-                                <input value="0" id="info-addtime" type="hidden">
-                                <input value="0" id="info-timestamp" type="hidden">
-                                <div class="row-fluid"
-                                     style="margin-left: -36px;padding-top: 50px;padding-bottom: 50px">
-
-                                    <div class="span4">
-                                        <div class="control-group" id="group-order">
-
-                                            <label class="control-label" id="label-order">指令号</label>
-
-                                            <div class="controls">
-
-                                                <input type="text" id="info-order" class="span12 m-wrap"
-                                                       style="margin: 0 auto;"
-                                                       data-provide="typeahead" data-items="4" placeholder="输入以查找"
-                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="span4">
-                                        <div class="control-group" id="group-clientname">
-
-                                            <label class="control-label" id="label-clientname">客户名称</label>
-
-                                            <div class="controls">
-
-                                                <input type="text" id="info-clientname" class="span12 m-wrap"
-                                                       style="margin: 0 auto;"
-                                                       data-provide="typeahead" data-items="4" placeholder="输入以查找"
-                                                       data-source="[&quot;大连&quot;,&quot;xx大连&quot;,&quot;xx大连&quot;,&quot;北京xxxx&quot;,&quot;xxx北京x&quot;]"/>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="span4">
-                                        <div class="control-group" id="group-port">
-
-                                            <label class="control-label">目的港</label>
-
-                                            <div class="controls">
-                                                <input type="text" class="span12 m-wrap" name="digits" id="info-boxnum"
-                                                       placeholder="输入港口名"/>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="form-actions">
-
-                                    <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
-                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
-                                    </button>
-                                    <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
-                                    <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
-                                    <div id="static" class="modal hide fade" tabindex="-1">
-
-                                        <div class="modal-body">
-
-                                                <p>请确认信息:</p>
-                                                <table>
-                                                    <tr>
-                                                        <td id="td-order"></td>
-                                                        <td></td>
-                                                        <td id="td-boxnum"></td>
-
-                                                        <td id="td-boxtype"></td>
-
-                                                        <td id="td-goodsname"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="td-clientname"></td>
-                                                        <td></td>
-                                                        <td id="td-port"></td>
-
-                                                        <td id="td-tradetype"></td>
-
-                                                        <td id="td-billcycle"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><br></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="5">==================提货信息==================</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="td-pickaddr" colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="td-pickdate" colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="td-pickperson" colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="td-picktel" colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><br></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="4">==================收货信息==================</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="td-recaddr" colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="td-recdate" colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="td-recperson" colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="td-rectel" colspan="5"></td>
-                                                    </tr>
-
-                                                </table>
-                                        </div>
-
-                                        <div class="modal-footer">
-
-                                            <button type="button" data-dismiss="modal" class="btn" id="btn-return">
-                                                返回修改
-                                            </button>
-                                            <button class="btn green" data-toggle="modal" href="#static2"
-                                                    id="btn-submit" onclick="checkAll()">继续提交
-                                            </button>
-
-
-                                        </div>
-
-                                    </div>
-                                    <div id="static2" class="modal hide fade" tabindex="-1">
-
-                                        <div class="modal-body">
-
-                                            <h3 id="info-attention" style="text-align: center"></h3>
-
-                                        </div>
-
-                                        <div class="modal-footer">
-
-                                            <button type="button" data-dismiss="modal" class="btn green">确认</button>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </form>
-
-                            <!-- 客户信息 FORM 结束-->
-
-                        </div>
-
-                    </div>
-
-                    <!-- 客户信息结束-->
-
-                </div>
-
-            </div>
-
-
-            <div class="row-fluid">
+            <div class="row-fluid" style="margin-top: 100px">
 
                 <div class="span12">
 
@@ -402,72 +207,297 @@
 
                                     <th style="display: none">timestamp</th>
 
+                                    <th>录入日期</th>
+
                                     <th>指令号</th>
 
                                     <th>客户名称</th>
 
+                                    <th>品名</th>
+
                                     <th>箱型</th>
+
 
                                     <th>箱量</th>
 
-                                    <th>品名</th>
-
-                                    <th>贸易类型</th>
-
                                     <th>目的港</th>
-
-                                    <th>交货日期</th>
 
                                     <th>贸易方式</th>
 
-                                    <th>结算周期</th>
+                                    <th>交货期限</th>
 
-                                    <th >已提数量</th>
+                                    <th>接单人</th>
 
-                                    <th >当日提货数量</th>
 
-                                    <th>海运进度</th>
+                                    <th>承运商</th>
 
-                                    <th>交货进度</th>
+                                    <th >船名航次</th>
 
-                                    <th>付款情况</th>
+                                    <th >提单号</th>
 
-                                    <th>发票情况</th>
+                                    <th>到港日期</th>
 
-                                    <th style="display: none">已提数量</th>
-                                    <th style="display: none">当日提货数量</th>
-                                    <!--<th min-width="40px">修改</th>-->
-                                    <!--<th min-width="40px">删除</th>-->
+                                    <th>放货状态</th>
+
+
+                                    <th>状态</th>
 
                                 </tr>
 
                                 </thead>
 
                                 <tbody id="tablelist" style="background-color: #ffffff;">
-                                <tr class="odd">
+                                <tr >
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛身份和健身房奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">20</td>
-                                    <td class="">5</td>
-                                    <td class="">已定舱</td>
-                                    <td class="">未到港</td>
-                                    <td class="">未付款</td>
-                                    <td class="">无发票</td>
-                                    <td style="display: none">20</td>
-                                    <td style="display: none">5</td>
 
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">-</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
 
                                 </tr>
+                                <tr >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">-</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+                                <tr >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">-</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+                                <tr >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">-</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+                                <tr >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">-</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+                                <tr >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">-</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+                                <tr class="statusok" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+                                <tr class="statusok" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+                                <tr class="statusok" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+                                <tr class="statusok" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+
 
 
 
@@ -585,8 +615,8 @@
                             <td colspan="2">琴谱区嘉松中路1289号</td>
                             <td colspan="1">吴迪</td>
                             <td colspan="2">12345678911/87654321123</td>
-                            <td colspan="1"><input type="text" class="m-wrap" data-tabindex="1" style="border: none;text-align: center;padding: 0px;word-wrap:break-word;word-break:break-all;"></td>
-                            <td colspan="1"><input type="text" class="m-wrap" data-tabindex="1" style="border: none;text-align: center;padding: 0px;word-wrap:break-word;word-break:break-all;"></td>
+                            <td colspan="1"><input type="text" class="m-wrap" data-tabindex="1" style="border: none;text-align: center;padding: 0px;" ></td>
+                            <td colspan="1"><input type="text" class="m-wrap" data-tabindex="1" style="border: none;text-align: center;padding: 0px;" ></td>
 
                         </tr>
                         <tr>
@@ -617,6 +647,9 @@
 
             <button type="button" data-dismiss="modal" class="btn" id="btn-return">
                 返回
+            </button>
+            <button type="button" data-dismiss="modal" class="btn" id="Export">
+                导出
             </button>
             <button type="button" data-dismiss="modal" class="btn" id="Print">
                 打印
@@ -696,6 +729,10 @@
 <script src="media/js/form-components.js"></script>
 
 <script src="media/js/ui-modals.js"></script>
+
+<script src="media/exportpdfjs/html2canvas.js"></script>
+
+<script src="media/exportpdfjs/jsPdf.debug.js"></script>
 
 <script>
 
@@ -1140,6 +1177,27 @@
         $printSection.innerHTML = "";
         $printSection.appendChild(domClone);
         window.print();
+    };
+
+    var downPdf = document.getElementById("Export");
+    var downmodal=$("#printmodal");
+    downPdf.onclick = function() {
+        html2canvas(downmodal, {
+            onrendered:function(canvas) {
+
+                //返回图片URL，参数：图片格式和清晰度(0-1)
+                var pageData = canvas.toDataURL('image/jpeg', 1.0);
+
+                //方向默认竖直，尺寸ponits，格式a4【595.28,841.89]
+                var pdf = new jsPDF('l', 'mm', [300, 700]);
+
+                //需要dataUrl格式
+                pdf.addImage(pageData, 'JPEG', 0, 0, 595.28, 592.28/canvas.width * canvas.height );
+
+                pdf.save('content.pdf');
+
+            }
+        })
     }
 </script>
 
