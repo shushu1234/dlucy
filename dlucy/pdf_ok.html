@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>my first export PDF</title>
+
+    <script src="media/pdf/jquery-1.12.4.js"></script>
+    <script src="media/pdf/pdfmake.min.js"></script>
+    <script src="media/pdf/vfs_fonts.js"></script>
+    <script src="media/pdf/FileSaver.js"></script>
+    <script>
+        function down() {
+            var table=document.getElementById("#sample_1");
+            var dd = {
+                pageSize: 'A4',
+                pageOrientation: 'landscape',
+                content: [
+
+                    {
+                        style: 'tableExample',
+                        color: '#000',
+                        table: {
+                            widths: [ 'auto', 'auto','auto','auto', 'auto',
+                                'auto','auto', 'auto','auto','auto',
+                                'auto','auto','auto','auto'],
+                            headerRows: 2,
+                            // keepWithHeaderRows: 1,
+                            body: [
+                                /**
+                                 * Created by shushu on 17-9-5.
+                                 */
+                                [{text: '天津市胜腾货运有限公司', style: 'tableHeader', colSpan: 14, alignment: 'center'},
+                                    {},{},{},{},{},
+                                    {},{},{},{},{},
+                                    {},{},{}],
+                                [{text: '送货明细',  colSpan: 14, alignment: 'center'},
+                                    {},{},{},{},{},
+                                    {},{},{},{},{},
+                                    {},{},{}],
+                                [{text: 'TO:',  colSpan: 2, alignment: 'center'},
+                                    {},
+                                    {text: '基础预设下拉菜单选择:',colSpan: 5, alignment: 'center'},
+                                    {},{},{},{},
+                                    {text: '走船时间:',  colSpan: 2, alignment: 'center'},
+                                    {},
+                                    {text: '2017-9-11',  colSpan: 5, alignment: 'center'},
+                                    {},{},{},{},
+
+                                ],
+                                [{text: 'FM:',  colSpan: 2, alignment: 'center'},
+                                    {},
+                                    {text: '天津胜腾',  colSpan: 12, alignment: 'center'},
+                                    {},{},{},{},{},
+                                    {},{},{},{},{},
+                                    {}
+                                ],
+                                [{text: '预计到港日',  colSpan: 1, alignment: 'center',noWrap: true},
+                                    {text: '指令号',  colSpan: 1, alignment: 'center',noWrap: true},
+                                    {text: '船名航次',  colSpan: 1, alignment: 'center',noWrap: true},
+                                    {text: '运单号',  colSpan: 2, alignment: 'center',noWrap: true},
+                                    {},
+
+                                    {text: '箱号',  colSpan: 1, alignment: 'center',noWrap: true},
+                                    {text: '封号',  colSpan: 1, alignment: 'center',noWrap: true},
+                                    {text: '收货地址',  colSpan: 2, alignment: 'center',noWrap: true},
+                                    {},
+                                    {text: '联系人',  colSpan: 1, alignment: 'center',noWrap: true},
+
+                                    {text: '联系电话',  colSpan: 2, alignment: 'center',noWrap: true},
+                                    {},
+                                    {text: '拖车费(元)',  colSpan: 1, alignment: 'center',noWrap: true},
+                                    {text: '备注',  colSpan: 1, alignment: 'center',noWrap: true},
+                                ],
+                                [{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
+                                    {text: 'D00012',  colSpan: 1, alignment: 'center'},
+                                    {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
+                                    {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
+                                    {},
+
+                                    {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
+                                    {text: '5558455',  colSpan: 1, alignment: 'center'},
+                                    {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
+                                    {},
+                                    {text: '吴迪',  colSpan: 1, alignment: 'center'},
+
+                                    {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
+                                    {},
+                                    {text: '940.00',  colSpan: 1, alignment: 'center'},
+                                    {text: '我叫备注',  colSpan: 1, alignment: 'center'},
+                                ],
+                                [{text: '服务电话:022-59853734',  colSpan: 5, alignment: 'left',border: [true, true, false, true],},
+                                    {},{},{},{},
+                                    {text: '传真:022-66175318',  colSpan: 5, alignment: 'left',border: [false, true, false, true],},
+                                    {},{},{},{},
+                                    {text: '制单日期:2017-9-11',  colSpan: 4, alignment: 'right',border: [false, true, true, true],},
+                                    {},{},{},
+
+
+                                ],
+
+                            ]
+                        }
+                    },
+
+                ],
+                styles: {
+                    header: {
+                        fontSize: 18,
+                        margin: [0, 0, 0, 10]
+                    },
+                    subheader: {
+                        fontSize: 16,
+                        margin: [0, 10, 0, 5]
+                    },
+                    tableExample: {
+                        margin: [0, 5, 0, 5],
+                        fontSize: 10,
+                    },
+                    tableHeader: {
+                        fontSize: 25,
+                        color: 'black'
+                    }
+                },
+                defaultStyle: {
+                    font: 'msyh'
+                }
+
+            }
+
+            pdfMake.fonts = {
+                Roboto: {
+                    normal: 'Roboto-Regular.ttf',
+                    bold: 'Roboto-Medium.ttf',
+                    italics: 'Roboto-Italic.ttf',
+                    bolditalics: 'Roboto-Italic.ttf'
+                },
+
+                msyh: {
+                    normal: 'msyh.ttf'
+                }
+            };
+
+            pdfMake.createPdf(dd).download();
+
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+<button onclick="down()">下载</button>
+
+
+</body>
+</html>

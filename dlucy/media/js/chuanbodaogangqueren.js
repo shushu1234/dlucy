@@ -22,6 +22,10 @@ var TableAdvanced = function () {
         var nCloneTd = document.createElement('td');
         nCloneTd.innerHTML = '<span class="row-details row-details-close"></span>';
 
+        var nOperaTh = document.createElement('th');
+        var nOperaTd = document.createElement('td');
+        nOperaTd.innerHTML = '<a  class="btn blue row-add" style="font-size: 10px;padding: 2px 8px;">提交</a>';
+
         $('#sample_1 thead tr').each(function () {
             this.insertBefore(nCloneTh, this.childNodes[0]);
         });
@@ -30,11 +34,68 @@ var TableAdvanced = function () {
             this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
         });
 
+
+        $('#sample_1 thead tr').each(function () {
+            this.insertBefore(nOperaTh, this.childNodes[1]);
+        });
+
+        $('#sample_1 tbody tr').each(function () {
+            this.insertBefore(nOperaTd.cloneNode(true), this.childNodes[1]);
+        });
+
+        $('#sample_1').on('click', ' tbody td .row-add', function () {
+            var nTr = $(this).parents('tr')[0];
+            var aData = oTable.fnGetData(nTr);
+            var str=" <tr>"+
+                "<td><a  class=\"btn red btn-del\" style=\"font-size: 10px;padding: 2px 8px;\">删除</a></td>"+
+                "<td>" +
+                aData[5] +
+                "</td>"+
+                "<td>" +
+                aData[6] +
+                "</td>"+
+                "<td>" +
+                aData[7]     +
+                "</td>"+
+                "<td >" +
+                aData[8] +
+                "</td>"+
+                "<td>" +
+                aData[9] +
+                "</td>"+
+                "<td>" +
+                aData[10] +
+                "</td>"+
+                "<td>" +
+                aData[11] +
+                "</td>"+
+                "<td >" +
+                aData[12] +
+                "</td>"+
+                "<td>" +
+                aData[13] +
+                "</td>"+
+                "<td>" +
+                aData[14] +
+                "</td>"+
+                "<td>" +
+                aData[15] +
+                "</td>"+
+                "<td >" +
+                aData[16] +
+                "</td>"+
+                "</tr>";
+            $("#tbody-box").append(str);
+            oTable.fnDeleteRow(nTr);
+
+        });
+
         /*
          * Initialse DataTables, with no sorting on the 'details' column
          */
         var oTable = $('#sample_1').dataTable({
             "aoColumns": [
+                null,
                 null,
                 {"bVisible": false},
                 {"bVisible": false},
@@ -71,9 +132,8 @@ var TableAdvanced = function () {
             ],
             // set the initial value
             "iDisplayLength": 10,
-            // "sScrollX": "100%",
-            "sScrollY": "300",
-            "bScrollCollapse": true,
+            "scrollY": "200px",
+            "scrollCollapse": true,
             bFilter: false,
 
 

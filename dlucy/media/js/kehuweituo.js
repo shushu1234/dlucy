@@ -75,9 +75,8 @@ var TableAdvanced = function () {
             ],
             // set the initial value
             "iDisplayLength": 10,
-            "sScrollX": "100%",
-            "sScrollY": "300",
-            "bScrollCollapse": true,
+            "scrollY": "200px",
+            "scrollCollapse": true,
             bFilter: false,
         });
 

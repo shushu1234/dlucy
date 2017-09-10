@@ -497,6 +497,106 @@
                                     <td class="">未确认</td>
 
                                 </tr>
+                                <tr class="statusok" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr><tr class="statusok" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr><tr class="statusok" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr><tr class="statusok" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+
+
+
 
 
 
@@ -575,7 +675,22 @@
                         <tr>
 
                             <td colspan="2">TO:</td>
-                            <td colspan="6">基础预设下拉菜单选择</td>
+                            <td colspan="6">
+                                <select class="span12 m-wrap" data-placeholder="Choose a Category"
+                                                     tabindex="1" id="info-boxtype" width="345px">
+
+                                <option value="">请选择...</option>
+
+                                <option value="Category 1">张三丰</option>
+
+                                <option value="Category 2">王五</option>
+
+                                <option value="Category 3">赵六</option>
+
+                                <option value="Category 4">张珊</option>
+
+                            </select>
+                            </td>
                             <td colspan="2">走船时间:</td>
                             <td colspan="6">2017-9-11</td>
 
@@ -594,10 +709,12 @@
                             <td colspan="1">指令号</td>
                             <td colspan="1">船名航次</td>
                             <td colspan="2">运单号</td>
+
                             <td colspan="1">箱号</td>
                             <td colspan="1">封号</td>
                             <td colspan="2">收货地址</td>
                             <td colspan="1">联系人</td>
+
                             <td colspan="2">联系电话</td>
                             <td colspan="1">拖车费(元)</td>
                             <td colspan="1">备注</td>
@@ -648,10 +765,10 @@
             <button type="button" data-dismiss="modal" class="btn" id="btn-return">
                 返回
             </button>
-            <button type="button" data-dismiss="modal" class="btn" id="Export">
+            <button type="button" data-dismiss="modal" class="btn" onclick="down()" id="Export">
                 导出
             </button>
-            <button type="button" data-dismiss="modal" class="btn" id="Print">
+            <button type="button" data-dismiss="modal" class="btn" onclick="print()" id="Print">
                 打印
             </button>
 
@@ -716,6 +833,9 @@
 
 <script src="media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
 
+<script src="media/pdf/pdfmake.min.js"></script>
+<script src="media/pdf/vfs_fonts.js"></script>
+<script src="media/pdf/FileSaver.js"></script>
 
 <!-- 本页插件结束-->
 
@@ -729,10 +849,6 @@
 <script src="media/js/form-components.js"></script>
 
 <script src="media/js/ui-modals.js"></script>
-
-<script src="media/exportpdfjs/html2canvas.js"></script>
-
-<script src="media/exportpdfjs/jsPdf.debug.js"></script>
 
 <script>
 
@@ -1159,46 +1275,276 @@
     });
 
 
-    document.getElementById("Print").onclick = function () {
-        printElement(document.getElementById("printcontent"));
-    };
+    function down() {
+        var table=document.getElementById("#sample_1");
+        var dd = {
+            pageSize: 'A4',
+            pageOrientation: 'landscape',
+            content: [
 
-    function printElement(elem) {
-        var domClone = elem.cloneNode(true);
+                {
+                    style: 'tableExample',
+                    color: '#000',
+                    table: {
+                        widths: [ 'auto', 'auto','auto','auto', 'auto',
+                            'auto','auto', 'auto','auto','auto',
+                            'auto','auto','auto','auto'],
+                        headerRows: 2,
+                        // keepWithHeaderRows: 1,
+                        body: [
+                            /**
+                             * Created by shushu on 17-9-5.
+                             */
+                            [{text: '天津市胜腾货运有限公司', style: 'tableHeader', colSpan: 14, alignment: 'center'},
+                                {},{},{},{},{},
+                                {},{},{},{},{},
+                                {},{},{}],
+                            [{text: '送货明细',  colSpan: 14, alignment: 'center'},
+                                {},{},{},{},{},
+                                {},{},{},{},{},
+                                {},{},{}],
+                            [{text: 'TO:',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '基础预设下拉菜单选择:',colSpan: 5, alignment: 'center'},
+                                {},{},{},{},
+                                {text: '走船时间:',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '2017-9-11',  colSpan: 5, alignment: 'center'},
+                                {},{},{},{},
 
-        var $printSection = document.getElementById("printSection");
+                            ],
+                            [{text: 'FM:',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '天津胜腾',  colSpan: 12, alignment: 'center'},
+                                {},{},{},{},{},
+                                {},{},{},{},{},
+                                {}
+                            ],
+                            [{text: '预计到港日',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '指令号',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '船名航次',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '运单号',  colSpan: 2, alignment: 'center',noWrap: true},
+                                {},
 
-        if (!$printSection) {
-            var $printSection = document.createElement("div");
-            $printSection.id = "printSection";
-            document.body.appendChild($printSection);
+                                {text: '箱号',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '封号',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '收货地址',  colSpan: 2, alignment: 'center',noWrap: true},
+                                {},
+                                {text: '联系人',  colSpan: 1, alignment: 'center',noWrap: true},
+
+                                {text: '联系电话',  colSpan: 2, alignment: 'center',noWrap: true},
+                                {},
+                                {text: '拖车费(元)',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '备注',  colSpan: 1, alignment: 'center',noWrap: true},
+                            ],
+                            [{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
+                                {text: 'D00012',  colSpan: 1, alignment: 'center'},
+                                {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
+                                {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
+                                {},
+
+                                {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
+                                {text: '5558455',  colSpan: 1, alignment: 'center'},
+                                {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '吴迪',  colSpan: 1, alignment: 'center'},
+
+                                {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '940.00',  colSpan: 1, alignment: 'center'},
+                                {text: '我叫备注',  colSpan: 1, alignment: 'center'},
+                            ],
+                            [{text: '服务电话:022-59853734',  colSpan: 5, alignment: 'left',border: [true, true, false, true],},
+                                {},{},{},{},
+                                {text: '传真:022-66175318',  colSpan: 5, alignment: 'left',border: [false, true, false, true],},
+                                {},{},{},{},
+                                {text: '制单日期:2017-9-11',  colSpan: 4, alignment: 'right',border: [false, true, true, true],},
+                                {},{},{},
+
+
+                            ],
+
+                        ]
+                    }
+                },
+
+            ],
+            styles: {
+                header: {
+                    fontSize: 18,
+                    margin: [0, 0, 0, 10]
+                },
+                subheader: {
+                    fontSize: 16,
+                    margin: [0, 10, 0, 5]
+                },
+                tableExample: {
+                    margin: [0, 5, 0, 5],
+                    fontSize: 10,
+                },
+                tableHeader: {
+                    fontSize: 25,
+                    color: 'black'
+                }
+            },
+            defaultStyle: {
+                font: 'msyh'
+            }
+
         }
 
-        $printSection.innerHTML = "";
-        $printSection.appendChild(domClone);
-        window.print();
-    };
+        pdfMake.fonts = {
+            Roboto: {
+                normal: 'Roboto-Regular.ttf',
+                bold: 'Roboto-Medium.ttf',
+                italics: 'Roboto-Italic.ttf',
+                bolditalics: 'Roboto-Italic.ttf'
+            },
 
-    var downPdf = document.getElementById("Export");
-    var downmodal=$("#printmodal");
-    downPdf.onclick = function() {
-        html2canvas(downmodal, {
-            onrendered:function(canvas) {
-
-                //返回图片URL，参数：图片格式和清晰度(0-1)
-                var pageData = canvas.toDataURL('image/jpeg', 1.0);
-
-                //方向默认竖直，尺寸ponits，格式a4【595.28,841.89]
-                var pdf = new jsPDF('l', 'mm', [300, 700]);
-
-                //需要dataUrl格式
-                pdf.addImage(pageData, 'JPEG', 0, 0, 595.28, 592.28/canvas.width * canvas.height );
-
-                pdf.save('content.pdf');
-
+            msyh: {
+                normal: 'msyh.ttf'
             }
-        })
+        };
+
+        pdfMake.createPdf(dd).download();
+
     }
+
+    function print() {
+        var table=document.getElementById("#sample_1");
+        var dd = {
+            pageSize: 'A4',
+            pageOrientation: 'landscape',
+            content: [
+
+                {
+                    style: 'tableExample',
+                    color: '#000',
+                    table: {
+                        widths: [ 'auto', 'auto','auto','auto', 'auto',
+                            'auto','auto', 'auto','auto','auto',
+                            'auto','auto','auto','auto'],
+                        headerRows: 2,
+                        // keepWithHeaderRows: 1,
+                        body: [
+                            /**
+                             * Created by shushu on 17-9-5.
+                             */
+                            [{text: '天津市胜腾货运有限公司', style: 'tableHeader', colSpan: 14, alignment: 'center'},
+                                {},{},{},{},{},
+                                {},{},{},{},{},
+                                {},{},{}],
+                            [{text: '送货明细',  colSpan: 14, alignment: 'center'},
+                                {},{},{},{},{},
+                                {},{},{},{},{},
+                                {},{},{}],
+                            [{text: 'TO:',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '基础预设下拉菜单选择:',colSpan: 5, alignment: 'center'},
+                                {},{},{},{},
+                                {text: '走船时间:',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '2017-9-11',  colSpan: 5, alignment: 'center'},
+                                {},{},{},{},
+
+                            ],
+                            [{text: 'FM:',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '天津胜腾',  colSpan: 12, alignment: 'center'},
+                                {},{},{},{},{},
+                                {},{},{},{},{},
+                                {}
+                            ],
+                            [{text: '预计到港日',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '指令号',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '船名航次',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '运单号',  colSpan: 2, alignment: 'center',noWrap: true},
+                                {},
+
+                                {text: '箱号',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '封号',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '收货地址',  colSpan: 2, alignment: 'center',noWrap: true},
+                                {},
+                                {text: '联系人',  colSpan: 1, alignment: 'center',noWrap: true},
+
+                                {text: '联系电话',  colSpan: 2, alignment: 'center',noWrap: true},
+                                {},
+                                {text: '拖车费(元)',  colSpan: 1, alignment: 'center',noWrap: true},
+                                {text: '备注',  colSpan: 1, alignment: 'center',noWrap: true},
+                            ],
+                            [{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
+                                {text: 'D00012',  colSpan: 1, alignment: 'center'},
+                                {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
+                                {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
+                                {},
+
+                                {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
+                                {text: '5558455',  colSpan: 1, alignment: 'center'},
+                                {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '吴迪',  colSpan: 1, alignment: 'center'},
+
+                                {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
+                                {},
+                                {text: '940.00',  colSpan: 1, alignment: 'center'},
+                                {text: '我叫备注',  colSpan: 1, alignment: 'center'},
+                            ],
+                            [{text: '服务电话:022-59853734',  colSpan: 5, alignment: 'left',border: [true, true, false, true],},
+                                {},{},{},{},
+                                {text: '传真:022-66175318',  colSpan: 5, alignment: 'left',border: [false, true, false, true],},
+                                {},{},{},{},
+                                {text: '制单日期:2017-9-11',  colSpan: 4, alignment: 'right',border: [false, true, true, true],},
+                                {},{},{},
+
+
+                            ],
+
+                        ]
+                    }
+                },
+
+            ],
+            styles: {
+                header: {
+                    fontSize: 18,
+                    margin: [0, 0, 0, 10]
+                },
+                subheader: {
+                    fontSize: 16,
+                    margin: [0, 10, 0, 5]
+                },
+                tableExample: {
+                    margin: [0, 5, 0, 5],
+                    fontSize: 10,
+                },
+                tableHeader: {
+                    fontSize: 25,
+                    color: 'black'
+                }
+            },
+            defaultStyle: {
+                font: 'msyh'
+            }
+
+        }
+
+        pdfMake.fonts = {
+            Roboto: {
+                normal: 'Roboto-Regular.ttf',
+                bold: 'Roboto-Medium.ttf',
+                italics: 'Roboto-Italic.ttf',
+                bolditalics: 'Roboto-Italic.ttf'
+            },
+
+            msyh: {
+                normal: 'msyh.ttf'
+            }
+        };
+
+        pdfMake.createPdf(dd).print();
+
+    }
+
 </script>
 
 <!-- 本页JS脚本结束 -->
