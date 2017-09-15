@@ -85,6 +85,10 @@ var TableAdvanced = function () {
             "scrollY": "200px",
             "scrollCollapse": true,
             bFilter: false,
+            fixedHeader: {
+                header: true,
+                footer: true
+            }
 
 
         });

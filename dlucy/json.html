@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function createdata() {
+            var data=new Array();
+            for (var i=0;i<3;i++){
+                var temp=new Object();
+                temp.text="11";
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[i]=JSON.parse(JSON.stringify(temp));
+                console.log(temp);
+            }
+//            data=JSON.stringify(data);
+//            console.log(data[0]);
+//            var data1=[{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
+//                {text: 'D00012',  colSpan: 1, alignment: 'center'},
+//                {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
+//                {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
+//                {},
+//
+//                {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
+//                {text: '5558455',  colSpan: 1, alignment: 'center'},
+//                {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
+//                {},
+//                {text: '吴迪',  colSpan: 1, alignment: 'center'},
+//
+//                {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
+//                {},
+//                {text: '940.00',  colSpan: 1, alignment: 'center'},
+//                {text: '我叫备注',  colSpan: 1, alignment: 'center'},
+//            ];
+//            console.log(data1[0]);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="createdata()">sdsd</button>
+</body>
+</html>

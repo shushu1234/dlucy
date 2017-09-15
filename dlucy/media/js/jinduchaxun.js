@@ -55,6 +55,8 @@ var TableAdvanced = function () {
                 null,
                 null,
                 null,
+                null,
+                null,
 
                 null,
 

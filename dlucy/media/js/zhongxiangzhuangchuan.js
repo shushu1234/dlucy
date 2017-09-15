@@ -43,9 +43,6 @@ var TableAdvanced = function () {
             this.insertBefore(nOperaTd.cloneNode(true), this.childNodes[1]);
         });
 
-        $('#tablelist').on( 'click', 'tr', function () {
-            $(this).toggleClass('selected');
-        } );
 
         /*
          * Initialse DataTables, with no sorting on the 'details' column
