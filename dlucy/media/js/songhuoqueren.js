@@ -111,16 +111,20 @@ var TableAdvanced = function () {
             // alert(data[0][5]);
             var str1=" <tbody id=\"printtr\">"+
                 "                     <tr>"+
-                "                            <td colspan=\"14\" ><h1>天津市胜腾货运有限公司</h1></td>"+
+                "<td colspan=\"14\" style=\""+
+                "    font-size: 40px;"+
+                "    height: 50px;"+
+                "    line-height: 50px;"+
+                "\">天津市胜腾货运有限公司</td>"+
                 "                        </tr>"+
                 "                        <tr>"+
-                "                            <td colspan=\"14\" style=\"text-align: center\"><span style=\"font-size: 20px;font-weight: 200\">送货明细</span></td>"+
+                "<td colspan=\"14\" style=\"text-align: center;font-size: 22px;\">送货明细</td>"+
                 "                        </tr>"+
                 "                        <tr>"+
                 "                            <td colspan=\"2\">TO:</td>"+
                 "                            <td colspan=\"6\">"+
                 "                                <select class=\"span12 m-wrap\" data-placeholder=\"Choose a Category\""+
-                "                                                     tabindex=\"1\" id=\"info-boxtype\" width=\"345px\">"+
+                "                                                     tabindex=\"1\" id=\"info-to\" width=\"345px\">"+
                 "                                <option value=\"\">请选择...</option>"+
                 "                                <option value=\"Category 1\">张三丰</option>"+
                 "                                <option value=\"Category 2\">王五</option>"+
@@ -166,25 +170,25 @@ var TableAdvanced = function () {
                         data[i][5] +
                         "</td>"+
                         "                            <td colspan=\"1\" >" +
-                        data[0][15] +
+                        data[i][6] +
                         "</td>"+
                         "                            <td colspan=\"2\">" +
-                        data[0][15] +
+                        data[i][7] +
                         "</td>"+
                         "                            <td colspan=\"1\">" +
-                        data[0][15] +
+                        data[i][8] +
                         "</td>"+
                         "                            <td colspan=\"1\">" +
-                        data[0][15] +
+                        data[i][9] +
                         "</td>"+
                         "                            <td colspan=\"2\">" +
-                        data[0][15] +
+                        data[i][9] +
                         "</td>"+
                         "                            <td colspan=\"1\">" +
-                        data[0][15] +
+                        data[i][10] +
                         "</td>"+
                         "                            <td colspan=\"2\">" +
-                        data[0][15] +
+                        data[i][11] +
                         "</td>"+
                         "                            <td colspan=\"1\"><input type=\"text\" class=\"m-wrap\" data-tabindex=\"1\" style=\"border: none;text-align: center;padding: 0px;\" ></td>"+
                         "                            <td colspan=\"1\"><input type=\"text\" class=\"m-wrap\" data-tabindex=\"1\" style=\"border: none;text-align: center;padding: 0px;\" ></td>"+

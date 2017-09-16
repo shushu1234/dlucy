@@ -658,98 +658,7 @@
 
                         <table class="table table-bordered table-hover" id="printtable">
 
-                        <!--<tbody id="printtr">-->
 
-                        <!--<tr>-->
-
-                        <!--<td colspan="14" ><h1>天津市胜腾货运有限公司</h1></td>-->
-
-                        <!--</tr>-->
-
-                        <!--<tr>-->
-
-                        <!--<td colspan="14" style="text-align: center"><span style="font-size: 20px;font-weight: 200">送货明细</span></td>-->
-
-                        <!--</tr>-->
-
-
-
-                        <!--<tr>-->
-
-                        <!--<td colspan="2">TO:</td>-->
-                        <!--<td colspan="6">-->
-                        <!--<select class="span12 m-wrap" data-placeholder="Choose a Category"-->
-                        <!--tabindex="1" id="info-boxtype" width="345px">-->
-
-                        <!--<option value="">请选择...</option>-->
-
-                        <!--<option value="Category 1">张三丰</option>-->
-
-                        <!--<option value="Category 2">王五</option>-->
-
-                        <!--<option value="Category 3">赵六</option>-->
-
-                        <!--<option value="Category 4">张珊</option>-->
-
-                        <!--</select>-->
-                        <!--</td>-->
-                        <!--<td colspan="2">走船时间:</td>-->
-                        <!--<td colspan="6">2017-9-11</td>-->
-
-                        <!--</tr>-->
-
-                        <!--<tr>-->
-
-                        <!--<td colspan="2">FM:</td>-->
-                        <!--<td colspan="12">天津胜腾</td>-->
-
-                        <!--</tr>-->
-
-                        <!--<tr id="printtr">-->
-
-                        <!--<td colspan="1">预计到港日</td>-->
-                        <!--<td colspan="1">指令号</td>-->
-                        <!--<td colspan="1">船名航次</td>-->
-                        <!--<td colspan="2">运单号</td>-->
-
-                        <!--<td colspan="1">箱号</td>-->
-                        <!--<td colspan="1">封号</td>-->
-                        <!--<td colspan="2">收货地址</td>-->
-                        <!--<td colspan="1">联系人</td>-->
-
-                        <!--<td colspan="2">联系电话</td>-->
-                        <!--<td colspan="1">拖车费(元)</td>-->
-                        <!--<td colspan="1">备注</td>-->
-
-                        <!--</tr>-->
-
-                        <!--<tr class="edittr">-->
-
-                        <!--<td colspan="1" >2017-10-11</td>-->
-                        <!--<td colspan="1" >D00012</td>-->
-                        <!--<td colspan="1" >新海欣1647S</td>-->
-                        <!--<td colspan="2">XHX1647TJSH120</td>-->
-                        <!--<td colspan="1">BEAU2555237</td>-->
-                        <!--<td colspan="1">5558455</td>-->
-                        <!--<td colspan="2">琴谱区嘉松中路1289号</td>-->
-                        <!--<td colspan="1">吴迪</td>-->
-                        <!--<td colspan="2">12345678911/87654321123</td>-->
-                        <!--<td colspan="1"><input type="text" class="m-wrap" data-tabindex="1" style="border: none;text-align: center;padding: 0px;" ></td>-->
-                        <!--<td colspan="1"><input type="text" class="m-wrap" data-tabindex="1" style="border: none;text-align: center;padding: 0px;" ></td>-->
-
-                        <!--</tr>-->
-                        <!--<tr>-->
-                        <!--<td colspan="7" style="text-align: left">服务电话:022-59853734</td>-->
-
-                        <!--<td colspan="6" style="text-align: left;border-left: none">传真:022-66175318</td>-->
-
-
-                        <!--<td colspan="1" style="text-align: left;border-left: none">制单日期:2017-9-11</td>-->
-
-                        <!--</tr>-->
-
-
-                        <!--</tbody>-->
 
                     </table>
 
@@ -1281,8 +1190,206 @@
 
 
     function down() {
-        var table=document.getElementById("#sample_1");
+        function create2() {
+
+            var data1=new Array();
+
+            var mytable = document.getElementById("printtable");
+            for(var j=0,rows=window.operarow; j<rows; j++){
+//                for(var j=0,cells=mytable.rows[i].cells.length; j<cells; j++){
+//                    if(!data[i]){
+//                        data[i] = new Array();
+//                    }
+//                    data[i][j] = mytable.rows[i].cells[j].innerHTML;
+//                }
+                var temp=new Object();
+                var data=new Array();
+                var i=j+5;
+                temp.text=mytable.rows[i].cells[0].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[0]=JSON.parse(JSON.stringify(temp));
+                console.log(data[0]);
+
+                temp.text=mytable.rows[i].cells[1].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[1]=JSON.parse(JSON.stringify(temp));
+                console.log(data[1]);
+
+                temp.text=mytable.rows[i].cells[2].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[2]=JSON.parse(JSON.stringify(temp));
+                console.log(data[2]);
+
+
+                temp.text=mytable.rows[i].cells[3].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[3]=JSON.parse(JSON.stringify(temp));
+                console.log(data[3]);
+
+                temp={};
+                data[4]=JSON.parse(JSON.stringify(temp));
+                console.log(data[4]);
+
+
+                temp.text=mytable.rows[i].cells[4].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[5]=JSON.parse(JSON.stringify(temp));
+                console.log(data[5]);
+
+
+                temp.text=mytable.rows[i].cells[5].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[6]=JSON.parse(JSON.stringify(temp));
+                console.log(data[6]);
+
+                temp.text=mytable.rows[i].cells[6].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[7]=JSON.parse(JSON.stringify(temp));
+                console.log(data[7]);
+
+
+                temp={};
+                data[8]=JSON.parse(JSON.stringify(temp));
+                console.log(data[8]);
+
+                temp.text=mytable.rows[i].cells[7].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[9]=JSON.parse(JSON.stringify(temp));
+                console.log(data[9]);
+
+
+                temp.text=mytable.rows[i].cells[8].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[10]=JSON.parse(JSON.stringify(temp));
+                console.log(data[10]);
+
+
+                temp={};
+                data[11]=JSON.parse(JSON.stringify(temp));
+                console.log(data[11]);
+
+                var tdArr = $("#printtr").children();
+                temp.text=tdArr.eq(i).find('td').eq(9).find('input').val();
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[12]=JSON.parse(JSON.stringify(temp));
+                console.log(data[12]);
+
+
+                var tdArr = $("#printtr").children();
+                temp.text=tdArr.eq(i).find('td').eq(10).find('input').val();
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[13]=JSON.parse(JSON.stringify(temp));
+                console.log(data[13]);
+
+                console.log(data);
+                data1[j]=data;
+            }
+
+            console.log(data1);
+
+//            var mytable = document.getElementById("printtable").rows[0].cells[0].innerHTML;
+//            console.log(mytable);
+
+//            for(var i=0;i<3;i++){
+//                data1[i]=[{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
+//                    {text: 'D00012',  colSpan: 1, alignment: 'center'},
+//                    {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
+//                    {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
+//                    {},
+//
+//                    {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
+//                    {text: '5558455',  colSpan: 1, alignment: 'center'},
+//                    {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
+//                    {},
+//                    {text: '吴迪',  colSpan: 1, alignment: 'center'},
+//
+//                    {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
+//                    {},
+//                    {text: '940.00',  colSpan: 1, alignment: 'center'},
+//                    {text: '我叫备注',  colSpan: 1, alignment: 'center'},
+//                ];
+//            }
+//            console.log(data1);
+            var infoto=$("#info-to").find("option:selected").text();
+            var rowdata=[];
+            rowdata.push( [{text: '天津市胜腾货运有限公司', style: 'tableHeader', colSpan: 14, alignment: 'center'},
+                {},{},{},{},{},
+                {},{},{},{},{},
+                {},{},{}]);
+            rowdata.push([{text: '送货明细',  colSpan: 14, alignment: 'center'},
+                {},{},{},{},{},
+                {},{},{},{},{},
+                {},{},{}]);
+            rowdata.push([{text: 'TO:',  colSpan: 2, alignment: 'center'},
+                {},
+                {text: infoto,colSpan: 5, alignment: 'center'},
+                {},{},{},{},
+                {text: '走船时间:',  colSpan: 2, alignment: 'center'},
+                {},
+                {text: '2017-9-11',  colSpan: 5, alignment: 'center'},
+                {},{},{},{},
+
+            ]);
+            rowdata.push([{text: 'FM:',  colSpan: 2, alignment: 'center'},
+                {},
+                {text: '天津胜腾',  colSpan: 12, alignment: 'center'},
+                {},{},{},{},{},
+                {},{},{},{},{},
+                {}
+            ]);
+            rowdata.push([{text: '预计到港日',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '指令号',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '船名航次',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '运单号',  colSpan: 2, alignment: 'center',noWrap: true},
+                {},
+
+                {text: '箱号',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '封号',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '收货地址',  colSpan: 2, alignment: 'center',noWrap: true},
+                {},
+                {text: '联系人',  colSpan: 1, alignment: 'center',noWrap: true},
+
+                {text: '联系电话',  colSpan: 2, alignment: 'center',noWrap: true},
+                {},
+                {text: '拖车费(元)',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '备注',  colSpan: 1, alignment: 'center',noWrap: true},
+            ]);
+            for (var i=0;i<data1.length;i++){
+//                console.log(data1[i]);
+                rowdata.push(data1[i]);
+            }
+            rowdata.push([{text: '服务电话:022-59853734',  colSpan: 5, alignment: 'left',border: [true, true, false, true],},
+                {},{},{},{},
+                {text: '传真:022-66175318',  colSpan: 5, alignment: 'left',border: [false, true, false, true],},
+                {},{},{},{},
+                {text: '制单日期:2017-9-11',  colSpan: 4, alignment: 'right',border: [false, true, true, true],},
+                {},{},{},
+
+
+            ]);
+            return rowdata;
+        };
         var dd = {
+            footer: function(currentPage, pageCount) { return currentPage.toString() + ' of ' + pageCount; },
+//            header: function(currentPage, pageCount, pageSize) {
+//                // you can apply any logic and return any valid pdfmake element
+//
+//                return [
+//                    { text: '送货明细', alignment: (currentPage % 2) ? 'left' : 'right' },
+//                    { canvas: [ { type: 'rect', x: 170, y: 32, w: pageSize.width - 170, h: 40 } ] }
+//                ]
+//            },
             pageSize: 'A4',
             pageOrientation: 'landscape',
             content: [
@@ -1294,82 +1401,9 @@
                         widths: [ 'auto', 'auto','auto','auto', 'auto',
                             'auto','auto', 'auto','auto','auto',
                             'auto','auto','auto','auto'],
-                        headerRows: 2,
+//                        headerRows: 2,
                         // keepWithHeaderRows: 1,
-                        body: [
-                            /**
-                             * Created by shushu on 17-9-5.
-                             */
-                            [{text: '天津市胜腾货运有限公司', style: 'tableHeader', colSpan: 14, alignment: 'center'},
-                                {},{},{},{},{},
-                                {},{},{},{},{},
-                                {},{},{}],
-                            [{text: '送货明细',  colSpan: 14, alignment: 'center'},
-                                {},{},{},{},{},
-                                {},{},{},{},{},
-                                {},{},{}],
-                            [{text: 'TO:',  colSpan: 2, alignment: 'center'},
-                                {},
-                                {text: '基础预设下拉菜单选择:',colSpan: 5, alignment: 'center'},
-                                {},{},{},{},
-                                {text: '走船时间:',  colSpan: 2, alignment: 'center'},
-                                {},
-                                {text: '2017-9-11',  colSpan: 5, alignment: 'center'},
-                                {},{},{},{},
-
-                            ],
-                            [{text: 'FM:',  colSpan: 2, alignment: 'center'},
-                                {},
-                                {text: '天津胜腾',  colSpan: 12, alignment: 'center'},
-                                {},{},{},{},{},
-                                {},{},{},{},{},
-                                {}
-                            ],
-                            [{text: '预计到港日',  colSpan: 1, alignment: 'center',noWrap: true},
-                                {text: '指令号',  colSpan: 1, alignment: 'center',noWrap: true},
-                                {text: '船名航次',  colSpan: 1, alignment: 'center',noWrap: true},
-                                {text: '运单号',  colSpan: 2, alignment: 'center',noWrap: true},
-                                {},
-
-                                {text: '箱号',  colSpan: 1, alignment: 'center',noWrap: true},
-                                {text: '封号',  colSpan: 1, alignment: 'center',noWrap: true},
-                                {text: '收货地址',  colSpan: 2, alignment: 'center',noWrap: true},
-                                {},
-                                {text: '联系人',  colSpan: 1, alignment: 'center',noWrap: true},
-
-                                {text: '联系电话',  colSpan: 2, alignment: 'center',noWrap: true},
-                                {},
-                                {text: '拖车费(元)',  colSpan: 1, alignment: 'center',noWrap: true},
-                                {text: '备注',  colSpan: 1, alignment: 'center',noWrap: true},
-                            ],
-                            [{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
-                                {text: 'D00012',  colSpan: 1, alignment: 'center'},
-                                {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
-                                {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
-                                {},
-
-                                {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
-                                {text: '5558455',  colSpan: 1, alignment: 'center'},
-                                {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
-                                {},
-                                {text: '吴迪',  colSpan: 1, alignment: 'center'},
-
-                                {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
-                                {},
-                                {text: '940.00',  colSpan: 1, alignment: 'center'},
-                                {text: '我叫备注',  colSpan: 1, alignment: 'center'},
-                            ],
-                            [{text: '服务电话:022-59853734',  colSpan: 5, alignment: 'left',border: [true, true, false, true],},
-                                {},{},{},{},
-                                {text: '传真:022-66175318',  colSpan: 5, alignment: 'left',border: [false, true, false, true],},
-                                {},{},{},{},
-                                {text: '制单日期:2017-9-11',  colSpan: 4, alignment: 'right',border: [false, true, true, true],},
-                                {},{},{},
-
-
-                            ],
-
-                        ]
+                        body:create2()
                     }
                 },
 
@@ -1416,115 +1450,138 @@
     }
 
     function print() {
-        var table=document.getElementById("#sample_1");
-
         function create2() {
 
             var data1=new Array();
 
-//            alert(window.operarow);
-//            var mytable=$("#printtable");
-//            console.log(mytable.outerHTML);
-//            for(var i=0,rows=window.operarow; i<rows; i++){
-////                for(var j=0,cells=mytable.rows[i].cells.length; j<cells; j++){
-////                    if(!data[i]){
-////                        data[i] = new Array();
-////                    }
-////                    data[i][j] = mytable.rows[i].cells[j].innerHTML;
-////                }
-//                var temp=new Object();
-//                var data=new Array();
-//                temp.text=mytable.rows[i].cells[0];
-//                temp.colSpan=1;
-//                temp.alignment="center";
-//                data[0]=JSON.parse(JSON.stringify(temp));
-//
-//                temp.text=mytable.rows[i].cells[1];
-//                temp.colSpan=1;
-//                temp.alignment="center";
-//                data[1]=JSON.parse(JSON.stringify(temp));
-//
-//                temp.text=mytable.rows[i].cells[2];
-//                temp.colSpan=1;
-//                temp.alignment="center";
-//                data[2]=JSON.parse(JSON.stringify(temp));
-//
-//                temp.text=mytable.rows[i].cells[3];
-//                temp.colSpan=2;
-//                temp.alignment="center";
-//                data[3]=JSON.parse(JSON.stringify(temp));
-//
-//                temp={};
-//                data[4]=JSON.parse(JSON.stringify(temp));
-//
-//
-//                temp.text=mytable.rows[i].cells[4];
-//                temp.colSpan=1;
-//                temp.alignment="center";
-//                data[5]=JSON.parse(JSON.stringify(temp));
-//
-//                temp.text=mytable.rows[i].cells[5];
-//                temp.colSpan=1;
-//                temp.alignment="center";
-//                data[6]=JSON.parse(JSON.stringify(temp));
-//
-//                temp.text=mytable.rows[i].cells[6];
-//                temp.colSpan=2;
-//                temp.alignment="center";
-//                data[7]=JSON.parse(JSON.stringify(temp));
-//
-//                temp={};
-//                data[8]=JSON.parse(JSON.stringify(temp));
-//
-//                temp.text=mytable.rows[i].cells[7];
-//                temp.colSpan=1;
-//                temp.alignment="center";
-//                data[9]=JSON.parse(JSON.stringify(temp));
-//
-//                temp.text=mytable.rows[i].cells[8];
-//                temp.colSpan=2;
-//                temp.alignment="center";
-//                data[10]=JSON.parse(JSON.stringify());
-//
-//                temp={};
-//                data[11]=JSON.parse(JSON.stringify(temp));
-//
-//                temp.text=mytable.rows[i].cells[9];
-//                temp.colSpan=1;
-//                temp.alignment="center";
-//                data[12]=JSON.parse(JSON.stringify(temp));
-//
-//                temp.text=mytable.rows[i].cells[10];
-//                temp.colSpan=1;
-//                temp.alignment="center";
-//                data[13]=JSON.parse(JSON.stringify(temp));
-//
-//                data1[i]=data;
-//            }
-//
-//            console.log(data1);
+            var mytable = document.getElementById("printtable");
+            for(var j=0,rows=window.operarow; j<rows; j++){
+//                for(var j=0,cells=mytable.rows[i].cells.length; j<cells; j++){
+//                    if(!data[i]){
+//                        data[i] = new Array();
+//                    }
+//                    data[i][j] = mytable.rows[i].cells[j].innerHTML;
+//                }
+                var temp=new Object();
+                var data=new Array();
+                var i=j+5;
+                temp.text=mytable.rows[i].cells[0].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[0]=JSON.parse(JSON.stringify(temp));
+                console.log(data[0]);
 
-            for(var i=0;i<3;i++){
-                data1[i]=[{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
-                    {text: 'D00012',  colSpan: 1, alignment: 'center'},
-                    {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
-                    {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
-                    {},
+                temp.text=mytable.rows[i].cells[1].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[1]=JSON.parse(JSON.stringify(temp));
+                console.log(data[1]);
 
-                    {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
-                    {text: '5558455',  colSpan: 1, alignment: 'center'},
-                    {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
-                    {},
-                    {text: '吴迪',  colSpan: 1, alignment: 'center'},
+                temp.text=mytable.rows[i].cells[2].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[2]=JSON.parse(JSON.stringify(temp));
+                console.log(data[2]);
 
-                    {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
-                    {},
-                    {text: '940.00',  colSpan: 1, alignment: 'center'},
-                    {text: '我叫备注',  colSpan: 1, alignment: 'center'},
-                ];
+
+                temp.text=mytable.rows[i].cells[3].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[3]=JSON.parse(JSON.stringify(temp));
+                console.log(data[3]);
+
+                temp={};
+                data[4]=JSON.parse(JSON.stringify(temp));
+                console.log(data[4]);
+
+
+                temp.text=mytable.rows[i].cells[4].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[5]=JSON.parse(JSON.stringify(temp));
+                console.log(data[5]);
+
+
+                temp.text=mytable.rows[i].cells[5].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[6]=JSON.parse(JSON.stringify(temp));
+                console.log(data[6]);
+
+                temp.text=mytable.rows[i].cells[6].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[7]=JSON.parse(JSON.stringify(temp));
+                console.log(data[7]);
+
+
+                temp={};
+                data[8]=JSON.parse(JSON.stringify(temp));
+                console.log(data[8]);
+
+                temp.text=mytable.rows[i].cells[7].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[9]=JSON.parse(JSON.stringify(temp));
+                console.log(data[9]);
+
+
+                temp.text=mytable.rows[i].cells[8].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[10]=JSON.parse(JSON.stringify(temp));
+                console.log(data[10]);
+
+
+                temp={};
+                data[11]=JSON.parse(JSON.stringify(temp));
+                console.log(data[11]);
+
+                var tdArr = $("#printtr").children();
+                temp.text=tdArr.eq(i).find('td').eq(9).find('input').val();
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[12]=JSON.parse(JSON.stringify(temp));
+                console.log(data[12]);
+
+
+                var tdArr = $("#printtr").children();
+                temp.text=tdArr.eq(i).find('td').eq(10).find('input').val();
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[13]=JSON.parse(JSON.stringify(temp));
+                console.log(data[13]);
+
+                console.log(data);
+                data1[j]=data;
             }
+
             console.log(data1);
 
+//            var mytable = document.getElementById("printtable").rows[0].cells[0].innerHTML;
+//            console.log(mytable);
+
+//            for(var i=0;i<3;i++){
+//                data1[i]=[{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
+//                    {text: 'D00012',  colSpan: 1, alignment: 'center'},
+//                    {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
+//                    {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
+//                    {},
+//
+//                    {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
+//                    {text: '5558455',  colSpan: 1, alignment: 'center'},
+//                    {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
+//                    {},
+//                    {text: '吴迪',  colSpan: 1, alignment: 'center'},
+//
+//                    {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
+//                    {},
+//                    {text: '940.00',  colSpan: 1, alignment: 'center'},
+//                    {text: '我叫备注',  colSpan: 1, alignment: 'center'},
+//                ];
+//            }
+//            console.log(data1);
+            var infoto=$("#info-to").find("option:selected").text();
             var rowdata=[];
             rowdata.push( [{text: '天津市胜腾货运有限公司', style: 'tableHeader', colSpan: 14, alignment: 'center'},
                 {},{},{},{},{},
@@ -1536,7 +1593,7 @@
                 {},{},{}]);
             rowdata.push([{text: 'TO:',  colSpan: 2, alignment: 'center'},
                 {},
-                {text: '基础预设下拉菜单选择:',colSpan: 5, alignment: 'center'},
+                {text: infoto,colSpan: 5, alignment: 'center'},
                 {},{},{},{},
                 {text: '走船时间:',  colSpan: 2, alignment: 'center'},
                 {},
@@ -1569,7 +1626,7 @@
                 {text: '备注',  colSpan: 1, alignment: 'center',noWrap: true},
             ]);
             for (var i=0;i<data1.length;i++){
-
+//                console.log(data1[i]);
                 rowdata.push(data1[i]);
             }
             rowdata.push([{text: '服务电话:022-59853734',  colSpan: 5, alignment: 'left',border: [true, true, false, true],},
@@ -1584,17 +1641,26 @@
             return rowdata;
         }
 
-        function createdata() {
-            var data=new Array();
-            for (var i=0;i<3;i++){
-                var temp=new Object();
-                temp.text="11";
-                temp.colSpan=1;
-                temp.alignment="center";
-                data[i]=JSON.stringify(temp);
-            }
-        }
+//        function createdata() {
+//            var data=new Array();
+//            for (var i=0;i<3;i++){
+//                var temp=new Object();
+//                temp.text="11";
+//                temp.colSpan=1;
+//                temp.alignment="center";
+//                data[i]=JSON.stringify(temp);
+//            }
+//        }
         var dd = {
+            footer: function(currentPage, pageCount) { return currentPage.toString() + ' of ' + pageCount; },
+//            header: function(currentPage, pageCount, pageSize) {
+//                // you can apply any logic and return any valid pdfmake element
+//
+//                return [
+//                    { text: '送货明细', alignment: (currentPage % 2) ? 'left' : 'right' },
+//                    { canvas: [ { type: 'rect', x: 170, y: 32, w: pageSize.width - 170, h: 40 } ] }
+//                ]
+//            },
             pageSize: 'A4',
             pageOrientation: 'landscape',
             content: [
@@ -1606,7 +1672,7 @@
                         widths: [ 'auto', 'auto','auto','auto', 'auto',
                             'auto','auto', 'auto','auto','auto',
                             'auto','auto','auto','auto'],
-                        headerRows: 2,
+//                        headerRows: 2, 表头重复去掉
                         // keepWithHeaderRows: 1,
                         body: create2()
                     }
