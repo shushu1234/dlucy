@@ -44,50 +44,52 @@ var TableAdvanced = function () {
         });
 
         $('#sample_1').on('click', ' tbody td .row-add', function () {
-            var nTr = $(this).parents('tr')[0];
-            var aData = oTable.fnGetData(nTr);
-            var str=" <tr>"+
-                "<td><a  class=\"btn red btn-del\" style=\"font-size: 10px;padding: 2px 8px;\">删除</a></td>"+
-                "<td>" +
-                aData[5] +
-                "</td>"+
-                "<td>" +
-                aData[6] +
-                "</td>"+
-                "<td>" +
-                aData[7]     +
-                "</td>"+
-                "<td >" +
-                aData[8] +
-                "</td>"+
-                "<td>" +
-                aData[9] +
-                "</td>"+
-                "<td>" +
-                aData[10] +
-                "</td>"+
-                "<td>" +
-                aData[11] +
-                "</td>"+
-                "<td >" +
-                aData[12] +
-                "</td>"+
-                "<td>" +
-                aData[13] +
-                "</td>"+
-                "<td>" +
-                aData[14] +
-                "</td>"+
-                "<td>" +
-                aData[15] +
-                "</td>"+
-                "<td >" +
-                aData[16] +
-                "</td>"+
-                "</tr>";
-            $("#tbody-box").append(str);
-            oTable.fnDeleteRow(nTr);
-
+           if (window.addflag){
+               var nTr = $(this).parents('tr')[0];
+               var aData = oTable.fnGetData(nTr);
+               var str=" <tr>"+
+                   "<td><a  class=\"btn red btn-del\" style=\"font-size: 10px;padding: 2px 8px;\">删除</a></td>"+
+                   "<td>" +
+                   aData[5] +
+                   "</td>"+
+                   "<td>" +
+                   aData[6] +
+                   "</td>"+
+                   "<td>" +
+                   aData[7]     +
+                   "</td>"+
+                   "<td >" +
+                   aData[8] +
+                   "</td>"+
+                   "<td>" +
+                   aData[9] +
+                   "</td>"+
+                   "<td>" +
+                   aData[10] +
+                   "</td>"+
+                   "<td>" +
+                   aData[11] +
+                   "</td>"+
+                   "<td >" +
+                   aData[12] +
+                   "</td>"+
+                   "<td>" +
+                   aData[13] +
+                   "</td>"+
+                   "<td>" +
+                   aData[14] +
+                   "</td>"+
+                   "<td>" +
+                   aData[15] +
+                   "</td>"+
+                   "<td >" +
+                   aData[16] +
+                   "</td>"+
+                   "</tr>";
+               $("#tbody-box").append(str);
+               oTable.fnDeleteRow(nTr);
+               window.addflag=false;
+           }
         });
 
         /*

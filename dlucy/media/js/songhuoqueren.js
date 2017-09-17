@@ -170,25 +170,25 @@ var TableAdvanced = function () {
                         data[i][5] +
                         "</td>"+
                         "                            <td colspan=\"1\" >" +
-                        data[i][6] +
+                        data[i][15] +
                         "</td>"+
                         "                            <td colspan=\"2\">" +
-                        data[i][7] +
+                        data[i][15] +
                         "</td>"+
                         "                            <td colspan=\"1\">" +
-                        data[i][8] +
+                        data[i][15] +
                         "</td>"+
                         "                            <td colspan=\"1\">" +
-                        data[i][9] +
+                        data[i][15] +
                         "</td>"+
                         "                            <td colspan=\"2\">" +
-                        data[i][9] +
+                        data[i][15] +
                         "</td>"+
                         "                            <td colspan=\"1\">" +
-                        data[i][10] +
+                        data[i][15] +
                         "</td>"+
                         "                            <td colspan=\"2\">" +
-                        data[i][11] +
+                        data[i][15] +
                         "</td>"+
                         "                            <td colspan=\"1\"><input type=\"text\" class=\"m-wrap\" data-tabindex=\"1\" style=\"border: none;text-align: center;padding: 0px;\" ></td>"+
                         "                            <td colspan=\"1\"><input type=\"text\" class=\"m-wrap\" data-tabindex=\"1\" style=\"border: none;text-align: center;padding: 0px;\" ></td>"+
