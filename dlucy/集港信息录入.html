@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<!-- HEAD 开始-->
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>船运管理系统</title>
+
+
+    <meta content="" name="description"/>
+
+    <meta content="" name="author"/>
+
+    <!-- 全局样式开始-->
+
+    <link href="media/mycss/core.css" rel="stylesheet" type="text/css"/>
+    <!-- 全局样式结束 -->
+
+    <!-- 本页样式开始 -->
+
+    <link rel="shortcut icon" href="media/image/favicon.ico"/>
+
+    <!-- 本页样式结束 -->
+
+</head>
+
+<!-- HEAD 结束 -->
+
+<!--  BODY 开始-->
+
+<body class="page-header-fixed">
+
+<!--HEADER 开始-->
+
+<div class="header navbar navbar-inverse navbar-fixed-top myheader" >
+
+    <!-- 导航栏开始 -->
+
+    <div class="navbar-inner">
+
+        <div class="container-fluid navbar hor-menu hidden-phone hidden-tablet">
+
+            <div class="navbar hor-menu  hidden-tablet">
+                <div class="navbar-inner">
+                    <ul class="nav">
+
+                        <li class="active">
+
+                            <a href="kehuweituo.html">
+
+                                客户委托
+
+                                <span class="selected"></span>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="jinduchaxun.html">进度查询</a>
+                            
+                            
+                            
+                            
+
+                        </li>
+                        <li>
+
+                            <a href="#">提货方</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">提箱(空/套)</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱进场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱出场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱进场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱预约确认</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱出场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱进港</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱装船</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">到港放货</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">异地配送</a>
+
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 导航栏结束 -->
+</div>
+
+<!--HEADER 结束-->
+
+
+<!--CONTAINER 开始 -->
+
+<div class="page-container row-fluid mycontainer">
+
+    <!-- 页面开始 -->
+
+    <div class="page-content" style="margin-left: 0px">
+
+
+        <div class="container-fluid">
+
+            <!-- 页面内容开始-->
+            <div class="row-fluid">
+
+                <div class="span12">
+
+
+                    <!-- 客户信息开始-->
+
+                    <div class="portlet box blue">
+
+                        <div class="portlet-title" style="margin-top: 50px">
+
+                            <div class="caption"><i class="icon-user"></i>客户信息</div>
+
+                            <div class="tools">
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body form">
+
+                            <!-- 客户信息 FORM 开始-->
+
+                            <form action="#" class="form-horizontal" style="background-color: aliceblue"
+                                  onSubmit="return checkAll()">
+                                <input value="0" id="info-id" type="hidden">
+                                <input value="0" id="info-addtime" type="hidden">
+                                <input value="0" id="info-timestamp" type="hidden">
+                               
+                               
+                                <div class="row-fluid">
+                                    <div class="span8" style="margin-left: 0px;margin-top: 20px;">
+                                        <!-- 业务列表开始　-->
+
+                                        <div class="portlet box blue">
+                                            <div class="portlet box blue"
+                                                 style="overflow-x:auto;overflow-y:hidden;">
+                                                <div class="portlet-title">
+
+                                                    <div class="caption"><i class="icon-list"></i>业务处理</div>
+
+                                                    <div class="tools">
+
+                                                        <a href="javascript:;" class="reload"></a>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="portlet-body"
+                                                     style="background-color: azure ;border-top:1px solid limegreen">
+
+                                                    <table class="table table-striped table-bordered table-hover table-full-width"
+                                                           id="sample_2">
+
+                                                        <thead>
+
+                                                        <tr>
+                                                            <th style="display: none">id</th>
+
+                                                            <th style="display: none">timestamp</th>
+
+                                                            <th class="disabled">箱号</th>
+
+                                                            <th>箱型</th>
+
+                                                            <th>船名航次</th>
+
+                                                            <th>提单号</th>                                               
+
+                                                            <th>铅封号</th>
+
+                                                            <th>进港码头</th>
+
+                                                            <th>操作</th>
+
+                                                            <th style="display: none">提货联系人</th>
+                                                            <th style="display: none">提货地址</th>
+                                                            <th style="display: none">提货联系电话</th>
+                                                            <th style="display: none">收货联系人</th>
+                                                            <th style="display: none">收货地址</th>
+                                                            <th style="display: none">收货联系电话</th>
+                                                            <!--<th min-width="40px">修改</th>-->
+                                                            <!--<th min-width="40px">删除</th>-->
+
+                                                        </tr>
+
+                                                        </thead>
+
+                                                        <tbody id="tablelist0" style="background-color: #ffffff;">
+
+                                                      
+                                                        
+
+
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+                                            </div>
+
+                                            <!-- 业务列表结束-->
+
+
+                                        </div>
+                                    </div>
+                                
+                                    <div class="span3" style="margin-top: 30px;">
+                                        <div class="control-group" id="group-pickdate">
+
+                                            <label class="control-label">交货日期</label>
+
+                                            <div class="controls">
+
+                                                <input class="m-wrap span12 m-ctrl-medium date-picker"
+                                                       id="info-pickdate" readonly
+                                                       size="16" type="text" value="" data-date-format="yyyy-mm-dd"/>
+
+                                            </div>
+
+                                        </div>
+                                        
+                                        
+                                        <div class="control-group" id="group-boxnum">
+                                            <label class="control-label">集港时间段</label>
+                                            <div class="controls">
+                                                <input type="text" class="span6 m-wrap" name="digits" id="info-boxnum"
+                                                       placeholder="起始时间" style="background-color: white;"/>
+                                                <input type="text" class="span6 m-wrap" name="digits" id="info-boxnum"
+                                                       placeholder="末尾时间" style="background-color: white;"/>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                            
+                        
+                                
+                                
+                                
+                                
+                         <!-- 确认提交                                  -->
+                                <div class="form-actions">
+
+                                    <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
+                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                    </button>
+                                    <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
+                                    <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
+                                   
+                                </div>    
+
+                                
+
+                            </form>
+
+                            <!-- 客户信息 FORM 结束-->
+
+                        </div>
+
+                    </div>
+
+                    <!-- 客户信息结束-->
+
+                </div>
+
+            </div>
+
+
+            <div class="row-fluid">
+
+                <div class="span12">
+
+                    <!-- 业务列表开始　-->
+
+                    <div class="portlet box green">
+                        <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
+                        <div class="portlet-title">
+
+                            <div class="caption"><i class="icon-list"></i>未完成业务列表</div>
+
+                            <div class="tools">
+
+                                <a href="javascript:;" class="reload"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body" style="background-color: azure ;">
+
+                            <table class="table table-bordered table-hover table-full-width"
+                                   id="sample_0">
+
+                                <thead>
+
+                                <tr>
+                                    <th style="display: none">id</th>
+
+                                    <th style="display: none">timestamp</th>
+                                    
+                                    <th>操作</th>
+
+                                    <th>箱号</th>
+
+                                    <th>箱型</th>
+
+                                    <th>船名航次</th>
+
+                                    <th>提单号</th>
+
+                                    <th>铅封号</th>
+
+                                    <th>备位号</th>
+
+                                    <th>进港日期</th>
+
+                                    <th>进港码头</th>
+
+                                    <th>开港日期</th>
+
+                                    <th>截关日期</th>
+
+                                    <th>截关时间</th>
+
+                                    <th></th>
+
+                                    <th></th>
+
+
+                                    
+                                
+                                </tr>
+
+                                </thead>
+
+                                <tbody style="background-color:#ffffff;" >
+                                <tr id="abc" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                         <a href="#" class="btn blue mini ">提交</a>
+                                    </td> 
+                                    <td class="">D0133</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+
+                                </tr>
+                                <tr id="ccc" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0134</td>
+                                    <td class="">张三</td>
+                                    <td class="">张三</td>
+                                    <td class="">张三公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0135</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0135</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                </tr>
+
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0135</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                </tr>
+
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0135</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0135</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0135</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0135</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0135</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                </tr>
+
+
+
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 业务列表结束-->
+                    
+                    <div class="portlet box green ">
+                        <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
+                        <div class="portlet-title">
+
+                            <div class="caption"><i class="icon-list"></i>已完成业务列表</div>
+
+                            <div class="tools">
+
+                                <a href="javascript:;" class="reload"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body" style="background-color: azure ;">
+
+                            <table class="table table-bordered table-hover table-full-width"
+                                   id="sample_1">
+
+                                <thead>
+
+                                <tr>
+                                    <th style="display: none">id</th>
+
+                                    <th style="display: none">timestamp</th>
+                                    
+                                    <th>操作</th>
+
+                                    <th>箱号</th>
+
+                                    <th>箱型</th>
+
+                                    <th>船名航次</th>
+
+                                    <th>提单号</th>
+
+                                    <th>铅封号</th>
+
+                                    <th>备位号</th>
+
+                                    <th>进港日期</th>
+
+                                    <th>进港码头</th>
+
+                                    <th>集港日期</th>
+
+                                    <th>起始时间</th>
+
+                                    <th>末尾时间</th>
+
+                                    <th></th>
+
+                                    <th></th>
+
+                                
+                                </tr>
+
+                                </thead>
+
+                                <tbody style="background-color:#ffffff;" class="muted">
+                                <tr id="abc" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0123</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+
+                                </tr>
+                                <tr id="ccc" >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0124</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0125</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0125</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0125</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0125</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0125</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+                                <tr id="bbb">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0125</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                
+               
+
+            </div>
+            
+          
+            
+          
+            <!-- 页面内容结束　-->
+
+        </div>
+
+        <!-- CONTAINER　结束-->
+
+    </div>
+
+    <!-- 页面结束 -->
+    <div id="static3" class="modal hide fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-body">
+
+            <h3 id="user-attention" style="text-align: center"></h3>
+            <input type="hidden" value="0" id="user-attentionflag">
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button type="button" data-dismiss="modal" class="btn">放弃</button>
+
+            <button type="button" data-dismiss="modal" class="btn red" id="btn-delrow">确认</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CONTAINER 结束-->
+
+
+<!--引入 JAVASCRIPTS(将JAVASCRIPT放在页面底部，可以减少页面加载时间) -->
+
+<!--核心插件开始-->
+<script src="media/js/moment.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<!-- IMPORTANT! 在bootstrap.min.js之前加载jquery-ui-1.10.1.custom.min.js以修复与jquery ui工具提示冲突的引导工具提示 -->
+
+<script src="media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.blockui.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.uniform.min.js" type="text/javascript"></script>
+
+<!--核心插件结束-->
+
+<!-- 本页插件开始 -->
+
+<script type="text/javascript" src="media/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="media/js/DT_bootstrap.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="media/js/chosen.jquery.min.js"></script>
+
+<script type="text/javascript" src="media/js/select2.min.js"></script>
+
+<script type="text/javascript" src="media/js/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript" src="media/js/bootstrap-datetimepicker.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.inputmask.bundle.min.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.input-ip-address-control-1.0.min.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.multi-select.js"></script>
+
+<script src="media/js/bootstrap-modal.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+
+
+<!-- 本页插件结束-->
+
+<!-- 本页JS脚本开始 -->
+
+<script src="media/js/app.js"></script>
+<script src="media/js/function.js"></script>
+
+<script src="media/js/jigangxinxiluru.js"></script>
+
+<script src="media/js/form-validation.js"></script>
+<script src="media/js/form-components.js"></script>
+
+<script src="media/js/ui-modals.js"></script>
+
+<script>
+
+    jQuery(document).ready(function () {
+
+        // 初始化布局和插件
+        App.init();
+        FormValidation.init();
+        FormComponents.init();
+        TableAdvanced.init();
+        UIModals.init();
+        var nowTime = new Date();
+        $("#info-pickdate").datepicker('setDate', nowTime);
+        $("#info-recdate").datepicker('setDate', nowTime);
+    });
+
+   
+</script>
+
+<!-- 本页JS脚本结束 -->
+<!-- 引入JAVASCRIPTS结束 -->
+</body>
+
+<!-- BODY 结束-->
+
+</html>

@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12a4b1a3-346e-42d2-bcff-a6430d69dedb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dlucy/media/js/haiyunyunfeitaizhang.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dlucy/media/js/kongxiangpancunchaxun.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dlucy/media/js/kongxiangqueren.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dlucy/media/js/weikuanjiesuanluru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dlucy/tihuofeiyongluru.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dlucy/weikuanjiesuanluru.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dlucy/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dlucy/1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dlucy/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dlucy/json.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dlucy/pdf_ok.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dlucy/chuanbodaogangqueren.html" afterPath="$PROJECT_DIR$/dlucy/chuanbodaogangqueren.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dlucy/media/js/chuanbodaogangqueren.js" afterPath="$PROJECT_DIR$/dlucy/media/js/chuanbodaogangqueren.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dlucy/media/js/songhuojindu.js" afterPath="$PROJECT_DIR$/dlucy/media/js/songhuojindu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dlucy/jinduchaxun.html" afterPath="$PROJECT_DIR$/dlucy/jinduchaxun.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dlucy/media/js/songhuoqueren.js" afterPath="$PROJECT_DIR$/dlucy/media/js/songhuoqueren.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dlucy/songhuojindu.html" afterPath="$PROJECT_DIR$/dlucy/songhuojindu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dlucy/songhuoqueren.html" afterPath="$PROJECT_DIR$/dlucy/songhuoqueren.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,47 +34,104 @@
       <file leaf-file-name="songhuoqueren.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dlucy/songhuoqueren.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3511">
-              <caret line="598" column="0" lean-forward="true" selection-start-line="598" selection-start-column="0" selection-end-line="598" selection-end-column="0" />
+            <state relative-caret-position="114">
+              <caret line="741" column="30" lean-forward="false" selection-start-line="741" selection-start-column="30" selection-end-line="741" selection-end-column="30" />
               <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#27046#28133#0" expanded="false" />
-                <element signature="e#28184#29185#0" expanded="false" />
-                <element signature="e#29865#30692#0" expanded="false" />
-                <element signature="e#30828#31532#0" expanded="false" />
-                <element signature="e#31576#35578#0" expanded="false" />
-                <element signature="e#39685#47288#0" expanded="false" />
-                <element signature="e#39847#43383#0" expanded="false" />
-                <element signature="e#43549#43584#0" expanded="false" />
-                <element signature="e#45478#45711#0" expanded="false" />
-                <element signature="e#45739#46662#0" expanded="false" />
-                <element signature="e#46831#47248#0" expanded="false" />
-                <element signature="e#49466#57069#0" expanded="false" />
-                <element signature="e#49628#53164#0" expanded="false" />
-                <element signature="e#53330#53365#0" expanded="false" />
-                <element signature="e#55259#55492#0" expanded="false" />
-                <element signature="e#55520#56443#0" expanded="false" />
-                <element signature="e#56612#57029#0" expanded="false" />
-                <element signature="e#57071#57104#0" expanded="false" />
-                <element signature="e#57535#57601#0" expanded="false" />
-                <marker date="1505614101342" expanded="true" signature="34766:34798" ph="..." />
-                <marker date="1505614101342" expanded="true" signature="35024:35056" ph="..." />
+                <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1505647542480" expanded="true" signature="34765:34797" ph="..." />
+                <marker date="1505647542480" expanded="true" signature="35023:35055" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chuanbodaogangqueren.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Index-bj.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dlucy/Index-bj.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index-cz.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dlucy/Index-cz.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index-login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dlucy/Index-login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index-yw.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dlucy/Index-yw.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tihuo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dlucy/tihuo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <marker date="1505662056000" expanded="true" signature="44814:44846" ph="..." />
+                <marker date="1505662056000" expanded="true" signature="45072:45104" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="songhuo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dlucy/songhuo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1505662858487" expanded="true" signature="52052:52084" ph="..." />
+                <marker date="1505662858487" expanded="true" signature="52310:52342" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="beiweihaoluru.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dlucy/beiweihaoluru.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="701" column="21" lean-forward="true" selection-start-line="701" selection-start-column="21" selection-end-line="701" selection-end-column="21" />
+              <folding>
+                <marker date="1505488155501" expanded="true" signature="40965:40997" ph="..." />
+                <marker date="1505488155501" expanded="true" signature="41223:41255" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chuanbodaogangqueren.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dlucy/chuanbodaogangqueren.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="751">
-              <caret line="913" column="27" lean-forward="false" selection-start-line="913" selection-start-column="27" selection-end-line="913" selection-end-column="27" />
+            <state relative-caret-position="316">
+              <caret line="898" column="0" lean-forward="true" selection-start-line="898" selection-start-column="0" selection-end-line="898" selection-end-column="0" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <marker date="1505614534293" expanded="true" signature="40796:40828" ph="..." />
                 <marker date="1505614534293" expanded="true" signature="41054:41086" ph="..." />
               </folding>
@@ -73,57 +139,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chuanbodaogangqueren.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dlucy/media/js/chuanbodaogangqueren.js">
+      <file leaf-file-name="songhuoqueren.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dlucy/media/js/songhuoqueren.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state relative-caret-position="4640">
+              <caret line="160" column="44" lean-forward="false" selection-start-line="160" selection-start-column="44" selection-end-line="160" selection-end-column="44" />
               <folding>
-                <element signature="e#1738#3192#0" expanded="false" />
-                <element signature="e#3348#4331#0" expanded="false" />
-                <element signature="e#5017#5545#0" expanded="false" />
-                <marker date="1505614602855" expanded="true" signature="1059:1092" ph="..." />
-                <marker date="1505614602855" expanded="true" signature="1935:1968" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="songhuojindu.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dlucy/songhuojindu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="887" column="51" lean-forward="true" selection-start-line="887" selection-start-column="51" selection-end-line="887" selection-end-column="51" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1505614653003" expanded="true" signature="41295:41327" ph="..." />
-                <marker date="1505614653003" expanded="true" signature="41553:41585" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="songhuojindu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dlucy/media/js/songhuojindu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="167" column="36" lean-forward="false" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="36" />
-              <folding>
-                <marker date="1505614696145" expanded="true" signature="1059:1092" ph="..." />
-                <marker date="1505614696145" expanded="true" signature="4375:4408" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="json.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dlucy/json.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#7051#9050#0" expanded="false" />
+                <marker date="1505647542464" expanded="true" signature="1106:1139" ph="..." />
+                <marker date="1505647542464" expanded="true" signature="3766:3865" ph="..." />
+                <marker date="1505647542464" expanded="true" signature="4048:4083" ph="..." />
+                <marker date="1505647542464" expanded="true" signature="6624:6640" ph="..." />
+                <marker date="1505647542464" expanded="true" signature="6739:6773" ph="..." />
+                <marker date="1505647542464" expanded="true" signature="6870:6904" ph="..." />
+                <marker date="1505647542464" expanded="true" signature="8678:8723" ph="..." />
+                <marker date="1505647542464" expanded="true" signature="8872:8917" ph="..." />
               </folding>
             </state>
           </provider>
@@ -159,6 +189,9 @@
       <find>dataTables</find>
       <find>overflow</find>
       <find>printtable</find>
+      <find>881px</find>
+      <find>进空车号</find>
+      <find>55</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,12 +203,23 @@
         <option value="$PROJECT_DIR$/dlucy/table_advanced.html" />
         <option value="$PROJECT_DIR$/dlucy/media/mycss/kehuweituo.css" />
         <option value="$PROJECT_DIR$/temp.html" />
-        <option value="$PROJECT_DIR$/dlucy/media/js/songhuoqueren.js" />
-        <option value="$PROJECT_DIR$/dlucy/songhuoqueren.html" />
         <option value="$PROJECT_DIR$/dlucy/chuanbodaogangqueren.html" />
         <option value="$PROJECT_DIR$/dlucy/media/js/chuanbodaogangqueren.js" />
         <option value="$PROJECT_DIR$/dlucy/songhuojindu.html" />
         <option value="$PROJECT_DIR$/dlucy/media/js/songhuojindu.js" />
+        <option value="$PROJECT_DIR$/dlucy/kongxiangjinchang.html" />
+        <option value="$PROJECT_DIR$/dlucy/media/js/tihuojinchangluru.js" />
+        <option value="$PROJECT_DIR$/dlucy/media/js/jigangxinxiluru.js" />
+        <option value="$PROJECT_DIR$/dlucy/集港信息录入.html" />
+        <option value="$PROJECT_DIR$/dlucy/tihuofeiyongluru.html" />
+        <option value="$PROJECT_DIR$/dlucy/weikuanjiesuanluru.html" />
+        <option value="$PROJECT_DIR$/dlucy/media/js/weikuanjiesuanluru.js" />
+        <option value="$PROJECT_DIR$/dlucy/media/js/kongxiangpancunchaxun.js" />
+        <option value="$PROJECT_DIR$/dlucy/dingcangluru.html" />
+        <option value="$PROJECT_DIR$/dlucy/jinduchaxun.html" />
+        <option value="$PROJECT_DIR$/dlucy/songhuoqueren.html" />
+        <option value="$PROJECT_DIR$/dlucy/media/js/songhuoqueren.js" />
+        <option value="$PROJECT_DIR$/dlucy/songhuo.html" />
       </list>
     </option>
   </component>
@@ -214,6 +258,9 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -229,6 +276,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,8 +294,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,6 +306,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MyFile\05 MyProjects\dlucy\dlucy\dlucy\media\js" />
+      <recent name="C:\MyFile\05 MyProjects\dlucy\dlucy\dlucy" />
       <recent name="E:\dlucy\dlucy\media\js" />
     </key>
   </component>
@@ -274,20 +323,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.songhuojindu.html">
+  <component name="RunManager" selected="JavaScript Debug.chuanbodaogangqueren.html">
+    <configuration name="Index-yw.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dlucy/dlucy/Index-yw.html" />
+    <configuration name="集港信息录入.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dlucy/dlucy/集港信息录入.html" />
+    <configuration name="集港信息录入.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dlucy/dlucy/集港信息录入.html" />
+    <configuration name="beiweihaoluru.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dlucy/dlucy/beiweihaoluru.html" />
     <configuration name="chuanbodaogangqueren.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dlucy/dlucy/chuanbodaogangqueren.html" />
-    <configuration name="songhuojindu.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dlucy/dlucy/songhuojindu.html" />
-    <configuration name="songhuoqueren.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dlucy/dlucy/songhuoqueren.html" />
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.songhuoqueren.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.chuanbodaogangqueren.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.songhuojindu.html" />
+    <configuration name="songhuo.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dlucy/dlucy/songhuo.html" />
+    <configuration name="tihuo.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dlucy/dlucy/tihuo.html" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Index-yw.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.tihuo.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.songhuo.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.beiweihaoluru.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.chuanbodaogangqueren.html" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.songhuojindu.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.chuanbodaogangqueren.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.songhuoqueren.html" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.chuanbodaogangqueren.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.beiweihaoluru.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.songhuo.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.tihuo.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.Index-yw.html" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +367,10 @@
       <workItem from="1505571415114" duration="800000" />
       <workItem from="1505573683005" duration="8766000" />
       <workItem from="1505582568529" duration="22000" />
-      <workItem from="1505613413661" duration="1309000" />
+      <workItem from="1505613413661" duration="8813000" />
+      <workItem from="1505628739038" duration="1784000" />
+      <workItem from="1505646178261" duration="1628000" />
+      <workItem from="1505662692489" duration="543000" />
     </task>
     <task id="LOCAL-00001" summary="修改完后重置表单...">
       <created>1503459002101</created>
@@ -323,19 +383,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22357000" />
+    <option name="totallyTimeSpent" value="33816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="-9" width="1938" height="1058" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29475984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29475984" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -362,142 +421,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dlucy/media/mycss/kehuweituo.css" />
-    <entry file="file://$PROJECT_DIR$/dlucy/table_advanced.html" />
-    <entry file="file://$PROJECT_DIR$/dlucy/media/js/moment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dlucy.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/table_advanced.html" />
-    <entry file="file://$PROJECT_DIR$/dlucy/media/js/moment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dlucy.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/table_advanced.html" />
-    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/tianrenjie.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dlucy.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/tianrenjie.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dlucy.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/table_advanced.html" />
-    <entry file="file://$PROJECT_DIR$/dlucy/media/js/jquery.validate.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dlucy/media/js/jquery.cookie.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -513,7 +436,7 @@
         <state relative-caret-position="173">
           <caret line="719" column="48" lean-forward="false" selection-start-line="719" selection-start-column="38" selection-end-line="719" selection-end-column="48" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -531,7 +454,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -600,170 +523,268 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/jinduchaxun.html">
+    <entry file="file://$PROJECT_DIR$/dlucy/2.html" />
+    <entry file="file://$PROJECT_DIR$/temp.html" />
+    <entry file="file://$PROJECT_DIR$/dlucy/1.js" />
+    <entry file="file://$PROJECT_DIR$/dlucy/media/js/chuanbodaogangqueren.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="102">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/json.html" />
+    <entry file="file://$PROJECT_DIR$/dlucy/media/js/haiyunyunfeitaizhang.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8439">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/dingdanluru.html">
+    <entry file="file://$PROJECT_DIR$/dlucy/media/js/songhuojindu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="2977">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/zhongxiangzhuangchuan.html">
+    <entry file="file://$PROJECT_DIR$/dlucy/media/js/jigangxinxiluru.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/media/js/tihuojinchangluru.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="79" column="36" lean-forward="true" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/media/js/weikuanjiesuanluru.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="175" column="27" lean-forward="false" selection-start-line="175" selection-start-column="27" selection-end-line="175" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/media/js/kongxiangpancunchaxun.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="109" column="30" lean-forward="false" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/dingcangluru.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="707" column="30" lean-forward="true" selection-start-line="707" selection-start-column="30" selection-end-line="707" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/dingdanluru.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/2.html">
+    <entry file="file://$PROJECT_DIR$/dlucy/haiyunyunfeitaizhang.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="1082" column="35" lean-forward="false" selection-start-line="1082" selection-start-column="35" selection-end-line="1082" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.html">
+    <entry file="file://$PROJECT_DIR$/dlucy/jinduchaxun.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2900">
-          <caret line="172" column="0" lean-forward="false" selection-start-line="172" selection-start-column="0" selection-end-line="176" selection-end-column="18" />
-          <folding>
-            <element signature="n#tbody#0;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#9;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#10;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#9;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#10;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#7;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#7;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="802">
+          <caret line="677" column="0" lean-forward="true" selection-start-line="677" selection-start-column="0" selection-end-line="677" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/1.js">
+    <entry file="file://$PROJECT_DIR$/dlucy/kongxiangjinchang.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="122" column="5" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="122" selection-end-column="5" />
+        <state relative-caret-position="346">
+          <caret line="311" column="0" lean-forward="true" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/kongxiangpancunchaxun.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="1030" column="22" lean-forward="true" selection-start-line="1030" selection-start-column="22" selection-end-line="1030" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/kongxiangqueren.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/songhuojindu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="879" column="0" lean-forward="true" selection-start-line="879" selection-start-column="0" selection-end-line="879" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/tihuofeiyongluru.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="406" column="11" lean-forward="false" selection-start-line="406" selection-start-column="11" selection-end-line="406" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/weikuanjiesuanluru.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="275" column="0" lean-forward="true" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/zhongxiangzhuangchuan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/zxjgqr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/zxjgxxlr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/提货进场录入.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="552" column="0" lean-forward="true" selection-start-line="552" selection-start-column="0" selection-end-line="552" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/集港信息录入.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="690" column="23" lean-forward="true" selection-start-line="690" selection-start-column="23" selection-end-line="690" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dlucy/media/js/songhuoqueren.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="178" column="17" lean-forward="true" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
+        <state relative-caret-position="4640">
+          <caret line="160" column="44" lean-forward="false" selection-start-line="160" selection-start-column="44" selection-end-line="160" selection-end-column="44" />
           <folding>
-            <marker date="1505613859386" expanded="true" signature="1106:1139" ph="..." />
-            <marker date="1505613859386" expanded="true" signature="3763:3862" ph="..." />
-            <marker date="1505613859386" expanded="true" signature="4045:4080" ph="..." />
-            <marker date="1505613859386" expanded="true" signature="6621:6637" ph="..." />
-            <marker date="1505613859386" expanded="true" signature="6736:6770" ph="..." />
-            <marker date="1505613859386" expanded="true" signature="6867:6901" ph="..." />
-            <marker date="1505613859386" expanded="true" signature="8675:8720" ph="..." />
-            <marker date="1505613859386" expanded="true" signature="8869:8914" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/json.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#7051#9050#0" expanded="false" />
+            <marker date="1505647542464" expanded="true" signature="1106:1139" ph="..." />
+            <marker date="1505647542464" expanded="true" signature="3766:3865" ph="..." />
+            <marker date="1505647542464" expanded="true" signature="4048:4083" ph="..." />
+            <marker date="1505647542464" expanded="true" signature="6624:6640" ph="..." />
+            <marker date="1505647542464" expanded="true" signature="6739:6773" ph="..." />
+            <marker date="1505647542464" expanded="true" signature="6870:6904" ph="..." />
+            <marker date="1505647542464" expanded="true" signature="8678:8723" ph="..." />
+            <marker date="1505647542464" expanded="true" signature="8872:8917" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dlucy/songhuoqueren.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3511">
-          <caret line="598" column="0" lean-forward="true" selection-start-line="598" selection-start-column="0" selection-end-line="598" selection-end-column="0" />
+        <state relative-caret-position="114">
+          <caret line="741" column="30" lean-forward="false" selection-start-line="741" selection-start-column="30" selection-end-line="741" selection-end-column="30" />
           <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#27046#28133#0" expanded="false" />
-            <element signature="e#28184#29185#0" expanded="false" />
-            <element signature="e#29865#30692#0" expanded="false" />
-            <element signature="e#30828#31532#0" expanded="false" />
-            <element signature="e#31576#35578#0" expanded="false" />
-            <element signature="e#39685#47288#0" expanded="false" />
-            <element signature="e#39847#43383#0" expanded="false" />
-            <element signature="e#43549#43584#0" expanded="false" />
-            <element signature="e#45478#45711#0" expanded="false" />
-            <element signature="e#45739#46662#0" expanded="false" />
-            <element signature="e#46831#47248#0" expanded="false" />
-            <element signature="e#49466#57069#0" expanded="false" />
-            <element signature="e#49628#53164#0" expanded="false" />
-            <element signature="e#53330#53365#0" expanded="false" />
-            <element signature="e#55259#55492#0" expanded="false" />
-            <element signature="e#55520#56443#0" expanded="false" />
-            <element signature="e#56612#57029#0" expanded="false" />
-            <element signature="e#57071#57104#0" expanded="false" />
-            <element signature="e#57535#57601#0" expanded="false" />
-            <marker date="1505614101342" expanded="true" signature="34766:34798" ph="..." />
-            <marker date="1505614101342" expanded="true" signature="35024:35056" ph="..." />
+            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1505647542480" expanded="true" signature="34765:34797" ph="..." />
+            <marker date="1505647542480" expanded="true" signature="35023:35055" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/Index-bj.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/Index-cz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/Index-login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/Index-yw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/tihuo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1505662056000" expanded="true" signature="44814:44846" ph="..." />
+            <marker date="1505662056000" expanded="true" signature="45072:45104" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/songhuo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1505662858487" expanded="true" signature="52052:52084" ph="..." />
+            <marker date="1505662858487" expanded="true" signature="52310:52342" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dlucy/beiweihaoluru.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="701" column="21" lean-forward="true" selection-start-line="701" selection-start-column="21" selection-end-line="701" selection-end-column="21" />
+          <folding>
+            <marker date="1505488155501" expanded="true" signature="40965:40997" ph="..." />
+            <marker date="1505488155501" expanded="true" signature="41223:41255" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dlucy/chuanbodaogangqueren.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="913" column="27" lean-forward="false" selection-start-line="913" selection-start-column="27" selection-end-line="913" selection-end-column="27" />
+        <state relative-caret-position="316">
+          <caret line="898" column="0" lean-forward="true" selection-start-line="898" selection-start-column="0" selection-end-line="898" selection-end-column="0" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <marker date="1505614534293" expanded="true" signature="40796:40828" ph="..." />
             <marker date="1505614534293" expanded="true" signature="41054:41086" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/media/js/chuanbodaogangqueren.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding>
-            <element signature="e#1738#3192#0" expanded="false" />
-            <element signature="e#3348#4331#0" expanded="false" />
-            <element signature="e#5017#5545#0" expanded="false" />
-            <marker date="1505614602855" expanded="true" signature="1059:1092" ph="..." />
-            <marker date="1505614602855" expanded="true" signature="1935:1968" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/media/js/songhuojindu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="167" column="36" lean-forward="false" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="36" />
-          <folding>
-            <marker date="1505614696145" expanded="true" signature="1059:1092" ph="..." />
-            <marker date="1505614696145" expanded="true" signature="4375:4408" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dlucy/songhuojindu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="887" column="51" lean-forward="true" selection-start-line="887" selection-start-column="51" selection-end-line="887" selection-end-column="51" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1505614653003" expanded="true" signature="41295:41327" ph="..." />
-            <marker date="1505614653003" expanded="true" signature="41553:41585" ph="..." />
           </folding>
         </state>
       </provider>

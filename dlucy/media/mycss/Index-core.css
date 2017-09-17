@@ -1,0 +1,136 @@
+
+img, div, header, footer, p, ul, li, body{
+	
+	margin: 0px;
+	padding: 0px;
+}
+
+a{
+
+	text-decoration: none;
+}
+
+.index-hight{
+	/*使内部div能按照百分比分布*/
+	height: 100%;
+}
+
+.index-style{
+	
+	width: 100%;	
+}
+
+#index-hd{
+	
+	background: rgb(0, 176, 240);
+	height: 30%;
+	text-align: center;
+	line-height: 3.8;
+}
+
+#index-hd-span{
+	font-size: 80px;
+	color: yellow;
+	font-family: "隶书";
+}
+
+#index-main{
+	
+	height: 70%;
+}
+
+#index-meau{
+	
+	height:65%;
+	background: rgb(0, 220, 240);
+	text-align: center;
+}
+/*业务人员的菜单栏*/
+.index-yw-meau-li{
+	/*float:left;*/
+	display:inline-block;
+	list-style: none;
+	
+		
+	width: 175px;
+	height: 75px;
+	border: 2px solid rgb(68, 114, 196);
+	background: rgb(91, 128, 203);
+	
+	line-height: 75px;
+	text-align: center;	
+	font-size: 20px;
+	font-family: "楷体";
+	font-weight: bold;
+	color:white;
+	
+	margin: 12% 6%;
+}
+/*海运操作平台的菜单栏*/
+.index-cz-meau-li{
+	/*float:left;*/
+	display:inline-block;
+	list-style: none;
+	
+	width: 175px;
+	height: 75px;
+	border: 2px solid rgb(68, 114, 196);
+	background: rgb(91, 128, 203);
+	
+	line-height: 75px;
+	text-align: center;	
+	font-size: 20px;
+	font-family: "楷体";
+	font-weight: bold;
+	color:white;
+	
+	margin: 6% 2%;
+}
+/*北京调度平台的菜单栏*/
+.index-bj-meau-li{
+	/*float:left;*/
+	display:inline-block;
+	list-style: none;
+	
+	width: 175px;
+	height: 75px;
+	border: 2px solid rgb(68, 114, 196);
+	background: rgb(91, 128, 203);
+	
+	line-height: 75px;
+	text-align: center;	
+	font-size: 20px;
+	font-family: "楷体";
+	font-weight: bold;
+	color:white;
+	
+	margin: 6% 0%;
+}
+#index-meau-ul-li3{
+	background: none;
+	border: none;
+}
+/*第一行与第二行之间的间隔*/
+#index-meau ul:nth-child(1) li{
+	margin-bottom: 3%;
+}
+.index-cz-meau-li:hover, .index-yw-meau-li:hover, .index-bj-meau-li:hover{
+	border: 2px solid rgba(68, 114, 196, 0.9);
+	background: rgba(91, 128, 203, 0.6);
+	//color: black;
+}
+
+
+#index-ft{
+	
+	height: 35%;
+	background: rgb(0, 200, 255);
+	text-align: center;
+	line-height: 5;
+}
+
+#index-ft-span{
+	font-size: 50px;
+	color: rgb(255, 192, 0);
+	font-family: "华文行楷";
+}
