@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<!--外来车辆加油费用录入-->
+<!--冯江惠-->
+
+<html lang="en">
+
+<!-- HEAD 开始-->
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>船运管理系统</title>
+
+
+    <meta content="" name="description"/>
+
+    <meta content="" name="author"/>
+
+    <!-- 全局样式开始-->
+
+    <link href="media/mycss/core.css" rel="stylesheet" type="text/css"/>
+    <!-- 全局样式结束 -->
+
+    <!-- 本页样式开始 -->
+
+    <link rel="shortcut icon" href="media/image/favicon.ico"/>
+
+    <!-- 本页样式结束 -->
+
+
+</head>
+
+<!-- HEAD 结束 -->
+
+<!--  BODY 开始-->
+
+<body class="page-header-fixed">
+
+<!--HEADER 开始-->
+
+<div class="header navbar navbar-inverse navbar-fixed-top myheader">
+
+    <!-- 导航栏开始 -->
+
+    <div class="navbar-inner">
+
+        <div class="container-fluid navbar hor-menu hidden-phone hidden-tablet">
+
+            <div class="navbar hor-menu  hidden-tablet">
+                <div class="navbar-inner">
+                    <ul class="nav">
+
+                        <li>
+
+                            <a href="kehuweituo.html">
+
+                                客户委托
+
+
+                            </a>
+
+                        </li>
+
+                        <li class="active">
+
+                            <a href="jinduchaxun.html">外来车辆加油费用录入
+
+                                <span class="selected"></span>
+                            </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">进度查询</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">提箱(空/套)</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">重箱进场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱预约确认</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱出场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱进港</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱装船</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">到港放货</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">异地配送</a>
+
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 导航栏结束 -->
+</div>
+
+<!--HEADER 结束-->
+
+
+<!--CONTAINER 开始 -->
+
+<div class="page-container row-fluid mycontainer">
+
+    <!-- 页面开始 -->
+
+    <div class="page-content" style="margin-left: 0px">
+
+
+        <div class="container-fluid">
+
+            <!-- 页面内容开始-->
+            <div class="row-fluid">
+
+                <div class="span12">
+
+
+                    <!-- 客户信息开始-->
+
+                    <div class="portlet box blue">
+
+                        <div class="portlet-title" style="margin-top: 50px">
+
+                            <div class="caption"><i class="icon-money"></i>输入金额</div>
+
+                            <div class="tools">
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body form">
+
+                            <!-- 客户信息 FORM 开始-->
+
+                            <form action="#" class="form-horizontal" style="background-color: aliceblue"
+                                  onSubmit="return checkAll()">
+                                <input value="0" id="info-id" type="hidden">
+                                <input value="0" id="info-addtime" type="hidden">
+                                <input value="0" id="info-timestamp" type="hidden">
+                                <div class="row-fluid">
+                                    <div class="span1"></div>
+                                    <div class="span4">
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">车号</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                       style="margin: 0 auto;" readonly
+                                                       data-provide="typeahead" data-items="4" placeholder="下面列表点击生成"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="span1"></div>
+                                    <div class="span4">
+                                        <div class="control-group" id="group-clientname">
+
+                                            <label class="control-label" id="label-clientname">加油金额</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="info-clientname" class="span12 m-wrap"
+                                                       style="margin: 0 auto;"
+                                                       data-provide="typeahead" data-items="4" placeholder="输入以查找"
+                                                       data-source="[&quot;大连&quot;,&quot;xx大连&quot;,&quot;xx大连&quot;,&quot;北京xxxx&quot;,&quot;xxx北京x&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="span2"></div>
+
+                                </div>
+
+
+                                <div class="form-actions">
+
+                                    <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
+                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                    </button>
+                                    <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
+                                    <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
+                                    <div id="static" class="modal hide fade" tabindex="-1">
+
+                                        <div class="modal-body">
+
+                                            <p>请确认信息:</p>
+                                            <table>
+                                                <tr>
+                                                    <td id="td-order"></td>
+                                                    <td></td>
+                                                    <td id="td-boxnum"></td>
+
+                                                    <td id="td-boxtype"></td>
+
+                                                    <td id="td-goodsname"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td-clientname"></td>
+                                                    <td></td>
+                                                    <td id="td-port"></td>
+
+                                                    <td id="td-tradetype"></td>
+
+                                                    <td id="td-billcycle"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5">==================提货信息==================</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td-pickaddr" colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td-pickdate" colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td-pickperson" colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td-picktel" colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">==================收货信息==================</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td-recaddr" colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td-recdate" colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td-recperson" colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td-rectel" colspan="5"></td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" data-dismiss="modal" class="btn" id="btn-return">
+                                                返回修改
+                                            </button>
+                                            <button class="btn green" data-toggle="modal" href="#static2"
+                                                    id="btn-submit" onclick="checkAll()">继续提交
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    <div id="static2" class="modal hide fade" tabindex="-1">
+
+                                        <div class="modal-body">
+
+                                            <h3 id="info-attention" style="text-align: center"></h3>
+
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" data-dismiss="modal" class="btn green">确认</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <!-- 客户信息 FORM 结束-->
+
+                        </div>
+
+                    </div>
+
+                    <!-- 客户信息结束-->
+
+                </div>
+
+            </div>
+
+
+            <div class="row-fluid">
+
+                <div class="span12">
+
+                    <!-- 业务列表开始　-->
+
+                    <div class="portlet box green">
+                        <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
+                        <div class="portlet-title">
+
+                            <div class="caption"><i class="icon-list"></i>业务列表</div>
+
+                            <div class="tools">
+
+                                <a href="javascript:;" class="reload"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body" style="background-color: azure ;">
+
+                            <table class="table table-striped table-bordered table-hover table-full-width"
+                                   id="sample_1">
+
+                                <thead>
+
+                                <tr>
+                                    <th style="display: none">id</th>
+
+                                    <th style="display: none">timestamp</th>
+
+                                    <th>指令号</th>
+
+                                    <th>客户</th>
+
+                                    <th>接单人</th>
+
+                                    <th>船公司名称</th>
+
+                                    <th>箱号</th>
+
+
+                                    <th>箱型</th>
+
+                                    <th>船名航次</th>
+
+                                    <th>提单号</th>
+
+                                    <th>铅封号</th>
+
+                                    <th>备位号</th>
+
+
+                                    <th>进场日期</th>
+
+                                    <th>进港码头</th>
+
+                                    <th>集港日期</th>
+
+                                    <th>入港时间段</th>
+
+                                    <th>加油金额</th>
+
+                                </tr>
+
+                                </thead>
+
+                                <tbody id="tablelist" style="background-color: #ffffff;">
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd statusok">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd statusok">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd statusok">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd statusok">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                <tr class="odd statusok">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">李四</td>
+                                    <td class="">来巍</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">DFIU2221235</td>
+
+                                    <td class="">20GP</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">12346</td>
+                                    <td class="">B010203</td>
+
+                                    <td class="">2017/8/29</td>
+                                    <td class="">国际码头</td>
+                                    <td class="">2017/9/3</td>
+                                    <td class="">8:00-12:00</td>
+                                    <td class="">-</td>
+
+
+                                </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 业务列表结束-->
+
+
+                </div>
+
+            </div>
+
+            <!-- 页面内容结束　-->
+
+        </div>
+
+        <!-- CONTAINER　结束-->
+
+    </div>
+
+    <!-- 页面结束 -->
+    <div id="static3" class="modal hide fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-body">
+
+            <h3 id="user-attention" style="text-align: center"></h3>
+            <input type="hidden" value="0" id="user-attentionflag">
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button type="button" data-dismiss="modal" class="btn">放弃</button>
+
+            <button type="button" data-dismiss="modal" class="btn red" id="btn-delrow">确认</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CONTAINER 结束-->
+
+
+<!--引入 JAVASCRIPTS(将JAVASCRIPT放在页面底部，可以减少页面加载时间) -->
+
+<!--核心插件开始-->
+<script src="media/js/moment.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<!-- IMPORTANT! 在bootstrap.min.js之前加载jquery-ui-1.10.1.custom.min.js以修复与jquery ui工具提示冲突的引导工具提示 -->
+
+<script src="media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.blockui.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.uniform.min.js" type="text/javascript"></script>
+
+<!--核心插件结束-->
+
+<!-- 本页插件开始 -->
+
+<script type="text/javascript" src="media/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="media/js/DT_bootstrap.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="media/js/chosen.jquery.min.js"></script>
+
+<script type="text/javascript" src="media/js/select2.min.js"></script>
+
+<script type="text/javascript" src="media/js/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript" src="media/js/bootstrap-datetimepicker.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.inputmask.bundle.min.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.input-ip-address-control-1.0.min.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.multi-select.js"></script>
+
+<script src="media/js/bootstrap-modal.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+
+
+<!-- 本页插件结束-->
+
+<!-- 本页JS脚本开始 -->
+
+<script src="media/js/app.js"></script>
+
+<script src="media/js/wlcljyfylr.js"></script>
+
+<script src="media/js/form-validation.js"></script>
+<script src="media/js/form-components.js"></script>
+
+<script src="media/js/ui-modals.js"></script>
+
+<script>
+
+    jQuery(document).ready(function () {
+
+        // 初始化布局和插件
+
+        App.init();
+
+        FormValidation.init();
+        FormComponents.init();
+        TableAdvanced.init();
+        UIModals.init();
+        var nowTime = new Date();
+        $("#info-pickdate").datepicker('setDate', nowTime);
+        $("#info-recdate").datepicker('setDate', nowTime);
+    });
+
+    var info_order;
+    var info_boxnum;
+    var info_boxtype;
+    var info_goodsname;
+
+    var info_clientname;
+    var info_port;
+    var info_tradetype;
+    var info_billcycle;
+
+    var info_pickdate;
+    var info_pickaddr;
+    var info_pickperson;
+    var info_picktel;
+
+    var info_recdate;
+    var info_recaddr;
+    var info_recperson;
+    var info_rectel;
+
+    /*获得客户信息*/
+    function getInfoData() {
+        info_order = $("#info-order").val();
+        info_boxnum = $("#info-boxnum").val();
+        info_boxtype = $("#info-boxtype").find("option:selected").text();
+        info_goodsname = $("#info-goodsname").find("option:selected").text();
+
+        info_clientname = $("#info-clientname").val();
+        info_port = $("#info-port").find("option:selected").text();
+        info_tradetype = $("#info-tradetype").find("option:selected").text();
+        info_billcycle = $("#info-billcycle").find("option:selected").text();
+
+        info_pickdate = $("#info-pickdate").val();
+        info_pickaddr = $("#info-pickaddr").find("option:selected").text();
+        info_pickperson = $("#info-pickperson").find("option:selected").text();
+        info_picktel = $("#info-picktel").find("option:selected").text();
+
+        info_recdate = $("#info-recdate").val();
+        info_recaddr = $("#info-recaddr").find("option:selected").text();
+        info_recperson = $("#info-recperson").find("option:selected").text();
+        info_rectel = $("#info-rectel").find("option:selected").text();
+    }
+
+    /*客户信息模态框初始化信息*/
+    function modalConfirm() {
+        getInfoData();
+        $("#td-order").text("指令号: " + info_order);
+        $("#td-boxnum").text("   箱量: " + info_boxnum);
+        $("#td-boxtype").text("   箱型: " + info_boxtype);
+        $("#td-goodsname").text("   品名: " + info_goodsname);
+
+        $("#td-clientname").text("   客户名称: " + info_clientname);
+        $("#td-port").text("   目的港: " + info_port);
+        $("#td-tradetype").text("   贸易方式: " + info_tradetype);
+        $("#td-billcycle").text("   结算周期: " + info_billcycle);
+
+        $("#td-pickdate").text("   提货时间:  " + info_pickdate);
+        $("#td-pickaddr").text("   提货地址:  " + info_pickaddr);
+        $("#td-pickperson").text("   提货联系人:  " + info_pickperson);
+        $("#td-picktel").text("   提货联系人电话:  " + info_picktel);
+
+        $("#td-recdate").text("   收货时间:  " + info_recdate);
+        $("#td-recaddr").text("   收货地址:  " + info_recaddr);
+        $("#td-recperson").text("   收货联系人:  " + info_recperson);
+        $("#td-rectel").text("   收货联系人电话:  " + info_rectel);
+
+    }
+
+    //    数字输入检查
+    function isNum(str) {
+        if (str != null && str != "") {
+            return !isNaN(str);
+        }
+        return false;
+    }
+
+    //输入框检查
+    function checkInput(str) {
+        if (str == null || str == "") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //    下拉框检查
+    function checkSelect(str) {
+        if (str == "请选择...") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //    获得当前时间的时间戳
+    function getTimeStamp() {
+        var timestamp = new Date().getTime();
+        return timestamp;
+    }
+
+    //获得当前时间　yyyy-mm-dd hh:mm:ss
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = "-";
+        var seperator2 = ":";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        if (minutes >= 0 && minutes <= 9) {
+            minutes = "0" + minutes;
+        }
+        if (seconds >= 0 && seconds <= 9) {
+            seconds = "0" + seconds;
+        }
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+            + " " + date.getHours() + seperator2 + minutes
+            + seperator2 + seconds;
+        return currentdate;
+    }
+
+    //    重置输入框
+    function resetAll() {
+        $("#btn-reset").click();
+    }
+
+    //    重新刷新表格数据
+    function reloadData(theData) {
+
+        if (theData[9] == 0) {
+            theData[9] = getNowFormatDate();
+            theData[22] = "<td class=\"myhidden sorting_1\">" + getTimeStamp() + "</td>";
+        }
+        $('#sample_1').dataTable().fnAddData(theData);
+
+        resetAll();
+
+        $("form select").each(function (index, item) {
+            $(item).find('option').each(function () {
+                $(this).removeAttrs('selected');
+            });
+        });
+
+        $('.chzn-container-single span').html('请选择...');
+
+        $("#info-attention").text("添加成功:)");
+        var nowTime = new Date();
+        $("#info-pickdate").datepicker('setDate', nowTime);
+        $("#info-recdate").datepicker('setDate', nowTime);
+    }
+
+    //   客户信息检查入口
+    function checkAll() {
+        var ev = arguments[0] || window.event;
+        var info_id = $("#info-id").val();
+        var info_addtime = $("#info-addtime").val();
+        var info_timestamp = $("#info-timestamp").val();
+
+        getInfoData();
+        $('#static').modal('hide')
+
+        var check = true;
+
+        if (!checkInput(info_order)) {
+            $("#group-order").addClass("error");
+            check = false;
+        }
+
+        if (!isNum(info_boxnum)) {
+            $("#group-boxnum").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_boxtype)) {
+            $("#group-boxtype").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_goodsname)) {
+            $("#group-goodsname").addClass("error");
+            check = false;
+        }
+
+        if (!checkInput(info_clientname)) {
+            $("#group-clientname").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_port)) {
+            $("#group-port").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_tradetype)) {
+            $("#group-tradetype").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_billcycle)) {
+            $("#group-billcycle").addClass("error");
+            check = false;
+        }
+
+        if (!checkInput(info_pickdate)) {
+            $("#group-pickdate").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_pickaddr)) {
+            $("#group-pickaddr").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_pickperson)) {
+            $("#group-pickperson").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_picktel)) {
+            $("#group-picktel").addClass("error");
+            check = false;
+        }
+
+        if (!checkInput(info_recdate)) {
+            $("#group-recdate").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_recaddr)) {
+            $("#group-recaddr").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_recperson)) {
+            $("#group-recperson").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_rectel)) {
+            $("#group-rectel").addClass("error");
+            check = false;
+        }
+
+
+        if (!check) {
+//            alert("请检查...");
+            $("#info-attention").text("请检查红色区域:(");
+//            resetAll();
+        } else {
+            var theData = [
+                "<span class=\"row-details row-details-close\"></span>",
+                info_pickaddr, info_pickdate, info_pickperson, info_picktel,
+                info_recaddr, info_recdate, info_recperson, info_rectel,
+                info_addtime,
+                info_order, info_goodsname, info_clientname,
+                info_boxtype, info_boxnum, info_pickperson, info_recperson,
+                info_recdate, info_port, info_billcycle, info_tradetype, info_id,
+                "<td class=\"myhidden sorting_1\">" + info_timestamp + "</td>",
+                "<a class=\"btn blue row-edit\" href=\"#\"  style=\"font-size:10px;padding: 0px 5px;\">" +
+                "                                            <i class=\"icon-edit \"></i>" +
+                "修改" +
+                "</a>",
+                "<a class=\"btn red row-delete\" href=\"#\" alt=\"删除\" style=\"font-size:10px;padding: 0px 5px;\">" +
+                "                                            <i class=\"icon-trash \"></i>" +
+                "删除" +
+                "</a>"
+            ];
+
+            //        var theTable = $('#sample_1').dataTable();
+            //        theTable.fnClearTable();
+            //        alert(1);
+//            $('#sample_1').dataTable().fnAddData(theData);
+//            alert("添加成功");
+//            resetAll();
+            reloadData(theData);
+            check = true;
+        }
+
+
+        return false;
+
+    }
+
+    //    以下为客户信息状态转换产生的事件
+    $("#info-order").change(function () {
+        $("#group-order").removeClass("error");
+    });
+    $("#info-boxnum").change(function () {
+        $("#group-boxnum").removeClass("error");
+    });
+    $("#info-boxtype").change(function () {
+        $("#group-boxtype").removeClass("error");
+    });
+    $("#info-goodsname").change(function () {
+        $("#group-goodsname").removeClass("error");
+    });
+
+    $("#info-clientname").change(function () {
+        $("#group-clientname").removeClass("error");
+
+    });
+    $("#info-clientname").mouseleave($.post("#", {}, function (data) {
+        data = {"addrinfo": [{"id": 1, "name": "大连"}, {"id": 2, "name": "北京"}]};
+        var addrlist = data.addrinfo;
+        var str;
+        $.each(addrlist, function (n, addr) {
+            str += "<option value=\"" +
+                addr.id +
+                "\">" +
+                addr.name +
+                "</option>";
+        })
+        $("#info-pickaddr").append(str);
+        $("#info-recaddr").append(str);
+    }));
+    $("#info-port").change(function () {
+        $("#group-port").removeClass("error");
+    });
+    $("#info-tradetype").change(function () {
+        $("#group-tradetype").removeClass("error");
+    });
+    $("#info-billcycle").change(function () {
+        $("#group-billcycle").removeClass("error");
+    });
+
+    $("#info-pickdate").change(function () {
+        $("#group-pickdate").removeClass("error");
+    });
+    $("#info-pickaddr").change(function () {
+        $("#group-pickaddr").removeClass("error");
+    });
+    $("#info-pickaddr").mouseleave($.post("#", {}, function (data) {
+        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var personlist = data.personinfo;
+        var str;
+        $.each(personlist, function (n, person) {
+            str += "<option value=\"" +
+                person.id +
+                "\">" +
+                person.name +
+                "</option>";
+        })
+        $("#info-pickperson").append(str);
+    }));
+    $("#info-pickperson").change(function () {
+        $("#group-pickperson").removeClass("error");
+    });
+    $("#info-pickperson").mouseleave($.post("#", {}, function (data) {
+        data = {"telinfo": [{"id": 1, "name": "12345678"}, {"id": 2, "name": "987654321"}]};
+        var tellist = data.telinfo;
+        var str;
+        $.each(tellist, function (n, tel) {
+            str += "<option value=\"" +
+                tel.id +
+                "\">" +
+                tel.name +
+                "</option>";
+        })
+        $("#info-picktel").append(str);
+    }));
+    $("#info-picktel").change(function () {
+        $("#group-picktel").removeClass("error");
+    });
+
+    $("#info-recdate").change(function () {
+        $("#group-recdate").removeClass("error");
+    });
+    $("#info-recaddr").change(function () {
+        $("#group-recaddr").removeClass("error");
+    });
+    $("#info-recaddr").mouseleave($.post("#", {}, function (data) {
+        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var personlist = data.personinfo;
+        var str;
+        $.each(personlist, function (n, person) {
+            str += "<option value=\"" +
+                person.id +
+                "\">" +
+                person.name +
+                "</option>";
+        })
+        $("#info-recperson").append(str);
+    }));
+    $("#info-recperson").change(function () {
+        $("#group-recperson").removeClass("error");
+    });
+    //
+    $("#info-recperson").mouseleave($.post("#", {}, function (data) {
+        data = {"telinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var tellist = data.telinfo;
+        var str;
+        $.each(tellist, function (n, tel) {
+            str += "<option value=\"" +
+                tel.id +
+                "\">" +
+                tel.name +
+                "</option>";
+        })
+        $("#info-rectel").append(str);
+    }));
+    $("#info-rectel").change(function () {
+        $("#group-rectel").removeClass("error");
+    });
+</script>
+
+<!-- 本页JS脚本结束 -->
+<!-- 引入JAVASCRIPTS结束 -->
+</body>
+
+<!-- BODY 结束-->
+
+</html>

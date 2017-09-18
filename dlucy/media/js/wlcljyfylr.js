@@ -55,11 +55,9 @@ var TableAdvanced = function () {
                 null,
                 null,
                 null,
-                null,
-                null,
 
-                null,
-
+                // null,
+                // null,
 
             ],
             "aoColumnDefs": [
@@ -73,7 +71,7 @@ var TableAdvanced = function () {
             // set the initial value
             "iDisplayLength": 10,
             // "sScrollX": "100%",
-            "sScrollY": "300px",
+            "sScrollY": "300",
             "bScrollCollapse": true,
             bFilter: false,
 
