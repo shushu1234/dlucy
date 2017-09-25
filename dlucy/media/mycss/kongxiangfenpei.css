@@ -1,0 +1,21 @@
+.table1{
+	/*width: 30%;*/
+	border-collapse:separate;
+ 	 border-spacing:20px 20px;
+}
+
+.table1 td{
+	
+	text-align: center;
+}
+
+.table1 input{
+	width: 85px;	
+	/*height: 11px;*/
+	/*font-size: 12px;*/
+}
+
+.table1 span{
+	/*font-size: 12px;*/
+}
+

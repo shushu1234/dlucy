@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<!-- HEAD 开始-->
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>船运管理系统</title>
+
+
+    <meta content="" name="description"/>
+
+    <meta content="" name="author"/>
+
+    <!-- 全局样式开始-->
+
+    <link href="media/mycss/core.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="media/mycss/tihuofangshiqueding.css"/>
+    <!-- 全局样式结束 -->
+
+    <!-- 本页样式开始 -->
+
+    <link rel="shortcut icon" href="media/image/favicon.ico"/>
+
+    <!-- 本页样式结束 -->
+
+
+</head>
+
+<!-- HEAD 结束 -->
+
+<!--  BODY 开始-->
+
+<body class="page-header-fixed">
+
+<!--HEADER 开始-->
+
+<div class="header navbar navbar-inverse navbar-fixed-top myheader">
+
+    <!-- 导航栏开始 -->
+
+    <div class="navbar-inner">
+
+        <div class="container-fluid navbar hor-menu hidden-phone hidden-tablet">
+
+            <div class="navbar hor-menu  hidden-tablet">
+                <div class="navbar-inner">
+                    <ul class="nav">
+
+
+
+                        <li class="active">
+
+                            <a href="tihuofangshiqueding.html">
+                                提货方式确定
+                                <span class="selected"></span>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="kongxiangfenpei.html">空箱分配</a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 导航栏结束 -->
+</div>
+
+<!--HEADER 结束-->
+
+
+<!--CONTAINER 开始 -->
+
+<div class="page-container row-fluid mycontainer">
+
+    <!-- 页面开始 -->
+
+    <div class="page-content" style="margin-left: 0px;">
+
+
+        <div class="container-fluid">
+
+            <!-- 页面内容开始-->
+            <div class="row-fluid">
+
+                <div class="span12">
+
+                    <div style="margin-top: 50px;width: 100%;"></div>
+                    <!-- 客户信息开始-->
+
+                    <div class="portlet box blue" style="width: 40%;display: inline-block;">
+
+
+                        <div class="portlet-title" style="margin-top: 0px;">
+
+                            <div class="caption"><i class="icon-user"></i>客户信息</div>
+
+                            <div class="tools">
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body form">
+
+                            <!-- 客户信息 FORM 开始-->
+
+                            <form action="#" class="form-horizontal"style="background-color: aliceblue"
+                                  onSubmit="return checkAll()">
+                                <input value="0" id="info-id" type="hidden">
+                                <input value="0" id="info-addtime" type="hidden">
+                                <input value="0" id="info-timestamp" type="hidden">
+
+
+                                <div class="row-fluid" style="padding-bottom: 55px">
+
+                                    <table class = "table1 span12" id = "printTableOne">
+
+                                        <tr>
+                                            <td class = "table-jx">
+                                                <label class="span6" >指令号:<input id = "printTableOne00" type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span6">客户名称:<input id = "printTableOne01"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class = "table-jx">
+                                                <label class="span4">　箱号:<input id = "printTableOne10"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span4">　铅封号:<input id = "printTableOne11"type="text" placeholder="下面列表点击生成"style="width: 120px"disabled/></label>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class = "table-jx">
+                                                <label class="span4">承运商:<input id = "printTableOne20"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span4">　　车号:<input id = "printTableOne21"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="portlet box blue"style="width: 58%;display: inline-block;float: right;">
+
+                        <div class="portlet-title" style="margin-top: 0px;">
+
+                            <div class="caption"><i class="icon-user"></i>提/送货方式确认</div>
+
+                            <div class="tools">
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body form">
+
+                            <!-- 客户信息 FORM 开始-->
+
+                            <form action="#" class="form-horizontal"style="background-color: aliceblue"
+                                  onSubmit="return checkAll()">
+                                <input value="0" id="info-id" type="hidden">
+                                <input value="0" id="info-addtime" type="hidden">
+                                <input value="0" id="info-timestamp" type="hidden">
+
+
+                                <div class="row-fluid">
+
+                                    <table class="table1 span12">
+                                        <tr>
+                                            <td class = "table-jx">
+                                                　
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="" style="padding-left: 0px;font-size: 20px;">天&nbsp;&nbsp;&nbsp;&nbsp;津</label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class=""style="padding-left: 0px;font-size: 20px;">北&nbsp;&nbsp;&nbsp;&nbsp;京</label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class=""style="padding-left: 0px;font-size: 20px;" >张家口</label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class=""style="padding-left: 0px;font-size: 20px;" >专项操作</label>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class = "table-jx">
+                                                数量
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span3"><input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span3"><input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span3"><input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span3"><input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class = "table-jx">
+                                                费率
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span3"><input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span3"><input type="text" placeholder="手工录入"style="width: 120px" /></label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span3"><input type="text" placeholder="手工录入"style="width: 120px" /></label>
+                                            </td>
+                                            <td class = "table-jx">
+                                                <label class="span3"><input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+
+                                </div>
+
+
+                                <div class="form-actions" style="position: relative">
+
+                                    <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
+                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                    </button>
+                                    <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
+                                    <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
+
+                                    <div id="static2" class="modal hide fade" tabindex="-1">
+
+                                        <div class="modal-body">
+
+                                            <h3 id="info-attention" style="text-align: center"></h3>
+
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" data-dismiss="modal" class="btn green">确认</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="row-fluid">
+
+                        <div class="span12" style="position: relative">
+
+
+                            <!-- 业务列表开始　-->
+                            <!--第一行-->
+                            <div class="portlet box green span12" style="position: relative;">
+
+                                <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
+                                <div class="portlet-title">
+
+
+                                    <div class="caption"><i class="icon-list"></i>订单清单</div>
+
+                                    <div class="tools">
+
+                                        <a href="javascript:;" class="reload"></a>
+
+                                    </div>
+
+                                </div>
+
+                                <div style="position:absolute;top:48px;">
+                                    <label style="font-size: 16px; margin-left:300px;">指令号: <input type="text" placeholder="请输入以查找" style="height: 20px;padding: 6px;"/>
+                                        <!--<span style="font-size: 20px;">海运承运商: <input type="text" placeholder="请输入以查找" style="height: 20px;padding: 6px;""/></span>-->
+                                        <input type="button" value="搜索" style="background: rgb(75, 141, 248); color: white;height: 34px;padding: 6px; margin-bottom: 14px"/></label>
+                                </div>
+
+                                <div class="portlet-body" style="background-color: azure ;">
+
+
+                                    <table class="table table-striped table-bordered table-hover table-full-width"
+                                           id="sample_1">
+
+                                        <thead>
+
+                                        <tr>
+                                            <th style="display: none">id</th>
+
+                                            <th style="display: none">timestamp</th>
+
+                                            <th>指令号</th>
+
+                                            <th>客户名称</th>
+
+                                            <th>品名</th>
+
+                                            <th>箱型</th>
+
+                                            <th>箱量</th>
+
+                                            <th>目的港</th>
+
+                                            <th>交货日期</th>
+
+                                            <th>贸易方式</th>
+
+                                            <th>贸易类型</th>
+
+                                            <th>承运商</th>
+
+                                            <th>开航日期</th>
+
+                                            <th>订舱状态</th>
+
+                                            <th>提/送货地址</th>
+
+                                            <th>提/送货联系人</th>
+
+                                            <th>提/送货联系电话</th>
+
+                                            <th>提/送货状态</th>
+
+                                        </tr>
+
+                                        </thead>
+
+                                        <tbody id="tablelist0" style="background-color: #ffffff;">
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                        </tr>
+
+
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!--<第二行>-->
+                            <div class="portlet box green" style="position: relative;">
+
+                                <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
+                                <div class="portlet-title">
+
+
+                                    <div class="caption"><i class="icon-list"></i>订单清单</div>
+
+                                    <div class="tools">
+
+                                        <a href="javascript:;" class="reload"></a>
+
+                                    </div>
+
+                                </div>
+                                <!--
+
+                                                                <div style="position:absolute;top:48px;">
+                                                                    <span style="font-size: 20px; margin-left:550px;">指令号: <input type="text" placeholder="请输入以查找" style="height: 20px;padding: 6px;"/></span>
+                                                                    &lt;!&ndash;<span style="font-size: 20px;">海运承运商: <input type="text" placeholder="请输入以查找" style="height: 20px;padding: 6px;""/></span>&ndash;&gt;
+                                                                    <input type="button" value="搜索" style="background: rgb(75, 141, 248); color: white;height: 34px;padding: 6px; margin-bottom: 14px"/>
+                                                                </div>
+                                -->
+
+                                <div class="portlet-body" style="background-color: azure ;">
+
+
+                                    <table class="table table-striped table-bordered table-hover table-full-width"
+                                           id="sample_0">
+
+                                        <thead>
+
+                                        <tr>
+                                            <th style="display: none">id</th>
+
+                                            <th style="display: none">timestamp</th>
+
+                                            <th>指令号</th>
+
+                                            <th>客户名称</th>
+
+                                            <th>品名</th>
+
+                                            <th>箱型</th>
+
+                                            <th>箱量</th>
+
+                                            <th>空箱箱量</th>
+
+                                            <th>承运商</th>
+
+                                            <th>船名航次</th>
+
+                                            <th>提单号</th>
+
+                                            <th>提货地址</th>
+
+                                            <th>提货联系人</th>
+
+                                            <th>天津箱量</th>
+
+                                            <th>北京箱量</th>
+
+                                            <th>张家口箱量</th>
+
+                                            <th>堆场4箱量</th>
+
+                                            <th>空箱分配</th>
+
+                                        </tr>
+
+                                        </thead>
+
+                                        <tbody id="tablelist" style="background-color: #ffffff;">
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+
+                                        </tr>
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+
+
+                                        </tr>
+
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+
+
+                                        </tr>
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+
+
+                                        </tr>
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+
+
+                                        </tr>
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+
+
+                                        </tr>
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+
+
+                                        </tr>
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+
+
+                                        </tr>
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+                                        </tr>
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+                                        </tr>
+                                        <tr class="odd statusok">
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+                                        </tr>
+                                        <tr class="odd statusok" >
+                                            <td style="display: none">1</td>
+                                            <td style="display: none">1</td>
+                                            <td class="">D001</td>
+                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">20GP</td>
+                                            <td class="">30</td>
+                                            <td class="">牛身份和健身房奶</td>
+                                            <td class="">黄埔</td>
+                                            <td class="">门到天津港</td>
+                                            <td class="">天津</td>
+                                            <td class="">30</td>
+                                            <td class="">信丰海运</td>
+                                            <td class="">20GP</td>
+                                            <td class="">TEMU1234567</td>
+                                            <td class="">A0101010</td>
+                                            <td class="">9月20日</td>
+                                            <td class="">空箱进场</td>
+                                            <td class="">无限制</td>
+                                        </tr>
+
+
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                            <!-- 业务列表结束-->
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- 页面内容结束　-->
+
+            </div>
+
+            <!-- CONTAINER　结束-->
+
+        </div>
+    </div>
+
+
+    <!-- 页面结束 -->
+    <div id="static3" class="modal hide fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-body">
+
+            <h3 id="user-attention" style="text-align: center"></h3>
+            <input type="hidden" value="0" id="user-attentionflag">
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button type="button" data-dismiss="modal" class="btn">放弃</button>
+
+            <button type="button" data-dismiss="modal" class="btn red" id="btn-delrow">确认</button>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="printmodal" class="modal hide fade container" tabindex="-1" style="overflow: scroll;height: 450px;" >
+
+        <div class="modal-body" id="printcontent" style="width:1250px;">
+
+
+            <!-- BEGIN BORDERED TABLE PORTLET-->
+
+            <div class="portlet box " >
+
+                <div class="portlet-body">
+
+                    <table class="table table-bordered table-hover" id="printtable">
+
+
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!-- END BORDERED TABLE PORTLET-->
+
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button type="button" data-dismiss="modal" class="btn" id="btn-return">
+                返回
+            </button>
+            <button type="button" data-dismiss="modal" class="btn" onclick="down()" id="Export">
+                导出
+            </button>
+            <button type="button" data-dismiss="modal" class="btn" onclick="print()" id="Print">
+                打印
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CONTAINER 结束-->
+
+
+<!--引入 JAVASCRIPTS(将JAVASCRIPT放在页面底部，可以减少页面加载时间) -->
+
+<!--核心插件开始-->
+<script src="media/js/moment.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<!-- IMPORTANT! 在bootstrap.min.js之前加载jquery-ui-1.10.1.custom.min.js以修复与jquery ui工具提示冲突的引导工具提示 -->
+
+<script src="media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.blockui.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.uniform.min.js" type="text/javascript"></script>
+
+<!--核心插件结束-->
+
+<!-- 本页插件开始 -->
+
+<script type="text/javascript" src="media/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="media/js/DT_bootstrap.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="media/js/chosen.jquery.min.js"></script>
+
+<script type="text/javascript" src="media/js/select2.min.js"></script>
+
+<script type="text/javascript" src="media/js/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript" src="media/js/bootstrap-datetimepicker.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.inputmask.bundle.min.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.input-ip-address-control-1.0.min.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.multi-select.js"></script>
+
+<script src="media/js/bootstrap-modal.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+
+
+<!-- 本页插件结束-->
+
+<!-- 本页JS脚本开始 -->
+
+<script src="media/js/app.js"></script>
+
+<script src="media/js/tihuofangshiqueding.js"></script>
+
+<script src="media/js/form-validation.js"></script>
+<script src="media/js/form-components.js"></script>
+
+<script src="media/js/ui-modals.js"></script>
+
+<script>
+
+    jQuery(document).ready(function () {
+
+        // 初始化布局和插件
+
+        App.init();
+
+        FormValidation.init();
+        FormComponents.init();
+        TableAdvanced.init();
+        UIModals.init();
+        var nowTime = new Date();
+        $("#info-pickdate").datepicker('setDate', nowTime);
+        $("#info-recdate").datepicker('setDate', nowTime);
+    });
+
+    var info_order;
+    var info_boxnum;
+    var info_boxtype;
+    var info_goodsname;
+
+    var info_clientname;
+    var info_port;
+    var info_tradetype;
+    var info_billcycle;
+
+    var info_pickdate;
+    var info_pickaddr;
+    var info_pickperson;
+    var info_picktel;
+
+    var info_recdate;
+    var info_recaddr;
+    var info_recperson;
+    var info_rectel;
+
+    /*获得客户信息*/
+    function getInfoData() {
+        info_order = $("#info-order").val();
+        info_boxnum = $("#info-boxnum").val();
+        info_boxtype = $("#info-boxtype").find("option:selected").text();
+        info_goodsname = $("#info-goodsname").find("option:selected").text();
+
+        info_clientname = $("#info-clientname").val();
+        info_port = $("#info-port").find("option:selected").text();
+        info_tradetype = $("#info-tradetype").find("option:selected").text();
+        info_billcycle = $("#info-billcycle").find("option:selected").text();
+
+        info_pickdate = $("#info-pickdate").val();
+        info_pickaddr = $("#info-pickaddr").find("option:selected").text();
+        info_pickperson = $("#info-pickperson").find("option:selected").text();
+        info_picktel = $("#info-picktel").find("option:selected").text();
+
+        info_recdate = $("#info-recdate").val();
+        info_recaddr = $("#info-recaddr").find("option:selected").text();
+        info_recperson = $("#info-recperson").find("option:selected").text();
+        info_rectel = $("#info-rectel").find("option:selected").text();
+    }
+
+    /*客户信息模态框初始化信息*/
+    function modalConfirm() {
+        getInfoData();
+        $("#td-order").text("指令号: " + info_order);
+        $("#td-boxnum").text("   箱量: " + info_boxnum);
+        $("#td-boxtype").text("   箱型: " + info_boxtype);
+        $("#td-goodsname").text("   品名: " + info_goodsname);
+
+        $("#td-clientname").text("   客户名称: " + info_clientname);
+        $("#td-port").text("   目的港: " + info_port);
+        $("#td-tradetype").text("   贸易方式: " + info_tradetype);
+        $("#td-billcycle").text("   结算周期: " + info_billcycle);
+
+        $("#td-pickdate").text("   提货时间:  " + info_pickdate);
+        $("#td-pickaddr").text("   提货地址:  " + info_pickaddr);
+        $("#td-pickperson").text("   提货联系人:  " + info_pickperson);
+        $("#td-picktel").text("   提货联系人电话:  " + info_picktel);
+
+        $("#td-recdate").text("   收货时间:  " + info_recdate);
+        $("#td-recaddr").text("   收货地址:  " + info_recaddr);
+        $("#td-recperson").text("   收货联系人:  " + info_recperson);
+        $("#td-rectel").text("   收货联系人电话:  " + info_rectel);
+
+    }
+
+    //    数字输入检查
+    function isNum(str) {
+        if (str != null && str != "") {
+            return !isNaN(str);
+        }
+        return false;
+    }
+    //输入框检查
+    function checkInput(str) {
+        if (str == null || str == "") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    //    下拉框检查
+    function checkSelect(str) {
+        if (str == "请选择...") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //    获得当前时间的时间戳
+    function getTimeStamp() {
+        var timestamp = new Date().getTime();
+        return timestamp;
+    }
+    //获得当前时间　yyyy-mm-dd hh:mm:ss
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = "-";
+        var seperator2 = ":";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        if (minutes >= 0 && minutes <= 9) {
+            minutes = "0" + minutes;
+        }
+        if (seconds >= 0 && seconds <= 9) {
+            seconds = "0" + seconds;
+        }
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+            + " " + date.getHours() + seperator2 + minutes
+            + seperator2 + seconds;
+        return currentdate;
+    }
+
+    //    重置输入框
+    function resetAll() {
+        $("#btn-reset").click();
+    }
+
+    //    重新刷新表格数据
+    function reloadData(theData) {
+
+        if (theData[9] == 0) {
+            theData[9] = getNowFormatDate();
+            theData[22] = "<td class=\"myhidden sorting_1\">" + getTimeStamp() + "</td>";
+        }
+        $('#sample_1').dataTable().fnAddData(theData);
+
+        resetAll();
+
+        $("form select").each(function (index, item) {
+            $(item).find('option').each(function () {
+                $(this).removeAttrs('selected');
+            });
+        });
+
+        $('.chzn-container-single span').html('请选择...');
+
+        $("#info-attention").text("添加成功:)");
+        var nowTime = new Date();
+        $("#info-pickdate").datepicker('setDate', nowTime);
+        $("#info-recdate").datepicker('setDate', nowTime);
+    }
+
+    //   客户信息检查入口
+    function checkAll() {
+        var ev = arguments[0] || window.event;
+        var info_id = $("#info-id").val();
+        var info_addtime = $("#info-addtime").val();
+        var info_timestamp = $("#info-timestamp").val();
+
+        getInfoData();
+        $('#static').modal('hide')
+
+        var check = true;
+
+        if (!checkInput(info_order)) {
+            $("#group-order").addClass("error");
+            check = false;
+        }
+
+        if (!isNum(info_boxnum)) {
+            $("#group-boxnum").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_boxtype)) {
+            $("#group-boxtype").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_goodsname)) {
+            $("#group-goodsname").addClass("error");
+            check = false;
+        }
+
+        if (!checkInput(info_clientname)) {
+            $("#group-clientname").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_port)) {
+            $("#group-port").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_tradetype)) {
+            $("#group-tradetype").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_billcycle)) {
+            $("#group-billcycle").addClass("error");
+            check = false;
+        }
+
+        if (!checkInput(info_pickdate)) {
+            $("#group-pickdate").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_pickaddr)) {
+            $("#group-pickaddr").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_pickperson)) {
+            $("#group-pickperson").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_picktel)) {
+            $("#group-picktel").addClass("error");
+            check = false;
+        }
+
+        if (!checkInput(info_recdate)) {
+            $("#group-recdate").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_recaddr)) {
+            $("#group-recaddr").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_recperson)) {
+            $("#group-recperson").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(info_rectel)) {
+            $("#group-rectel").addClass("error");
+            check = false;
+        }
+
+
+        if (!check) {
+//            alert("请检查...");
+            $("#info-attention").text("请检查红色区域:(");
+//            resetAll();
+        } else {
+            var theData = [
+                "<span class=\"row-details row-details-close\"></span>",
+                info_pickaddr, info_pickdate, info_pickperson, info_picktel,
+                info_recaddr, info_recdate, info_recperson, info_rectel,
+                info_addtime,
+                info_order, info_goodsname, info_clientname,
+                info_boxtype, info_boxnum, info_pickperson, info_recperson,
+                info_recdate, info_port, info_billcycle, info_tradetype, info_id,
+                "<td class=\"myhidden sorting_1\">" + info_timestamp + "</td>",
+                "<a class=\"btn blue row-edit\" href=\"#\"  style=\"font-size:10px;padding: 0px 5px;\">" +
+                "                                            <i class=\"icon-edit \"></i>" +
+                "修改" +
+                "</a>",
+                "<a class=\"btn red row-delete\" href=\"#\" alt=\"删除\" style=\"font-size:10px;padding: 0px 5px;\">" +
+                "                                            <i class=\"icon-trash \"></i>" +
+                "删除" +
+                "</a>"
+            ];
+
+            //        var theTable = $('#sample_1').dataTable();
+            //        theTable.fnClearTable();
+            //        alert(1);
+//            $('#sample_1').dataTable().fnAddData(theData);
+//            alert("添加成功");
+//            resetAll();
+            reloadData(theData);
+            check = true;
+        }
+
+
+        return false;
+
+    }
+
+    //    以下为客户信息状态转换产生的事件
+    $("#info-order").change(function () {
+        $("#group-order").removeClass("error");
+    });
+    $("#info-boxnum").change(function () {
+        $("#group-boxnum").removeClass("error");
+    });
+    $("#info-boxtype").change(function () {
+        $("#group-boxtype").removeClass("error");
+    });
+    $("#info-goodsname").change(function () {
+        $("#group-goodsname").removeClass("error");
+    });
+
+    $("#info-clientname").change(function () {
+        $("#group-clientname").removeClass("error");
+
+    });
+    $("#info-clientname").mouseleave($.post("#", {}, function (data) {
+        data = {"addrinfo": [{"id": 1, "name": "大连"}, {"id": 2, "name": "北京"}]};
+        var addrlist = data.addrinfo;
+        var str;
+        $.each(addrlist, function (n, addr) {
+            str += "<option value=\"" +
+                addr.id +
+                "\">" +
+                addr.name +
+                "</option>";
+        })
+        $("#info-pickaddr").append(str);
+        $("#info-recaddr").append(str);
+    }));
+    $("#info-port").change(function () {
+        $("#group-port").removeClass("error");
+    });
+    $("#info-tradetype").change(function () {
+        $("#group-tradetype").removeClass("error");
+    });
+    $("#info-billcycle").change(function () {
+        $("#group-billcycle").removeClass("error");
+    });
+
+    $("#info-pickdate").change(function () {
+        $("#group-pickdate").removeClass("error");
+    });
+    $("#info-pickaddr").change(function () {
+        $("#group-pickaddr").removeClass("error");
+    });
+    $("#info-pickaddr").mouseleave($.post("#", {}, function (data) {
+        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var personlist = data.personinfo;
+        var str;
+        $.each(personlist, function (n, person) {
+            str += "<option value=\"" +
+                person.id +
+                "\">" +
+                person.name +
+                "</option>";
+        })
+        $("#info-pickperson").append(str);
+    }));
+    $("#info-pickperson").change(function () {
+        $("#group-pickperson").removeClass("error");
+    });
+    $("#info-pickperson").mouseleave($.post("#", {}, function (data) {
+        data = {"telinfo": [{"id": 1, "name": "12345678"}, {"id": 2, "name": "987654321"}]};
+        var tellist = data.telinfo;
+        var str;
+        $.each(tellist, function (n, tel) {
+            str += "<option value=\"" +
+                tel.id +
+                "\">" +
+                tel.name +
+                "</option>";
+        })
+        $("#info-picktel").append(str);
+    }));
+    $("#info-picktel").change(function () {
+        $("#group-picktel").removeClass("error");
+    });
+
+    $("#info-recdate").change(function () {
+        $("#group-recdate").removeClass("error");
+    });
+    $("#info-recaddr").change(function () {
+        $("#group-recaddr").removeClass("error");
+    });
+    $("#info-recaddr").mouseleave($.post("#", {}, function (data) {
+        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var personlist = data.personinfo;
+        var str;
+        $.each(personlist, function (n, person) {
+            str += "<option value=\"" +
+                person.id +
+                "\">" +
+                person.name +
+                "</option>";
+        })
+        $("#info-recperson").append(str);
+    }));
+    $("#info-recperson").change(function () {
+        $("#group-recperson").removeClass("error");
+    });
+    //
+    $("#info-recperson").mouseleave($.post("#", {}, function (data) {
+        data = {"telinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var tellist = data.telinfo;
+        var str;
+        $.each(tellist, function (n, tel) {
+            str += "<option value=\"" +
+                tel.id +
+                "\">" +
+                tel.name +
+                "</option>";
+        })
+        $("#info-rectel").append(str);
+    }));
+    $("#info-rectel").change(function () {
+        $("#group-rectel").removeClass("error");
+    });
+
+    function down() {
+        function create2() {
+
+            var data1=new Array();
+
+            var mytable = document.getElementById("printtable");
+            for(var j=0,rows=window.operarow; j<rows; j++){
+
+                var temp=new Object();
+                var data=new Array();
+                var i=j+5;
+                temp.text=mytable.rows[i].cells[0].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[0]=JSON.parse(JSON.stringify(temp));
+                console.log(data[0]);
+
+                temp.text=mytable.rows[i].cells[1].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[1]=JSON.parse(JSON.stringify(temp));
+                console.log(data[1]);
+
+                temp.text=mytable.rows[i].cells[2].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[2]=JSON.parse(JSON.stringify(temp));
+                console.log(data[2]);
+
+
+                temp.text=mytable.rows[i].cells[3].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[3]=JSON.parse(JSON.stringify(temp));
+                console.log(data[3]);
+
+                temp={};
+                data[4]=JSON.parse(JSON.stringify(temp));
+                console.log(data[4]);
+
+
+                temp.text=mytable.rows[i].cells[4].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[5]=JSON.parse(JSON.stringify(temp));
+                console.log(data[5]);
+
+
+                temp.text=mytable.rows[i].cells[5].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[6]=JSON.parse(JSON.stringify(temp));
+                console.log(data[6]);
+
+                temp.text=mytable.rows[i].cells[6].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[7]=JSON.parse(JSON.stringify(temp));
+                console.log(data[7]);
+
+
+                temp={};
+                data[8]=JSON.parse(JSON.stringify(temp));
+                console.log(data[8]);
+
+                temp.text=mytable.rows[i].cells[7].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[9]=JSON.parse(JSON.stringify(temp));
+                console.log(data[9]);
+
+
+                temp.text=mytable.rows[i].cells[8].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[10]=JSON.parse(JSON.stringify(temp));
+                console.log(data[10]);
+
+
+                temp={};
+                data[11]=JSON.parse(JSON.stringify(temp));
+                console.log(data[11]);
+
+                var tdArr = $("#printtr").children();
+                temp.text=tdArr.eq(i).find('td').eq(9).find('input').val();
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[12]=JSON.parse(JSON.stringify(temp));
+                console.log(data[12]);
+
+
+                var tdArr = $("#printtr").children();
+                temp.text=tdArr.eq(i).find('td').eq(10).find('input').val();
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[13]=JSON.parse(JSON.stringify(temp));
+                console.log(data[13]);
+
+                console.log(data);
+                data1[j]=data;
+            }
+
+            console.log(data1);
+
+            var infoto=$("#info-to").find("option:selected").text();
+            var rowdata=[];
+            rowdata.push( [{text: '天津市胜腾货运有限公司', style: 'tableHeader', colSpan: 14, alignment: 'center'},
+                {},{},{},{},{},
+                {},{},{},{},{},
+                {},{},{}]);
+            rowdata.push([{text: '送货明细',  colSpan: 14, alignment: 'center'},
+                {},{},{},{},{},
+                {},{},{},{},{},
+                {},{},{}]);
+            rowdata.push([{text: 'TO:',  colSpan: 2, alignment: 'center'},
+                {},
+                {text: infoto,colSpan: 5, alignment: 'center'},
+                {},{},{},{},
+                {text: '走船时间:',  colSpan: 2, alignment: 'center'},
+                {},
+                {text: '2017-9-11',  colSpan: 5, alignment: 'center'},
+                {},{},{},{},
+
+            ]);
+            rowdata.push([{text: 'FM:',  colSpan: 2, alignment: 'center'},
+                {},
+                {text: '天津胜腾',  colSpan: 12, alignment: 'center'},
+                {},{},{},{},{},
+                {},{},{},{},{},
+                {}
+            ]);
+            rowdata.push([{text: '预计到港日',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '指令号',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '船名航次',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '运单号',  colSpan: 2, alignment: 'center',noWrap: true},
+                {},
+
+                {text: '箱号',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '封号',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '收货地址',  colSpan: 2, alignment: 'center',noWrap: true},
+                {},
+                {text: '联系人',  colSpan: 1, alignment: 'center',noWrap: true},
+
+                {text: '联系电话',  colSpan: 2, alignment: 'center',noWrap: true},
+                {},
+                {text: '拖车费(元)',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '备注',  colSpan: 1, alignment: 'center',noWrap: true},
+            ]);
+            for (var i=0;i<data1.length;i++){
+
+                rowdata.push(data1[i]);
+            }
+            rowdata.push([{text: '服务电话:022-59853734',  colSpan: 5, alignment: 'left',border: [true, true, false, true],},
+                {},{},{},{},
+                {text: '传真:022-66175318',  colSpan: 5, alignment: 'left',border: [false, true, false, true],},
+                {},{},{},{},
+                {text: '制单日期:2017-9-11',  colSpan: 4, alignment: 'right',border: [false, true, true, true],},
+                {},{},{},
+
+
+            ]);
+            return rowdata;
+        };
+        var dd = {
+            footer: function(currentPage, pageCount) { return currentPage.toString() + ' of ' + pageCount; },
+
+            pageSize: 'A4',
+            pageOrientation: 'landscape',
+            content: [
+
+                {
+                    style: 'tableExample',
+                    color: '#000',
+                    table: {
+                        widths: [ 'auto', 'auto','auto','auto', 'auto',
+                            'auto','auto', 'auto','auto','auto',
+                            'auto','auto','auto','auto'],
+
+                        body:create2()
+                    }
+                },
+
+            ],
+            styles: {
+                header: {
+                    fontSize: 18,
+                    margin: [0, 0, 0, 10]
+                },
+                subheader: {
+                    fontSize: 16,
+                    margin: [0, 10, 0, 5]
+                },
+                tableExample: {
+                    margin: [0, 5, 0, 5],
+                    fontSize: 10,
+                },
+                tableHeader: {
+                    fontSize: 25,
+                    color: 'black'
+                }
+            },
+            defaultStyle: {
+                font: 'msyh'
+            }
+
+        }
+
+        pdfMake.fonts = {
+            Roboto: {
+                normal: 'Roboto-Regular.ttf',
+                bold: 'Roboto-Medium.ttf',
+                italics: 'Roboto-Italic.ttf',
+                bolditalics: 'Roboto-Italic.ttf'
+            },
+
+            msyh: {
+                normal: 'msyh.ttf'
+            }
+        };
+
+        pdfMake.createPdf(dd).download();
+
+    }
+
+    function print() {
+        function create2() {
+
+            var data1=new Array();
+
+            var mytable = document.getElementById("printtable");
+            for(var j=0,rows=1; j<rows; j++){
+//                for(var j=0,cells=mytable.rows[i].cells.length; j<cells; j++){
+//                    if(!data[i]){
+//                        data[i] = new Array();
+//                    }
+//                    data[i][j] = mytable.rows[i].cells[j].innerHTML;
+//                }
+                var temp=new Object();
+                var data=new Array();
+                var i=j+5;
+                temp.text=mytable.rows[i].cells[0].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[0]=JSON.parse(JSON.stringify(temp));
+                console.log(data[0]);
+
+                temp.text=mytable.rows[i].cells[1].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[1]=JSON.parse(JSON.stringify(temp));
+                console.log(data[1]);
+
+                temp.text=mytable.rows[i].cells[2].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[2]=JSON.parse(JSON.stringify(temp));
+                console.log(data[2]);
+
+
+                temp.text=mytable.rows[i].cells[3].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[3]=JSON.parse(JSON.stringify(temp));
+                console.log(data[3]);
+
+                temp={};
+                data[4]=JSON.parse(JSON.stringify(temp));
+                console.log(data[4]);
+
+
+                temp.text=mytable.rows[i].cells[4].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[5]=JSON.parse(JSON.stringify(temp));
+                console.log(data[5]);
+
+
+                temp.text=mytable.rows[i].cells[5].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[6]=JSON.parse(JSON.stringify(temp));
+                console.log(data[6]);
+
+                temp.text=mytable.rows[i].cells[6].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[7]=JSON.parse(JSON.stringify(temp));
+                console.log(data[7]);
+
+
+                temp={};
+                data[8]=JSON.parse(JSON.stringify(temp));
+                console.log(data[8]);
+
+                temp.text=mytable.rows[i].cells[7].innerHTML;
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[9]=JSON.parse(JSON.stringify(temp));
+                console.log(data[9]);
+
+
+                temp.text=mytable.rows[i].cells[8].innerHTML;
+                temp.colSpan=2;
+                temp.alignment="center";
+                data[10]=JSON.parse(JSON.stringify(temp));
+                console.log(data[10]);
+
+
+                temp={};
+                data[11]=JSON.parse(JSON.stringify(temp));
+                console.log(data[11]);
+
+                var tdArr = $("#printtr").children();
+                temp.text=tdArr.eq(i).find('td').eq(9).find('input').val();
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[12]=JSON.parse(JSON.stringify(temp));
+                console.log(data[12]);
+
+
+                var tdArr = $("#printtr").children();
+                temp.text=tdArr.eq(i).find('td').eq(10).find('input').val();
+                temp.colSpan=1;
+                temp.alignment="center";
+                data[13]=JSON.parse(JSON.stringify(temp));
+                console.log(data[13]);
+
+                console.log(data);
+                data1[j]=data;
+            }
+
+            console.log(data1);
+
+//            var mytable = document.getElementById("printtable").rows[0].cells[0].innerHTML;
+//            console.log(mytable);
+
+//            for(var i=0;i<3;i++){
+//                data1[i]=[{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
+//                    {text: 'D00012',  colSpan: 1, alignment: 'center'},
+//                    {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
+//                    {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
+//                    {},
+//
+//                    {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
+//                    {text: '5558455',  colSpan: 1, alignment: 'center'},
+//                    {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
+//                    {},
+//                    {text: '吴迪',  colSpan: 1, alignment: 'center'},
+//
+//                    {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
+//                    {},
+//                    {text: '940.00',  colSpan: 1, alignment: 'center'},
+//                    {text: '我叫备注',  colSpan: 1, alignment: 'center'},
+//                ];
+//            }
+//            console.log(data1);
+            var infoto=$("#info-to").find("option:selected").text();
+            var rowdata=[];
+            rowdata.push( [{text: '天津市胜腾货运有限公司', style: 'tableHeader', colSpan: 14, alignment: 'center'},
+                {},{},{},{},{},
+                {},{},{},{},{},
+                {},{},{}]);
+            rowdata.push([{text: '送货明细',  colSpan: 14, alignment: 'center'},
+                {},{},{},{},{},
+                {},{},{},{},{},
+                {},{},{}]);
+            rowdata.push([{text: 'TO:',  colSpan: 2, alignment: 'center'},
+                {},
+                {text: infoto,colSpan: 5, alignment: 'center'},
+                {},{},{},{},
+                {text: '走船时间:',  colSpan: 2, alignment: 'center'},
+                {},
+                {text: '2017-9-11',  colSpan: 5, alignment: 'center'},
+                {},{},{},{},
+
+            ]);
+            rowdata.push([{text: 'FM:',  colSpan: 2, alignment: 'center'},
+                {},
+                {text: '天津胜腾',  colSpan: 12, alignment: 'center'},
+                {},{},{},{},{},
+                {},{},{},{},{},
+                {}
+            ]);
+            rowdata.push([{text: '预计到港日',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '指令号',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '船名航次',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '运单号',  colSpan: 2, alignment: 'center',noWrap: true},
+                {},
+
+                {text: '箱号',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '封号',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '收货地址',  colSpan: 2, alignment: 'center',noWrap: true},
+                {},
+                {text: '联系人',  colSpan: 1, alignment: 'center',noWrap: true},
+
+                {text: '联系电话',  colSpan: 2, alignment: 'center',noWrap: true},
+                {},
+                {text: '拖车费(元)',  colSpan: 1, alignment: 'center',noWrap: true},
+                {text: '备注',  colSpan: 1, alignment: 'center',noWrap: true},
+            ]);
+            for (var i=0;i<data1.length;i++){
+//                console.log(data1[i]);
+                rowdata.push(data1[i]);
+            }
+            rowdata.push([{text: '服务电话:022-59853734',  colSpan: 5, alignment: 'left',border: [true, true, false, true],},
+                {},{},{},{},
+                {text: '传真:022-66175318',  colSpan: 5, alignment: 'left',border: [false, true, false, true],},
+                {},{},{},{},
+                {text: '制单日期:2017-9-11',  colSpan: 4, alignment: 'right',border: [false, true, true, true],},
+                {},{},{},
+
+
+            ]);
+            return rowdata;
+        }
+
+//        function createdata() {
+//            var data=new Array();
+//            for (var i=0;i<3;i++){
+//                var temp=new Object();
+//                temp.text="11";
+//                temp.colSpan=1;
+//                temp.alignment="center";
+//                data[i]=JSON.stringify(temp);
+//            }
+//        }
+        var dd = {
+            footer: function(currentPage, pageCount) { return currentPage.toString() + ' of ' + pageCount; },
+//            header: function(currentPage, pageCount, pageSize) {
+//                // you can apply any logic and return any valid pdfmake element
+//
+//                return [
+//                    { text: '送货明细', alignment: (currentPage % 2) ? 'left' : 'right' },
+//                    { canvas: [ { type: 'rect', x: 170, y: 32, w: pageSize.width - 170, h: 40 } ] }
+//                ]
+//            },
+            pageSize: 'A4',
+            pageOrientation: 'landscape',
+            content: [
+
+                {
+                    style: 'tableExample',
+                    color: '#000',
+                    table: {
+                        widths: [ 'auto', 'auto','auto','auto', 'auto',
+                            'auto','auto', 'auto','auto','auto',
+                            'auto','auto','auto','auto'],
+//                        headerRows: 2, 表头重复去掉
+                        // keepWithHeaderRows: 1,
+                        body: create2()
+                    }
+                },
+
+            ],
+            styles: {
+                header: {
+                    fontSize: 18,
+                    margin: [0, 0, 0, 10]
+                },
+                subheader: {
+                    fontSize: 16,
+                    margin: [0, 10, 0, 5]
+                },
+                tableExample: {
+                    margin: [0, 5, 0, 5],
+                    fontSize: 10,
+                },
+                tableHeader: {
+                    fontSize: 25,
+                    color: 'black'
+                }
+            },
+            defaultStyle: {
+                font: 'msyh'
+            }
+
+        }
+
+        pdfMake.fonts = {
+            Roboto: {
+                normal: 'Roboto-Regular.ttf',
+                bold: 'Roboto-Medium.ttf',
+                italics: 'Roboto-Italic.ttf',
+                bolditalics: 'Roboto-Italic.ttf'
+            },
+
+            msyh: {
+                normal: 'msyh.ttf'
+            }
+        };
+
+        pdfMake.createPdf(dd).print();
+
+    }
+
+
+</script>
+
+<!-- 本页JS脚本结束 -->
+<!-- 引入JAVASCRIPTS结束 -->
+
+
+
+</body>
+
+<!-- BODY 结束-->
+
+</html>
