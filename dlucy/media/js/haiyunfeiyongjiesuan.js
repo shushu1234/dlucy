@@ -1,8 +1,9 @@
 var TableAdvanced = function () {
-    var initTable0 = function () {
+
+    var initTable1 = function () {
 
         /* Formating function for row details */
-        function fnFormatDetails(oTable, nTr) {
+        /*function fnFormatDetails(oTable, nTr) {
             //alert(nTr);
             var aData = oTable.fnGetData(nTr);
             var sOut = '<table>';
@@ -17,54 +18,60 @@ var TableAdvanced = function () {
             sOut += '</table>';
 
             return sOut;
-        }
+        }*/
 
         /*
          * Insert a 'details' column to the table
          */
-        // var nCloneTh = document.createElement('th');
-        // var nCloneTd = document.createElement('td');
-        // nCloneTd.innerHTML = '<span class="row-details row-details-close"></span>';
-        //
-        // $('#sample_0 thead tr').each(function () {
-        //     this.insertBefore(nCloneTh, this.childNodes[0]);
-        // });
-        //
-        // $('#sample_0 tbody tr').each(function () {
-        //     this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
-        // });
+        var nCloneTh = document.createElement('th');
+        var nCloneTd = document.createElement('td');
+        nCloneTd.innerHTML = '<span class="row-details row-details-close"></span>';
+
+        var nOperaTh = document.createElement('th');
+        var nOperaTd = document.createElement('td');
+        nOperaTd.innerHTML = '<a  class="btn blue row-add" style="font-size: 10px;padding: 2px 8px;">提交</a>';
+
+        $('#sample_1 thead tr').each(function () {
+            this.insertBefore(nCloneTh, this.childNodes[0]);
+        });
+
+        $('#sample_1 tbody tr').each(function () {
+            this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
+        });
+
+        $('#sample_1 thead tr').each(function () {
+            this.insertBefore(nOperaTh, this.childNodes[1]);
+        });
+
+        $('#sample_1 tbody tr').each(function () {
+            this.insertBefore(nOperaTd.cloneNode(true), this.childNodes[1]);
+        });
+
 
         /*
          * Initialse DataTables, with no sorting on the 'details' column
          */
-        var oTable = $('#sample_0').dataTable({
+        var oTable = $('#sample_1').dataTable({
             "aoColumns": [
                 null,
-                {"bVisible": false},
-                {"bVisible": false},
-                null,
-                null,
-                null,
-                null,
-                null,
-
-                null,
-                null,
-                null,
-                null,
-                null,
-
-                null,
-                null,
-                null,
-                null,
                 null,
                 {"bVisible": false},
                 {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
 
             ],
             "aoColumnDefs": [
@@ -77,14 +84,16 @@ var TableAdvanced = function () {
             ],
             // set the initial value
             "iDisplayLength": 10,
-            "scrollY": "200px",
-            "scrollCollapse": true,
-            bFilter: false,
+            "sScrollX": "100%",
+            "sScrollY": "300",
+            "bScrollCollapse": true,
+            bFilter:false,
+
         });
 
-        jQuery('#sample_0_wrapper .dataTables_filter input').addClass("m-wrap small"); // modify table search input
-        jQuery('#sample_0_wrapper .dataTables_length select').addClass("m-wrap small"); // modify table per page dropdown
-        jQuery('#sample_0_wrapper .dataTables_length select').select2(); // initialzie select2 dropdown
+        jQuery('#sample_1_wrapper .dataTables_filter input').addClass("m-wrap small"); // modify table search input
+        jQuery('#sample_1_wrapper .dataTables_length select').addClass("m-wrap small"); // modify table per page dropdown
+        jQuery('#sample_1_wrapper .dataTables_length select').select2(); // initialzie select2 dropdown
 
         /* Add event listener for opening and closing details
          * Note that the indicator for showing which row is open is not controlled by DataTables,
@@ -95,7 +104,7 @@ var TableAdvanced = function () {
 
         }
 
-        $('#sample_0').on('click', ' tbody td .row-details', function () {
+        $('#sample_1').on('click', ' tbody td .row-details', function () {
             var nTr = $(this).parents('tr')[0];
             if (oTable.fnIsOpen(nTr)) {
                 /* This row is already open - close it */
@@ -108,76 +117,8 @@ var TableAdvanced = function () {
                 oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
             }
         });
-
-
-        $('#sample_0').on('click', ' tbody td .btn-del', function () {
-            var nTr = $(this).parents('tr')[0];
-            var aData = oTable.fnGetData(nTr);
-            var str="                                    <tr>"+
-                "                                        <td><span class=\"row-details row-details-close\"></span></td>"+
-                "                                        <td><a  class=\"btn red .row-add\" style=\"font-size: 10px;padding: 2px 8px;\">提交</a></td>"+
-                "                                        <td>" +
-                aData[4] +
-                "</td>"+
-                "                                        <td>" +
-                aData[5] +
-                "</td>"+
-                "                                        <td>" +
-                aData[6] +
-                "</td>"+
-                "                                        <td>" +
-                aData[7] +
-                "</td>"+
-                "                                        <td>" +
-                aData[8] +
-                "</td>"+
-                "                                        <td>" +
-                aData[9] +
-                "</td>"+
-                "                                        <td>" +
-                aData[10] +
-                "</td>"+
-                "                                        <td>" +
-                aData[11] +
-                "</td>"+
-                "                                        <td>" +
-                aData[12] +
-                "</td>"+
-                "                                        <td>"+
-                aData[13] +
-                "</td>"+
-                "                                        <td>" +
-                aData[14] +
-                "</td>"+
-                "                                        <td>" +
-                aData[15] +
-                "</td>"+
-                "                                        <td>" +
-                aData[16] +
-                "</td>"+
-                "                                        <td>" +
-                aData[17] +
-                "</td>"+
-                "                                        <td>" +
-                aData[18] +
-                "</td>"+
-                "                                        <td>" +
-                // aData[19] +
-                "未核对"+
-                "</td>"+
-                // "                                        <td><input type=\"text\" placeholder=\"结算金额\" /></td>"+
-                // "                                        <td>" +
-                // "2017-09-17" +
-                // "</td>"+
-                "                                    </tr>";
-
-            $("#tbody-box1").append(str);
-            oTable.fnDeleteRow(nTr);
-
-        });
-
         var nTr;
-        $('#sample_0').on('click', ' tbody td .row-delete', function () {
+        $('#sample_1').on('click', ' tbody td .row-delete', function () {
             nTr = $(this).parents('tr')[0];
             $("#user-attention").text("确认要删除该行数据吗?");
             $("#user-attentionflag").val(1);
@@ -257,7 +198,7 @@ var TableAdvanced = function () {
             }
         })
 
-        $('#sample_0').on('click', ' tbody td .row-edit', function () {
+        $('#sample_1').on('click', ' tbody td .row-edit', function () {
             $("#user-attention").text("确认要修改该行数据吗?");
             $("#user-attentionflag").val(2);
             $('#static3').modal('show');
@@ -265,12 +206,12 @@ var TableAdvanced = function () {
         });
     }
 
-    var initTable1 = function () {
+    var initTable2 = function () {
 
         /* Formating function for row details */
-        function fnFormatDetails(oTable1, nTr) {
+        /*function fnFormatDetails(oTable, nTr) {
             //alert(nTr);
-            var aData = oTable1.fnGetData(nTr);
+            var aData = oTable.fnGetData(nTr);
             var sOut = '<table>';
             sOut += '<tr><td colspan="2">==========================提货信息==========================</td></tr>';
             sOut += '<tr><td>提货联系人:</td><td>' + aData[17] + '</td></tr>';
@@ -283,7 +224,7 @@ var TableAdvanced = function () {
             sOut += '</table>';
 
             return sOut;
-        }
+        }*/
 
         /*
          * Insert a 'details' column to the table
@@ -292,38 +233,31 @@ var TableAdvanced = function () {
         var nCloneTd = document.createElement('td');
         nCloneTd.innerHTML = '<span class="row-details row-details-close"></span>';
 
+        var nOperaTh = document.createElement('th');
+        var nOperaTd = document.createElement('td');
+        nOperaTd.innerHTML = '<a  class="btn blue row-add" style="font-size: 10px;padding: 2px 8px;">提交</a>';
 
-        //未用
-        var nCommitButtonTh = document.createElement('th');
-        var nCommitButtonTd = document.createElement('td');
-        nCommitButtonTd.innerHTML = '<a  class="btn blue row-add" style="font-size: 10px;padding: 2px 8px;">提交</a>';
-        // nCommitButtonTd.click(function(){
-        //     $("p").hide();
-        // });
-
-
-        $('#sample_1 thead tr').each(function () {
+        $('#sample_2 thead tr').each(function () {
             this.insertBefore(nCloneTh, this.childNodes[0]);
         });
 
-        $('#sample_1 tbody tr').each(function () {
+        $('#sample_2 tbody tr').each(function () {
             this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
         });
 
-
-        //未用
-        $('#sample_1 thead tr').each(function () {
-            this.insertBefore(nCommitButtonTh, this.childNodes[1]);
+        $('#sample_2 thead tr').each(function () {
+            this.insertBefore(nOperaTh, this.childNodes[1]);
         });
 
-        $('#sample_1 tbody tr').each(function () {
-            this.insertBefore(nCommitButtonTd.cloneNode(true), this.childNodes[1]);
+        $('#sample_2 tbody tr').each(function () {
+            this.insertBefore(nOperaTd.cloneNode(true), this.childNodes[1]);
         });
+
 
         /*
          * Initialse DataTables, with no sorting on the 'details' column
          */
-        var oTable1 = $('#sample_1').dataTable({
+        var oTable = $('#sample_2').dataTable({
             "aoColumns": [
                 null,
                 null,
@@ -334,25 +268,17 @@ var TableAdvanced = function () {
                 null,
                 null,
                 null,
-
-                null,
-                null,
-                null,
-                null,
-                null,
-
                 null,
                 null,
                 null,
                 null,
                 null,
                 null,
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
+                null,
+                null,
+                null,
+                null,
+                null
 
             ],
             "aoColumnDefs": [
@@ -365,106 +291,41 @@ var TableAdvanced = function () {
             ],
             // set the initial value
             "iDisplayLength": 10,
-            "scrollY": "200px",
-            "scrollCollapse": true,
-            bFilter: false,
+            "sScrollX": "100%",
+            "sScrollY": "300",
+            "bScrollCollapse": true,
+            bFilter:false,
+
         });
 
-        jQuery('#sample_1_wrapper .dataTables_filter input').addClass("m-wrap small"); // modify table search input
-        jQuery('#sample_1_wrapper .dataTables_length select').addClass("m-wrap small"); // modify table per page dropdown
-        jQuery('#sample_1_wrapper .dataTables_length select').select2(); // initialzie select2 dropdown
+        jQuery('#sample_2_wrapper .dataTables_filter input').addClass("m-wrap small"); // modify table search input
+        jQuery('#sample_2_wrapper .dataTables_length select').addClass("m-wrap small"); // modify table per page dropdown
+        jQuery('#sample_2_wrapper .dataTables_length select').select2(); // initialzie select2 dropdown
 
         /* Add event listener for opening and closing details
          * Note that the indicator for showing which row is open is not controlled by DataTables,
          * rather it is done here
          */
-        
+
         function delRow(nTr) {
 
         }
-        
-        $('#sample_1').on('click', ' tbody td .row-details', function () {
+
+        $('#sample_2').on('click', ' tbody td .row-details', function () {
             var nTr = $(this).parents('tr')[0];
-            if (oTable1.fnIsOpen(nTr)) {
+            if (oTable.fnIsOpen(nTr)) {
                 /* This row is already open - close it */
                 $(this).addClass("row-details-close").removeClass("row-details-open");
-                oTable1.fnClose(nTr);
+                oTable.fnClose(nTr);
             }
             else {
                 /* Open this row */
                 $(this).addClass("row-details-open").removeClass("row-details-close");
-                oTable1.fnOpen(nTr, fnFormatDetails(oTable1, nTr), 'details');
+                oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
             }
         });
-
-        //提交数据到上面的表格中
-        $('#sample_1').on('click', ' tbody td .row-add', function () {
-            var nTr = $(this).parents('tr')[0];
-            var aData = oTable1.fnGetData(nTr);
-            var str="                                    <tr>"+
-                "                                        <td><a  class=\"btn red btn-del\" style=\"font-size: 10px;padding: 2px 8px;\">删除</a></td>"+
-                "                                        <td>" +
-                aData[4] +
-                "</td>"+
-                "                                        <td>" +
-                aData[5] +
-                "</td>"+
-                "                                        <td>" +
-                aData[6] +
-                "</td>"+
-                "                                        <td>" +
-                aData[7] +
-                "</td>"+
-                "                                        <td>" +
-                aData[8] +
-                "</td>"+
-                "                                        <td>" +
-                aData[9] +
-                "</td>"+
-                "                                        <td>" +
-                aData[10] +
-                "</td>"+
-                "                                        <td>" +
-                aData[11] +
-                "</td>"+
-                "                                        <td>" +
-                aData[12] +
-                "</td>"+
-                "                                        <td><input type=\"text\" placeholder=\"出车费\" value=\""+aData[13]+"\"/></td>"+
-                // aData[13] +
-                // "</td>"+
-                "                                        <td><input type=\"text\" placeholder=\"随车现金\" value=\""+aData[14]+"\"/></td>" +
-                // aData[14] +
-                // "</td>"+
-                "                                        <td>" +
-                aData[15] +
-                "</td>"+
-                "                                        <td><input type=\"text\" placeholder=\"油气金额\" value=\""+aData[16]+"\"/></td>" +
-                // aData[16] +
-                // "</td>"+
-                "                                        <td>" +
-                aData[17] +
-                "</td>"+
-                "                                        <td>" +
-                aData[18] +
-                "</td>"+
-                // "                                        <td>" +
-                // aData[19] +
-                // "</td>"+
-                // "                                        <td><input type=\"text\" placeholder=\"结算金额\" /></td>"+
-                // "                                        <td>" +
-                // "2017-09-17" +
-                // "</td>"+
-                "                                    </tr>";
-
-            $("#tbody-box").append(str);
-            oTable1.fnDeleteRow(nTr);
-
-        });
-
-
         var nTr;
-        $('#sample_1').on('click', ' tbody td .row-delete', function () {
+        $('#sample_2').on('click', ' tbody td .row-delete', function () {
             nTr = $(this).parents('tr')[0];
             $("#user-attention").text("确认要删除该行数据吗?");
             $("#user-attentionflag").val(1);
@@ -474,10 +335,10 @@ var TableAdvanced = function () {
         $("#btn-delrow").click(function () {
             var user_attentionfalg=$("#user-attentionflag").val();
             if(user_attentionfalg==1){
-                oTable1.fnDeleteRow(nTr);
+                oTable.fnDeleteRow(nTr);
             }
             if (user_attentionfalg==2){
-                var aData = oTable1.fnGetData(nTr);
+                var aData = oTable.fnGetData(nTr);
                 //  console.log(aData);
                 // alert(user_attentionfalg);
                 $("#info-order").val(aData[10]);
@@ -540,11 +401,11 @@ var TableAdvanced = function () {
                     if($(this).text()==aData[8]){
                         $(this).attr("selected",true);
                     }});
-                oTable1.fnDeleteRow(nTr);
+                oTable.fnDeleteRow(nTr);
             }
         })
 
-        $('#sample_1').on('click', ' tbody td .row-edit', function () {
+        $('#sample_2').on('click', ' tbody td .row-edit', function () {
             $("#user-attention").text("确认要修改该行数据吗?");
             $("#user-attentionflag").val(2);
             $('#static3').modal('show');
@@ -561,15 +422,14 @@ var TableAdvanced = function () {
                 return;
             }
 
-            initTable0();
             initTable1();
+            initTable2();
         },
 
         opera: function () {
 
-            initTable0().delRow();
             initTable1().delRow();
-
+            initTable2().delRow();
         }
 
 

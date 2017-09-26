@@ -24,6 +24,11 @@
     <!-- 本页样式开始 -->
 
     <link rel="shortcut icon" href="media/image/favicon.ico"/>
+    <style type="text/css">
+        .modal-confirm-table td {
+            width: 200px;
+        }
+    </style>
 
     <!-- 本页样式结束 -->
 
@@ -37,7 +42,7 @@
 
 <!--HEADER 开始-->
 
-<div class="header navbar navbar-inverse navbar-fixed-top myheader" >
+<div class="header navbar navbar-inverse navbar-fixed-top myheader">
 
     <!-- 导航栏开始 -->
 
@@ -185,8 +190,8 @@
 
                                             <div class="controls">
 
-                                                <input  type="text" id="info-order_no" class="span12 m-wrap"
-                                                       style="margin: 0 auto;"
+                                                <input type="text" id="order_no" class="span12 m-wrap"
+                                                       style="margin: 0 auto;" onchange="removeError('group-order_no')"
                                                        data-provide="typeahead" data-items="4" placeholder="输入以查找"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
 
@@ -201,9 +206,9 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-boxtype"
+                                                <select class="span12 m-wrap" id="boxtype"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-boxtype')">
 
                                                     <option value="">请选择...</option>
 
@@ -228,19 +233,15 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-pickup_addr"
+                                                <select class="span12 m-wrap" id="pickup_addr"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-pickup_addr')">
 
                                                     <option value="">请选择...</option>
 
-                                                    <option value="Category 1">张三丰</option>
+                                                    <option value="Category 1">大连</option>
 
-                                                    <option value="Category 2">王五</option>
-
-                                                    <option value="Category 3">赵六</option>
-
-                                                    <option value="Category 4">张珊</option>
+                                                    <option value="Category 2">北京</option>
 
                                                 </select>
 
@@ -255,19 +256,16 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-recperson_addr"
+                                                <select class="span12 m-wrap" id="recperson_addr"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-recperson_addr')">
 
                                                     <option value="">请选择...</option>
 
-                                                    <option value="Category 1">张三丰</option>
+                                                    <option value="Category 1">成都</option>
 
-                                                    <option value="Category 2">王五</option>
+                                                    <option value="Category 2">上海</option>
 
-                                                    <option value="Category 3">赵六</option>
-
-                                                    <option value="Category 4">张珊</option>
 
                                                 </select>
 
@@ -275,16 +273,16 @@
 
                                         </div>
                                     </div>
-                                    <div style="width:230px;position:relative;float: left;margin-left: -10px">
+                                    <div style="width:230px;position:relative;float: left;margin-left: -30px">
                                         <div class="control-group" id="group-trade_method">
 
                                             <label class="control-label">贸易方式</label>
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-trade_method"
+                                                <select class="span12 m-wrap" id="trade_method"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-trade_method')">
 
                                                     <option value="">请选择...</option>
 
@@ -313,8 +311,9 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-customer_name" class="span12 m-wrap"
+                                                <input type="text" id="customer_name" class="span12 m-wrap"
                                                        style="margin: 0 auto;"
+                                                       onchange="removeError('group-customer_name')"
                                                        data-provide="typeahead" data-items="4" placeholder="输入以查找"
                                                        data-source="[&quot;大连&quot;,&quot;xx大连&quot;,&quot;xx大连&quot;,&quot;北京xxxx&quot;,&quot;xxx北京x&quot;]"/>
 
@@ -328,8 +327,8 @@
                                             <label class="control-label">箱量</label>
 
                                             <div class="controls">
-                                                <input type="text" class="span12 m-wrap" name="digits" id="info-boxnum"
-                                                       placeholder="输入数字"/>
+                                                <input type="text" class="span12 m-wrap" name="digits" id="boxnum"
+                                                       placeholder="输入数字" onchange="removeError('group-boxnum')"/>
                                             </div>
 
                                         </div>
@@ -341,19 +340,12 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-pickup_contacts"
+                                                <select class="span12 m-wrap" id="pickup_contacts"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-pickup_contacts')">
 
                                                     <option value="">请选择...</option>
 
-                                                    <option value="Category 1">张三丰</option>
-
-                                                    <option value="Category 2">王五</option>
-
-                                                    <option value="Category 3">赵六</option>
-
-                                                    <option value="Category 4">张珊</option>
 
                                                 </select>
 
@@ -368,19 +360,12 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-receive_contacts"
+                                                <select class="span12 m-wrap" id="receive_contacts"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-receive_contacts')">
 
                                                     <option value="">请选择...</option>
 
-                                                    <option value="Category 1">张三丰</option>
-
-                                                    <option value="Category 2">王五</option>
-
-                                                    <option value="Category 3">赵六</option>
-
-                                                    <option value="Category 4">张珊</option>
 
                                                 </select>
 
@@ -388,16 +373,17 @@
 
                                         </div>
                                     </div>
-                                    <div style="width:230px;position:relative;float: left;margin-left: -10px">
+                                    <div style="width:230px;position:relative;float: left;margin-left: -30px">
                                         <div class="control-group" id="group-settlement_interval">
 
                                             <label class="control-label">结算周期</label>
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-settlement_interval"
+                                                <select class="span12 m-wrap" id="settlement_interval"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1"
+                                                        onchange="removeError('group-settlement_interval')">
 
                                                     <option value="">请选择...</option>
 
@@ -426,9 +412,9 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-customer_code"
+                                                <select class="span12 m-wrap" id="customer_code"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-customer_code')">
 
                                                     <option value="">请选择...</option>
 
@@ -453,9 +439,9 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-product_name"
+                                                <select class="span12 m-wrap" id="product_name"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-product_name')">
 
                                                     <option value="">请选择...</option>
 
@@ -480,19 +466,12 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-pickupcontacts_tel"
+                                                <select class="span12 m-wrap" id="pickupcontacts_tel"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-pickupcontacts_tel')">
 
                                                     <option value="">请选择...</option>
 
-                                                    <option value="Category 1">张三丰</option>
-
-                                                    <option value="Category 2">王五</option>
-
-                                                    <option value="Category 3">赵六</option>
-
-                                                    <option value="Category 4">张珊</option>
 
                                                 </select>
 
@@ -507,19 +486,11 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-reccontacts_tel"
+                                                <select class="span12 m-wrap" id="reccontacts_tel"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-reccontacts_tel')">
 
                                                     <option value="">请选择...</option>
-
-                                                    <option value="Category 1">张三丰</option>
-
-                                                    <option value="Category 2">王五</option>
-
-                                                    <option value="Category 3">赵六</option>
-
-                                                    <option value="Category 4">张珊</option>
 
                                                 </select>
 
@@ -527,7 +498,7 @@
 
                                         </div>
                                     </div>
-                                    <div style="width:230px;position:relative;float: left;margin-left: -10px">
+                                    <div style="width:230px;position:relative;float: left;margin-left: -30px">
                                         <div class="control-group" id="group-delivery_date">
 
                                             <label class="control-label">交货日期</label>
@@ -535,7 +506,8 @@
                                             <div class="controls">
 
                                                 <input class="m-wrap span12 m-ctrl-medium date-picker"
-                                                       id="info-delivery_date" readonly
+                                                       id="delivery_date" readonly
+                                                       onchange="removeError('group-delivery_date')"
                                                        size="16" type="text" value="" data-date-format="yyyy-mm-dd"/>
 
                                             </div>
@@ -553,8 +525,8 @@
                                             <label class="control-label">目的港</label>
 
                                             <div class="controls">
-                                                <input type="text" class="span12 m-wrap" name="digits" id="info-destport"
-                                                       placeholder="输入港口名"/>
+                                                <input type="text" class="span12 m-wrap" name="digits" id="destport"
+                                                       placeholder="输入港口名" onchange="removeError('group-destport')"/>
                                             </div>
 
                                         </div>
@@ -566,9 +538,9 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-trade_type"
+                                                <select class="span12 m-wrap" id="trade_type"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-trade_type')">
 
                                                     <option value="">请选择...</option>
 
@@ -593,9 +565,9 @@
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-invoice_situation"
+                                                <select class="span12 m-wrap" id="invoice_situation"
                                                         data-placeholder="Choose a Category"
-                                                        tabindex="1">
+                                                        tabindex="1" onchange="removeError('group-invoice_situation')">
 
                                                     <option value="">请选择...</option>
 
@@ -619,19 +591,21 @@
                                             <label class="control-label">海运操作员</label>
 
                                             <div class="controls">
-                                                <input type="text" class="span12 m-wrap" name="digits" id="info-ship_operator" placeholder="输入海运操作员"/>
+                                                <input type="text" class="span12 m-wrap"
+                                                       onchange="removeError('group-ship_operator')" name="digits"
+                                                       id="ship_operator" placeholder="输入海运操作员"/>
                                             </div>
 
                                         </div>
                                     </div>
-                                    <div style="width:230px;position:relative;float: left;margin-left: -10px">
+                                    <div style="width:230px;position:relative;float: left;margin-left: -30px">
                                         <div class="control-group" id="group-rate">
 
                                             <label class="control-label">费率</label>
 
                                             <div class="controls">
-                                                <input type="text" class="span12 m-wrap" name="digits" id="info-rate"
-                                                       placeholder="输入费率"/>
+                                                <input type="text" class="span12 m-wrap" name="digits" id="rate"
+                                                       placeholder="输入费率" onchange="removeError('group-rate')"/>
                                             </div>
 
                                         </div>
@@ -641,70 +615,47 @@
                                 <div class="form-actions">
 
                                     <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
-                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                            href="#full-width" onclick="modalConfirm()" style="float: right">确认提交
                                     </button>
                                     <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
                                     <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
-                                    <div id="static" class="modal hide fade" tabindex="-1">
+                                    <div id="full-width" class="modal container hide fade" tabindex="-1">
 
                                         <div class="modal-body">
 
-                                            <p>请确认信息:</p>
-                                            <table>
-                                                <tr>
-                                                    <td id="td-order"></td>
-                                                    <td></td>
-                                                    <td id="td-boxnum"></td>
+                                            <p style="font-size: 23px;">请确认信息:</p>
+                                            <table id="modal-confirm-table"
+                                                   class="modal-confirm-table table-bordered table-striped table">
 
-                                                    <td id="td-boxtype"></td>
+                                                <!--<tr>-->
+                                                <!--<td >指令号:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >箱型:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >提货地址:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >收货人地址:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >贸易方式:<span style="color: red">info_order_no</span></td>-->
+                                                <!--</tr>-->
+                                                <!--<tr>-->
+                                                <!--<td >客户名称:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >箱量:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >提货联系人:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >收货联系人:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >结算周期:<span style="color: red">info_order_no</span></td>-->
+                                                <!--</tr>-->
+                                                <!--<tr>-->
+                                                <!--<td >客户代码:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >品名:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >提货联系人电话:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >收货联系人电话:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >交货日期:<span style="color: red">info_order_no</span></td>-->
+                                                <!--</tr>-->
+                                                <!--<tr>-->
+                                                <!--<td >目的港:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >贸易类型:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >发票情况:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >海运操作员:<span style="color: red">info_order_no</span></td>-->
+                                                <!--<td >费率:<span style="color: red">info_order_no</span></td>-->
+                                                <!--</tr>-->
 
-                                                    <td id="td-goodsname"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-clientname"></td>
-                                                    <td></td>
-                                                    <td id="td-port"></td>
-
-                                                    <td id="td-tradetype"></td>
-
-                                                    <td id="td-billcycle"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><br></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="5">==================提货信息==================</td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-pickaddr" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-pickdate" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-pickperson" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-picktel" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><br></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4">==================收货信息==================</td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recaddr" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recdate" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recperson" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-rectel" colspan="5"></td>
-                                                </tr>
 
                                             </table>
                                         </div>
@@ -786,6 +737,7 @@
 
                                     <th>录入日期</th>
 
+
                                     <th>指令号</th>
 
                                     <th>客户名称</th>
@@ -795,6 +747,7 @@
                                     <th>箱量</th>
 
                                     <th>品名</th>
+
 
                                     <th>贸易类型</th>
 
@@ -806,51 +759,28 @@
 
                                     <th>结算周期</th>
 
+
                                     <th>提货信息</th>
 
                                     <th>收货信息</th>
 
                                     <th>费率</th>
+
+
                                     <th style="display: none">提货联系人</th>
                                     <th style="display: none">提货地址</th>
                                     <th style="display: none">提货联系电话</th>
+
                                     <th style="display: none">收货联系人</th>
                                     <th style="display: none">收货地址</th>
                                     <th style="display: none">收货联系电话</th>
-                                    <!--<th min-width="40px">修改</th>-->
-                                    <!--<th min-width="40px">删除</th>-->
 
                                 </tr>
 
                                 </thead>
 
                                 <tbody id="tablelist" style="background-color: #ffffff;">
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利很少见的是的发送到</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出阿士大夫撒后发货号多少积分货好地方就爱上对方就口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
+                                <tr >
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
                                     <td class="">2017-08-22</td>
@@ -875,7 +805,7 @@
                                     <td style="display: none">13612121212</td>
 
                                 </tr>
-                                <tr class="odd">
+                                <tr >
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
                                     <td class="">2017-08-22</td>
@@ -900,957 +830,6 @@
                                     <td style="display: none">13612121212</td>
 
                                 </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">伊利</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22 </td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22 </td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22 </td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22 </td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22 </td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-                                <tr class="odd">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">2017-08-22</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">20GP</td>
-                                    <td class="">30</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">内贸出口</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">门到天津港</td>
-                                    <td class="">月结</td>
-                                    <td class="">张三</td>
-                                    <td class="">李四</td>
-                                    <td class="">7000</td>
-                                    <td style="display: none">张三</td>
-                                    <td style="display: none">大连xx路</td>
-                                    <td style="display: none">13612345678</td>
-                                    <td style="display: none">李四</td>
-                                    <td style="display: none">北京xx路</td>
-                                    <td style="display: none">13612121212</td>
-
-                                </tr>
-
 
                                 </tbody>
 
@@ -1889,7 +868,7 @@
 
             <button type="button" data-dismiss="modal" class="btn">放弃</button>
 
-            <button type="button" data-dismiss="modal" class="btn red" id="btn-delrow">确认</button>
+            <button type="button" data-dismiss="modal" class="btn red" id="btn-opera">确认</button>
 
         </div>
 
@@ -1979,19 +958,20 @@
         TableAdvanced.init();
         UIModals.init();
         var nowTime = new Date();
-        $("#info-delivery_date").datepicker('setDate', nowTime);
+        $("#delivery_date").datepicker('setDate', nowTime);
+        window.check = true;
     });
 
-    var info_order;
+    var info_order_no;
     var info_boxtype;
-    var info_pickup_addr ;
-    var info_recperson_addr ;
-    var info_trade_method ;
+    var info_pickup_addr;
+    var info_recperson_addr;
+    var info_trade_method;
 
-    var info_customer_name ;
+    var info_customer_name;
     var info_boxnum;
     var info_pickup_contacts;
-    var info_receive_contacts ;
+    var info_receive_contacts;
     var info_settlement_interval;
 
     var info_customer_code;
@@ -2008,109 +988,161 @@
 
     /*获得客户信息*/
     function getInfoData() {
-        info_order = $("#info-order_no").val();
-        info_boxtype = $("#info-boxtype").find("option:selected").text();
-        info_pickup_addr = $("#info-pickup_addr").find("option:selected").text();
-        info_recperson_addr = $("#info-recperson_addr").find("option:selected").text();
-        info_trade_method = $("#info-trade_method").find("option:selected").text();
+        info_order_no = $("#order_no").val();
+        info_boxtype = $("#boxtype").find("option:selected").text();
+        info_pickup_addr = $("#pickup_addr").find("option:selected").text();
+        info_recperson_addr = $("#recperson_addr").find("option:selected").text();
+        info_trade_method = $("#trade_method").find("option:selected").text();
 
-        info_customer_name = $("#info-customer_name").val();
-        info_boxnum = $("#info-boxnum").val();
-        info_pickup_contacts = $("#info-pickup_contacts").find("option:selected").text();
-        info_receive_contacts = $("#info-receive_contacts").find("option:selected").text();
-        info_settlement_interval = $("#info-settlement_interval").find("option:selected").text();
+        info_customer_name = $("#customer_name").val();
+        info_boxnum = $("#boxnum").val();
+        info_pickup_contacts = $("#pickup_contacts").find("option:selected").text();
+        info_receive_contacts = $("#receive_contacts").find("option:selected").text();
+        info_settlement_interval = $("#settlement_interval").find("option:selected").text();
 
-        info_customer_code = $("#info-customer_code").find("option:selected").text();
-        info_product_name = $("#info-product_name").find("option:selected").text();
-        info_pickupcontacts_tel = $("#info-pickupcontacts_tel").find("option:selected").text();
-        info_reccontacts_tel = $("#info-reccontacts_tel").find("option:selected").text();
-        info_delivery_date = $("#info-delivery_date").val();
+        info_customer_code = $("#customer_code").find("option:selected").text();
+        info_product_name = $("#product_name").find("option:selected").text();
+        info_pickupcontacts_tel = $("#pickupcontacts_tel").find("option:selected").text();
+        info_reccontacts_tel = $("#reccontacts_tel").find("option:selected").text();
+        info_delivery_date = $("#delivery_date").val();
 
-        info_destport = $("#info-destport").val();
-        info_trade_type = $("#info-trade_type").find("option:selected").text();
-        info_invoice_situation = $("#info-invoice_situation").find("option:selected").text();
-        info_ship_operator = $("#info-ship_operator").val();
-        info_rate = $("#info-rate").val();
+        info_destport = $("#destport").val();
+        info_trade_type = $("#trade_type").find("option:selected").text();
+        info_invoice_situation = $("#invoice_situation").find("option:selected").text();
+        info_ship_operator = $("#ship_operator").val();
+        info_rate = $("#rate").val();
     }
 
     /*客户信息模态框初始化信息*/
     function modalConfirm() {
         getInfoData();
-        $("#td-order").text("指令号: " + info_order);
-        $("#td-boxnum").text("   箱量: " + info_boxnum);
-        $("#td-boxtype").text("   箱型: " + info_boxtype);
-        $("#td-goodsname").text("   品名: " + info_goodsname);
+        $("#modal-confirm-table").find("tr").remove();
+        var str = " <tr>" +
+            "<td >指令号:<span style=\"color: red\">" +
+            info_order_no +
+            "</span></td>" +
+            "<td >箱型:<span style=\"color: red\">" +
+            info_boxtype +
+            "</span></td>" +
+            "<td >提货地址:<span style=\"color: red\">" +
+            info_pickup_addr +
+            "</span></td>" +
+            "<td >收货人地址:<span style=\"color: red\">" +
+            info_recperson_addr +
+            "</span></td>" +
+            "<td >贸易方式:<span style=\"color: red\">" +
+            info_trade_method +
+            "</span></td>" +
+            "</tr>" +
+            "<tr>" +
+            "<td >客户名称:<span style=\"color: red\">" +
+            info_customer_name +
+            "</span></td>" +
+            "<td >箱量:<span style=\"color: red\">" +
+            info_boxnum +
+            "</span></td>" +
+            "<td >提货联系人:<span style=\"color: red\">" +
+            info_pickup_contacts +
+            "</span></td>" +
+            "<td >收货联系人:<span style=\"color: red\">" +
+            info_receive_contacts +
+            "</span></td>" +
+            "<td >结算周期:<span style=\"color: red\">" +
+            info_settlement_interval +
+            "</span></td>" +
+            "</tr>" +
+            "<tr>" +
+            "<td >客户代码:<span style=\"color: red\">" +
+            info_customer_code +
+            "</span></td>" +
+            "<td >品名:<span style=\"color: red\">" +
+            info_product_name +
+            "</span></td>" +
+            "<td >提货联系人电话:<span style=\"color: red\">" +
+            info_pickupcontacts_tel +
+            "</span></td>" +
+            "<td >收货联系人电话:<span style=\"color: red\">" +
+            info_reccontacts_tel +
+            "</span></td>" +
+            "<td >交货日期:<span style=\"color: red\">" +
+            info_delivery_date +
+            "</span></td>" +
+            "</tr>" +
+            "<tr>" +
+            "<td >目的港:<span style=\"color: red\">" +
+            info_destport +
+            "</span></td>" +
+            "<td >贸易类型:<span style=\"color: red\">" +
+            info_trade_type +
+            "</span></td>" +
+            "<td >发票情况:<span style=\"color: red\">" +
+            info_invoice_situation +
+            "</span></td>" +
+            "<td >海运操作员:<span style=\"color: red\">" +
+            info_ship_operator +
+            "</span></td>" +
+            "<td >费率:<span style=\"color: red\">" +
+            info_rate +
+            "</span></td>" +
+            "</tr>";
+        $("#modal-confirm-table").append(str);
+    }
 
-        $("#td-clientname").text("   客户名称: " + info_clientname);
-        $("#td-port").text("   目的港: " + info_port);
-        $("#td-tradetype").text("   贸易方式: " + info_tradetype);
-        $("#td-billcycle").text("   结算周期: " + info_billcycle);
+    //使一组元素变成错误状态
+    function addError(checkid) {
+        var group = "group-" + checkid.slice(5);
+        $("#" + group).addClass("error");
+        window.check = false;
+    }
 
-        $("#td-pickdate").text("   提货时间:  " + info_pickdate);
-        $("#td-pickaddr").text("   提货地址:  " + info_pickaddr);
-        $("#td-pickperson").text("   提货联系人:  " + info_pickperson);
-        $("#td-picktel").text("   提货联系人电话:  " + info_picktel);
-
-        $("#td-recdate").text("   收货时间:  " + info_recdate);
-        $("#td-recaddr").text("   收货地址:  " + info_recaddr);
-        $("#td-recperson").text("   收货联系人:  " + info_recperson);
-        $("#td-rectel").text("   收货联系人电话:  " + info_rectel);
-
+    //去除一组元素错误状态
+    function removeError(checkid) {
+        $("#" + checkid).removeClass("error");
     }
 
     //    数字输入检查
-    function isNum(str) {
+    function isNum(checkid, str) {
         if (str != null && str != "") {
             return !isNaN(str);
-        }
-        return false;
-    }
-    //输入框检查
-    function checkInput(str) {
-        if (str == null || str == "") {
-            return false;
         } else {
-            return true;
-        }
-    }
-    //    下拉框检查
-    function checkSelect(str) {
-        if (str == "请选择...") {
-            return false;
-        } else {
-            return true;
+            addError(checkid);
         }
     }
 
-    //    获得当前时间的时间戳
+    //输入框检查
+    function checkInput(checkid, str) {
+        if (str == null || str == "") {
+            addError(checkid);
+        }
+
+    }
+
+    // 下拉框检查
+    function checkSelect(checkid, str) {
+        if (str == "请选择...") {
+            addError(checkid);
+        }
+    }
+
+    // 获得当前时间的时间戳
     function getTimeStamp() {
         var timestamp = new Date().getTime();
         return timestamp;
     }
-    //获得当前时间　yyyy-mm-dd hh:mm:ss
+
+    //获得当前时间　yyyy-mm-dd
     function getNowFormatDate() {
         var date = new Date();
         var seperator1 = "-";
-        var seperator2 = ":";
         var month = date.getMonth() + 1;
         var strDate = date.getDate();
-        var minutes = date.getMinutes();
-        var seconds = date.getSeconds();
         if (month >= 1 && month <= 9) {
             month = "0" + month;
         }
         if (strDate >= 0 && strDate <= 9) {
             strDate = "0" + strDate;
         }
-        if (minutes >= 0 && minutes <= 9) {
-            minutes = "0" + minutes;
-        }
-        if (seconds >= 0 && seconds <= 9) {
-            seconds = "0" + seconds;
-        }
-        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
-            + " " + date.getHours() + seperator2 + minutes
-            + seperator2 + seconds;
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate;
         return currentdate;
     }
 
@@ -2122,11 +1154,12 @@
     //    重新刷新表格数据
     function reloadData(theData) {
 
-        if (theData[9] == 0) {
-            theData[9] = getNowFormatDate();
-            theData[22] = "<td class=\"myhidden sorting_1\">" + getTimeStamp() + "</td>";
+        if (theData[5] == 0) {
+            theData[5] = getNowFormatDate();
+            theData[4] = getTimeStamp();
         }
         $('#sample_1').dataTable().fnAddData(theData);
+        console.log(theData);
 
         resetAll();
 
@@ -2138,10 +1171,10 @@
 
         $('.chzn-container-single span').html('请选择...');
 
+        $('#full-width').modal('hide');
         $("#info-attention").text("添加成功:)");
         var nowTime = new Date();
-        $("#info-pickdate").datepicker('setDate', nowTime);
-        $("#info-recdate").datepicker('setDate', nowTime);
+        $("#delivery_date").datepicker('setDate', nowTime);
     }
 
     //   客户信息检查入口
@@ -2154,227 +1187,55 @@
         getInfoData();
         $('#static').modal('hide')
 
-        var check = true;
+        window.check = true;
+        checkInput("info_order_no", info_order_no);
+        checkSelect("info_boxtype", info_boxtype);
+        checkSelect("info_pickup_addr", info_pickup_addr);
+        checkSelect("info_recperson_addr", info_recperson_addr);
+        checkSelect("info_trade_method", info_trade_method);
 
-        if (!checkInput(info_order)) {
-            $("#group-order").addClass("error");
-            check = false;
-        }
+        checkInput("info_customer_name", info_customer_name);
+        checkInput("info_boxnum", info_boxnum);
+        isNum("info_boxnum", info_boxnum);
+        checkSelect("info_pickup_contacts", info_pickup_contacts);
+        checkSelect("info_receive_contacts", info_receive_contacts);
+        checkSelect("info_settlement_interval", info_settlement_interval);
 
-        if (!isNum(info_boxnum)) {
-            $("#group-boxnum").addClass("error");
-            check = false;
-        }
+        checkSelect("info_customer_code", info_customer_code);
+        checkSelect("info_product_name", info_product_name);
+        checkSelect("info_pickupcontacts_tel", info_pickupcontacts_tel);
+        checkSelect("info_reccontacts_tel", info_reccontacts_tel);
+        checkInput("info_delivery_date", info_delivery_date);
 
-        if (!checkSelect(info_boxtype)) {
-            $("#group-boxtype").addClass("error");
-            check = false;
-        }
+        checkInput("info_destport", info_destport);
+        checkSelect("info_trade_type", info_trade_type);
+        checkSelect("info_invoice_situation", info_invoice_situation);
+        checkInput("info_ship_operator", info_ship_operator);
+        checkInput("info_rate", info_rate);
 
-        if (!checkSelect(info_goodsname)) {
-            $("#group-goodsname").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_clientname)) {
-            $("#group-clientname").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_port)) {
-            $("#group-port").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_tradetype)) {
-            $("#group-tradetype").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_billcycle)) {
-            $("#group-billcycle").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_pickdate)) {
-            $("#group-pickdate").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_pickaddr)) {
-            $("#group-pickaddr").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_pickperson)) {
-            $("#group-pickperson").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_picktel)) {
-            $("#group-picktel").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_recdate)) {
-            $("#group-recdate").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_recaddr)) {
-            $("#group-recaddr").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_recperson)) {
-            $("#group-recperson").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_rectel)) {
-            $("#group-rectel").addClass("error");
-            check = false;
-        }
-
-
-        if (!check) {
-//            alert("请检查...");
+        if (!window.check) {
+            $('#full-width').modal('hide');
             $("#info-attention").text("请检查红色区域:(");
-//            resetAll();
         } else {
             var theData = [
                 "<span class=\"row-details row-details-close\"></span>",
-                info_pickaddr, info_pickdate, info_pickperson, info_picktel,
-                info_recaddr, info_recdate, info_recperson, info_rectel,
-                info_addtime,
-                info_order, info_goodsname, info_clientname,
-                info_boxtype, info_boxnum, info_pickperson, info_recperson,
-                info_recdate, info_port, info_billcycle, info_tradetype, info_id,
-                "<td class=\"myhidden sorting_1\">" + info_timestamp + "</td>",
-                "<a class=\"btn blue row-edit\" href=\"#\"  style=\"font-size:10px;padding: 0px 5px;\">" +
-                "                                            <i class=\"icon-edit \"></i>" +
-                "修改" +
-                "</a>",
-                "<a class=\"btn red row-delete\" href=\"#\" alt=\"删除\" style=\"font-size:10px;padding: 0px 5px;\">" +
-                "                                            <i class=\"icon-trash \"></i>" +
-                "删除" +
-                "</a>"
+                "<a  class=\"btn blue row-update\" style=\"font-size: 10px;padding: 2px 8px;\">修改</a>",
+                "<a  class=\"btn red row-del\" style=\"font-size: 10px;padding: 2px 8px;\">删除</a>",
+                info_id, info_timestamp, info_addtime,
+                info_order_no, info_customer_name, info_boxtype, info_boxnum, info_product_name,
+                info_trade_type, info_destport, info_delivery_date, info_trade_method, info_settlement_interval,
+                info_pickup_contacts, info_receive_contacts, info_rate,
+                info_pickup_contacts, info_pickup_addr, info_pickupcontacts_tel,
+                info_receive_contacts, info_recperson_addr, info_reccontacts_tel
             ];
-
             reloadData(theData);
-            check = true;
+            window.check = true;
         }
-
-
         return false;
-
     }
 
-    //    以下为客户信息状态转换产生的事件
-    $("#info-order").change(function () {
-        $("#group-order").removeClass("error");
-    });
-    $("#info-boxnum").change(function () {
-        $("#group-boxnum").removeClass("error");
-    });
-    $("#info-boxtype").change(function () {
-        $("#group-boxtype").removeClass("error");
-    });
-    $("#info-goodsname").change(function () {
-        $("#group-goodsname").removeClass("error");
-    });
-
-    $("#info-clientname").change(function () {
-        $("#group-clientname").removeClass("error");
-
-    });
-    $("#info-clientname").mouseleave($.post("#", {}, function (data) {
-        data = {"addrinfo": [{"id": 1, "name": "大连"}, {"id": 2, "name": "北京"}]};
-        var addrlist = data.addrinfo;
-        var str;
-        $.each(addrlist, function (n, addr) {
-            str += "<option value=\"" +
-                addr.id +
-                "\">" +
-                addr.name +
-                "</option>";
-        })
-        $("#info-pickaddr").append(str);
-        $("#info-recaddr").append(str);
-    }));
-    $("#info-port").change(function () {
-        $("#group-port").removeClass("error");
-    });
-    $("#info-tradetype").change(function () {
-        $("#group-tradetype").removeClass("error");
-    });
-    $("#info-billcycle").change(function () {
-        $("#group-billcycle").removeClass("error");
-    });
-
-    $("#info-pickdate").change(function () {
-        $("#group-pickdate").removeClass("error");
-    });
-    $("#info-pickaddr").change(function () {
-        $("#group-pickaddr").removeClass("error");
-    });
-    $("#info-pickaddr").mouseleave($.post("#", {}, function (data) {
-        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
-        var personlist = data.personinfo;
-        var str;
-        $.each(personlist, function (n, person) {
-            str += "<option value=\"" +
-                person.id +
-                "\">" +
-                person.name +
-                "</option>";
-        })
-        $("#info-pickperson").append(str);
-    }));
-    $("#info-pickperson").change(function () {
-        $("#group-pickperson").removeClass("error");
-    });
-    $("#info-pickperson").mouseleave($.post("#", {}, function (data) {
-        data = {"telinfo": [{"id": 1, "name": "12345678"}, {"id": 2, "name": "987654321"}]};
-        var tellist = data.telinfo;
-        var str;
-        $.each(tellist, function (n, tel) {
-            str += "<option value=\"" +
-                tel.id +
-                "\">" +
-                tel.name +
-                "</option>";
-        })
-        $("#info-picktel").append(str);
-    }));
-    $("#info-picktel").change(function () {
-        $("#group-picktel").removeClass("error");
-    });
-
-    $("#info-recdate").change(function () {
-        $("#group-recdate").removeClass("error");
-    });
-    $("#info-recaddr").change(function () {
-        $("#group-recaddr").removeClass("error");
-    });
-    $("#info-recaddr").mouseleave($.post("#", {}, function (data) {
-        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
-        var personlist = data.personinfo;
-        var str;
-        $.each(personlist, function (n, person) {
-            str += "<option value=\"" +
-                person.id +
-                "\">" +
-                person.name +
-                "</option>";
-        })
-        $("#info-recperson").append(str);
-    }));
-    $("#info-recperson").change(function () {
-        $("#group-recperson").removeClass("error");
-    });
-    //
-    $("#info-recperson").mouseleave($.post("#", {}, function (data) {
+    //    Ajax
+    $("#pickup_addr").mouseleave($.post("#", {}, function (data) {
         data = {"telinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
         var tellist = data.telinfo;
         var str;
@@ -2385,11 +1246,52 @@
                 tel.name +
                 "</option>";
         })
-        $("#info-rectel").append(str);
+        $("#pickup_contacts").append(str);
     }));
-    $("#info-rectel").change(function () {
-        $("#group-rectel").removeClass("error");
-    });
+
+    $("#pickup_contacts").mouseleave($.post("#", {}, function (data) {
+        data = {"telinfo": [{"id": 1, "name": "12345678"}, {"id": 2, "name": "987654321"}]};
+        var tellist = data.telinfo;
+        var str;
+        $.each(tellist, function (n, tel) {
+            str += "<option value=\"" +
+                tel.id +
+                "\">" +
+                tel.name +
+                "</option>";
+        })
+        $("#pickupcontacts_tel").append(str);
+    }));
+
+    $("#recperson_addr").mouseleave($.post("#", {}, function (data) {
+        data = {"telinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var tellist = data.telinfo;
+        var str;
+        $.each(tellist, function (n, tel) {
+            str += "<option value=\"" +
+                tel.id +
+                "\">" +
+                tel.name +
+                "</option>";
+        })
+        $("#receive_contacts").append(str);
+    }));
+
+    $("#receive_contacts").mouseleave($.post("#", {}, function (data) {
+        data = {"telinfo": [{"id": 1, "name": "12345678"}, {"id": 2, "name": "987654321"}]};
+        var tellist = data.telinfo;
+        var str;
+        $.each(tellist, function (n, tel) {
+            str += "<option value=\"" +
+                tel.id +
+                "\">" +
+                tel.name +
+                "</option>";
+        })
+        $("#reccontacts_tel ").append(str);
+    }));
+
+
 </script>
 
 <!-- 本页JS脚本结束 -->

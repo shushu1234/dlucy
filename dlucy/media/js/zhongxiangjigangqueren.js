@@ -3,17 +3,22 @@ var TableAdvanced = function () {
     var initTable1 = function () {
 
         /* Formating function for row details */
-        function fnFormatDetails(oTable, nTr) {
-            // //alert(nTr);
-            // var aData = oTable.fnGetData(nTr);
-            // var sOut = '<table>';
-            // sOut += '<tr><td colspan="2">==========================提货进度==========================</td></tr>';
-            // sOut += '<tr><td>已提数量:</td><td>' + aData[19] + '</td></tr>';
-            // sOut += '<tr><td>当日提货数量:</td><td>' + aData[20] + '</td></tr>';
-            // sOut += '</table>';
-            //
-            // return sOut;
-        }
+        /*function fnFormatDetails(oTable, nTr) {
+            //alert(nTr);
+            var aData = oTable.fnGetData(nTr);
+            var sOut = '<table>';
+            sOut += '<tr><td colspan="2">==========================提货信息==========================</td></tr>';
+            sOut += '<tr><td>提货联系人:</td><td>' + aData[17] + '</td></tr>';
+            sOut += '<tr><td>提货地址:</td><td>' + aData[18] + '</td></tr>';
+            sOut += '<tr><td>提货联系人电话:</td><td>' + aData[19] + '</td></tr>';
+            sOut += '<tr><td colspan="2">==========================收货信息==========================</td></tr>';
+            sOut += '<tr><td>收货联系人:</td><td>' + aData[20] + '</td></tr>';
+            sOut += '<tr><td>收货地址:</td><td>' + aData[21] + '</td></tr>';
+            sOut += '<tr><td>收货联系人电话:</td><td>' + aData[22] + '</td></tr>';
+            sOut += '</table>';
+
+            return sOut;
+        }*/
 
         /*
          * Insert a 'details' column to the table
@@ -21,6 +26,10 @@ var TableAdvanced = function () {
         var nCloneTh = document.createElement('th');
         var nCloneTd = document.createElement('td');
         nCloneTd.innerHTML = '<span class="row-details row-details-close"></span>';
+
+        var nOperaTh = document.createElement('th');
+        var nOperaTd = document.createElement('td');
+        nOperaTd.innerHTML = '<a  class="btn blue row-add" style="font-size: 10px;padding: 2px 8px;">提交</a>';
 
         $('#sample_1 thead tr').each(function () {
             this.insertBefore(nCloneTh, this.childNodes[0]);
@@ -30,12 +39,22 @@ var TableAdvanced = function () {
             this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
         });
 
+        $('#sample_1 thead tr').each(function () {
+            this.insertBefore(nOperaTh, this.childNodes[1]);
+        });
+
+        $('#sample_1 tbody tr').each(function () {
+            this.insertBefore(nOperaTd.cloneNode(true), this.childNodes[1]);
+        });
+
+
         /*
          * Initialse DataTables, with no sorting on the 'details' column
          */
         var oTable = $('#sample_1').dataTable({
             "aoColumns": [
                 null,
+                null,
                 {"bVisible": false},
                 {"bVisible": false},
                 null,
@@ -43,13 +62,6 @@ var TableAdvanced = function () {
                 null,
                 null,
                 null,
-
-                null,
-                null,
-                null,
-                null,
-                null,
-
                 null,
                 null,
                 null,
@@ -57,9 +69,10 @@ var TableAdvanced = function () {
                 null,
                 null,
                 null,
-
                 null,
-
+                null,
+                null,
+                null,
 
             ],
             "aoColumnDefs": [
@@ -72,11 +85,10 @@ var TableAdvanced = function () {
             ],
             // set the initial value
             "iDisplayLength": 10,
-            // "sScrollX": "100%",
-            "sScrollY": "300px",
+            "sScrollX": "100%",
+            "sScrollY": "300",
             "bScrollCollapse": true,
-            bFilter: false,
-
+            bFilter:false,
 
         });
 
@@ -126,7 +138,8 @@ var TableAdvanced = function () {
                 $("#info-order").val(aData[10]);
                 $("#info-boxnum").val(aData[14]);
                 $("#info-clientname").val(aData[12]);
-
+                $("#info-id").val(aData[21]);
+                $("#info-addtime").val(aData[9]);
                 $("#info-boxtype option").each(function () {
                     if ($(this).text() == aData[13]) {
                         $(this).attr("selected", true);

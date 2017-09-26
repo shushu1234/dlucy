@@ -3,22 +3,22 @@ var TableAdvanced = function () {
     var initTable1 = function () {
 
         /* Formating function for row details */
-        function fnFormatDetails(oTable, nTr) {
+        /*function fnFormatDetails(oTable, nTr) {
             //alert(nTr);
             var aData = oTable.fnGetData(nTr);
             var sOut = '<table>';
             sOut += '<tr><td colspan="2">==========================提货信息==========================</td></tr>';
-            sOut += '<tr><td>提货联系人:</td><td>' + aData[19] + '</td></tr>';
-            sOut += '<tr><td>提货地址:</td><td>' + aData[20] + '</td></tr>';
-            sOut += '<tr><td>提货联系人电话:</td><td>' + aData[21] + '</td></tr>';
+            sOut += '<tr><td>提货联系人:</td><td>' + aData[17] + '</td></tr>';
+            sOut += '<tr><td>提货地址:</td><td>' + aData[18] + '</td></tr>';
+            sOut += '<tr><td>提货联系人电话:</td><td>' + aData[19] + '</td></tr>';
             sOut += '<tr><td colspan="2">==========================收货信息==========================</td></tr>';
-            sOut += '<tr><td>收货联系人:</td><td>' + aData[22] + '</td></tr>';
-            sOut += '<tr><td>收货地址:</td><td>' + aData[23] + '</td></tr>';
-            sOut += '<tr><td>收货联系人电话:</td><td>' + aData[24] + '</td></tr>';
+            sOut += '<tr><td>收货联系人:</td><td>' + aData[20] + '</td></tr>';
+            sOut += '<tr><td>收货地址:</td><td>' + aData[21] + '</td></tr>';
+            sOut += '<tr><td>收货联系人电话:</td><td>' + aData[22] + '</td></tr>';
             sOut += '</table>';
 
             return sOut;
-        }
+        }*/
 
         /*
          * Insert a 'details' column to the table
@@ -27,14 +27,9 @@ var TableAdvanced = function () {
         var nCloneTd = document.createElement('td');
         nCloneTd.innerHTML = '<span class="row-details row-details-close"></span>';
 
-        var nOperaTh1 = document.createElement('th');
-        var nOperaTd1 = document.createElement('td');
-        nOperaTd1.innerHTML = '<a  class="btn blue row-update" style="font-size: 10px;padding: 2px 8px;">修改</a>';
-
-        var nOperaTh2 = document.createElement('th');
-        var nOperaTd2 = document.createElement('td');
-        nOperaTd2.innerHTML = '<a  class="btn red row-del" style="font-size: 10px;padding: 2px 8px;">删除</a>';
-
+        var nOperaTh = document.createElement('th');
+        var nOperaTd = document.createElement('td');
+        nOperaTd.innerHTML = '<a class="btn blue row-add" style="font-size: 10px;padding: 2px 8px;">提交</a>';
 
         $('#sample_1 thead tr').each(function () {
             this.insertBefore(nCloneTh, this.childNodes[0]);
@@ -45,20 +40,13 @@ var TableAdvanced = function () {
         });
 
         $('#sample_1 thead tr').each(function () {
-            this.insertBefore(nOperaTh1, this.childNodes[1]);
+            this.insertBefore(nOperaTh, this.childNodes[1]);
         });
 
         $('#sample_1 tbody tr').each(function () {
-            this.insertBefore(nOperaTd1.cloneNode(true), this.childNodes[1]);
+            this.insertBefore(nOperaTd.cloneNode(true), this.childNodes[1]);
         });
 
-        $('#sample_1 thead tr').each(function () {
-            this.insertBefore(nOperaTh2, this.childNodes[2]);
-        });
-
-        $('#sample_1 tbody tr').each(function () {
-            this.insertBefore(nOperaTd2.cloneNode(true), this.childNodes[2]);
-        });
 
         /*
          * Initialse DataTables, with no sorting on the 'details' column
@@ -67,48 +55,41 @@ var TableAdvanced = function () {
             "aoColumns": [
                 null,
                 null,
-                null,
                 {"bVisible": false},
                 {"bVisible": false},
-
                 null,
                 null,
                 null,
                 null,
                 null,
-
                 null,
                 null,
                 null,
                 null,
                 null,
-
                 null,
                 null,
                 null,
                 null,
-
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
+                null,
+                null
 
             ],
             "aoColumnDefs": [
                 {"bSortable": false, "aTargets": [0]}
             ],
-            "aaSorting": [[4, 'desc']],
+            "aaSorting": [[2, 'desc']],
             "aLengthMenu": [
                 [10, 50, 100, -1],
                 [10, 50, 100, "全部"] // change per page values here
             ],
             // set the initial value
             "iDisplayLength": 10,
-            "scrollY": "300px",
-            "scrollCollapse": true,
+            "sScrollX": "100%",
+            "sScrollY": "300",
+            "bScrollCollapse": true,
             bFilter: false,
+
         });
 
         jQuery('#sample_1_wrapper .dataTables_filter input').addClass("m-wrap small"); // modify table search input
@@ -119,11 +100,11 @@ var TableAdvanced = function () {
          * Note that the indicator for showing which row is open is not controlled by DataTables,
          * rather it is done here
          */
-        
+
         function delRow(nTr) {
 
         }
-        
+
         $('#sample_1').on('click', ' tbody td .row-details', function () {
             var nTr = $(this).parents('tr')[0];
             if (oTable.fnIsOpen(nTr)) {
@@ -137,120 +118,118 @@ var TableAdvanced = function () {
                 oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
             }
         });
+
+        /*Hank js*/
+
+        //提交数据到上面的表格中
+        $('#sample_1').on('click', ' tbody td .row-add', function () {
+            var nTr = $(this).parents('tr')[0];
+            var aData = oTable.fnGetData(nTr);
+            var str =
+                "<tr>" +
+                "<td><a  class=\"btn red btn-del\" style=\"font-size: 10px;padding: 2px 8px;\">删除</a></td>" +
+                "<td>" + aData[4] + "</td>" +
+                "<td>" + aData[5] + "</td>" +
+                "<td>" + aData[8] + "</td>" +
+                "</tr>";
+
+            $("#tbody-box").append(str);
+            $("#boxtype").val(aData[7]);//品名
+            oTable.fnDeleteRow(nTr);
+
+        });
+
+        //mian
+        /*Hank js*/
+
         var nTr;
-        $('#sample_1').on('click', ' tbody td .row-del', function () {
+        $('#box_info').on('click', ' tbody td .btn-del', function () {
             nTr = $(this).parents('tr')[0];
             $("#user-attention").text("确认要删除该行数据吗?");
             $("#user-attentionflag").val(1);
             $('#static3').modal('show');
         });
 
-        $("#btn-opera").click(function () {
-            var user_attentionfalg=$("#user-attentionflag").val();
-            if(user_attentionfalg==1){
+        $("#btn-delrow").click(function () {
+            var user_attentionfalg = $("#user-attentionflag").val();
+            if (user_attentionfalg == 1) {
                 oTable.fnDeleteRow(nTr);
             }
-            if (user_attentionfalg==2){
+            if (user_attentionfalg == 2) {
                 var aData = oTable.fnGetData(nTr);
-                console.log(aData);
-                $("#info-id").val(aData[3]);
-                $("#info-timestamp").val(aData[4]);
-                $("#info-addtime").val(aData[5]);
-
-                $("#order_no").val(aData[6]);
-                $("#boxtype option").each(function () {
-                    if ($(this).text() == aData[8]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                $("#pickup_addr option").each(function () {
-                    if ($(this).text() == aData[20]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                $("#recperson_addr option").each(function () {
-                    if ($(this).text() == aData[23]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                $("#trade_method option").each(function () {
-                    if ($(this).text() == aData[14]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-
-
-                $("#customer_name").val(aData[14]);
-                $("#boxnum").val(aData[9]);
-                $("#pickup_contacts option").each(function () {
-                    if ($(this).text() == aData[16]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                $("#receive_contacts option").each(function () {
-                    if ($(this).text() == aData[17]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                $("#settlement_interval option").each(function () {
-                    if ($(this).text() == aData[15]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-
-                //表格无
-                $("#customer_code option").each(function () {
+                //  console.log(aData);
+                // alert(user_attentionfalg);
+                $("#info-order").val(aData[10]);
+                $("#info-boxnum").val(aData[14]);
+                $("#info-clientname").val(aData[12]);
+                $("#info-id").val(aData[21]);
+                $("#info-addtime").val(aData[9]);
+                $("#info-boxtype option").each(function () {
                     if ($(this).text() == aData[13]) {
                         $(this).attr("selected", true);
                     }
                 });
-                $("#product_name option").each(function () {
-                    if ($(this).text() == aData[10]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                $("#pickupcontacts_tel option").each(function () {
-                    if ($(this).text() == aData[21]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                $("#reccontacts_tel option").each(function () {
-                    if ($(this).text() == aData[24]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                $("#delivery_date" ).datepicker( 'setDate' , new Date(aData[13]));
 
-                $("#destport").val(aData[12]);
-                $("#trade_type option").each(function () {
+                $("#info-goodsname option").each(function () {
                     if ($(this).text() == aData[11]) {
                         $(this).attr("selected", true);
                     }
                 });
-                //表格无
-                $("#invoice_situation option").each(function () {
-                    if ($(this).text() == aData[13]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                //表格无
-                $("#ship_operator option").each(function () {
-                    if ($(this).text() == aData[13]) {
-                        $(this).attr("selected", true);
-                    }
-                });
-                $("#rate option").each(function () {
+                $("#info-port option").each(function () {
                     if ($(this).text() == aData[18]) {
                         $(this).attr("selected", true);
                     }
                 });
+                $("#info-tradetype option").each(function () {
+                    if ($(this).text() == aData[20]) {
+                        $(this).attr("selected", true);
+                    }
+                });
+                $("#info-billcycle option").each(function () {
+                    if ($(this).text() == aData[19]) {
+                        $(this).attr("selected", true);
+                    }
+                });
 
+                $("#info-pickdate").datepicker('setDate', new Date(aData[2]));
 
+                $("#info-pickaddr option").each(function () {
+                    if ($(this).text() == aData[1]) {
+                        $(this).attr("selected", true);
+                    }
+                });
+                $("#info-pickperson option").each(function () {
+                    if ($(this).text() == aData[3]) {
+                        $(this).attr("selected", true);
+                    }
+                });
+                $("#info-picktel option").each(function () {
+                    if ($(this).text() == aData[4]) {
+                        $(this).attr("selected", true);
+                    }
+                });
+
+                $("#info-recdate").datepicker('setDate', new Date(aData[6]));
+                $("#info-recaddr option").each(function () {
+                    if ($(this).text() == aData[5]) {
+                        $(this).attr("selected", true);
+                    }
+                });
+                $("#info-recperson option").each(function () {
+                    if ($(this).text() == aData[7]) {
+                        $(this).attr("selected", true);
+                    }
+                });
+                $("#info-rectel option").each(function () {
+                    if ($(this).text() == aData[8]) {
+                        $(this).attr("selected", true);
+                    }
+                });
                 oTable.fnDeleteRow(nTr);
             }
         })
 
-        $('#sample_1').on('click', ' tbody td .row-update', function () {
+        $('#sample_1').on('click', ' tbody td .row-edit', function () {
             $("#user-attention").text("确认要修改该行数据吗?");
             $("#user-attentionflag").val(2);
             $('#static3').modal('show');
@@ -275,7 +254,6 @@ var TableAdvanced = function () {
             initTable1().delRow();
 
         }
-
 
 
     };
