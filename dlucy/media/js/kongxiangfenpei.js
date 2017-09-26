@@ -186,12 +186,6 @@ var TableAdvanced = function () {
 
 
         var nTr;
-        $('#sample_1').on('click', ' tbody td .row-delete', function () {
-            nTr = $(this).parents('tr')[0];
-            $("#user-attention").text("确认要删除该行数据吗?");
-            $("#user-attentionflag").val(1);
-            $('#static3').modal('show');
-        });
 
 
         $("#btn-delrow").click(function () {
@@ -267,12 +261,25 @@ var TableAdvanced = function () {
             }
         })
 
-        $('#sample_1').on('click', ' tbody td .row-edit', function () {
-            $("#user-attention").text("确认要修改该行数据吗?");
-            $("#user-attentionflag").val(2);
-            $('#static3').modal('show');
-            nTr = $(this).parents('tr')[0];
+
+        $('#sample_1').on('click', ' tbody td .row-add', function () {
+
+            var nTr = $(this).parents('tr')[0];
+            var aData = oTable.fnGetData(nTr);
+
+            $("#order_no").val(aData[4]);
+            $("#customer_name").val(aData[5]);
+            $("#boxtype").val(aData[7]);
+            $("#pickup_addr").val(aData[13]);
+            $("#tianjin_pickup").val(aData[15]);
+            $("#beijing_pickup").val(aData[16]);
+            $("#zhangjiakou_pickup").val(aData[17]);
+            $("#duikou4_pickup").val(aData[18]);
+
+            oTable.fnDeleteRow(nTr);
+
         });
+
 
     }
 

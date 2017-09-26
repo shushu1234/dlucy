@@ -118,6 +118,39 @@ var TableAdvanced = function () {
                 oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
             }
         });
+
+        $('#sample_1').on('click', ' tbody td .row-add', function () {
+
+            var nTr = $(this).parents('tr')[0];
+            var aData = oTable.fnGetData(nTr);
+
+            $("#box_no").val(aData[9]);//箱号
+
+            order_no = aData[4];
+            customer_name = aData[5];
+            destport = aData[6];
+            box_company = aData[7];
+            box_type = aData[8];
+
+            box_no = aData[9];
+            spare_no = aData[10];
+            ship_no = aData[11];
+            lading_no = aData[12];
+            entry_time = aData[13];
+
+            entry_status = aData[14];
+            pack_condition = aData[15];
+            flow_condition = aData[16];
+            exemp_period = aData[17];
+            entry_carrier = aData[18];
+
+            car_no = aData[19]
+
+            oTable.fnDeleteRow(nTr);
+
+        });
+
+
         var nTr;
         $('#sample_1').on('click', ' tbody td .row-delete', function () {
             nTr = $(this).parents('tr')[0];

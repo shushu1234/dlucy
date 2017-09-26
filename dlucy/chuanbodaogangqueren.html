@@ -165,7 +165,7 @@
 
                             <div class="portlet-body" style="overflow: scroll;height: 100px;padding-bottom: 31px;background-color: aliceblue">
 
-                                <table class="table table-striped table-bordered table-hover ">
+                                <table id="opera-table" class="table table-striped table-bordered table-hover ">
 
                                     <thead>
 
@@ -265,8 +265,9 @@
 
 
                                 <input value="0" id="info-id" type="hidden">
-                                <input value="0" id="info-addtime" type="hidden">
+                                <input value="0" id="info-status" type="hidden">
                                 <input value="0" id="info-timestamp" type="hidden">
+                                <input value="0" id="info-addtime" type="hidden">
 
                                 <div class="row-fluid" style="background-color: aliceblue" >
 
@@ -278,7 +279,7 @@
                                             <div class="controls">
 
                                                 <input class="m-wrap span12 m-ctrl-medium date-picker"
-                                                       id="info-recdate" readonly
+                                                       id="arriveport_date" readonly
                                                        size="16" type="text" value="" data-date-format="yyyy-mm-dd"/>
 
                                             </div>
@@ -293,7 +294,7 @@
                                 <div class="form-actions">
 
                                     <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
-                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                             onclick="checkAll()" style="float: right">确认提交
                                     </button>
                                     <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
                                     <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
@@ -432,7 +433,7 @@
 
                                 <tr>
                                     <th style="display: none">id</th>
-
+                                    <th style="display: none">status</th>
                                     <th style="display: none">timestamp</th>
 
                                     <th>录入日期</th>
@@ -476,9 +477,35 @@
 
                                 <tbody id="tablelist" style="background-color: #ffffff;">
                                 <tr >
-                                    <td style="display: none">1</td>
+                                    <td style="display: none">0</td>
+                                    <td style="display: none">0</td>
                                     <td style="display: none">1</td>
 
+                                    <td>2017-08-30</td>
+                                    <td class="">D001</td>
+                                    <td class="">伊利</td>
+                                    <td class="">牛奶</td>
+                                    <td class="">20GP</td>
+
+                                    <td class="">30</td>
+                                    <td class="">黄埔</td>
+                                    <td class="">门到门</td>
+                                    <td class="">2017-08-26</td>
+                                    <td class="">张三</td>
+
+                                    <td class="">中远海远</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">-</td>
+                                    <td class="">已放货</td>
+
+                                    <td class="">未确认</td>
+
+                                </tr>
+                                <tr>
+                                    <td style="display: none">0</td>
+                                    <td style="display: none">0</td>
+                                    <td style="display: none">1</td>
                                     <td>2017-08-30</td>
                                     <td class="">D001</td>
                                     <td class="">伊利</td>
@@ -501,32 +528,8 @@
 
                                 </tr>
                                 <tr >
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-
-                                    <td>2017-08-30</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">20GP</td>
-
-                                    <td class="">30</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">门到门</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">张三</td>
-
-                                    <td class="">中远海远</td>
-                                    <td class="">长安103/1120</td>
-                                    <td class="">XFHP000123</td>
-                                    <td class="">-</td>
-                                    <td class="">已放货</td>
-
-                                    <td class="">未确认</td>
-
-                                </tr>
-                                <tr >
-                                    <td style="display: none">1</td>
+                                    <td style="display: none">0</td>
+                                    <td style="display: none">0</td>
                                     <td style="display: none">1</td>
 
                                     <td>2017-08-30</td>
@@ -550,60 +553,10 @@
                                     <td class="">未确认</td>
 
                                 </tr>
-                                <tr >
+                                <tr>
+                                    <td style="display: none">0</td>
+                                    <td style="display: none">0</td>
                                     <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-
-                                    <td>2017-08-30</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">20GP</td>
-
-                                    <td class="">30</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">门到门</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">张三</td>
-
-                                    <td class="">中远海远</td>
-                                    <td class="">长安103/1120</td>
-                                    <td class="">XFHP000123</td>
-                                    <td class="">-</td>
-                                    <td class="">已放货</td>
-
-                                    <td class="">未确认</td>
-
-                                </tr>
-                                <tr >
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-
-                                    <td>2017-08-30</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">20GP</td>
-
-                                    <td class="">30</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">门到门</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">张三</td>
-
-                                    <td class="">中远海远</td>
-                                    <td class="">长安103/1120</td>
-                                    <td class="">XFHP000123</td>
-                                    <td class="">-</td>
-                                    <td class="">已放货</td>
-
-                                    <td class="">未确认</td>
-
-                                </tr>
-                                <tr >
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-
                                     <td>2017-08-30</td>
                                     <td class="">D001</td>
                                     <td class="">伊利</td>
@@ -628,7 +581,7 @@
                                 <tr class="statusok" >
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
-
+                                    <td style="display: none">1</td>
                                     <td>2017-08-30</td>
                                     <td class="">D001</td>
                                     <td class="">伊利</td>
@@ -653,7 +606,7 @@
                                 <tr class="statusok" >
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
-
+                                    <td style="display: none">1</td>
                                     <td>2017-08-30</td>
                                     <td class="">D001</td>
                                     <td class="">伊利</td>
@@ -678,7 +631,7 @@
                                 <tr class="statusok" >
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
-
+                                    <td style="display: none">1</td>
                                     <td>2017-08-30</td>
                                     <td class="">D001</td>
                                     <td class="">伊利</td>
@@ -703,7 +656,7 @@
                                 <tr class="statusok" >
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
-
+                                    <td style="display: none">1</td>
                                     <td>2017-08-30</td>
                                     <td class="">D001</td>
                                     <td class="">伊利</td>
@@ -725,60 +678,6 @@
                                     <td class="">未确认</td>
 
                                 </tr>
-                                <tr class="statusok" >
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-
-                                    <td>2017-08-30</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">20GP</td>
-
-                                    <td class="">30</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">门到门</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">张三</td>
-
-                                    <td class="">中远海远</td>
-                                    <td class="">长安103/1120</td>
-                                    <td class="">XFHP000123</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">已放货</td>
-
-                                    <td class="">未确认</td>
-
-                                </tr>
-                                <tr class="statusok" >
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-
-                                    <td>2017-08-30</td>
-                                    <td class="">D001</td>
-                                    <td class="">伊利</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">20GP</td>
-
-                                    <td class="">30</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">门到门</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">张三</td>
-
-                                    <td class="">中远海远</td>
-                                    <td class="">长安103/1120</td>
-                                    <td class="">XFHP000123</td>
-                                    <td class="">2017-08-26</td>
-                                    <td class="">已放货</td>
-
-                                    <td class="">未确认</td>
-
-                                </tr>
-
-
-
-
 
 
                                 </tbody>
@@ -908,418 +807,73 @@
         TableAdvanced.init();
         UIModals.init();
         var nowTime = new Date();
-        $("#info-pickdate").datepicker('setDate', nowTime);
-        $("#info-recdate").datepicker('setDate', nowTime);
-
+        $("#arriveport_date").datepicker('setDate', nowTime);
         window.addflag=true;
     });
 
-    var info_order;
-    var info_boxnum;
-    var info_boxtype;
-    var info_goodsname;
 
-    var info_clientname;
-    var info_port;
-    var info_tradetype;
-    var info_billcycle;
-
-    var info_pickdate;
-    var info_pickaddr;
-    var info_pickperson;
-    var info_picktel;
-
-    var info_recdate;
-    var info_recaddr;
-    var info_recperson;
-    var info_rectel;
-
-    /*获得客户信息*/
-    function getInfoData() {
-        info_order = $("#info-order").val();
-        info_boxnum = $("#info-boxnum").val();
-        info_boxtype = $("#info-boxtype").find("option:selected").text();
-        info_goodsname = $("#info-goodsname").find("option:selected").text();
-
-        info_clientname = $("#info-clientname").val();
-        info_port = $("#info-port").find("option:selected").text();
-        info_tradetype = $("#info-tradetype").find("option:selected").text();
-        info_billcycle = $("#info-billcycle").find("option:selected").text();
-
-        info_pickdate = $("#info-pickdate").val();
-        info_pickaddr = $("#info-pickaddr").find("option:selected").text();
-        info_pickperson = $("#info-pickperson").find("option:selected").text();
-        info_picktel = $("#info-picktel").find("option:selected").text();
-
-        info_recdate = $("#info-recdate").val();
-        info_recaddr = $("#info-recaddr").find("option:selected").text();
-        info_recperson = $("#info-recperson").find("option:selected").text();
-        info_rectel = $("#info-rectel").find("option:selected").text();
-    }
-
-    /*客户信息模态框初始化信息*/
-    function modalConfirm() {
-        getInfoData();
-        $("#td-order").text("指令号: " + info_order);
-        $("#td-boxnum").text("   箱量: " + info_boxnum);
-        $("#td-boxtype").text("   箱型: " + info_boxtype);
-        $("#td-goodsname").text("   品名: " + info_goodsname);
-
-        $("#td-clientname").text("   客户名称: " + info_clientname);
-        $("#td-port").text("   目的港: " + info_port);
-        $("#td-tradetype").text("   贸易方式: " + info_tradetype);
-        $("#td-billcycle").text("   结算周期: " + info_billcycle);
-
-        $("#td-pickdate").text("   提货时间:  " + info_pickdate);
-        $("#td-pickaddr").text("   提货地址:  " + info_pickaddr);
-        $("#td-pickperson").text("   提货联系人:  " + info_pickperson);
-        $("#td-picktel").text("   提货联系人电话:  " + info_picktel);
-
-        $("#td-recdate").text("   收货时间:  " + info_recdate);
-        $("#td-recaddr").text("   收货地址:  " + info_recaddr);
-        $("#td-recperson").text("   收货联系人:  " + info_recperson);
-        $("#td-rectel").text("   收货联系人电话:  " + info_rectel);
-
-    }
-
-    //    数字输入检查
-    function isNum(str) {
-        if (str != null && str != "") {
-            return !isNaN(str);
-        }
-        return false;
-    }
-    //输入框检查
-    function checkInput(str) {
-        if (str == null || str == "") {
-            return false;
-        } else {
-            return true;
-        }
-    }
-    //    下拉框检查
-    function checkSelect(str) {
-        if (str == "请选择...") {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    //    获得当前时间的时间戳
+    // 获得当前时间的时间戳
     function getTimeStamp() {
         var timestamp = new Date().getTime();
         return timestamp;
     }
-    //获得当前时间　yyyy-mm-dd hh:mm:ss
+
+    //获得当前时间　yyyy-mm-dd
     function getNowFormatDate() {
         var date = new Date();
         var seperator1 = "-";
-        var seperator2 = ":";
         var month = date.getMonth() + 1;
         var strDate = date.getDate();
-        var minutes = date.getMinutes();
-        var seconds = date.getSeconds();
         if (month >= 1 && month <= 9) {
             month = "0" + month;
         }
         if (strDate >= 0 && strDate <= 9) {
             strDate = "0" + strDate;
         }
-        if (minutes >= 0 && minutes <= 9) {
-            minutes = "0" + minutes;
-        }
-        if (seconds >= 0 && seconds <= 9) {
-            seconds = "0" + seconds;
-        }
-        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
-            + " " + date.getHours() + seperator2 + minutes
-            + seperator2 + seconds;
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate;
         return currentdate;
     }
 
-    //    重置输入框
-    function resetAll() {
-        $("#btn-reset").click();
-    }
-
-    //    重新刷新表格数据
-    function reloadData(theData) {
-
-        if (theData[9] == 0) {
-            theData[9] = getNowFormatDate();
-            theData[22] = "<td class=\"myhidden sorting_1\">" + getTimeStamp() + "</td>";
-        }
-        $('#sample_1').dataTable().fnAddData(theData);
-
-        resetAll();
-
-        $("form select").each(function (index, item) {
-            $(item).find('option').each(function () {
-                $(this).removeAttrs('selected');
-            });
-        });
-
-        $('.chzn-container-single span').html('请选择...');
-
-        $("#info-attention").text("添加成功:)");
-        var nowTime = new Date();
-        $("#info-pickdate").datepicker('setDate', nowTime);
-        $("#info-recdate").datepicker('setDate', nowTime);
-    }
 
     //   客户信息检查入口
     function checkAll() {
         var ev = arguments[0] || window.event;
         var info_id = $("#info-id").val();
-        var info_addtime = $("#info-addtime").val();
+        var info_status = $("#info-status").val();
         var info_timestamp = $("#info-timestamp").val();
+        var info_addtime = $("#info-addtime").val();
+        var info_arriveport_date=$("#arriveport_date").val();
 
-        getInfoData();
-        $('#static').modal('hide')
-
-        var check = true;
-
-        if (!checkInput(info_order)) {
-            $("#group-order").addClass("error");
-            check = false;
+        if (info_status==0){
+            info_status=1;
+            info_addtime=getNowFormatDate();
+            info_timestamp=getTimeStamp();
         }
-
-        if (!isNum(info_boxnum)) {
-            $("#group-boxnum").addClass("error");
-            check = false;
+        var theData = new Array();
+        theData[0]=  "<span class=\"row-details row-details-close\"></span>";
+        theData[1]=  "<a  class=\"btn blue row-update\" style=\"font-size: 10px;padding: 2px 8px;\">提交</a>";
+        theData[2]=info_id;
+        theData[3]=info_status;
+        theData[4]=info_timestamp;
+        theData[5]=info_addtime;
+        theData[18]=info_arriveport_date;
+        theData[19]="已放货";
+        theData[20]="已确认";
+        var j=6;
+        var tb=document.getElementById("opera-table");
+        for(var k=1;k<tb.rows.length;k++){
+            for(var i=1;i<tb.rows[k].cells.length;i++){
+                theData[j]=tb.rows[k].cells[i].innerHTML;
+                j++;
+            }
         }
-
-        if (!checkSelect(info_boxtype)) {
-            $("#group-boxtype").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_goodsname)) {
-            $("#group-goodsname").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_clientname)) {
-            $("#group-clientname").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_port)) {
-            $("#group-port").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_tradetype)) {
-            $("#group-tradetype").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_billcycle)) {
-            $("#group-billcycle").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_pickdate)) {
-            $("#group-pickdate").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_pickaddr)) {
-            $("#group-pickaddr").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_pickperson)) {
-            $("#group-pickperson").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_picktel)) {
-            $("#group-picktel").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_recdate)) {
-            $("#group-recdate").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_recaddr)) {
-            $("#group-recaddr").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_recperson)) {
-            $("#group-recperson").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_rectel)) {
-            $("#group-rectel").addClass("error");
-            check = false;
-        }
-
-
-        if (!check) {
-//            alert("请检查...");
-            $("#info-attention").text("请检查红色区域:(");
-//            resetAll();
-        } else {
-            var theData = [
-                "<span class=\"row-details row-details-close\"></span>",
-                info_pickaddr, info_pickdate, info_pickperson, info_picktel,
-                info_recaddr, info_recdate, info_recperson, info_rectel,
-                info_addtime,
-                info_order, info_goodsname, info_clientname,
-                info_boxtype, info_boxnum, info_pickperson, info_recperson,
-                info_recdate, info_port, info_billcycle, info_tradetype, info_id,
-                "<td class=\"myhidden sorting_1\">" + info_timestamp + "</td>",
-                "<a class=\"btn blue row-edit\" href=\"#\"  style=\"font-size:10px;padding: 0px 5px;\">" +
-                "                                            <i class=\"icon-edit \"></i>" +
-                "修改" +
-                "</a>",
-                "<a class=\"btn red row-delete\" href=\"#\" alt=\"删除\" style=\"font-size:10px;padding: 0px 5px;\">" +
-                "                                            <i class=\"icon-trash \"></i>" +
-                "删除" +
-                "</a>"
-            ];
-
-            //        var theTable = $('#sample_1').dataTable();
-            //        theTable.fnClearTable();
-            //        alert(1);
-//            $('#sample_1').dataTable().fnAddData(theData);
-//            alert("添加成功");
-//            resetAll();
-            reloadData(theData);
-            check = true;
-        }
-
-
-        return false;
-
+        var addrownumber=$('#sample_1').dataTable().fnAddData(theData);
+        var newTr = $('#sample_1').dataTable().fnSettings().aoData[addrownumber[0]].nTr;
+        $(newTr).addClass('statusok');
+        $("#info-attention").text("添加成功:)");
+        $("#static2").modal('show');
     }
 
-    //    以下为客户信息状态转换产生的事件
-    $("#info-order").change(function () {
-        $("#group-order").removeClass("error");
-    });
-    $("#info-boxnum").change(function () {
-        $("#group-boxnum").removeClass("error");
-    });
-    $("#info-boxtype").change(function () {
-        $("#group-boxtype").removeClass("error");
-    });
-    $("#info-goodsname").change(function () {
-        $("#group-goodsname").removeClass("error");
-    });
-
-    $("#info-clientname").change(function () {
-        $("#group-clientname").removeClass("error");
-
-    });
-    $("#info-clientname").mouseleave($.post("#", {}, function (data) {
-        data = {"addrinfo": [{"id": 1, "name": "大连"}, {"id": 2, "name": "北京"}]};
-        var addrlist = data.addrinfo;
-        var str;
-        $.each(addrlist, function (n, addr) {
-            str += "<option value=\"" +
-                addr.id +
-                "\">" +
-                addr.name +
-                "</option>";
-        })
-        $("#info-pickaddr").append(str);
-        $("#info-recaddr").append(str);
-    }));
-    $("#info-port").change(function () {
-        $("#group-port").removeClass("error");
-    });
-    $("#info-tradetype").change(function () {
-        $("#group-tradetype").removeClass("error");
-    });
-    $("#info-billcycle").change(function () {
-        $("#group-billcycle").removeClass("error");
-    });
-
-    $("#info-pickdate").change(function () {
-        $("#group-pickdate").removeClass("error");
-    });
-    $("#info-pickaddr").change(function () {
-        $("#group-pickaddr").removeClass("error");
-    });
-    $("#info-pickaddr").mouseleave($.post("#", {}, function (data) {
-        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
-        var personlist = data.personinfo;
-        var str;
-        $.each(personlist, function (n, person) {
-            str += "<option value=\"" +
-                person.id +
-                "\">" +
-                person.name +
-                "</option>";
-        })
-        $("#info-pickperson").append(str);
-    }));
-    $("#info-pickperson").change(function () {
-        $("#group-pickperson").removeClass("error");
-    });
-    $("#info-pickperson").mouseleave($.post("#", {}, function (data) {
-        data = {"telinfo": [{"id": 1, "name": "12345678"}, {"id": 2, "name": "987654321"}]};
-        var tellist = data.telinfo;
-        var str;
-        $.each(tellist, function (n, tel) {
-            str += "<option value=\"" +
-                tel.id +
-                "\">" +
-                tel.name +
-                "</option>";
-        })
-        $("#info-picktel").append(str);
-    }));
-    $("#info-picktel").change(function () {
-        $("#group-picktel").removeClass("error");
-    });
-
-    $("#info-recdate").change(function () {
-        $("#group-recdate").removeClass("error");
-    });
-    $("#info-recaddr").change(function () {
-        $("#group-recaddr").removeClass("error");
-    });
-    $("#info-recaddr").mouseleave($.post("#", {}, function (data) {
-        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
-        var personlist = data.personinfo;
-        var str;
-        $.each(personlist, function (n, person) {
-            str += "<option value=\"" +
-                person.id +
-                "\">" +
-                person.name +
-                "</option>";
-        })
-        $("#info-recperson").append(str);
-    }));
-    $("#info-recperson").change(function () {
-        $("#group-recperson").removeClass("error");
-    });
-    //
-    $("#info-recperson").mouseleave($.post("#", {}, function (data) {
-        data = {"telinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
-        var tellist = data.telinfo;
-        var str;
-        $.each(tellist, function (n, tel) {
-            str += "<option value=\"" +
-                tel.id +
-                "\">" +
-                tel.name +
-                "</option>";
-        })
-        $("#info-rectel").append(str);
-    }));
-    $("#info-rectel").change(function () {
-        $("#group-rectel").removeClass("error");
-    });
 </script>
 
 <!-- 本页JS脚本结束 -->

@@ -169,13 +169,14 @@
 
                                     <div class="span6 ">
 
-                                        <div class="control-group" style="margin-left: 100px;width:370px;">
+                                        <div class="control-group" style="margin-left: 100px;width:370px;"
+                                             id="group-BN">
 
                                             <label class="control-label">箱号</label>
 
                                             <div class="controls">
 
-                                                <input type="text" class="m-wrap span12" disabled />
+                                                <input type="text" class="m-wrap span12" readonly id="box_no"/>
 
                                             </div>
 
@@ -187,13 +188,14 @@
 
                                     <div class="span6 ">
 
-                                        <div class="control-group" style="margin-right: 100px;width:370px;" >
+                                        <div class="control-group" style="margin-right: 100px;width:370px;"
+                                             id="group-SN">
 
                                             <label class="control-label">备位号</label>
 
                                             <div class="controls">
 
-                                                <input type="text" class="m-wrap span12"  placeholder="手工录入">
+                                                <input type="text" class="m-wrap span12" placeholder="手工录入" id="C_SN">
 
                                             </div>
 
@@ -205,15 +207,15 @@
 
                                 </div>
 
-                            <!--</form>-->
+                                <!--</form>-->
 
-                            <!-- 箱号信息 FORM 结束-->
+                                <!-- 箱号信息 FORM 结束-->
+
+                            </div>
 
                         </div>
 
-                    </div>
-
-                    <!-- 箱号信息结束-->
+                        <!-- 箱号信息结束-->
                     </div>
                     <div class="form-actions">
 
@@ -229,60 +231,53 @@
                                 <p>请确认信息:</p>
                                 <table>
                                     <tr>
-                                        <td id="td-order"></td>
-                                        <td></td>
-                                        <td id="td-boxnum"></td>
+                                        <td id="td-box_no"></td>
 
-                                        <td id="td-boxtype"></td>
+                                        <td id="td-spare_no"></td>
+                                    </tr>
+                                    <tr><br/></tr>
+                                    <tr>
+                                        <td>===============其他信息===============</td>
+                                    </tr>
+                                    <tr>
 
-                                        <td id="td-goodsname"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-clientname"></td>
-                                        <td></td>
-                                        <td id="td-port"></td>
+                                        <td id="td-order_no"></td>
 
-                                        <td id="td-tradetype"></td>
+                                        <td id="td-customer_name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="td-destport"></td>
 
-                                        <td id="td-billcycle"></td>
+                                        <td id="td-box_company"></td>
                                     </tr>
                                     <tr>
-                                        <td><br></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="5">==================提货信息==================</td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-pickaddr" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-pickdate" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-pickperson" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-picktel" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><br></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">==================收货信息==================</td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-recaddr" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-recdate" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-recperson" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-rectel" colspan="5"></td>
-                                    </tr>
 
+                                        <td id="td-box_type"></td>
+
+                                        <td id="td-ship_no"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="td-lading_no"></td>
+
+                                        <td id="td-entry_time"></td>
+                                    </tr>
+                                    <tr>
+
+                                        <td id="td-entry_status"></td>
+
+                                        <td id="td-pack_condition"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="td-flow_condition"></td>
+
+                                        <td id="td-exemp_period"></td>
+                                    </tr>
+                                    <tr>
+
+                                        <td id="td-entry_carrier"></td>
+
+                                        <td id="td-car_no"></td>
+                                    </tr>
                                 </table>
                             </div>
 
@@ -314,444 +309,203 @@
                         </div>
                     </div>
 
-            </form>
-        </div>
+                </form>
+            </div>
 
 
-        <div class="row-fluid">
+            <div class="row-fluid">
 
-            <div class="span12">
+                <div class="span12">
 
-                <!-- 业务列表开始　-->
+                    <!-- 业务列表开始　-->
 
-                <div class="portlet box green">
-                    <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
-                    <div class="portlet-title">
+                    <div class="portlet box green">
+                        <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
+                        <div class="portlet-title">
 
-                        <div class="caption"><i class="icon-list"></i>业务列表</div>
+                            <div class="caption"><i class="icon-list"></i>业务列表</div>
 
-                        <div class="tools">
+                            <div class="tools">
 
-                            <a href="javascript:;" class="reload"></a>
+                                <a href="javascript:;" class="reload"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body" style="background-color: azure ;">
+
+                            <table class="table table-striped table-bordered table-hover table-full-width"
+                                   id="sample_1">
+
+                                <thead>
+
+                                <tr>
+                                    <th style="display: none">id</th>
+
+                                    <th style="display: none">timestamp</th>
+
+                                    <th>指令号</th>
+
+                                    <th>客户名称</th>
+
+                                    <th>目的港</th>
+
+                                    <th>箱属公司</th>
+
+                                    <th>箱型</th>
+
+                                    <th>箱号</th>
+
+                                    <th>备位号</th>
+
+                                    <th>航名航次</th>
+
+                                    <th>提单号</th>
+
+                                    <th>进场时间</th>
+
+                                    <th>进场状态</th>
+
+                                    <th>装箱条件</th>
+
+                                    <th>流向条件</th>
+
+                                    <th>免存期</th>
+
+                                    <th>进场承运商</th>
+
+                                    <th>车号</th>
+
+                                </tr>
+
+                                </thead>
+
+                                <tbody id="tablelist" style="background-color: #ffffff;">
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">-</td>
+                                    <td class="">-</td>
+                                    <td class="">-</td>
+                                    <td class="">信丰海运</td>
+                                    <td class="">20GP</td>
+                                    <td class="">TEMU1234567</td>
+                                    <td class="">-</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">8月30日</td>
+                                    <td class="">空箱进场</td>
+                                    <td class="">无限制</td>
+                                    <td class="">无限制</td>
+                                    <td class="">20</td>
+                                    <td class="">胜腾物流</td>
+                                    <td class="">津A1234</td>
+                                </tr>
+                                <tr class="even">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">-</td>
+                                    <td class="">-</td>
+                                    <td class="">-</td>
+                                    <td class="">信丰海运</td>
+                                    <td class="">20GP</td>
+                                    <td class="">TEMU1234568</td>
+                                    <td class="">-</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">8月30日</td>
+                                    <td class="">外协进场</td>
+                                    <td class="">无限制</td>
+                                    <td class="">无限制</td>
+                                    <td class="">20</td>
+                                    <td class="">胜腾物流</td>
+                                    <td class="">津A1234</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">-</td>
+                                    <td class="">-</td>
+                                    <td class="">-</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">20GP</td>
+                                    <td class="">DFIU2221234</td>
+                                    <td class="">-</td>
+                                    <td class="">新长沙/0025</td>
+                                    <td class="">NSTJ222345</td>
+                                    <td class="">8月30日</td>
+                                    <td class="">掏箱进场</td>
+                                    <td class="">A类箱</td>
+                                    <td class="">30</td>
+                                    <td class="">20</td>
+                                    <td class="">胜腾物流</td>
+                                    <td class="">津B2234</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">-</td>
+                                    <td class="">-</td>
+                                    <td class="">-</td>
+                                    <td class="">信丰海运</td>
+                                    <td class="">20GP</td>
+                                    <td class="">TEMU1234567</td>
+                                    <td class="">-</td>
+                                    <td class="">长安103/1120</td>
+                                    <td class="">XFHP000123</td>
+                                    <td class="">8月30日</td>
+                                    <td class="">空箱进场</td>
+                                    <td class="">无限制</td>
+                                    <td class="">无限制</td>
+                                    <td class="">20</td>
+                                    <td class="">胜腾物流</td>
+                                    <td class="">津A1234</td>
+                                </tr>
+
+
+                                </tbody>
+
+                            </table>
 
                         </div>
 
                     </div>
 
-                    <div class="portlet-body" style="background-color: azure ;">
+                    <!-- 业务列表结束-->
 
-                        <table class="table table-striped table-bordered table-hover table-full-width"
-                               id="sample_1">
-
-                            <thead>
-
-                            <tr>
-                                <th style="display: none">id</th>
-
-                                <th style="display: none">timestamp</th>
-
-                                <th>指令号</th>
-
-                                <th>客户名称</th>
-
-                                <th>目的港</th>
-
-                                <th>箱属公司</th>
-
-                                <th>箱型</th>
-
-                                <th>箱号</th>
-
-                                <th>备位号</th>
-
-                                <th>航名航次</th>
-
-                                <th>提单号</th>
-
-                                <th>进场时间</th>
-
-                                <th>进场状态</th>
-
-                                <th>装箱条件</th>
-
-                                <th>流向条件</th>
-
-                                <th>免存期</th>
-
-                                <th>进场承运商</th>
-
-                                <th>车号</th>
-
-                            </tr>
-
-                            </thead>
-
-                            <tbody id="tablelist" style="background-color: #ffffff;">
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd statusok">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd statusok">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-                            <tr class="odd statusok">
-                                <td style="display: none">1</td>
-                                <td style="display: none">1</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">信丰海运</td>
-                                <td class="">20GP</td>
-                                <td class="">TEMU1234567</td>
-                                <td class="">-</td>
-                                <td class="">长安103/1120</td>
-                                <td class="">XFHP000123</td>
-                                <td class="">8月30日</td>
-                                <td class="">空箱进场</td>
-                                <td class="">无限制</td>
-                                <td class="">无限制</td>
-                                <td class="">20</td>
-                                <td class="">胜腾物流</td>
-                                <td class="">津A1234</td>
-                            </tr>
-
-
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
 
                 </div>
 
-                <!-- 业务列表结束-->
-
-
             </div>
+
+            <!-- 页面内容结束　-->
 
         </div>
 
-        <!-- 页面内容结束　-->
+        <!-- CONTAINER　结束-->
 
     </div>
 
-    <!-- CONTAINER　结束-->
+    <!-- 页面结束 -->
+    <div id="static3" class="modal hide fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
 
-</div>
+        <div class="modal-body">
 
-<!-- 页面结束 -->
-<div id="static3" class="modal hide fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
+            <h3 id="user-attention" style="text-align: center"></h3>
+            <input type="hidden" value="0" id="user-attentionflag">
 
-    <div class="modal-body">
+        </div>
 
-        <h3 id="user-attention" style="text-align: center"></h3>
-        <input type="hidden" value="0" id="user-attentionflag">
+        <div class="modal-footer">
 
-    </div>
+            <button type="button" data-dismiss="modal" class="btn">放弃</button>
 
-    <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn red" id="btn-delrow">确认</button>
 
-        <button type="button" data-dismiss="modal" class="btn">放弃</button>
-
-        <button type="button" data-dismiss="modal" class="btn red" id="btn-delrow">确认</button>
+        </div>
 
     </div>
-
-</div>
 
 </div>
 
@@ -841,71 +595,55 @@
         $("#info-recdate").datepicker('setDate', nowTime);
     });
 
-    var info_order;
-    var info_boxnum;
-    var info_boxtype;
-    var info_goodsname;
+    var order_no;
+    var customer_name;
+    var destport;
+    var box_company;
+    var box_type;
 
-    var info_clientname;
-    var info_port;
-    var info_tradetype;
-    var info_billcycle;
+    var box_no;
+    var spare_no;
+    var ship_no;
+    var lading_no;
+    var entry_time;
 
-    var info_pickdate;
-    var info_pickaddr;
-    var info_pickperson;
-    var info_picktel;
+    var entry_status;
+    var pack_condition;
+    var flow_condition;
+    var exemp_period;
+    var entry_carrier;
 
-    var info_recdate;
-    var info_recaddr;
-    var info_recperson;
-    var info_rectel;
+    var car_no;
 
-    /*获得客户信息*/
-    function getInfoData() {
-        info_order = $("#info-order").val();
-        info_boxnum = $("#info-boxnum").val();
-        info_boxtype = $("#info-boxtype").find("option:selected").text();
-        info_goodsname = $("#info-goodsname").find("option:selected").text();
-
-        info_clientname = $("#info-clientname").val();
-        info_port = $("#info-port").find("option:selected").text();
-        info_tradetype = $("#info-tradetype").find("option:selected").text();
-        info_billcycle = $("#info-billcycle").find("option:selected").text();
-
-        info_pickdate = $("#info-pickdate").val();
-        info_pickaddr = $("#info-pickaddr").find("option:selected").text();
-        info_pickperson = $("#info-pickperson").find("option:selected").text();
-        info_picktel = $("#info-picktel").find("option:selected").text();
-
-        info_recdate = $("#info-recdate").val();
-        info_recaddr = $("#info-recaddr").find("option:selected").text();
-        info_recperson = $("#info-recperson").find("option:selected").text();
-        info_rectel = $("#info-rectel").find("option:selected").text();
-    }
 
     /*客户信息模态框初始化信息*/
     function modalConfirm() {
-        getInfoData();
-        $("#td-order").text("指令号: " + info_order);
-        $("#td-boxnum").text("   箱量: " + info_boxnum);
-        $("#td-boxtype").text("   箱型: " + info_boxtype);
-        $("#td-goodsname").text("   品名: " + info_goodsname);
 
-        $("#td-clientname").text("   客户名称: " + info_clientname);
-        $("#td-port").text("   目的港: " + info_port);
-        $("#td-tradetype").text("   贸易方式: " + info_tradetype);
-        $("#td-billcycle").text("   结算周期: " + info_billcycle);
+        $("#td-box_no").text("箱号: " + box_no);
 
-        $("#td-pickdate").text("   提货时间:  " + info_pickdate);
-        $("#td-pickaddr").text("   提货地址:  " + info_pickaddr);
-        $("#td-pickperson").text("   提货联系人:  " + info_pickperson);
-        $("#td-picktel").text("   提货联系人电话:  " + info_picktel);
+        spare_no = $("#C_SN").val();
+        $("#td-spare_no").text("   备位号: " + spare_no);
 
-        $("#td-recdate").text("   收货时间:  " + info_recdate);
-        $("#td-recaddr").text("   收货地址:  " + info_recaddr);
-        $("#td-recperson").text("   收货联系人:  " + info_recperson);
-        $("#td-rectel").text("   收货联系人电话:  " + info_rectel);
+        $("#td-order_no").text("   指令号: " + order_no);
+        $("#td-customer_name").text("   客户名称: " + customer_name);
+
+        $("#td-destport").text("   目的港: " + destport);
+        $("#td-box_company").text("   箱属公司: " + box_company);
+
+        $("#td-box_type").text("   箱型: " + box_type);
+        $("#td-ship_no").text("   航名航次: " + ship_no);
+
+        $("#td-lading_no").text("   提单号:  " + lading_no);
+        $("#td-entry_time").text("   进场时间:  " + entry_time);
+
+        $("#td-entry_status").text("   进场状态:  " + entry_status);
+        $("#td-pack_condition").text("   装箱条件:  " + pack_condition);
+
+        $("#td-flow_condition").text("   流向条件:  " + flow_condition);
+        $("#td-exemp_period").text("   免存期:  " + exemp_period);
+
+        $("#td-entry_carrier").text("   进场承运商:  " + entry_carrier);
+        $("#td-car_no").text("   车号:  " + car_no);
 
     }
 
@@ -976,9 +714,9 @@
     //    重新刷新表格数据
     function reloadData(theData) {
 
-        if (theData[9] == 0) {
-            theData[9] = getNowFormatDate();
-            theData[22] = "<td class=\"myhidden sorting_1\">" + getTimeStamp() + "</td>";
+        if (theData[2] == 0) {
+            theData[2] = getNowFormatDate();
+            theData[3] = "<td class=\"myhidden sorting_1\">" + getTimeStamp() + "</td>";
         }
         $('#sample_1').dataTable().fnAddData(theData);
 
@@ -1005,91 +743,19 @@
         var info_addtime = $("#info-addtime").val();
         var info_timestamp = $("#info-timestamp").val();
 
-        getInfoData();
+//        getInfoData();
         $('#static').modal('hide')
 
         var check = true;
 
-        if (!checkInput(info_order)) {
-            $("#group-order").addClass("error");
+        if (!checkInput(spare_no)) {
+            $("#group-SN").addClass("error");
             check = false;
         }
-
-        if (!isNum(info_boxnum)) {
-            $("#group-boxnum").addClass("error");
+        if (!checkInput(box_no)) {
+            $("#group-BN").addClass("error");
             check = false;
         }
-
-        if (!checkSelect(info_boxtype)) {
-            $("#group-boxtype").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_goodsname)) {
-            $("#group-goodsname").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_clientname)) {
-            $("#group-clientname").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_port)) {
-            $("#group-port").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_tradetype)) {
-            $("#group-tradetype").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_billcycle)) {
-            $("#group-billcycle").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_pickdate)) {
-            $("#group-pickdate").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_pickaddr)) {
-            $("#group-pickaddr").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_pickperson)) {
-            $("#group-pickperson").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_picktel)) {
-            $("#group-picktel").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_recdate)) {
-            $("#group-recdate").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_recaddr)) {
-            $("#group-recaddr").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_recperson)) {
-            $("#group-recperson").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_rectel)) {
-            $("#group-rectel").addClass("error");
-            check = false;
-        }
-
 
         if (!check) {
 //            alert("请检查...");
@@ -1098,21 +764,13 @@
         } else {
             var theData = [
                 "<span class=\"row-details row-details-close\"></span>",
-                info_pickaddr, info_pickdate, info_pickperson, info_picktel,
-                info_recaddr, info_recdate, info_recperson, info_rectel,
-                info_addtime,
-                info_order, info_goodsname, info_clientname,
-                info_boxtype, info_boxnum, info_pickperson, info_recperson,
-                info_recdate, info_port, info_billcycle, info_tradetype, info_id,
-                "<td class=\"myhidden sorting_1\">" + info_timestamp + "</td>",
-                "<a class=\"btn blue row-edit\" href=\"#\"  style=\"font-size:10px;padding: 0px 5px;\">" +
-                "                                            <i class=\"icon-edit \"></i>" +
-                "修改" +
-                "</a>",
-                "<a class=\"btn red row-delete\" href=\"#\" alt=\"删除\" style=\"font-size:10px;padding: 0px 5px;\">" +
-                "                                            <i class=\"icon-trash \"></i>" +
-                "删除" +
-                "</a>"
+                "<a  class=\"btn blue row-add\" style=\"font-size: 10px;padding: 2px 8px;\">提交</a>",
+                info_addtime, info_id,
+                order_no, customer_name, destport, box_company, box_type,
+                box_no, spare_no, ship_no, lading_no, entry_time,
+                entry_status, pack_condition, flow_condition, exemp_period, entry_carrier,
+                car_no
+
             ];
 
             //        var theTable = $('#sample_1').dataTable();

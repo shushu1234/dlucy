@@ -50,18 +50,15 @@ var TableAdvanced = function () {
                var str=" <tr>"+
                    "<td><a  class=\"btn red btn-del\" style=\"font-size: 10px;padding: 2px 8px;\">删除</a></td>"+
                    "<td>" +
-                   aData[5] +
-                   "</td>"+
-                   "<td>" +
                    aData[6] +
                    "</td>"+
                    "<td>" +
-                   aData[7]     +
-                   "</td>"+
-                   "<td >" +
-                   aData[8] +
+                   aData[7] +
                    "</td>"+
                    "<td>" +
+                   aData[8]     +
+                   "</td>"+
+                   "<td >" +
                    aData[9] +
                    "</td>"+
                    "<td>" +
@@ -70,10 +67,10 @@ var TableAdvanced = function () {
                    "<td>" +
                    aData[11] +
                    "</td>"+
-                   "<td >" +
+                   "<td>" +
                    aData[12] +
                    "</td>"+
-                   "<td>" +
+                   "<td >" +
                    aData[13] +
                    "</td>"+
                    "<td>" +
@@ -82,8 +79,11 @@ var TableAdvanced = function () {
                    "<td>" +
                    aData[15] +
                    "</td>"+
-                   "<td >" +
+                   "<td>" +
                    aData[16] +
+                   "</td>"+
+                   "<td >" +
+                   aData[17] +
                    "</td>"+
                    "</tr>";
                $("#tbody-box").append(str);
@@ -101,6 +101,7 @@ var TableAdvanced = function () {
                 null,
                 {"bVisible": false},
                 {"bVisible": false},
+                {"bVisible": false},
                 null,
                 null,
                 null,
@@ -120,14 +121,12 @@ var TableAdvanced = function () {
                 null,
 
                 null,
-
-
 
             ],
             "aoColumnDefs": [
                 {"bSortable": false, "aTargets": [0]}
             ],
-            "aaSorting": [[2, 'desc']],
+            "aaSorting": [[3,'asc'],[4, 'desc']],
             "aLengthMenu": [
                 [10, 50, 100, -1],
                 [10, 50, 100, "全部"] // change per page values here

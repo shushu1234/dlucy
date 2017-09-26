@@ -133,33 +133,33 @@
 
                                         <tr>
                                             <td class = "table-jx">
-                                                <label class="span4" >　　指令号:<input id = "printTableOne00" type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                                <label class="span4" >　　指令号:<input id = "order_no" type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
                                             </td>
                                             <td class = "table-jx">
-                                                <label class="span4" style="padding-left: 8px;">客户名称:<input id = "printTableOne01"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                                <label class="span4" style="padding-left: 8px;">客户名称:<input id = "customer_name"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
                                             </td>
                                             <td class = "table-jx">
-                                                <label class="span4">　　箱型:<input id = "printTableOne02"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                                <label class="span4">　　箱型:<input id = "boxtype"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
                                             </td>
                                         </tr>
                                         <tr>
 
                                             <td class = "table-jx">
-                                                <label class="span4">　提货地址:<input id = "printTableOne10"type="text" placeholder="下面列表点击生成"style="width: 120px"disabled/></label>
+                                                <label class="span4">　提货地址:<input id = "pickup_addr"type="text" placeholder="下面列表点击生成"style="width: 120px"disabled/></label>
                                             </td>
                                             <td class = "table-jx">
-                                                <label class="span4" style="padding-left: 8px;">天津提货:<input id = "printTableOne11"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                                <label class="span4" style="padding-left: 8px;">天津提货:<input id = "tianjin_pickup"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
                                             </td>
                                             <td class = "table-jx">
-                                                <label class="span4">北京提货:<input id = "printTableOne12"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                                <label class="span4">北京提货:<input id = "beijing_pickup"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class = "table-jx">
-                                                <label class="span4">张家口提货:<input id = "printTableOne20"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                                <label class="span4">张家口提货:<input id = "zhangjiakou_pickup"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
                                             </td>
                                             <td class = "table-jx">
-                                            <label class="span4">堆场4提货:<input id = "printTableOne21"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
+                                            <label class="span4">堆场4提货:<input id = "duikou4_pickup"type="text" placeholder="下面列表点击生成"style="width: 120px" disabled/></label>
                                         </td>
 
                                         </tr>
@@ -168,6 +168,7 @@
 
                                 </div>
 
+                                <button type="reset" class="btn" id="btn-reset2" style="display: none;">取消重置</button>
 
 
 
@@ -193,9 +194,9 @@
 
                             <form action="#" class="form-horizontal"style="background-color: aliceblue"
                                   onSubmit="return checkAll()">
-                                <input value="0" id="info-id" type="hidden">
-                                <input value="0" id="info-addtime" type="hidden">
-                                <input value="0" id="info-timestamp" type="hidden">
+                                <input value="0" id="info-id2" type="hidden">
+                                <input value="0" id="info-addtime2" type="hidden">
+                                <input value="0" id="info-timestamp2" type="hidden">
 
 
                                 <div class="row-fluid">
@@ -204,20 +205,20 @@
                                         <tr>
 
                                             <td class = "table-jx">
-                                                <label class="span3">　天津箱量:<input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                                <label class="span3">　天津箱量:<input id = "tianjin_boxnum"type="text" placeholder="手工录入" style="width: 120px"/></label>
                                             </td>
                                             <td class = "table-jx">
-                                                <label class="span3">北京箱量:<input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                                <label class="span3">北京箱量:<input id = "beijing_boxnum"type="text" placeholder="手工录入" style="width: 120px"/></label>
                                             </td>
 
                                         </tr>
 
                                         <tr>
                                             <td class = "table-jx">
-                                                <label class="span3">张家口箱量:<input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                                <label class="span3">张家口箱量:<input id = "zhangjiakou_boxnum"type="text" placeholder="手工录入" style="width: 120px"/></label>
                                             </td>
                                             <td class = "table-jx">
-                                                <label class="span3">专项操作:<input type="text" placeholder="手工录入" style="width: 120px"/></label>
+                                                <label class="span3">专项操作:<input id = "zhuanxiang_boxnum"type="text" placeholder="手工录入" style="width: 120px"/></label>
                                             </td>
                                         </tr>
 
@@ -229,7 +230,7 @@
                                 <div class="form-actions" style="position: relative">
 
                                     <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
-                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                            href="#static" onclick="checkAll()" style="float: right">确认提交
                                     </button>
                                     <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
                                     <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
@@ -342,21 +343,21 @@
                                             <td style="display: none">1</td>
                                             <td style="display: none">1</td>
                                             <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">阜丰</td>
+                                            <td class="">味精</td>
                                             <td class="">20GP</td>
                                             <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
                                             <td class="">30</td>
+                                            <td class="">中远海运</td>
+                                            <td class="">新长沙/1124</td>
+                                            <td class="">TJHP12345</td>
+                                            <td class="">呼和浩特</td>
+                                            <td class="">张三</td>
+                                            <td class="">0</td>
                                             <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">30</td>
+                                            <td class="">0</td>
+                                            <td class="">0</td>
+                                            <td class="">未分配</td>
                                         </tr>
                                         <tr class="odd">
                                             <td style="display: none">1</td>
@@ -669,177 +670,21 @@
                                             <td style="display: none">1</td>
                                             <td style="display: none">1</td>
                                             <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
+                                            <td class="">阜丰</td>
+                                            <td class="">味精</td>
                                             <td class="">20GP</td>
                                             <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
                                             <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-
-                                        </tr>
-                                        <tr class="odd statusok">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                            <td class="">20GP</td>
+                                            <td class="">中远海运</td>
+                                            <td class="">新长沙/1124</td>
+                                            <td class="">TJHP12345</td>
+                                            <td class="">呼和浩特</td>
+                                            <td class="">张三</td>
+                                            <td class="">0</td>
                                             <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-
-
-                                        </tr>
-
-                                        <tr class="odd statusok">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                            <td class="">20GP</td>
-                                            <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-
-
-                                        </tr>
-                                        <tr class="odd statusok">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                            <td class="">20GP</td>
-                                            <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-
-
-                                        </tr>
-                                        <tr class="odd statusok">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                            <td class="">20GP</td>
-                                            <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-
-
-                                        </tr>
-                                        <tr class="odd statusok">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                            <td class="">20GP</td>
-                                            <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-
-
-                                        </tr>
-                                        <tr class="odd statusok">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                            <td class="">20GP</td>
-                                            <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-
-
-                                        </tr>
-                                        <tr class="odd statusok">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                            <td class="">20GP</td>
-                                            <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-
-
+                                            <td class="">0</td>
+                                            <td class="">0</td>
+                                            <td class="">未分配</td>
                                         </tr>
                                         <tr class="odd statusok">
                                             <td style="display: none">1</td>
@@ -862,46 +707,6 @@
                                             <td class="">无限制</td>
                                         </tr>
                                         <tr class="odd statusok">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                            <td class="">20GP</td>
-                                            <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-                                        </tr>
-                                        <tr class="odd statusok">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td class="">D001</td>
-                                            <td class="">伊利暗示过多久发货时间开放和上的飞机上飞机</td>
-                                            <td class="">20GP</td>
-                                            <td class="">30</td>
-                                            <td class="">牛身份和健身房奶</td>
-                                            <td class="">黄埔</td>
-                                            <td class="">门到天津港</td>
-                                            <td class="">天津</td>
-                                            <td class="">30</td>
-                                            <td class="">信丰海运</td>
-                                            <td class="">20GP</td>
-                                            <td class="">TEMU1234567</td>
-                                            <td class="">A0101010</td>
-                                            <td class="">9月20日</td>
-                                            <td class="">空箱进场</td>
-                                            <td class="">无限制</td>
-                                        </tr>
-                                        <tr class="odd statusok" >
                                             <td style="display: none">1</td>
                                             <td style="display: none">1</td>
                                             <td class="">D001</td>
@@ -1058,96 +863,35 @@
         $("#info-recdate").datepicker('setDate', nowTime);
     });
 
-    var info_order;
-    var info_boxnum;
+    var info_order_no;
+    var info_customer_name;
     var info_boxtype;
-    var info_goodsname;
+    var info_pickup_addr;
+    var info_tianjin_pickup;
+    var info_beijing_pickup;
+    var info_zhangjiakou_pickup;
+    var info_duikou4_pickup;
 
-    var info_clientname;
-    var info_port;
-    var info_tradetype;
-    var info_billcycle;
-
-    var info_pickdate;
-    var info_pickaddr;
-    var info_pickperson;
-    var info_picktel;
-
-    var info_recdate;
-    var info_recaddr;
-    var info_recperson;
-    var info_rectel;
+    var info_tianjin_boxnum;
+    var info_beijing_boxnum;
+    var info_zhangjiakou_boxnum;
+    var info_zhuanxiang_boxnum;
 
     /*获得客户信息*/
     function getInfoData() {
-        info_order = $("#info-order").val();
-        info_boxnum = $("#info-boxnum").val();
-        info_boxtype = $("#info-boxtype").find("option:selected").text();
-        info_goodsname = $("#info-goodsname").find("option:selected").text();
+        info_order_no = $("#order_no").val();
+        info_customer_name = $("#customer_name").val();
+        info_boxtype = $("#boxtype").val();
+        info_pickup_addr = $("#pickup_addr").val();
+        info_tianjin_pickup = $("#tianjin_pickup").val();
+        info_beijing_pickup = $("#beijing_pickup").val();
+        info_zhangjiakou_pickup = $("#zhangjiakou_pickup").val();
+        info_duikou4_pickup = $("#duikou4_pickup").val();
 
-        info_clientname = $("#info-clientname").val();
-        info_port = $("#info-port").find("option:selected").text();
-        info_tradetype = $("#info-tradetype").find("option:selected").text();
-        info_billcycle = $("#info-billcycle").find("option:selected").text();
-
-        info_pickdate = $("#info-pickdate").val();
-        info_pickaddr = $("#info-pickaddr").find("option:selected").text();
-        info_pickperson = $("#info-pickperson").find("option:selected").text();
-        info_picktel = $("#info-picktel").find("option:selected").text();
-
-        info_recdate = $("#info-recdate").val();
-        info_recaddr = $("#info-recaddr").find("option:selected").text();
-        info_recperson = $("#info-recperson").find("option:selected").text();
-        info_rectel = $("#info-rectel").find("option:selected").text();
-    }
-
-    /*客户信息模态框初始化信息*/
-    function modalConfirm() {
-        getInfoData();
-        $("#td-order").text("指令号: " + info_order);
-        $("#td-boxnum").text("   箱量: " + info_boxnum);
-        $("#td-boxtype").text("   箱型: " + info_boxtype);
-        $("#td-goodsname").text("   品名: " + info_goodsname);
-
-        $("#td-clientname").text("   客户名称: " + info_clientname);
-        $("#td-port").text("   目的港: " + info_port);
-        $("#td-tradetype").text("   贸易方式: " + info_tradetype);
-        $("#td-billcycle").text("   结算周期: " + info_billcycle);
-
-        $("#td-pickdate").text("   提货时间:  " + info_pickdate);
-        $("#td-pickaddr").text("   提货地址:  " + info_pickaddr);
-        $("#td-pickperson").text("   提货联系人:  " + info_pickperson);
-        $("#td-picktel").text("   提货联系人电话:  " + info_picktel);
-
-        $("#td-recdate").text("   收货时间:  " + info_recdate);
-        $("#td-recaddr").text("   收货地址:  " + info_recaddr);
-        $("#td-recperson").text("   收货联系人:  " + info_recperson);
-        $("#td-rectel").text("   收货联系人电话:  " + info_rectel);
-
-    }
-
-    //    数字输入检查
-    function isNum(str) {
-        if (str != null && str != "") {
-            return !isNaN(str);
-        }
-        return false;
-    }
-    //输入框检查
-    function checkInput(str) {
-        if (str == null || str == "") {
-            return false;
-        } else {
-            return true;
-        }
-    }
-    //    下拉框检查
-    function checkSelect(str) {
-        if (str == "请选择...") {
-            return false;
-        } else {
-            return true;
-        }
+        info_tianjin_boxnum = $("#tianjin_boxnum").val();
+        info_beijing_boxnum = $("#beijing_boxnum").val();
+        info_zhangjiakou_boxnum = $("#zhangjiakou_boxnum").val();
+        info_zhuanxiang_boxnum = $("#zhuanxiang_boxnum").val();
     }
 
     //    获得当前时间的时间戳
@@ -1185,32 +929,10 @@
     //    重置输入框
     function resetAll() {
         $("#btn-reset").click();
+        $("#btn-reset2").click();
     }
 
-    //    重新刷新表格数据
-    function reloadData(theData) {
 
-        if (theData[9] == 0) {
-            theData[9] = getNowFormatDate();
-            theData[22] = "<td class=\"myhidden sorting_1\">" + getTimeStamp() + "</td>";
-        }
-        $('#sample_1').dataTable().fnAddData(theData);
-
-        resetAll();
-
-        $("form select").each(function (index, item) {
-            $(item).find('option').each(function () {
-                $(this).removeAttrs('selected');
-            });
-        });
-
-        $('.chzn-container-single span').html('请选择...');
-
-        $("#info-attention").text("添加成功:)");
-        var nowTime = new Date();
-        $("#info-pickdate").datepicker('setDate', nowTime);
-        $("#info-recdate").datepicker('setDate', nowTime);
-    }
 
     //   客户信息检查入口
     function checkAll() {
@@ -1224,246 +946,49 @@
 
         var check = true;
 
-        if (!checkInput(info_order)) {
-            $("#group-order").addClass("error");
-            check = false;
-        }
-
-        if (!isNum(info_boxnum)) {
-            $("#group-boxnum").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_boxtype)) {
-            $("#group-boxtype").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_goodsname)) {
-            $("#group-goodsname").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_clientname)) {
-            $("#group-clientname").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_port)) {
-            $("#group-port").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_tradetype)) {
-            $("#group-tradetype").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_billcycle)) {
-            $("#group-billcycle").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_pickdate)) {
-            $("#group-pickdate").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_pickaddr)) {
-            $("#group-pickaddr").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_pickperson)) {
-            $("#group-pickperson").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_picktel)) {
-            $("#group-picktel").addClass("error");
-            check = false;
-        }
-
-        if (!checkInput(info_recdate)) {
-            $("#group-recdate").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_recaddr)) {
-            $("#group-recaddr").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_recperson)) {
-            $("#group-recperson").addClass("error");
-            check = false;
-        }
-
-        if (!checkSelect(info_rectel)) {
-            $("#group-rectel").addClass("error");
-            check = false;
-        }
-
-
         if (!check) {
 //            alert("请检查...");
             $("#info-attention").text("请检查红色区域:(");
 //            resetAll();
         } else {
-            var theData = [
-                "<span class=\"row-details row-details-close\"></span>",
-                info_pickaddr, info_pickdate, info_pickperson, info_picktel,
-                info_recaddr, info_recdate, info_recperson, info_rectel,
-                info_addtime,
-                info_order, info_goodsname, info_clientname,
-                info_boxtype, info_boxnum, info_pickperson, info_recperson,
-                info_recdate, info_port, info_billcycle, info_tradetype, info_id,
-                "<td class=\"myhidden sorting_1\">" + info_timestamp + "</td>",
-                "<a class=\"btn blue row-edit\" href=\"#\"  style=\"font-size:10px;padding: 0px 5px;\">" +
-                "                                            <i class=\"icon-edit \"></i>" +
-                "修改" +
-                "</a>",
-                "<a class=\"btn red row-delete\" href=\"#\" alt=\"删除\" style=\"font-size:10px;padding: 0px 5px;\">" +
-                "                                            <i class=\"icon-trash \"></i>" +
-                "删除" +
-                "</a>"
-            ];
 
-            //        var theTable = $('#sample_1').dataTable();
-            //        theTable.fnClearTable();
-            //        alert(1);
-//            $('#sample_1').dataTable().fnAddData(theData);
-//            alert("添加成功");
-//            resetAll();
-            reloadData(theData);
+            var theData = [
+                 "                                            <td><span class=\"row-details row-details-close\"></span></td>",
+                "                                            <td><a class=\"btn blue row-add\" style=\"font-size: 10px;padding: 2px 8px;\">提交</a></td>",
+                "                                            <td style=\"display: none\"></td>",
+                "                                            <td style=\"display: none\"></td>",
+                "                                            <td class=\"\">"+info_order_no+"</td>",
+                "                                            <td class=\"\">"+info_customer_name+"</td>",
+                "                                            <td class=\"\">"+info_boxtype+"</td>",
+                "                                            <td class=\"\">品 名</td>",
+                "                                            <td class=\"\">"+info_boxtype+"</td>",
+                "                                            <td class=\"\">空箱箱量</td>",
+                "                                            <td class=\"\">承运商</td>",
+                "                                            <td class=\"\">杭名航次</td>",
+                "                                            <td class=\"\">提单号</td>",
+                "                                            <td class=\"\">"+info_pickup_addr+"</td>",
+                "                                            <td class=\"\">提货联系人</td>",
+                "                                            <td class=\"\">"+info_tianjin_pickup+"</td>",
+                "                                            <td class=\"\">"+info_beijing_pickup+"</td>",
+                "                                            <td class=\"\">"+info_zhangjiakou_pickup+"</td>",
+                "                                            <td class=\"\">"+info_duikou4_pickup+"</td>",
+                "                                            <td class=\"\">空箱分配</td>",];
+
+
+
+                    var theTable = $('#sample_0').dataTable();
+                    //theTable.fnClearTable();
+                    //alert(1);
+
+            $('#sample_0').dataTable().fnAddData(theData)
+
+            //reloadData(theData);
+            resetAll();
             check = true;
         }
-
-
         return false;
 
     }
-
-    //    以下为客户信息状态转换产生的事件
-    $("#info-order").change(function () {
-        $("#group-order").removeClass("error");
-    });
-    $("#info-boxnum").change(function () {
-        $("#group-boxnum").removeClass("error");
-    });
-    $("#info-boxtype").change(function () {
-        $("#group-boxtype").removeClass("error");
-    });
-    $("#info-goodsname").change(function () {
-        $("#group-goodsname").removeClass("error");
-    });
-
-    $("#info-clientname").change(function () {
-        $("#group-clientname").removeClass("error");
-
-    });
-    $("#info-clientname").mouseleave($.post("#", {}, function (data) {
-        data = {"addrinfo": [{"id": 1, "name": "大连"}, {"id": 2, "name": "北京"}]};
-        var addrlist = data.addrinfo;
-        var str;
-        $.each(addrlist, function (n, addr) {
-            str += "<option value=\"" +
-                addr.id +
-                "\">" +
-                addr.name +
-                "</option>";
-        })
-        $("#info-pickaddr").append(str);
-        $("#info-recaddr").append(str);
-    }));
-    $("#info-port").change(function () {
-        $("#group-port").removeClass("error");
-    });
-    $("#info-tradetype").change(function () {
-        $("#group-tradetype").removeClass("error");
-    });
-    $("#info-billcycle").change(function () {
-        $("#group-billcycle").removeClass("error");
-    });
-
-    $("#info-pickdate").change(function () {
-        $("#group-pickdate").removeClass("error");
-    });
-    $("#info-pickaddr").change(function () {
-        $("#group-pickaddr").removeClass("error");
-    });
-    $("#info-pickaddr").mouseleave($.post("#", {}, function (data) {
-        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
-        var personlist = data.personinfo;
-        var str;
-        $.each(personlist, function (n, person) {
-            str += "<option value=\"" +
-                person.id +
-                "\">" +
-                person.name +
-                "</option>";
-        })
-        $("#info-pickperson").append(str);
-    }));
-    $("#info-pickperson").change(function () {
-        $("#group-pickperson").removeClass("error");
-    });
-    $("#info-pickperson").mouseleave($.post("#", {}, function (data) {
-        data = {"telinfo": [{"id": 1, "name": "12345678"}, {"id": 2, "name": "987654321"}]};
-        var tellist = data.telinfo;
-        var str;
-        $.each(tellist, function (n, tel) {
-            str += "<option value=\"" +
-                tel.id +
-                "\">" +
-                tel.name +
-                "</option>";
-        })
-        $("#info-picktel").append(str);
-    }));
-    $("#info-picktel").change(function () {
-        $("#group-picktel").removeClass("error");
-    });
-
-    $("#info-recdate").change(function () {
-        $("#group-recdate").removeClass("error");
-    });
-    $("#info-recaddr").change(function () {
-        $("#group-recaddr").removeClass("error");
-    });
-    $("#info-recaddr").mouseleave($.post("#", {}, function (data) {
-        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
-        var personlist = data.personinfo;
-        var str;
-        $.each(personlist, function (n, person) {
-            str += "<option value=\"" +
-                person.id +
-                "\">" +
-                person.name +
-                "</option>";
-        })
-        $("#info-recperson").append(str);
-    }));
-    $("#info-recperson").change(function () {
-        $("#group-recperson").removeClass("error");
-    });
-    //
-    $("#info-recperson").mouseleave($.post("#", {}, function (data) {
-        data = {"telinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
-        var tellist = data.telinfo;
-        var str;
-        $.each(tellist, function (n, tel) {
-            str += "<option value=\"" +
-                tel.id +
-                "\">" +
-                tel.name +
-                "</option>";
-        })
-        $("#info-rectel").append(str);
-    }));
-    $("#info-rectel").change(function () {
-        $("#group-rectel").removeClass("error");
-    });
 
     function down() {
         function create2() {
@@ -1696,12 +1221,7 @@
 
             var mytable = document.getElementById("printtable");
             for(var j=0,rows=1; j<rows; j++){
-//                for(var j=0,cells=mytable.rows[i].cells.length; j<cells; j++){
-//                    if(!data[i]){
-//                        data[i] = new Array();
-//                    }
-//                    data[i][j] = mytable.rows[i].cells[j].innerHTML;
-//                }
+
                 var temp=new Object();
                 var data=new Array();
                 var i=j+5;
@@ -1798,29 +1318,6 @@
 
             console.log(data1);
 
-//            var mytable = document.getElementById("printtable").rows[0].cells[0].innerHTML;
-//            console.log(mytable);
-
-//            for(var i=0;i<3;i++){
-//                data1[i]=[{text: '2017-10-11',  colSpan: 1, alignment: 'center'},
-//                    {text: 'D00012',  colSpan: 1, alignment: 'center'},
-//                    {text: '新海欣1647S',  colSpan: 1, alignment: 'center'},
-//                    {text: 'XHX1647TJSH120',  colSpan: 2, alignment: 'center'},
-//                    {},
-//
-//                    {text: 'BEAU2555237',  colSpan: 1, alignment: 'center'},
-//                    {text: '5558455',  colSpan: 1, alignment: 'center'},
-//                    {text: '琴谱区嘉松中路1289号',  colSpan: 2, alignment: 'center'},
-//                    {},
-//                    {text: '吴迪',  colSpan: 1, alignment: 'center'},
-//
-//                    {text: '12345678911/87654321123',  colSpan: 2, alignment: 'center'},
-//                    {},
-//                    {text: '940.00',  colSpan: 1, alignment: 'center'},
-//                    {text: '我叫备注',  colSpan: 1, alignment: 'center'},
-//                ];
-//            }
-//            console.log(data1);
             var infoto=$("#info-to").find("option:selected").text();
             var rowdata=[];
             rowdata.push( [{text: '天津市胜腾货运有限公司', style: 'tableHeader', colSpan: 14, alignment: 'center'},
