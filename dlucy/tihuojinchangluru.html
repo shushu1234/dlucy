@@ -22,11 +22,11 @@
     <!-- 全局样式结束 -->
 
     <!-- 本页样式开始 -->
-    <link rel="stylesheet" type="text/css" href="media/css/timepicker.css"/>
 
     <link rel="shortcut icon" href="media/image/favicon.ico"/>
 
     <!-- 本页样式结束 -->
+
 
 </head>
 
@@ -38,7 +38,7 @@
 
 <!--HEADER 开始-->
 
-<div class="header navbar navbar-inverse navbar-fixed-top myheader">
+<div class="header navbar navbar-inverse navbar-fixed-top myheader" >
 
     <!-- 导航栏开始 -->
 
@@ -50,13 +50,24 @@
                 <div class="navbar-inner">
                     <ul class="nav">
 
-                        <li>
-                            <a href="kehuweituo.html">客户委托</a>
+                        <li >
+
+                            <a href="kehuweituo.html">
+
+                                客户委托
+
+
+
+                            </a>
+
                         </li>
 
-                        <li>
+                        <li class="active">
 
-                            <a href="jinduchaxun.html">进度查询</a>
+                            <a href="jinduchaxun.html">提货进场录入
+
+                                <span class="selected"></span>
+                            </a>
 
                         </li>
                         <li>
@@ -69,14 +80,14 @@
                             <a href="#">提箱(空/套)</a>
 
                         </li>
-                        <li class="active">
+                        <li>
 
-                            <a href="zxjgxxlr.html">重箱集港</a>
-                            <span class="selected"></span>
+                            <a href="#">箱进场</a>
+
                         </li>
                         <li>
 
-                            <a href="zxjgqr.html">重箱进港</a>
+                            <a href="#">箱出场</a>
 
                         </li>
                         <li>
@@ -128,7 +139,7 @@
 
 <!--CONTAINER 开始 -->
 
-<div class="page-container row-fluid mycontainer">
+<div class="page-container row-fluid mycontainer" >
 
     <!-- 页面开始 -->
 
@@ -140,410 +151,78 @@
             <!-- 页面内容开始-->
             <div class="row-fluid">
 
-                <form action="#" class="form-horizontal" style="background-color: aliceblue"
-                      onSubmit="return checkAll()">
-                    <div class="span6">
+                <div class="span12">
 
 
-                        <!-- 箱号信息开始-->
+                    <!-- 客户信息开始-->
 
-                        <div class="portlet box blue" style="margin-top: 50px;">
+                    <div class="portlet box blue">
 
-                            <div class="portlet-title">
+                        <div class="portlet-title" style="margin-top: 50px">
 
-                                <div class="caption"><i class="icon-list-ol"></i>箱号信息</div>
+                            <div class="caption"><i class="icon-user"></i>查询条件</div>
 
-
-                            </div>
-
-                            <div class="portlet-body"
-                                 style="overflow: scroll;height: 280px;background-color: aliceblue">
-
-                                <table class="table table-striped table-bordered table-hover ">
-
-                                    <thead>
-
-                                    <tr>
-
-                                        <th>#</th>
-
-                                        <th>指令号</th>
-
-                                        <th>客户名称</th>
-
-                                        <th class="hidden-480">箱号</th>
-
-                                    </tr>
-
-                                    </thead>
-
-                                    <tbody id="tbody-box">
-
-                                    <tr>
-
-                                        <td style="width: 60px;"><a class="btn red btn-del"
-                                                                    style="font-size: 10px;padding: 2px 8px;">删除</a>
-                                        </td>
-
-                                        <td>D001</td>
-
-                                        <td>伊利</td>
-
-                                        <td>TGXKL0123</td>
-
-                                    </tr>
-                                    <tr>
-
-                                        <td><a class="btn red btn-del" style="font-size: 10px;padding: 2px 8px;">删除</a>
-                                        </td>
-
-                                        <td>D001</td>
-
-                                        <td>伊利</td>
-
-                                        <td>TGXKL0123</td>
-
-                                    </tr>
-                                    <tr>
-
-                                        <td><a class="btn red btn-del" style="font-size: 10px;padding: 2px 8px;">删除</a>
-                                        </td>
-
-                                        <td>D001</td>
-
-                                        <td>伊利</td>
-
-                                        <td>TGXKL0123</td>
-
-                                    </tr>
-                                    <tr>
-
-                                        <td><a class="btn red btn-del" style="font-size: 10px;padding: 2px 8px;">删除</a>
-                                        </td>
-
-                                        <td>D001</td>
-
-                                        <td>伊利</td>
-
-                                        <td>TGXKL0123</td>
-
-                                    </tr>
-                                    <tr>
-
-                                        <td><a class="btn red btn-del" style="font-size: 10px;padding: 2px 8px;">删除</a>
-                                        </td>
-
-                                        <td>D001</td>
-
-                                        <td>伊利</td>
-
-                                        <td>TGXKL0123</td>
-
-                                    </tr>
-                                    </tbody>
-
-                                </table>
-
+                            <div class="tools">
                             </div>
 
                         </div>
 
-                        <!-- 箱号信息结束-->
+                        <div class="portlet-body form">
 
-                    </div>
+                            <!-- 客户信息 FORM 开始-->
 
-                    <div class="span6">
-
-
-                        <!-- 船舶信息开始-->
-
-                        <div class="portlet box blue">
-
-                            <div class="portlet-title" style="margin-top: 50px">
-
-                                <div class="caption"><i class="icon-anchor"></i>船舶信息</div>
-
-                                <div class="tools">
-                                </div>
-
-                            </div>
-
-                            <div class="portlet-body form" style="background-color: aliceblue">
-
-                                <!--船舶信息 FORM 开始-->
-
-
+                            <form action="#" class="form-horizontal" style="background-color: aliceblue"
+                                  onSubmit="return checkAll()">
                                 <input value="0" id="info-id" type="hidden">
                                 <input value="0" id="info-addtime" type="hidden">
                                 <input value="0" id="info-timestamp" type="hidden">
+                                <div class="row-fluid"
+                                     style="margin-left: -36px;">
 
-                                <div class="row-fluid">
+                                    <div class="span4">
+                                        <div class="control-group" id="group-order">
 
-                                    <div class="span6 ">
-
-                                        <div class="control-group">
-
-                                            <label class="control-label">承运商名称
-                                            </label>
+                                            <label class="control-label" id="label-order">箱号</label>
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-boxtype"
-                                                        data-placeholder="Choose a Category"
-                                                        tabindex="1">
-
-                                                    <option value="">请选择...</option>
-
-                                                    <option value="Category 1">承运商1</option>
-
-                                                    <option value="Category 2">承运商2</option>
-
-                                                    <option value="Category 3">承运商3</option>
-
-                                                    <option value="Category 4">承运商4</option>
-
-
-                                                </select>
+                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="输入以查找"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
 
                                             </div>
 
                                         </div>
-
                                     </div>
+                                    <div class="span4" >
+                                        <div class="control-group" id="group-clientname">
 
-                                    <!--/span-->
-
-                                    <div class="span6 ">
-
-                                        <div class="control-group">
-
-                                            <label class="control-label">靠泊码头
-                                            </label>
+                                            <label class="control-label" id="label-clientname">日期</label>
 
                                             <div class="controls">
 
-                                                <select class="span12 m-wrap" id="info-boxtype"
-                                                        data-placeholder="Choose a Category"
-                                                        tabindex="1">
-
-                                                    <option value="">请选择...</option>
-
-                                                    <option value="Category 1">码头1</option>
-
-                                                    <option value="Category 2">码头2</option>
-
-                                                    <option value="Category 3">码头3</option>
-
-                                                    <option value="Category 4">码头4</option>
-
-
-                                                </select>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!--/span-->
-
-                                </div>
-                                <!--/row-->
-
-                                <div class="row-fluid">
-
-                                    <div class="span6 ">
-
-                                        <div class="control-group">
-
-                                            <label class="control-label">船名航次</label>
-
-                                            <div class="controls">
-
-                                                <input type="text" class="m-wrap span12" placeholder="手工录入"/>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!--/span-->
-
-                                    <div class="span6 ">
-
-                                        <div class="control-group">
-
-                                            <label class="control-label">提单号
-                                            </label>
-
-                                            <div class="controls">
-
-                                                <input type="text" class="m-wrap span12" placeholder="手工录入"/>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!--/span-->
-
-                                </div>
-                                <!--/row-->
-
-                                <div class="row-fluid">
-
-                                    <div class="span6 ">
-
-                                        <div class="control-group">
-
-                                            <label class="control-label">箱型
-                                            </label>
-
-                                            <div class="controls">
-
-                                                <input type="text" class="m-wrap span12" placeholder="下面列表点击生成（可手工修改）"/>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!--/span-->
-
-                                    <div class="span6 ">
-
-                                        <div class="control-group" id="group-recdate">
-
-                                            <label class="control-label">开港日期</label>
-
-                                            <div class="controls">
-
-                                                <input class="m-wrap span12 m-ctrl-medium date-picker"
-                                                       id="info-recdate" readonly
-                                                       size="16" type="text" value="" data-date-format="yyyy-mm-dd"/>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!--/span-->
-
-                                </div>
-                                <!--/row-->
-
-                                <div class="row-fluid">
-
-                                    <div class="span6 ">
-
-                                        <div class="control-group" id="group-pickdate">
-
-                                            <label class="control-label">结关日期</label>
-
-                                            <div class="controls">
-
-                                                <input class="m-wrap span12 m-ctrl-medium date-picker"
+                                                 <input class="m-wrap span12 m-ctrl-medium date-picker"
                                                        id="info-pickdate" readonly
                                                        size="16" type="text" value="" data-date-format="yyyy-mm-dd"/>
 
                                             </div>
 
                                         </div>
-
                                     </div>
-
-                                    <!--/span-->
-
-                                    <div class="span6 ">
-
-                                        <div class="control-group">
-
-                                            <label class="control-label">结关时间</label>
-
-                                            <div class="controls">
-
-                                                <div class="input-append bootstrap-timepicker-component">
-
-                                                    <input class="m-wrap span12 m-ctrl-medium timepicker-default add-on"
-                                                           type="text" readonly placeholder="可为空"
-                                                           style="text-align: left"/>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-
-                                    </div>
-
-                                    <!--/span-->
+                
 
                                 </div>
 
-                                <!--/row-->
 
                                 <div class="form-actions">
 
                                     <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
-                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                            href="" onclick="" style="float: right">确认提交
                                     </button>
                                     <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
                                     <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
-                                    <div id="static" class="modal hide fade" tabindex="-1">
-
-                                        <div class="modal-body">
-
-                                            <p>请确认信息:</p>
-                                            <table>
-                                                <tr>
-                                                    <td><br></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="5">==================箱号信息==================</td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-order" colspan="5"></td>
-                                                    <td id="td-customername" colspan="5"></td>
-                                                    <td id="td-boxid" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><br></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4">==================船舶信息==================</td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recaddr" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recdate" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recperson" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-rectel" colspan="5"></td>
-                                                </tr>
-
-                                            </table>
-                                        </div>
-
-                                        <div class="modal-footer">
-
-                                            <button type="button" data-dismiss="modal" class="btn" id="btn-return">
-                                                返回修改
-                                            </button>
-                                            <button class="btn green" data-toggle="modal" href="#static2"
-                                                    id="btn-submit" onclick="checkAll()">继续提交
-                                            </button>
-                                        </div>
-
-                                    </div>
+                                   
                                     <div id="static2" class="modal hide fade" tabindex="-1">
 
                                         <div class="modal-body">
@@ -561,18 +240,18 @@
                                     </div>
                                 </div>
 
+                            </form>
 
-                                <!-- 船舶信息 FORM 结束-->
-
-                            </div>
+                            <!-- 客户信息 FORM 结束-->
 
                         </div>
 
-                        <!-- 船舶信息结束-->
-
                     </div>
 
-                </form>
+                    <!-- 客户信息结束-->
+
+                </div>
+
             </div>
 
 
@@ -582,11 +261,11 @@
 
                     <!-- 业务列表开始　-->
 
-                    <div class="portlet box green">
+                     <div class="portlet box green">
                         <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
                         <div class="portlet-title">
 
-                            <div class="caption"><i class="icon-list"></i>业务列表</div>
+                            <div class="caption"><i class="icon-list"></i>未完成业务列表</div>
 
                             <div class="tools">
 
@@ -598,7 +277,7 @@
 
                         <div class="portlet-body" style="background-color: azure ;">
 
-                            <table class="table table-striped table-bordered table-hover table-full-width"
+                            <table class="table table-bordered table-hover table-full-width"
                                    id="sample_1">
 
                                 <thead>
@@ -607,111 +286,158 @@
                                     <th style="display: none">id</th>
 
                                     <th style="display: none">timestamp</th>
+                                    
+                                    <th>操作</th>
 
                                     <th>指令号</th>
 
-                                    <th>客户名称</th>
-
-                                    <th>品名</th>
-
-                                    <th>箱型</th>
-
-                                    <th>箱号</th>
-
-                                    <th>目的港</th>
+                                    <th>客户</th>
 
                                     <th>接单人</th>
 
+                                    <th>船公司</th>
 
-                                    <th>存箱地点</th>
+                                    <th>箱号</th>
 
+                                    <th>箱型</th>
 
-                                    <th>承运商</th>
-
-                                    <th>靠泊码头</th>
-
-                                    <th>航名航次</th>
+                                    <th>船名航次</th>
 
                                     <th>提单号</th>
 
-                                    <th>开港日期</th>
+                                    <th>铅封号</th>
 
-                                    <th>结关日期</th>
+                                    <th>承运商</th>
 
-                                    <th>结关时间</th>
+                                    <th>车号</th>
 
-                                    <th>状态</th>
+                                    <th>进场日期</th>
 
+                                    <th>备位号</th>
+
+                                    <th></th>
+
+
+                                    
+                                
                                 </tr>
 
                                 </thead>
 
-                                <tbody id="tablelist" style="background-color: #ffffff;">
-                                <tr class="odd">
+                                <tbody style="background-color:#ffffff;" id="tbody1">
+                                <tr>
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
-                                    <td class="">D003</td>
-                                    <td class="">伊利</td>
-                                    <td class="">牛奶dddddddd</td>
-                                    <td class="">20GP</td>
-                                    <td class="">TEMU1234567</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">来巍</td>
-                                    <td class="">北京堆场</td>
-                                    <td class="">中远海运</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">未确认</td>
-                                </tr>
-                                <tr class="even">
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">D003</td>
-                                    <td class="">伊利</td>
-                                    <td class="">牛奶</td>
-                                    <td class="">20GP</td>
-                                    <td class="">TEMU1234567</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">来巍</td>
-                                    <td class="">北京堆场</td>
-                                    <td class="">中远海运</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">未确认</td>
-                                </tr>
-                                <tr class="statusok odd" >
-                                    <td style="display: none">1</td>
-                                    <td style="display: none">1</td>
-                                    <td class="">D003</td>
-                                    <td class="">伊利</td>
-                                    <td class="">牛奶dddddddd</td>
-                                    <td class="">20GP</td>
-                                    <td class="">TEMU1234567</td>
-                                    <td class="">黄埔</td>
-                                    <td class="">来巍</td>
-                                    <td class="">北京堆场</td>
-                                    <td class="">中远海运</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">-</td>
-                                    <td class="">已确认</td>
-                                </tr>
+                                    <td class="">
+                                         <a href="#" class="btn blue mini">提交</a>
+                                    </td> 
+                                    <td class="">D0123</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">abc</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
 
+                                </tr>
+                                <tr >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0123</td>
+                                    <td class="">张三</td>
+                                    <td class="">张三</td>
+                                    <td class="">张三公司</td>
+                                    <td class="">G21</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">abc</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+                                <tr>
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0123</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四</td>
+                                    <td class="">李四公司</td>
+                                    <td class="">G22</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+                                <tr class="muted">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini">提交</a>
+                                    </td>
+                                    <td class="">D0123</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G23</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">辽B12345</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                    <td style="display: none"></td>
+                                </tr>
+                                
 
                                 </tbody>
+
                             </table>
+
                         </div>
+
                     </div>
 
                     <!-- 业务列表结束-->
@@ -757,9 +483,11 @@
 <!--引入 JAVASCRIPTS(将JAVASCRIPT放在页面底部，可以减少页面加载时间) -->
 
 <!--核心插件开始-->
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
 <script src="media/js/moment.js" type="text/javascript"></script>
 
-<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
 
 <script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 
@@ -812,14 +540,15 @@
 <!-- 本页JS脚本开始 -->
 
 <script src="media/js/app.js"></script>
+<script src="media/js/function.js"></script>
 
-<script src="media/js/zxjgxxlr.js"></script>
+<script src="media/js/tihuojinchangluru.js"></script>
 
 <script src="media/js/form-validation.js"></script>
 <script src="media/js/form-components.js"></script>
 
 <script src="media/js/ui-modals.js"></script>
-<script type="text/javascript" src="media/js/bootstrap-timepicker.js"></script>
+
 <script>
 
     jQuery(document).ready(function () {
@@ -835,12 +564,6 @@
         var nowTime = new Date();
         $("#info-pickdate").datepicker('setDate', nowTime);
         $("#info-recdate").datepicker('setDate', nowTime);
-
-        /*固定表头*/
-
-        /*固定表头*/
-
-
     });
 
     var info_order;
@@ -918,7 +641,6 @@
         }
         return false;
     }
-
     //输入框检查
     function checkInput(str) {
         if (str == null || str == "") {
@@ -927,7 +649,6 @@
             return true;
         }
     }
-
     //    下拉框检查
     function checkSelect(str) {
         if (str == "请选择...") {
@@ -942,7 +663,6 @@
         var timestamp = new Date().getTime();
         return timestamp;
     }
-
     //获得当前时间　yyyy-mm-dd hh:mm:ss
     function getNowFormatDate() {
         var date = new Date();

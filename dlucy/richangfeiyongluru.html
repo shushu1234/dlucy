@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<!-- HEAD 开始-->
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>船运管理系统</title>
+
+
+    <meta content="" name="description"/>
+
+    <meta content="" name="author"/>
+
+    <!-- 全局样式开始-->
+
+    <link href="media/mycss/core.css" rel="stylesheet" type="text/css"/>
+    <!-- 全局样式结束 -->
+
+    <!-- 本页样式开始 -->
+
+    <link rel="shortcut icon" href="media/image/favicon.ico"/>
+
+    <!-- 本页样式结束 -->
+
+</head>
+
+<!-- HEAD 结束 -->
+
+<!--  BODY 开始-->
+
+<body class="page-header-fixed">
+
+<!--HEADER 开始-->
+
+<div class="header navbar navbar-inverse navbar-fixed-top myheader" >
+
+    <!-- 导航栏开始 -->
+
+    <div class="navbar-inner">
+
+        <div class="container-fluid navbar hor-menu hidden-phone hidden-tablet">
+
+            <div class="navbar hor-menu  hidden-tablet">
+                <div class="navbar-inner">
+                    <ul class="nav">
+
+                        <li class="active">
+
+                            <a href="kehuweituo.html">
+
+                                日常费用录入
+
+                                <span class="selected"></span>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="jinduchaxun.html">进度查询</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">提货方</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">提箱(空/套)</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱进场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱出场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱进场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱预约确认</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱出场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱进港</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱装船</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">到港放货</a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 导航栏结束 -->
+</div>
+
+<!--HEADER 结束-->
+
+
+<!--CONTAINER 开始 -->
+
+<div class="page-container row-fluid mycontainer">
+
+    <!-- 页面开始 -->
+
+    <div class="page-content" style="margin-left: 0px">
+
+
+        <div class="container-fluid">
+
+            <!-- 页面内容开始-->
+            <div class="row-fluid">
+
+                <div class="span12">
+
+
+                    <!-- 客户信息开始-->
+
+                    <div class="portlet box blue">
+
+                        <div class="portlet-title" style="margin-top: 50px">
+
+                            <div class="caption"><i class="icon-user"></i>客户信息</div>
+
+                            <div class="tools">
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body form">
+
+                            <!-- 客户信息 FORM 开始-->
+
+                            <form action="#" class="form-horizontal" style="background-color: aliceblue"
+                                  onSubmit="return checkAll()">
+                                <input value="0" id="info-id" type="hidden">
+                                <input value="0" id="info-addtime" type="hidden">
+                                <input value="0" id="info-timestamp" type="hidden">
+                                <div class="row-fluid" >
+                                    <div class="span4">
+                                        <div class="control-group" id="group-datatime">
+
+                                            <label class="control-label">录入日期</label>
+
+                                            <div class="controls">
+
+                                                <input class="m-wrap span12 m-ctrl-medium date-picker"
+                                                       id="datatime" readonly
+                                                       size="16" type="text" value="" data-date-format="yyyy-mm-dd"/>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="span4">
+
+                                        <div class="control-group" id="group-blank">
+
+                                            <label class="control-label">执行银行</label>
+
+                                            <div class="controls">
+
+                                                <select class="span12 m-wrap"
+                                                        data-placeholder="Choose a Category"
+                                                        tabindex="1" id="blank">
+
+                                                    <option value="">请选择...</option>
+
+                                                    <option value="Category 1">承运商1</option>
+
+                                                    <option value="Category 2">承运商2</option>
+
+                                                    <option value="Category 3">承运商3</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row-fluid" >
+
+                                    <div class="span4">
+
+                                        <div class="control-group" id="group-money_adr">
+
+                                            <label class="control-label">资金流向</label>
+
+                                            <div class="controls">
+
+                                                <select class="span12 m-wrap"
+                                                        data-placeholder="Choose a Category"
+                                                        tabindex="1" id="money_adr">
+
+                                                    <option value="">请选择...</option>
+
+                                                    <option value="Category 1">承运商1</option>
+
+                                                    <option value="Category 2">承运商2</option>
+
+                                                    <option value="Category 3">承运商3</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="span4">
+
+                                        <div class="control-group" id="group-pay_com">
+
+                                            <label class="control-label">收付款单位</label>
+
+                                            <div class="controls">
+
+                                                <select class="span12 m-wrap"
+                                                        data-placeholder="Choose a Category"
+                                                        tabindex="1" id="pay_com">
+
+                                                    <option value="">请选择...</option>
+
+                                                    <option value="Category 1">承运商1</option>
+
+                                                    <option value="Category 2">承运商2</option>
+
+                                                    <option value="Category 3">承运商3</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="span4">
+                                        <div class="control-group" id="group-fee_money">
+
+                                            <label class="control-label" id="label-order">费用金额</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="fee_money" class="span12 m-wrap"
+                                                       style="margin: 0 auto;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-fluid" >
+
+                                    <div class="span4">
+                                        <div class="control-group" id="group-fee_pro">
+
+                                            <label class="control-label" id="label-order">费用项目</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="fee_pro" class="span12 m-wrap"
+                                                       style="margin: 0 auto;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="span4">
+
+                                        <div class="control-group" id="group-pay_way">
+
+                                            <label class="control-label">收付款方式</label>
+
+                                            <div class="controls">
+
+                                                <select class="span12 m-wrap"
+                                                        data-placeholder="Choose a Category"
+                                                        tabindex="1" id="pay_way">
+
+                                                    <option value="">请选择...</option>
+
+                                                    <option value="Category 1">承运商1</option>
+
+                                                    <option value="Category 2">承运商2</option>
+
+                                                    <option value="Category 3">承运商3</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="span4">
+                                        <div class="control-group" id="group-bill_info">
+
+                                            <label class="control-label" id="label-order">发票情况</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="bill_info" class="span12 m-wrap"
+                                                       style="margin: 0 auto;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-actions">
+
+                                    <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
+                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                    </button>
+                                    <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
+                                    <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
+                                    <div id="static" class="modal hide fade" tabindex="-1">
+
+                                        <div class="modal-body">
+
+                                            <p>请确认信息:</p>
+                                            <table>
+                                                <tr>
+                                                    <td id="td_datatime"></td>
+                                                    <td></td>
+                                                    <td id="td_blank"></td>
+
+                                                    <td id="td_money_adr"></td>
+
+                                                    <td id="td_pay_com"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td_fee_money"></td>
+                                                    <td></td>
+                                                    <td id="td_fee_pro"></td>
+
+                                                    <td id="td_pay_way"></td>
+
+                                                    <td id="td_bill_info"></td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" data-dismiss="modal" class="btn" id="btn-return">
+                                                返回修改
+                                            </button>
+                                            <button class="btn green" data-toggle="modal" href="#static2"
+                                                    id="btn-submit" onclick="checkAll()">继续提交
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    <div id="static2" class="modal hide fade" tabindex="-1">
+
+                                        <div class="modal-body">
+
+                                            <h3 id="info-attention" style="text-align: center"></h3>
+
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" data-dismiss="modal" class="btn green">确认</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <!-- 客户信息 FORM 结束-->
+
+                        </div>
+
+                    </div>
+
+                    <!-- 客户信息结束-->
+
+                </div>
+
+            </div>
+
+
+            <div class="row-fluid">
+
+                <div class="span12">
+
+                    <!-- 业务列表开始　-->
+
+                    <div class="portlet box green">
+                        <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
+                        <div class="portlet-title">
+
+                            <div class="caption"><i class="icon-list"></i>业务列表</div>
+
+                            <div class="tools">
+
+                                <a href="javascript:;" class="reload"></a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="portlet-body" style="background-color: azure ;">
+                            <div class="row-fluid">
+
+                                <div style="width: 198px; position: absolute">
+                                    <div class="control-group" id="group-order">
+
+                                        <label class="control-label" id="label-order">收款汇总</label>
+
+                                        <div class="controls">
+
+                                            <input type="text" class="span12 m-wrap" id="info-order"
+                                                   placeholder="自动计算生成" disabled/>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div style="width: 198px; position: relative;float:left;margin-left: 338px">
+                                    <div class="control-group" id="group-order">
+
+                                        <label class="control-label" id="label-order">付款汇总</label>
+
+                                        <div class="controls">
+
+                                            <input type="text" class="span12 m-wrap" id="info-order"
+                                                   placeholder="自动计算生成" disabled/>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div style="width: 198px;float: left;position:relative;margin-left: 140px">
+                                    <div class="control-group" id="group-order">
+
+                                        <label class="control-label" id="label-order">结余</label>
+
+                                        <div class="controls">
+
+                                            <input type="text" class="span12 m-wrap" id="info-order"
+                                                   placeholder="自动计算生成" disabled/>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <table class="table table-bordered table-hover table-full-width"
+                                   id="sample_1">
+
+                                <thead>
+
+                                <tr>
+                                    <th style="display: none">id</th>
+
+                                    <th style="display: none">timestamp</th>
+
+                                    <th>日期</th>
+
+                                    <th>收付款单位</th>
+
+                                    <th>收付款项目</th>
+
+                                    <th>发票情况</th>
+
+                                    <th>付款方式</th>
+
+                                    <th>执行银行</th>
+
+                                    <th>收款（借方）</th>
+
+                                    <th>付款（贷方）</th>
+                                </tr>
+
+                                </thead>
+
+                                <tbody style="background-color:#ffffff;" id="tbody1">
+                                <tr >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">2017/10/22</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+
+                                </tr>
+                                <tr >
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td class="">2017/10/22</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">某公司</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+
+                                </tr>
+
+
+
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- 业务列表结束-->
+
+
+                </div>
+
+            </div>
+
+            <!-- 页面内容结束　-->
+
+        </div>
+
+        <!-- CONTAINER　结束-->
+
+    </div>
+
+    <!-- 页面结束 -->
+    <div id="static3" class="modal hide fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-body">
+
+            <h3 id="user-attention" style="text-align: center"></h3>
+            <input type="hidden" value="0" id="user-attentionflag">
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button type="button" data-dismiss="modal" class="btn">放弃</button>
+
+            <button type="button" data-dismiss="modal" class="btn red" id="btn-delrow">确认</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CONTAINER 结束-->
+
+
+<!--引入 JAVASCRIPTS(将JAVASCRIPT放在页面底部，可以减少页面加载时间) -->
+
+<!--核心插件开始-->
+<script src="media/js/moment.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<!-- IMPORTANT! 在bootstrap.min.js之前加载jquery-ui-1.10.1.custom.min.js以修复与jquery ui工具提示冲突的引导工具提示 -->
+
+<script src="media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.blockui.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.uniform.min.js" type="text/javascript"></script>
+
+<!--核心插件结束-->
+
+<!-- 本页插件开始 -->
+
+<script type="text/javascript" src="media/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="media/js/DT_bootstrap.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="media/js/chosen.jquery.min.js"></script>
+
+<script type="text/javascript" src="media/js/select2.min.js"></script>
+
+<script type="text/javascript" src="media/js/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript" src="media/js/bootstrap-datetimepicker.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.inputmask.bundle.min.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.input-ip-address-control-1.0.min.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.multi-select.js"></script>
+
+<script src="media/js/bootstrap-modal.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+
+
+<!-- 本页插件结束-->
+
+<!-- 本页JS脚本开始 -->
+
+<script src="media/js/app.js"></script>
+
+<script src="media/js/richangfeiyongluru.js"></script>
+
+<script src="media/js/form-validation.js"></script>
+<script src="media/js/form-components.js"></script>
+
+<script src="media/js/ui-modals.js"></script>
+
+<script>
+
+    jQuery(document).ready(function () {
+
+        // 初始化布局和插件
+
+        App.init();
+
+        FormValidation.init();
+        FormComponents.init();
+        TableAdvanced.init();
+        UIModals.init();
+        var nowTime = new Date();
+        $("#info-pickdate").datepicker('setDate', nowTime);
+        $("#info-recdate").datepicker('setDate', nowTime);
+    });
+
+    var datatime;
+    var blank;
+    var money_adr;
+    var pay_com;
+
+    var fee_money;
+    var fee_pro;
+    var pay_way;
+    var bill_info;
+  /*获得客户信息*/
+    function getInfoData() {
+        datatime = $("#datatime").val();
+        blank = $("#blank").val();
+        money_adr=$('#money_adr').val();
+        pay_com=$('#pay_com').val();
+        fee_money=$('#fee_money').val();
+        fee_pro=$('#fee_pro').val();
+        pay_way=$('#pay_way').val();
+        bill_info=$('#bill_info').val();
+    }
+
+    /*客户信息模态框初始化信息*/
+    function modalConfirm() {
+        getInfoData();
+        $("#td_datatime").text("录入日期: " + datatime);
+        $("#td_blank").text("执行银行: " + blank);
+        $("#td_money_adr").text("资金流向: " + money_adr);
+        $("#td_pay_com").text("收付款单位: " + pay_com);
+
+        $("#td_fee_money").text("费用金额: " + fee_money);
+        $("#td_fee_pro").text("费用项目: " + fee_pro);
+        $("#td_pay_way").text("收付款方式: " + pay_way);
+        $("#td_bill_info").text("发票情况: " + bill_info);
+
+    }
+
+    //    数字输入检查
+    function isNum(str) {
+        if (str != null && str != "") {
+            return !isNaN(str);
+        }
+        return false;
+    }
+    //输入框检查
+    function checkInput(str) {
+        if (str == null || str == "") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    //    下拉框检查
+    function checkSelect(str) {
+        if (str == "请选择...") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //    获得当前时间的时间戳
+    function getTimeStamp() {
+        var timestamp = new Date().getTime();
+        return timestamp;
+    }
+    //获得当前时间　yyyy-mm-dd hh:mm:ss
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = "-";
+        var seperator2 = ":";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        if (minutes >= 0 && minutes <= 9) {
+            minutes = "0" + minutes;
+        }
+        if (seconds >= 0 && seconds <= 9) {
+            seconds = "0" + seconds;
+        }
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+            + " " + date.getHours() + seperator2 + minutes
+            + seperator2 + seconds;
+        return currentdate;
+    }
+
+    //    重置输入框
+    function resetAll() {
+        $("#btn-reset").click();
+    }
+
+    //    重新刷新表格数据
+    function reloadData(theData) {
+
+        if (theData[9] == 0) {
+            theData[9] = getNowFormatDate();
+            theData[22] = "<td class=\"myhidden sorting_1\">" + getTimeStamp() + "</td>";
+        }
+        $('#sample_1').dataTable().fnAddData(theData);
+
+        resetAll();
+
+        $("form select").each(function (index, item) {
+            $(item).find('option').each(function () {
+                $(this).removeAttrs('selected');
+            });
+        });
+
+        $('.chzn-container-single span').html('请选择...');
+
+        $("#info-attention").text("添加成功:)");
+        var nowTime = new Date();
+        $("#info-pickdate").datepicker('setDate', nowTime);
+        $("#info-recdate").datepicker('setDate', nowTime);
+    }
+
+    //   客户信息检查入口
+    function checkAll() {
+        var ev = arguments[0] || window.event;
+        var info_id = $("#info-id").val();
+        var info_addtime = $("#info-addtime").val();
+        var info_timestamp = $("#info-timestamp").val();
+
+        getInfoData();
+        $('#static').modal('hide')
+
+        var check = true;
+
+        if (!checkInput(datatime)) {
+            $("#group-datatime").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(blank)) {
+            $("#group-blank").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(money_adr)) {
+            $("#group-money_adr").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(pay_com)) {
+            $("#group-pay_com").addClass("error");
+            check = false;
+        }
+
+        if (!checkInput(fee_money)) {
+            $("#group-fee_money").addClass("error");
+            check = false;
+        }
+
+        if (!checkInput(fee_pro)) {
+            $("#group-fee_pro").addClass("error");
+            check = false;
+        }
+
+        if (!checkSelect(pay_way)) {
+            $("#group-pay_way").addClass("error");
+            check = false;
+        }
+
+        if (!checkInput(bill_info)) {
+            $("#group-bill_info").addClass("error");
+            check = false;
+        }
+        if (!check) {
+//            alert("请检查...");
+            $("#info-attention").text("请检查红色区域:(");
+
+//            resetAll();
+        } else {
+            var aa=[datatime,pay_com,fee_pro,bill_info,pay_way,blank,money_adr,fee_money];
+            var Ttr=yewuliebiao(aa);
+            $("#tbody1").prepend(Ttr);
+            check = true;
+        }
+
+
+        return false;
+
+    }
+
+    //    以下为客户信息状态转换产生的事件
+    $("#info-order").change(function () {
+        $("#group-order").removeClass("error");
+    });
+    $("#info-boxnum").change(function () {
+        $("#group-boxnum").removeClass("error");
+    });
+    $("#info-boxtype").change(function () {
+        $("#group-boxtype").removeClass("error");
+    });
+    $("#info-goodsname").change(function () {
+        $("#group-goodsname").removeClass("error");
+    });
+
+    $("#info-clientname").change(function () {
+        $("#group-clientname").removeClass("error");
+
+    });
+    $("#info-clientname").mouseleave($.post("#", {}, function (data) {
+        data = {"addrinfo": [{"id": 1, "name": "大连"}, {"id": 2, "name": "北京"}]};
+        var addrlist = data.addrinfo;
+        var str;
+        $.each(addrlist, function (n, addr) {
+            str += "<option value=\"" +
+                addr.id +
+                "\">" +
+                addr.name +
+                "</option>";
+        })
+        $("#info-pickaddr").append(str);
+        $("#info-recaddr").append(str);
+    }));
+    $("#info-port").change(function () {
+        $("#group-port").removeClass("error");
+    });
+    $("#info-tradetype").change(function () {
+        $("#group-tradetype").removeClass("error");
+    });
+    $("#info-billcycle").change(function () {
+        $("#group-billcycle").removeClass("error");
+    });
+
+    $("#info-pickdate").change(function () {
+        $("#group-pickdate").removeClass("error");
+    });
+    $("#info-pickaddr").change(function () {
+        $("#group-pickaddr").removeClass("error");
+    });
+    $("#info-pickaddr").mouseleave($.post("#", {}, function (data) {
+        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var personlist = data.personinfo;
+        var str;
+        $.each(personlist, function (n, person) {
+            str += "<option value=\"" +
+                person.id +
+                "\">" +
+                person.name +
+                "</option>";
+        })
+        $("#info-pickperson").append(str);
+    }));
+    $("#info-pickperson").change(function () {
+        $("#group-pickperson").removeClass("error");
+    });
+    $("#info-pickperson").mouseleave($.post("#", {}, function (data) {
+        data = {"telinfo": [{"id": 1, "name": "12345678"}, {"id": 2, "name": "987654321"}]};
+        var tellist = data.telinfo;
+        var str;
+        $.each(tellist, function (n, tel) {
+            str += "<option value=\"" +
+                tel.id +
+                "\">" +
+                tel.name +
+                "</option>";
+        })
+        $("#info-picktel").append(str);
+    }));
+    $("#info-picktel").change(function () {
+        $("#group-picktel").removeClass("error");
+    });
+
+    $("#info-recdate").change(function () {
+        $("#group-recdate").removeClass("error");
+    });
+    $("#info-recaddr").change(function () {
+        $("#group-recaddr").removeClass("error");
+    });
+    $("#info-recaddr").mouseleave($.post("#", {}, function (data) {
+        data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var personlist = data.personinfo;
+        var str;
+        $.each(personlist, function (n, person) {
+            str += "<option value=\"" +
+                person.id +
+                "\">" +
+                person.name +
+                "</option>";
+        })
+        $("#info-recperson").append(str);
+    }));
+    $("#info-recperson").change(function () {
+        $("#group-recperson").removeClass("error");
+    });
+    //
+    $("#info-recperson").mouseleave($.post("#", {}, function (data) {
+        data = {"telinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+        var tellist = data.telinfo;
+        var str;
+        $.each(tellist, function (n, tel) {
+            str += "<option value=\"" +
+                tel.id +
+                "\">" +
+                tel.name +
+                "</option>";
+        })
+        $("#info-rectel").append(str);
+    }));
+    $("#info-rectel").change(function () {
+        $("#group-rectel").removeClass("error");
+    });
+
+    //自己添加的js操作
+    function yewuliebiao(aa){//aa为传入的数组
+        var Ttr="<tr>";
+        Ttr+="<td><span class=\"row-details row-details-close\"></span></td>";
+        Ttr+="<td style=\"display: none\">1</td>";
+        Ttr+="<td style=\"display: none\">1</td>";
+        for(var i=0;i<8;i++){
+            Ttr+='<td class="">'+aa[i]+'</td>';
+        }
+        Ttr+="</tr>";
+        return Ttr;
+    }
+</script>
+
+<!-- 本页JS脚本结束 -->
+<!-- 引入JAVASCRIPTS结束 -->
+</body>
+
+<!-- BODY 结束-->
+
+</html>

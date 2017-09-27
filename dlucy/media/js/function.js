@@ -11,3 +11,16 @@ function Th_T(Ttr){
 		});
 	return a;
 }
+//返回数组个数
+function array_num(aa){//aa为传入的数组
+	for(var i in aa){
+		i++;
+	}
+	return i;
+}
+//a代表整点
+function time_change(a){
+	a=a+':'+'00';
+	return a;
+}
+

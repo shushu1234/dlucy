@@ -141,10 +141,19 @@ var TableAdvanced = function () {
         $('#sample_1').on('click', ' tbody td .row-del', function () {
             nTr = $(this).parents('tr')[0];
             $("#user-attention").text("确认要删除该行数据吗?");
+            //设置操作标志 1 删除
             $("#user-attentionflag").val(1);
             $('#static3').modal('show');
         });
+        $('#sample_1').on('click', ' tbody td .row-update', function () {
+            $("#user-attention").text("确认要修改该行数据吗?");
+            //设置操作标志 2 修改
+            $("#user-attentionflag").val(2);
+            $('#static3').modal('show');
+            nTr = $(this).parents('tr')[0];
+        });
 
+        //根据操作标志进行操作
         $("#btn-opera").click(function () {
             var user_attentionfalg=$("#user-attentionflag").val();
             if(user_attentionfalg==1){
@@ -245,17 +254,10 @@ var TableAdvanced = function () {
                     }
                 });
 
-
                 oTable.fnDeleteRow(nTr);
             }
         })
 
-        $('#sample_1').on('click', ' tbody td .row-update', function () {
-            $("#user-attention").text("确认要修改该行数据吗?");
-            $("#user-attentionflag").val(2);
-            $('#static3').modal('show');
-            nTr = $(this).parents('tr')[0];
-        });
     }
 
     return {

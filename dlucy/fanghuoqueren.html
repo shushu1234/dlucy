@@ -22,10 +22,11 @@
     <!-- 全局样式结束 -->
 
     <!-- 本页样式开始 -->
-    <link rel="stylesheet" type="text/css" href="media/css/timepicker.css"/>
+
     <link rel="shortcut icon" href="media/image/favicon.ico"/>
 
     <!-- 本页样式结束 -->
+
 
 </head>
 
@@ -49,13 +50,22 @@
                 <div class="navbar-inner">
                     <ul class="nav">
 
-                        <li>
-                            <a href="kehuweituo.html">客户委托</a>
+                        <li class="active">
+
+                            <a href="kehuweituo.html">
+                                送货费用查询
+                                <span class="selected"></span>
+
+                            </a>
+
                         </li>
 
                         <li>
 
-                            <a href="jinduchaxun.html">进度查询</a>
+                            <a href="jinduchaxun.html">进度查询
+
+
+                            </a>
 
                         </li>
                         <li>
@@ -70,14 +80,12 @@
                         </li>
                         <li>
 
-                            <a href="zxjgxxlr.html">重箱集港</a>
+                            <a href="#">箱进场</a>
 
                         </li>
+                        <li>
 
-                        <li class="active">
-
-                            <a href="zxjgqr.html">重箱进港</a>
-                            <span class="selected"></span>
+                            <a href="#">箱出场</a>
 
                         </li>
                         <li>
@@ -141,318 +149,156 @@
             <!-- 页面内容开始-->
             <div class="row-fluid">
 
-                <form action="#" class="form-horizontal" style="background-color: aliceblue"
+                <form action="#" class="form-horizontal"
                       onSubmit="return checkAll()">
                     <div class="span12">
 
 
-                        <!-- 箱号信息开始-->
+                        <!-- 客户信息开始-->
 
                         <div class="portlet box blue">
 
-                            <div class="portlet-title" style="margin-top: 30px">
+                            <div class="portlet-title" style="margin-top: 50px">
 
-                                <div class="caption"><i class="icon-file"></i>确认信息</div>
+                                <div class="caption"><i class="icon-info-sign"></i>船舶信息</div>
 
                                 <div class="tools">
                                 </div>
 
                             </div>
 
-                            <div class="portlet-body form" style="background-color: aliceblue">
+                            <div class="portlet-body form">
 
-                                <!-- 箱号信息 FORM 开始-->
+                                <!-- 客户信息 FORM 开始-->
 
 
                                 <input value="0" id="info-id" type="hidden">
                                 <input value="0" id="info-addtime" type="hidden">
                                 <input value="0" id="info-timestamp" type="hidden">
-                                <div class="row-fluid"
-                                     style="margin-left: 0px;margin-top:-10px;padding-top: 0px;padding-bottom: 0px;">
-                                    <table class="table table-striped table-bordered table-hover table-full-width">
+
+                                <div class="portlet-body"
+                                     style="overflow: scroll;height: 280px;background-color: aliceblue">
+
+                                    <table class="table table-striped table-bordered table-hover ">
 
                                         <thead>
 
                                         <tr>
-                                            <th style="display: none">id</th>
-
-                                            <th style="display: none">timestamp</th>
-
                                             <th>#</th>
 
                                             <th>指令号</th>
 
-                                            <th>客户名称</th>
-
-                                            <th>品名</th>
-
-                                            <th>箱型</th>
-
-                                            <th>箱号</th>
-
-                                            <th>目的港</th>
-
-                                            <th>贸易方式</th>
-
-                                            <th>接单人</th>
+                                            <th>结算日期</th>
 
                                             <th>承运商</th>
 
-                                            <th>航名航次</th>
+                                            <th>船名航次</th>
 
                                             <th>提单号</th>
 
-                                            <th>进港码头</th>
+                                            <th>目的港</th>
 
-                                            <th>进港日期</th>
+                                            <th>箱型</th>
 
-                                            <th>进港时间</th>
+                                            <th>箱量</th>
+
+                                            <th>到港日期</th>
+
+                                            <th>应收状态</th>
+
+                                            <th>放货状态</th>
 
                                         </tr>
 
                                         </thead>
 
-                                        <tbody id="tablelist_1" style="background-color: #ffffff;">
-                                        <tr class="odd">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td style="width: 60px;"><a class="btn red btn-del"
-                                                                        style="font-size: 10px;padding: 2px 8px;">删除</a>
-                                            </td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class="">
-                                                <input class="m-wrap span12 m-ctrl-medium date-picker"
-                                                       id="info-recdate1" readonly
-                                                       size="8" type="text" value="" data-date-format="yyyy-mm-dd"/>
-                                            </td>
-                                            <td class="">
-                                                <div class="input-append bootstrap-timepicker-component">
-                                                    <input class="m-wrap span12 m-ctrl-medium timepicker-default add-on"
-                                                           type="text" size="8" readonly placeholder="可空"/>
-                                                </div>
-                                            </td>
+                                        <tbody id="tbody-box">
+
+                                        <tr>
+
+                                            <td><a class="btn red btn-del"
+                                                   style="font-size: 10px;padding: 2px 8px;">删除</a></td>
+                                            <td>D004</td>
+
+                                            <td>月结</td>
+
+                                            <td>中远海运</td>
+                                            <td>长安103</td>
+
+                                            <td>xxoo123</td>
+
+                                            <td>南沙</td>
+                                            <td>20gp</td>
+
+                                            <td>3</td>
+
+                                            <td>8月31日</td>
+                                            <td>未收款</td>
+
+                                            <td>未放货</td>
 
                                         </tr>
-                                        <tr class="even">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td style="width: 60px;"><a class="btn red btn-del"
-                                                                        style="font-size: 10px;padding: 2px 8px;">删除</a>
-                                            </td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class="">
-                                                <input class="m-wrap span12 m-ctrl-medium date-picker"
-                                                       id="info-recdate2" readonly
-                                                       size="8" type="text" value="" data-date-format="yyyy-mm-dd"/>
-                                            </td>
-                                            <td class="">
-                                                <div class="input-append bootstrap-timepicker-component">
-                                                    <input class="m-wrap span12 m-ctrl-medium timepicker-default add-on"
-                                                           type="text" size="8" readonly placeholder="可空"/>
-                                                </div>
-                                            </td>
 
-                                        </tr>
-                                        <tr class="odd">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td style="width: 60px;"><a class="btn red btn-del"
-                                                                        style="font-size: 10px;padding: 2px 8px;">删除</a>
-                                            </td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class="">
-                                                <input class="m-wrap span12 m-ctrl-medium date-picker"
-                                                       id="info-recdate3" readonly
-                                                       size="8" type="text" value="" data-date-format="yyyy-mm-dd"/>
-                                            </td>
-                                            <td class="">
-                                                <div class="input-append bootstrap-timepicker-component">
-                                                    <input class="m-wrap span12 m-ctrl-medium timepicker-default add-on"
-                                                           type="text" size="8" readonly placeholder="可空"/>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="even">
-                                            <td style="display: none">1</td>
-                                            <td style="display: none">1</td>
-                                            <td style="width: 60px;"><a class="btn red btn-del"
-                                                                        style="font-size: 10px;padding: 2px 8px;">删除</a>
-                                            </td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class=""></td>
-                                            <td class="">
-                                                <input class="m-wrap span12 m-ctrl-medium date-picker"
-                                                       id="info-recdate4" readonly
-                                                       size="8" type="text" value="" data-date-format="yyyy-mm-dd"/>
-                                            </td>
-                                            <td class="">
-                                                <div class="input-append bootstrap-timepicker-component">
-                                                    <input class="m-wrap span12 m-ctrl-medium timepicker-default add-on"
-                                                           type="text" size="8" readonly placeholder="可空"/>
-                                                </div>
-                                            </td>
-
-                                        </tr>
 
                                         </tbody>
 
                                     </table>
 
                                 </div>
+                                <div class="form-actions" style="margin-top: -25px">
 
-                                <!--</form>-->
+                                    <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
+                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                        <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置
+                                        </button>
+                                    </button>
+                                    <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
+                                    <div id="static" class="modal hide fade" tabindex="-1">
 
-                                <!-- 箱号信息 FORM 结束-->
+                                        <div class="modal-body">
+
+                                            <p style="font-size: large  ">请确认</p>
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" data-dismiss="modal" class="btn" id="btn-return">
+                                                返回修改
+                                            </button>
+                                            <button class="btn green" data-toggle="modal" href="#static2"
+                                                    id="btn-submit" onclick="checkAll()">继续提交
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    <div id="static2" class="modal hide fade" tabindex="-1">
+
+                                        <div class="modal-body">
+
+                                            <h3 id="info-attention" style="text-align: center"></h3>
+
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <p style="font-size: large  ">提交成功</p>
+                                            <button type="button" data-dismiss="modal" class="btn green"
+                                                    onclick="modifyList()">确认
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- 客户信息 FORM 结束-->
 
                             </div>
 
                         </div>
 
-                        <!-- 箱号信息结束-->
+                        <!-- 客户信息结束-->
+
                     </div>
-                    <div class="form-actions">
-
-                        <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
-                                href="#static" onclick="modalConfirm()" style="float: right">确认提交
-                        </button>
-                        <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
-                        <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
-                        <div id="static" class="modal hide fade" tabindex="-1">
-
-                            <div class="modal-body">
-
-                                <p>请确认信息:</p>
-                                <table>
-                                    <tr>
-                                        <td id="td-order"></td>
-                                        <td></td>
-                                        <td id="td-boxnum"></td>
-
-                                        <td id="td-boxtype"></td>
-
-                                        <td id="td-goodsname"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-clientname"></td>
-                                        <td></td>
-                                        <td id="td-port"></td>
-
-                                        <td id="td-tradetype"></td>
-
-                                        <td id="td-billcycle"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><br></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="5">==================提货信息==================</td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-pickaddr" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-pickdate" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-pickperson" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-picktel" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><br></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">==================收货信息==================</td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-recaddr" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-recdate" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-recperson" colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="td-rectel" colspan="5"></td>
-                                    </tr>
-
-                                </table>
-                            </div>
-
-                            <div class="modal-footer">
-
-                                <button type="button" data-dismiss="modal" class="btn" id="btn-return">
-                                    返回修改
-                                </button>
-                                <button class="btn green" data-toggle="modal" href="#static2"
-                                        id="btn-submit" onclick="checkAll()">继续提交
-                                </button>
-                            </div>
-
-                        </div>
-                        <div id="static2" class="modal hide fade" tabindex="-1">
-
-                            <div class="modal-body">
-
-                                <h3 id="info-attention" style="text-align: center"></h3>
-
-                            </div>
-
-                            <div class="modal-footer">
-
-                                <button type="button" data-dismiss="modal" class="btn green">确认</button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
                 </form>
             </div>
 
@@ -489,39 +335,27 @@
 
                                     <th style="display: none">timestamp</th>
 
-                                    <th>录入日期</th>
-
                                     <th>指令号</th>
 
-                                    <th>客户名称</th>
-
-                                    <th>品名</th>
-
-                                    <th>箱型</th>
-
-                                    <th>箱号</th>
-
-                                    <th>目的港</th>
-
-                                    <th>贸易方式</th>
-
-                                    <th>接单人</th>
+                                    <th>结算日期</th>
 
                                     <th>承运商</th>
 
-                                    <th>航名航次</th>
+                                    <th>船名航次</th>
 
                                     <th>提单号</th>
 
-                                    <th>进港码头</th>
+                                    <th>目的港</th>
 
-                                    <th>预约日期</th>
+                                    <th>箱型</th>
 
-                                    <th>签约时间段</th>
+                                    <th>箱量</th>
 
-                                    <th>状态</th>
+                                    <th>到港日期</th>
 
-                                </tr>
+                                    <th>应收状态</th>
+
+                                    <th>放货状态</th>
 
                                 </thead>
 
@@ -529,44 +363,181 @@
                                 <tr class="odd">
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
-                                    <td class=""></td>
-                                    <td class="">D004</td>
-                                    <td class="">阜丰</td>
-                                    <td class="">味精</td>
-                                    <td class="">20GP</td>
-                                    <td class="">CCLU2345675</td>
-                                    <td class="">南沙</td>
-                                    <td class="">门到门</td>
-                                    <td class="">张玉珊</td>
+
+                                    <td class="">D001</td>
+                                    <td class="">月结</td>
                                     <td class="">中远海运</td>
-                                    <td class="">长安103/1120</td>
+                                    <td class="">长安103</td>
                                     <td class="">XFHP000123</td>
-                                    <td class="">五洲</td>
+
+                                    <td class="">南沙</td>
+                                    <td class="">20GP</td>
+                                    <td class="">3</td>
                                     <td class="">8月31日</td>
-                                    <td class="">8：00-10：00</td>
-                                    <td class="">未确认</td>
+                                    <td class="">未收款</td>
+
+                                    <td class="">未放货</td>
+
+
                                 </tr>
 
-                                <tr class="even statusok">
+                                <tr class="odd">
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
-                                    <td class=""></td>
-                                    <td class="">D004</td>
-                                    <td class="">阜丰</td>
-                                    <td class="">味精</td>
-                                    <td class="">20GP</td>
-                                    <td class="">CCLU2345675</td>
-                                    <td class="">南沙</td>
-                                    <td class="">门到门</td>
-                                    <td class="">张玉珊</td>
+
+                                    <td class="">D002</td>
+                                    <td class="">月结</td>
                                     <td class="">中远海运</td>
-                                    <td class="">长安103/1120</td>
+                                    <td class="">长安103</td>
                                     <td class="">XFHP000123</td>
-                                    <td class="">五洲</td>
+
+                                    <td class="">南沙</td>
+                                    <td class="">20GP</td>
+                                    <td class="">3</td>
                                     <td class="">8月31日</td>
-                                    <td class="">8：00-10：00</td>
-                                    <td class="">未确认</td>
+                                    <td class="">未收款</td>
+
+                                    <td class="">未放货</td>
+
+
                                 </tr>
+
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D003</td>
+                                    <td class="">月结</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">长安103</td>
+                                    <td class="">XFHP000123</td>
+
+                                    <td class="">南沙</td>
+                                    <td class="">20GP</td>
+                                    <td class="">3</td>
+                                    <td class="">8月31日</td>
+                                    <td class="">未收款</td>
+
+                                    <td class="">未放货</td>
+
+                                </tr>
+
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D004</td>
+                                    <td class="">月结</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">长安103</td>
+                                    <td class="">XFHP000123</td>
+
+                                    <td class="">南沙</td>
+                                    <td class="">20GP</td>
+                                    <td class="">3</td>
+                                    <td class="">8月31日</td>
+                                    <td class="">未收款</td>
+
+                                    <td class="">未放货</td>
+
+                                </tr>
+
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D005</td>
+                                    <td class="">月结</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">长安103</td>
+                                    <td class="">XFHP000123</td>
+
+                                    <td class="">南沙</td>
+                                    <td class="">20GP</td>
+                                    <td class="">3</td>
+                                    <td class="">8月31日</td>
+                                    <td class="">未收款</td>
+
+                                    <td class="">未放货</td>
+
+                                </tr>
+
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D006</td>
+                                    <td class="">月结</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">长安103</td>
+                                    <td class="">XFHP000123</td>
+
+                                    <td class="">南沙</td>
+                                    <td class="">20GP</td>
+                                    <td class="">3</td>
+                                    <td class="">8月31日</td>
+                                    <td class="">未收款</td>
+
+                                    <td class="">未放货</td>
+                                </tr>
+
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D007</td>
+                                    <td class="">月结</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">长安103</td>
+                                    <td class="">XFHP000123</td>
+
+                                    <td class="">南沙</td>
+                                    <td class="">20GP</td>
+                                    <td class="">3</td>
+                                    <td class="">8月31日</td>
+                                    <td class="">未收款</td>
+
+                                    <td class="">未放货</td>
+                                </tr>
+
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D008</td>
+                                    <td class="">月结</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">长安103</td>
+                                    <td class="">XFHP000123</td>
+
+                                    <td class="">南沙</td>
+                                    <td class="">20GP</td>
+                                    <td class="">3</td>
+                                    <td class="">8月31日</td>
+                                    <td class="">未收款</td>
+
+                                    <td class="">未放货</td>
+                                </tr>
+
+                                <tr class="odd">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+
+                                    <td class="">D009</td>
+                                    <td class="">月结</td>
+                                    <td class="">中远海运</td>
+                                    <td class="">长安103</td>
+                                    <td class="">XFHP000123</td>
+
+                                    <td class="">南沙</td>
+                                    <td class="">20GP</td>
+                                    <td class="">3</td>
+                                    <td class="">8月31日</td>
+                                    <td class="">未收款</td>
+
+                                    <td class="">未放货</td>
+                                </tr>
+
 
                                 </tbody>
 
@@ -675,13 +646,13 @@
 
 <script src="media/js/app.js"></script>
 
-<script src="media/js/zxjgqr.js"></script>
+<script src="media/js/fanghuoqueren.js"></script>
 
 <script src="media/js/form-validation.js"></script>
 <script src="media/js/form-components.js"></script>
 
 <script src="media/js/ui-modals.js"></script>
-<script type="text/javascript" src="media/js/bootstrap-timepicker.js"></script>
+
 <script>
 
     jQuery(document).ready(function () {
@@ -695,11 +666,8 @@
         TableAdvanced.init();
         UIModals.init();
         var nowTime = new Date();
-        $("#info-recdate1").datepicker('setDate', nowTime);
-        $("#info-recdate2").datepicker('setDate', nowTime);
-        $("#info-recdate3").datepicker('setDate', nowTime);
-        $("#info-recdate4").datepicker('setDate', nowTime);
-
+        $("#info-pickdate").datepicker('setDate', nowTime);
+        $("#info-recdate").datepicker('setDate', nowTime);
     });
 
     var info_order;
@@ -777,7 +745,6 @@
         }
         return false;
     }
-
     //输入框检查
     function checkInput(str) {
         if (str == null || str == "") {
@@ -786,7 +753,6 @@
             return true;
         }
     }
-
     //    下拉框检查
     function checkSelect(str) {
         if (str == "请选择...") {
@@ -801,7 +767,6 @@
         var timestamp = new Date().getTime();
         return timestamp;
     }
-
     //获得当前时间　yyyy-mm-dd hh:mm:ss
     function getNowFormatDate() {
         var date = new Date();
@@ -865,6 +830,8 @@
         var info_id = $("#info-id").val();
         var info_addtime = $("#info-addtime").val();
         var info_timestamp = $("#info-timestamp").val();
+//mark  修改人 c  2017/9/27 星期三
+
 
         getInfoData();
         $('#static').modal('hide')
@@ -950,13 +917,14 @@
             $("#group-rectel").addClass("error");
             check = false;
         }
-
+        check = true;
 
         if (!check) {
 //            alert("请检查...");
             $("#info-attention").text("请检查红色区域:(");
 //            resetAll();
         } else {
+            return true;
             var theData = [
                 "<span class=\"row-details row-details-close\"></span>",
                 info_pickaddr, info_pickdate, info_pickperson, info_picktel,
@@ -976,20 +944,103 @@
                 "</a>"
             ];
 
-            //        var theTable = $('#sample_1').dataTable();
-            //        theTable.fnClearTable();
-            //        alert(1);
-//            $('#sample_1').dataTable().fnAddData(theData);
-//            alert("添加成功");
-//            resetAll();
-            reloadData(theData);
-            check = true;
+
+            // var theTable = $('#sample_1').dataTable();
+            // theTable.fnClearTable();
+            // alert(1);
+            // $('#sample_1').dataTable().fnAddData(theData);
+            // alert("添加成功");
+            // resetAll();
+            // reloadData(theData);
+            //check = true;
         }
 
 
         return false;
 
     }
+
+    //*******************
+    function modifyList() {
+
+
+        var str2 = "<td><span class='row-details row-details-close'></span></td>" + "<td><a  class='btn blue row-add' style='font-size: 10px;padding: 2px 8px;'>提交</a></td>";
+        $("#tbody-box tr").each(function (trindex, tritem) {
+            //遍历每一行
+            //tableData[trindex]=new Array();
+
+            var str = "<tr class='odd'>" + str2;
+
+
+            $(tritem).find("td").each(function (tdindex, tditem) {
+
+
+                //遍历每一个数据，并存入
+                //subMilasUrlArr[trindex]=tableData[trindex];
+                //将每一行的数据存入
+
+                if (tdindex > 0 && tdindex < 11) {
+                    //alert(tdindex);
+                    str = str + "<td class=''>" + $(tditem).text() + "</td>";
+                    // alert(str);
+                }
+            });
+
+            str = str + "<td class=''>已放货</td></tr>";
+            $("#tablelist").append(str);
+
+        });
+        $("#tbody-box tr").each(function (trindex, tritem) {
+            $(tritem).remove();
+        });
+        //TableAdvanced.init();
+    }
+
+    /*var nTr = $(tritem);
+     var aData = oTable.fnGetData(nTr);
+
+     var str=" <tr>"+
+     "<td><a  class=\"btn red btn-del\" style=\"font-size: 10px;padding: 2px 8px;\">删除</a></td>"+
+     "<td>" +
+     aData[5] +
+     "</td>"+
+     "<td>" +
+     aData[6] +
+     "</td>"+
+     "<td>" +
+     aData[7]     +
+     "</td>"+
+     "<td >" +
+     aData[8] +
+     "</td>"+
+     "<td>" +
+     aData[9] +
+     "</td>"+
+     "<td>" +
+     aData[10] +
+     "</td>"+
+     "<td>" +
+     aData[11] +
+     "</td>"+
+     "<td >" +
+     aData[12] +
+     "</td>"+
+     "<td>" +
+     aData[13] +
+     "</td>"+
+     "<td>" +
+     aData[14] +
+     "</td>"+
+     "<td>" +
+     aData[15] +
+     "</td>"+
+     "<td >" +
+     aData[16] +
+     "</td>"+
+     "</tr>";
+     $("#tbody-box").append(str);
+     oTable.fnDeleteRow(nTr);*/
+    //*********************
 
     //    以下为客户信息状态转换产生的事件
     $("#info-order").change(function () {
@@ -1111,6 +1162,8 @@
     $("#info-rectel").change(function () {
         $("#group-rectel").removeClass("error");
     });
+
+
 </script>
 
 <!-- 本页JS脚本结束 -->

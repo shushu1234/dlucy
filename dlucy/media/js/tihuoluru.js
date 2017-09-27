@@ -293,15 +293,15 @@ var TableAdvanced = function () {
 
                // if (Array.isArray(data[i])){
                     //window.operarow=data.length;
-                    var data00 = document.getElementById('printTableOne00');
-                    var data01 = document.getElementById('printTableOne01');
-                    var data02 = document.getElementById('printTableOne02');
-                    var data10 = document.getElementById('printTableOne10');
-                    var data11 = document.getElementById('printTableOne11');
-                    var data12 = document.getElementById('printTableOne12');
-                    var data20 = document.getElementById('printTableOne20');
-                    var data21 = document.getElementById('printTableOne21');
-                    var data22 = document.getElementById('printTableOne22');
+                    var data00 = document.getElementById('order_no');
+                    var data01 = document.getElementById('customer_name');
+                    var data02 = document.getElementById('destport');
+                    var data10 = document.getElementById('box_no');
+                    var data11 = document.getElementById('lead_number');
+                    var data12 = document.getElementById('boxtype');
+                    var data20 = document.getElementById('carrier');
+                    var data21 = document.getElementById('car_no');
+                    var data22 = document.getElementById('pickup_addr');
 
 
                     var str3="                        <tr class=\"edittr\">"+

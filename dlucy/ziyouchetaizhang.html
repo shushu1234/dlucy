@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<!-- HEAD 开始-->
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>船运管理系统</title>
+
+
+    <meta content="" name="description"/>
+
+    <meta content="" name="author"/>
+
+    <!-- 全局样式开始-->
+
+    <link href="media/mycss/core.css" rel="stylesheet" type="text/css"/>
+    <!-- 全局样式结束 -->
+
+    <!-- 本页样式开始 -->
+    <link rel="stylesheet" type="text/css" href="media/css/timepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="media/mycss/jiaotitiaowen.css"/>
+
+    <link rel="shortcut icon" href="media/image/favicon.ico"/>
+
+    <!-- 本页样式结束 -->
+
+</head>
+
+<!-- HEAD 结束 -->
+
+<!--  BODY 开始-->
+
+<body class="page-header-fixed">
+
+<!--HEADER 开始-->
+
+<div class="header navbar navbar-inverse navbar-fixed-top myheader" >
+
+    <!-- 导航栏开始 -->
+
+    <div class="navbar-inner">
+
+        <div class="container-fluid navbar hor-menu hidden-phone hidden-tablet">
+
+            <div class="navbar hor-menu  hidden-tablet">
+                <div class="navbar-inner">
+                    <ul class="nav">
+
+                        <li >
+
+                            <a href="kehuweituo.html">
+
+                                客户委托
+                            </a>
+
+                        </li>
+
+                        <li class="active">
+
+                            <a href="jinduchaxun.html">自有车台账
+
+                                <span class="selected"></span>
+                            </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">提货方</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">提箱(空/套)</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱进场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱出场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱进场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">箱预约确认</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱出场</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱进港</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">重箱装船</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">到港放货</a>
+
+                        </li>
+                        <li>
+
+                            <a href="#">异地配送</a>
+
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 导航栏结束 -->
+</div>
+
+<!--HEADER 结束-->
+
+
+<!--CONTAINER 开始 -->
+
+<div class="page-container row-fluid mycontainer">
+
+    <!-- 页面开始 -->
+
+    <div class="page-content" style="margin-left: 0px">
+
+
+        <div class="container-fluid">
+
+            <!-- 页面内容开始-->
+            <div class="row-fluid">
+
+
+                <div class="span12">
+                    <!-- 箱号信息开始-->
+
+                    <div class="portlet box blue">
+
+                        <div class="portlet-title" style="margin-top: 50px">
+
+                            <div class="caption"><i class="icon-reorder"></i>杂费录入</div>
+
+                            <div class="tools">
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body form">
+
+                            <!-- 箱号信息 FORM 开始-->
+                            <form action="#" class="form-horizontal" style="background-color: aliceblue"
+                                  onSubmit="return checkAll()">
+                                <input value="0" id="info-id" type="hidden">
+                                <input value="0" id="info-addtime" type="hidden">
+                                <input value="0" id="info-timestamp" type="hidden">
+
+                                <div class="row-fluid">
+
+                                    <div class="span4 ">
+
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">指令号</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="order_no" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="span4 ">
+
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">车号</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="car_no" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="span4 ">
+
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">箱号</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="box_no" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <!--/row-->
+
+                                <div class="row-fluid">
+
+                                    <div class="span4 ">
+
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">杂费1名称</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="miscellaneous_items1" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="span4 ">
+
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">杂费2名称</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="miscellaneous_items2" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="span4 ">
+
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">杂费3名称</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="miscellaneous_items3" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <!--/row-->
+
+                                <div class="row-fluid">
+
+                                    <div class="span4 ">
+
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">杂费1费用</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="fees_amount1" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="span4 ">
+
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">杂费2费用</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="fees_amount2" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="span4 ">
+
+                                        <div class="control-group" id="group-order">
+
+                                            <label class="control-label" id="label-order">杂费3费用</label>
+
+                                            <div class="controls">
+
+                                                <input type="text" id="fees_amount3" class="span12 m-wrap"
+                                                       style="margin: 0 auto;background-color: white;"
+                                                       data-provide="typeahead" data-items="4" placeholder="手工录入"
+                                                       data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-actions">
+
+                                    <button type="submit" class="btn blue" id="btn-modal1" data-toggle="modal"
+                                            style="float: right">确认提交
+                                    </button>
+                                    <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
+                                    <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
+                                    <div id="static" class="modal hide fade" tabindex="-1">
+
+                                        <div class="modal-body">
+
+                                            <p>请确认信息:</p>
+                                            <table>
+                                                <tr>
+                                                    <td id="td_order_no"></td>
+                                                    <td></td>
+                                                    <td id="td_box_no"></td>
+                                                    <td id="td_car_no"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5">==================杂费信息==================</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td_miscellaneous_items1"></td>
+                                                    <td></td>
+                                                    <td id="td_miscellaneous_items2"></td>
+                                                    <td id="td_miscellaneous_items3"></td>
+                                                </tr>
+
+
+                                            </table>
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" data-dismiss="modal" class="btn" id="btn-return">
+                                                返回修改
+                                            </button>
+                                            <button class="btn green" data-toggle="modal" href=""
+                                                    id="btn-submit" >继续提交
+                                            </button>
+                                        </div>
+
+
+                                        <!--</form>-->
+                            </form>
+                            <!-- 箱号信息 FORM 结束-->
+
+                        </div>
+
+                    </div>
+
+                    <!-- 箱号信息结束-->
+
+                </div>
+            </div>
+
+            <div class="row-fluid">
+
+                <div class="span12">
+
+                    <!-- 业务列表开始　-->
+                    <form action="#" class="form-horizontal" style="background-color: aliceblue"
+                          onSubmit="return checkAll()">
+                        <div class="portlet box green">
+                            <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
+                            <div class="portlet-title">
+
+                                <div class="caption"><i class="icon-list"></i>杂费结算</div>
+
+                                <div class="tools">
+
+                                    <a href="javascript:;" class="reload"></a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="portlet-body" style="background-color: azure ;">
+
+                                <table class="table table-bordered table-hover table-full-width"
+                                       id="sample_0">
+
+                                    <thead>
+
+                                    <tr>
+                                        <th style="display: none">id</th>
+
+                                        <th style="display: none">timestamp</th>
+
+                                        <th>操作</th>
+
+                                        <th>日期</th>
+
+                                        <th>承运商</th>
+
+                                        <th>车号</th>
+
+                                        <th>指令号</th>
+
+                                        <th>提货地</th>
+
+                                        <th>箱号</th>
+
+                                        <th>出车费</th>
+
+                                        <th>随车现金</th>
+
+                                        <th>加油费</th>
+
+                                        <th>余额</th>
+
+                                        <th>余额结算状态</th>
+
+                                        <th>杂费1名称</th>
+
+                                        <th>杂费1金额</th>
+
+                                        <th>杂费2名称</th>
+
+                                        <th>杂费2金额</th>
+
+                                        <th>杂费3名称</th>
+
+                                        <th>杂费3金额</th>
+
+
+
+
+
+                                    </tr>
+
+                                    </thead>
+
+                                    <tbody style="background-color:#ffffff;" id="tbody0">
+                                    <tr >
+                                        <td style="display: none">1</td>
+                                        <td style="display: none">1</td>
+                                        <td> <a href="#" class="btn red mini icn-only">删除</a></td>
+                                        <td class="">2017/10/22</td>
+                                        <td class="">某某</td>
+                                        <td class="">接单人</td>
+                                        <td class="">aaa</td>
+                                        <td class="">G20</td>
+                                        <td class="">大箱</td>
+                                        <td class="">xxxxx</td>
+                                        <td class="">H123456</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">--</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                    </tr>
+
+                                    <tr >
+                                        <td style="display: none">1</td>
+                                        <td style="display: none">1</td>
+                                        <td> <a href="#" class="btn red mini icn-only">删除</a></td>
+                                        <td class="">2017/10/22</td>
+                                        <td class="">某某</td>
+                                        <td class="">接单人</td>
+                                        <td class="">ccc</td>
+                                        <td class="">G20</td>
+                                        <td class="">大箱</td>
+                                        <td class="">xxxxx</td>
+                                        <td class="">H123456</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">--</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                    </tr>
+
+
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+                        <div class="form-actions">
+
+                            <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
+                                    style="float: right">确认提交
+                            </button>
+                            <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
+                            <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
+
+                        </div>
+                        <!--</form>-->
+                    </form>
+
+                    <div class="portlet box green">
+                        <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
+                        <div class="portlet-title">
+
+                            <div class="caption"><i class="icon-list"></i>费用汇总</div>
+
+                            <div class="tools">
+
+                                <a href="javascript:;" class="reload"></a>
+
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <div style="position:absolute;top:408px;">
+                                <label style="font-size: 16px; margin-left:300px;">车号: <input type="text" placeholder="请输入以查找" style="height: 20px;padding: 6px;"/>
+                                    <!--<span style="font-size: 20px;">海运承运商: <input type="text" placeholder="请输入以查找" style="height: 20px;padding: 6px;""/></span>-->
+                                    <input type="button" value="搜索" style="background: rgb(75, 141, 248); color: white;height: 34px;padding: 6px; margin-bottom: 14px"/></label>
+                            </div>
+
+                            <div class="portlet-body" style="background-color: azure ;">
+
+                                <table class="table table-bordered table-hover table-full-width"
+                                       id="sample_1">
+
+                                    <thead>
+
+                                    <tr >
+                                        <th style="display: none">id</th>
+
+                                        <th style="display: none">timestamp</th>
+
+                                        <th>操作</th>
+
+                                        <th>日期</th>
+
+                                        <th>承运商</th>
+
+                                        <th>车号</th>
+
+                                        <th>指令号</th>
+
+                                        <th>提货地</th>
+
+                                        <th>箱号</th>
+
+                                        <th>出车费</th>
+
+                                        <th>随车现金</th>
+
+                                        <th>加油费</th>
+
+                                        <th>余额</th>
+
+                                        <th>余额结算状态</th>
+
+                                        <th>杂费1名称</th>
+
+                                        <th>杂费1金额</th>
+
+                                        <th>杂费2名称</th>
+
+                                        <th>杂费2金额</th>
+
+                                        <th>杂费3名称</th>
+
+                                        <th>杂费3金额</th>
+                                        <th>利润</th>
+
+
+
+
+                                    </tr>
+
+                                    </thead>
+
+                                    <tbody style="background-color:#ffffff;" id="tbody1">
+                                    <tr id="abc">
+                                        <td style="display: none">1</td>
+                                        <td style="display: none">1</td>
+                                        <td class="">
+                                            <a href="#" class="btn blue mini ">提交</a>
+                                        </td>
+                                        <td class="">2017/10/22</td>
+                                        <td class="">某某</td>
+                                        <td class="">接单人</td>
+                                        <td class="">abc</td>
+                                        <td class="">G20</td>
+                                        <td class="">大箱</td>
+                                        <td class="">xxxxx</td>
+                                        <td class="">H123456</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">--</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">--</td>
+
+
+                                    </tr>
+
+                                    <tr id="abd" >
+
+                                        <td style="display: none">1</td>
+                                        <td style="display: none">1</td>
+                                        <td class="">
+                                            <a href="#" class="btn blue mini ">提交</a>
+                                        </td>
+                                        <td class="">2017/10/22</td>
+                                        <td class="">某某</td>
+                                        <td class="">接单人</td>
+                                        <td class="">abd</td>
+                                        <td class="">G20</td>
+                                        <td class="">大箱</td>
+                                        <td class="">xxxxx</td>
+                                        <td class="">H123456</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">--</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">--</td>
+
+
+                                    </tr>
+                                    <tr id="ccc" style="display: none">
+                                        <td style="display: none">1</td>
+                                        <td style="display: none">1</td>
+                                        <td> <a href="#" class="btn blue mini ">提交</a></td>
+                                        <td class="">2017/10/22</td>
+                                        <td class="">某某</td>
+                                        <td class="">接单人</td>
+                                        <td class="">ccc</td>
+                                        <td class="">G20</td>
+                                        <td class="">大箱</td>
+                                        <td class="">xxxxx</td>
+                                        <td class="">H123456</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">--</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">xx</td>
+                                    </tr>
+
+                                    <tr id="aaa" style="display: none">
+                                        <td style="display: none">1</td>
+                                        <td style="display: none">1</td>
+                                        <td> <a href="#" class="btn blue mini ">提交</a></td>
+                                        <td class="">2017/10/22</td>
+                                        <td class="">某某</td>
+                                        <td class="">接单人</td>
+                                        <td class="">aaa</td>
+                                        <td class="">G20</td>
+                                        <td class="">大箱</td>
+                                        <td class="">xxxxx</td>
+                                        <td class="">H123456</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">--</td>
+                                        <td class="">123456</td>
+                                        <td class="">某某承运商</td>
+                                        <td class="">abc</td>
+                                        <td class="">--</td>
+                                        <td class="">xx</td>
+                                    </tr>
+
+
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                        <!-- 业务列表结束-->
+
+
+                    </div>
+
+                </div>
+
+                <!-- 页面内容结束　-->
+
+            </div>
+
+            <!-- CONTAINER　结束-->
+
+        </div>
+
+        <!-- 页面结束 -->
+        <div id="static3" class="modal hide fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
+
+            <div class="modal-body">
+
+                <h3 id="user-attention" style="text-align: center"></h3>
+                <input type="hidden" value="0" id="user-attentionflag">
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" data-dismiss="modal" class="btn">放弃</button>
+
+                <button type="button" data-dismiss="modal" class="btn red" id="btn-delrow">确认</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTAINER 结束-->
+
+
+    <!--引入 JAVASCRIPTS(将JAVASCRIPT放在页面底部，可以减少页面加载时间) -->
+
+    <!--核心插件开始-->
+    <script src="media/js/moment.js" type="text/javascript"></script>
+
+    <script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+    <script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+    <!-- IMPORTANT! 在bootstrap.min.js之前加载jquery-ui-1.10.1.custom.min.js以修复与jquery ui工具提示冲突的引导工具提示 -->
+
+    <script src="media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+    <script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+    <script src="media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+    <script src="media/js/jquery.blockui.min.js" type="text/javascript"></script>
+
+    <script src="media/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+    <script src="media/js/jquery.uniform.min.js" type="text/javascript"></script>
+
+    <!--核心插件结束-->
+
+    <!-- 本页插件开始 -->
+
+    <script type="text/javascript" src="media/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" src="media/js/DT_bootstrap.js"></script>
+
+    <script type="text/javascript" src="media/js/jquery.validate.min.js"></script>
+
+    <script type="text/javascript" src="media/js/chosen.jquery.min.js"></script>
+
+    <script type="text/javascript" src="media/js/select2.min.js"></script>
+
+    <script type="text/javascript" src="media/js/bootstrap-datepicker.js"></script>
+
+    <script type="text/javascript" src="media/js/bootstrap-datetimepicker.js"></script>
+
+    <script type="text/javascript" src="media/js/jquery.inputmask.bundle.min.js"></script>
+
+    <script type="text/javascript" src="media/js/jquery.input-ip-address-control-1.0.min.js"></script>
+
+    <script type="text/javascript" src="media/js/jquery.multi-select.js"></script>
+
+    <script src="media/js/bootstrap-modal.js" type="text/javascript"></script>
+
+    <script src="media/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+
+
+    <!-- 本页插件结束-->
+
+    <!-- 本页JS脚本开始 -->
+
+    <script src="media/js/app.js"></script>
+
+    <script src="media/js/function.js"></script>
+
+    <script src="media/js/form-validation.js"></script>
+    <script src="media/js/form-components.js"></script>
+
+    <script src="media/js/ui-modals.js"></script>
+    <script type="text/javascript" src="media/js/bootstrap-timepicker.js"></script>
+    <script>
+
+        jQuery(document).ready(function () {
+
+            // 初始化布局和插件
+
+            App.init();
+
+            FormValidation.init();
+            FormComponents.init();
+            TableAdvanced.init();
+            UIModals.init();
+            var nowTime = new Date();
+            $("#info-pickdate").datepicker('setDate', nowTime);
+            $("#info-recdate").datepicker('setDate', nowTime);
+        });
+        /*客户信息模态框初始化信息*/
+        function modalConfirm() {
+            /*获得客户信息*/
+            var order_no = $("#order_no").val();
+            var car_no = $("#car_no").val();
+            var box_no = $("#box_no").val();
+            var fees_amount1=$("#fees_amount1").val();
+            var fees_amount2=$("#fees_amount2").val();
+            var fees_amount3=$("#fees_amount3").val();
+            var miscellaneous_items1=$("#miscellaneous_items1").val();
+            var miscellaneous_items2=$("#miscellaneous_items2").val();
+            var miscellaneous_items3=$("#miscellaneous_items3").val();
+            $("#td_order_no").text("指令号: " + order_no);
+            $("#td_car_no").text("   车号: " + car_no);
+            $("#td_box_no").text("   箱量: " + box_no);
+            if(miscellaneous_items1){$("#td_miscellaneous_items1").text(miscellaneous_items1+" : " + fees_amount1+"元");}
+            if(miscellaneous_items2){$("#td_miscellaneous_items2").text(miscellaneous_items2+" : " + fees_amount2+"元");}
+            if(miscellaneous_items3){ $("#td_miscellaneous_items3").text(miscellaneous_items3+" : " + fees_amount3+"元");}
+        }
+
+        //    数字输入检查
+        function isNum(str) {
+            if (str != null && str != "") {
+                return !isNaN(str);
+            }
+            return false;
+        }
+
+        //输入框检查
+        function checkInput(str) {
+            if (str == null || str == "") {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        //    下拉框检查
+        function checkSelect(str) {
+            if (str == "请选择...") {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        //    获得当前时间的时间戳
+        function getTimeStamp() {
+            var timestamp = new Date().getTime();
+            return timestamp;
+        }
+
+        //获得当前时间　yyyy-mm-dd hh:mm:ss
+        function getNowFormatDate() {
+            var date = new Date();
+            var seperator1 = "-";
+            var seperator2 = ":";
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            if (minutes >= 0 && minutes <= 9) {
+                minutes = "0" + minutes;
+            }
+            if (seconds >= 0 && seconds <= 9) {
+                seconds = "0" + seconds;
+            }
+            var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+                + " " + date.getHours() + seperator2 + minutes
+                + seperator2 + seconds;
+            return currentdate;
+        }
+
+        //    重置输入框
+        function resetAll() {
+            $("#btn-reset").click();
+        }
+
+        //    重新刷新表格数据
+        function reloadData(theData) {
+
+            if (theData[9] == 0) {
+                theData[9] = getNowFormatDate();
+                theData[22] = "<td class=\"myhidden sorting_1\">" + getTimeStamp() + "</td>";
+            }
+            $('#sample_1').dataTable().fnAddData(theData);
+
+            resetAll();
+
+            $("form select").each(function (index, item) {
+                $(item).find('option').each(function () {
+                    $(this).removeAttrs('selected');
+                });
+            });
+
+            $('.chzn-container-single span').html('请选择...');
+
+            $("#info-attention").text("添加成功:)");
+            var nowTime = new Date();
+            $("#info-pickdate").datepicker('setDate', nowTime);
+            $("#info-recdate").datepicker('setDate', nowTime);
+        }
+
+        //   客户信息检查入口
+        function checkAll() {
+            var ev = arguments[0] || window.event;
+            var info_id = $("#info-id").val();
+            var info_addtime = $("#info-addtime").val();
+            var info_timestamp = $("#info-timestamp").val();
+
+            getInfoData();
+            $('#static').modal('hide')
+
+            var check = true;
+
+            if (!checkInput(info_order)) {
+                $("#group-order").addClass("error");
+                check = false;
+            }
+
+            if (!isNum(info_boxnum)) {
+                $("#group-boxnum").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_boxtype)) {
+                $("#group-boxtype").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_goodsname)) {
+                $("#group-goodsname").addClass("error");
+                check = false;
+            }
+
+            if (!checkInput(info_clientname)) {
+                $("#group-clientname").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_port)) {
+                $("#group-port").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_tradetype)) {
+                $("#group-tradetype").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_billcycle)) {
+                $("#group-billcycle").addClass("error");
+                check = false;
+            }
+
+            if (!checkInput(info_pickdate)) {
+                $("#group-pickdate").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_pickaddr)) {
+                $("#group-pickaddr").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_pickperson)) {
+                $("#group-pickperson").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_picktel)) {
+                $("#group-picktel").addClass("error");
+                check = false;
+            }
+
+            if (!checkInput(info_recdate)) {
+                $("#group-recdate").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_recaddr)) {
+                $("#group-recaddr").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_recperson)) {
+                $("#group-recperson").addClass("error");
+                check = false;
+            }
+
+            if (!checkSelect(info_rectel)) {
+                $("#group-rectel").addClass("error");
+                check = false;
+            }
+
+
+            if (!check) {
+//            alert("请检查...");
+                $("#info-attention").text("请检查红色区域:(");
+//            resetAll();
+            } else {
+                var theData = [
+                    "<span class=\"row-details row-details-close\"></span>",
+                    info_pickaddr, info_pickdate, info_pickperson, info_picktel,
+                    info_recaddr, info_recdate, info_recperson, info_rectel,
+                    info_addtime,
+                    info_order, info_goodsname, info_clientname,
+                    info_boxtype, info_boxnum, info_pickperson, info_recperson,
+                    info_recdate, info_port, info_billcycle, info_tradetype, info_id,
+                    "<td class=\"myhidden sorting_1\">" + info_timestamp + "</td>",
+                    "<a class=\"btn blue row-edit\" href=\"#\"  style=\"font-size:10px;padding: 0px 5px;\">" +
+                    "                                            <i class=\"icon-edit \"></i>" +
+                    "修改" +
+                    "</a>",
+                    "<a class=\"btn red row-delete\" href=\"#\" alt=\"删除\" style=\"font-size:10px;padding: 0px 5px;\">" +
+                    "                                            <i class=\"icon-trash \"></i>" +
+                    "删除" +
+                    "</a>"
+                ];
+
+                //        var theTable = $('#sample_1').dataTable();
+                //        theTable.fnClearTable();
+                //        alert(1);
+//            $('#sample_1').dataTable().fnAddData(theData);
+//            alert("添加成功");
+//            resetAll();
+                reloadData(theData);
+                check = true;
+            }
+
+
+            return false;
+
+        }
+
+        //    以下为客户信息状态转换产生的事件
+        $("#info-order").change(function () {
+            $("#group-order").removeClass("error");
+        });
+        $("#info-boxnum").change(function () {
+            $("#group-boxnum").removeClass("error");
+        });
+        $("#info-boxtype").change(function () {
+            $("#group-boxtype").removeClass("error");
+        });
+        $("#info-goodsname").change(function () {
+            $("#group-goodsname").removeClass("error");
+        });
+
+        $("#info-clientname").change(function () {
+            $("#group-clientname").removeClass("error");
+
+        });
+        $("#info-clientname").mouseleave($.post("#", {}, function (data) {
+            data = {"addrinfo": [{"id": 1, "name": "大连"}, {"id": 2, "name": "北京"}]};
+            var addrlist = data.addrinfo;
+            var str;
+            $.each(addrlist, function (n, addr) {
+                str += "<option value=\"" +
+                    addr.id +
+                    "\">" +
+                    addr.name +
+                    "</option>";
+            })
+            $("#info-pickaddr").append(str);
+            $("#info-recaddr").append(str);
+        }));
+        $("#info-port").change(function () {
+            $("#group-port").removeClass("error");
+        });
+        $("#info-tradetype").change(function () {
+            $("#group-tradetype").removeClass("error");
+        });
+        $("#info-billcycle").change(function () {
+            $("#group-billcycle").removeClass("error");
+        });
+
+        $("#info-pickdate").change(function () {
+            $("#group-pickdate").removeClass("error");
+        });
+        $("#info-pickaddr").change(function () {
+            $("#group-pickaddr").removeClass("error");
+        });
+        $("#info-pickaddr").mouseleave($.post("#", {}, function (data) {
+            data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+            var personlist = data.personinfo;
+            var str;
+            $.each(personlist, function (n, person) {
+                str += "<option value=\"" +
+                    person.id +
+                    "\">" +
+                    person.name +
+                    "</option>";
+            })
+            $("#info-pickperson").append(str);
+        }));
+        $("#info-pickperson").change(function () {
+            $("#group-pickperson").removeClass("error");
+        });
+        $("#info-pickperson").mouseleave($.post("#", {}, function (data) {
+            data = {"telinfo": [{"id": 1, "name": "12345678"}, {"id": 2, "name": "987654321"}]};
+            var tellist = data.telinfo;
+            var str;
+            $.each(tellist, function (n, tel) {
+                str += "<option value=\"" +
+                    tel.id +
+                    "\">" +
+                    tel.name +
+                    "</option>";
+            })
+            $("#info-picktel").append(str);
+        }));
+        $("#info-picktel").change(function () {
+            $("#group-picktel").removeClass("error");
+        });
+
+        $("#info-recdate").change(function () {
+            $("#group-recdate").removeClass("error");
+        });
+        $("#info-recaddr").change(function () {
+            $("#group-recaddr").removeClass("error");
+        });
+        $("#info-recaddr").mouseleave($.post("#", {}, function (data) {
+            data = {"personinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+            var personlist = data.personinfo;
+            var str;
+            $.each(personlist, function (n, person) {
+                str += "<option value=\"" +
+                    person.id +
+                    "\">" +
+                    person.name +
+                    "</option>";
+            })
+            $("#info-recperson").append(str);
+        }));
+        $("#info-recperson").change(function () {
+            $("#group-recperson").removeClass("error");
+        });
+        //
+        $("#info-recperson").mouseleave($.post("#", {}, function (data) {
+            data = {"telinfo": [{"id": 1, "name": "张三"}, {"id": 2, "name": "李四"}]};
+            var tellist = data.telinfo;
+            var str;
+            $.each(tellist, function (n, tel) {
+                str += "<option value=\"" +
+                    tel.id +
+                    "\">" +
+                    tel.name +
+                    "</option>";
+            })
+            $("#info-rectel").append(str);
+        }));
+        $("#info-rectel").change(function () {
+            $("#group-rectel").removeClass("error");
+        });
+    </script>
+
+    <!-- 本页JS脚本结束 -->
+    <!-- 引入JAVASCRIPTS结束 -->
+</body>
+
+<!-- BODY 结束-->
+<script src="media/js/chengbaochetaizhang.js"></script>
+</html>

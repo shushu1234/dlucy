@@ -1088,14 +1088,14 @@
         $("#modal-confirm-table").append(str);
     }
 
-    //使一组元素变成错误状态
+    //使一组元素变成错误状态 传入的是输入框，或者下拉框的id，自动转换成最外面group的id并添加class
     function addError(checkid) {
         var group = "group-" + checkid.slice(5);
         $("#" + group).addClass("error");
         window.check = false;
     }
 
-    //去除一组元素错误状态
+    //去除一组元素错误状态 传入的是外面的group的id，并有输入或者下拉框的onchange事件触发
     function removeError(checkid) {
         $("#" + checkid).removeClass("error");
     }
@@ -1103,9 +1103,9 @@
     //    数字输入检查
     function isNum(checkid, str) {
         if (str != null && str != "") {
-            return !isNaN(str);
-        } else {
-            addError(checkid);
+           if (isNaN(str)){
+               addError(checkid);
+           }
         }
     }
 
@@ -1151,7 +1151,7 @@
         $("#btn-reset").click();
     }
 
-    //    重新刷新表格数据
+    //    重新刷新表格数据 含有多个输入并确认的时候
     function reloadData(theData) {
 
         if (theData[5] == 0) {
@@ -1159,22 +1159,22 @@
             theData[4] = getTimeStamp();
         }
         $('#sample_1').dataTable().fnAddData(theData);
-        console.log(theData);
 
         resetAll();
 
+        //下来框复原
         $("form select").each(function (index, item) {
             $(item).find('option').each(function () {
                 $(this).removeAttrs('selected');
             });
         });
-
         $('.chzn-container-single span').html('请选择...');
+        //日期复原
+        var nowTime = new Date();
+        $("#delivery_date").datepicker('setDate', nowTime);
 
         $('#full-width').modal('hide');
         $("#info-attention").text("添加成功:)");
-        var nowTime = new Date();
-        $("#delivery_date").datepicker('setDate', nowTime);
     }
 
     //   客户信息检查入口
@@ -1212,6 +1212,7 @@
         checkSelect("info_invoice_situation", info_invoice_situation);
         checkInput("info_ship_operator", info_ship_operator);
         checkInput("info_rate", info_rate);
+        isNum("info_rate", info_rate);
 
         if (!window.check) {
             $('#full-width').modal('hide');

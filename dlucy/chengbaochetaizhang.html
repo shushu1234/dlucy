@@ -56,16 +56,13 @@
                             <a href="kehuweituo.html">
 
                                 客户委托
-
-
-
                             </a>
 
                         </li>
 
                         <li class="active">
 
-                            <a href="jinduchaxun.html">进度查询
+                            <a href="jinduchaxun.html">承包车台账
 
                                 <span class="selected"></span>
                             </a>
@@ -190,7 +187,7 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                <input type="text" id="order_no" class="span12 m-wrap"
                                                        style="margin: 0 auto;background-color: white;"
                                                        data-provide="typeahead" data-items="4" placeholder="手工录入"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
@@ -210,7 +207,7 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                <input type="text" id="car_no" class="span12 m-wrap"
                                                        style="margin: 0 auto;background-color: white;"
                                                        data-provide="typeahead" data-items="4" placeholder="手工录入"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
@@ -230,7 +227,7 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                <input type="text" id="box_no" class="span12 m-wrap"
                                                        style="margin: 0 auto;background-color: white;"
                                                        data-provide="typeahead" data-items="4" placeholder="手工录入"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
@@ -255,7 +252,7 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                <input type="text" id="miscellaneous_items1" class="span12 m-wrap"
                                                        style="margin: 0 auto;background-color: white;"
                                                        data-provide="typeahead" data-items="4" placeholder="手工录入"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
@@ -275,7 +272,7 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                <input type="text" id="miscellaneous_items2" class="span12 m-wrap"
                                                        style="margin: 0 auto;background-color: white;"
                                                        data-provide="typeahead" data-items="4" placeholder="手工录入"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
@@ -295,7 +292,7 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                <input type="text" id="miscellaneous_items3" class="span12 m-wrap"
                                                        style="margin: 0 auto;background-color: white;"
                                                        data-provide="typeahead" data-items="4" placeholder="手工录入"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
@@ -320,7 +317,7 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                <input type="text" id="fees_amount1" class="span12 m-wrap"
                                                        style="margin: 0 auto;background-color: white;"
                                                        data-provide="typeahead" data-items="4" placeholder="手工录入"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
@@ -340,7 +337,7 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                <input type="text" id="fees_amount2" class="span12 m-wrap"
                                                        style="margin: 0 auto;background-color: white;"
                                                        data-provide="typeahead" data-items="4" placeholder="手工录入"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
@@ -360,7 +357,7 @@
 
                                             <div class="controls">
 
-                                                <input type="text" id="info-order" class="span12 m-wrap"
+                                                <input type="text" id="fees_amount3" class="span12 m-wrap"
                                                        style="margin: 0 auto;background-color: white;"
                                                        data-provide="typeahead" data-items="4" placeholder="手工录入"
                                                        data-source="[&quot;TG&quot;,&quot;DL&quot;,&quot;BJ&quot;,&quot;SC&quot;,&quot;SY&quot;]"/>
@@ -376,8 +373,8 @@
 
                                 <div class="form-actions">
 
-                                    <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
-                                            href="#static" onclick="modalConfirm()" style="float: right">确认提交
+                                    <button type="submit" class="btn blue" id="btn-modal1" data-toggle="modal"
+                                             style="float: right">确认提交
                                     </button>
                                     <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
                                     <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
@@ -388,59 +385,21 @@
                                             <p>请确认信息:</p>
                                             <table>
                                                 <tr>
-                                                    <td id="td-order"></td>
+                                                    <td id="td_order_no"></td>
                                                     <td></td>
-                                                    <td id="td-boxnum"></td>
-
-                                                    <td id="td-boxtype"></td>
-
-                                                    <td id="td-goodsname"></td>
+                                                    <td id="td_box_no"></td>
+                                                    <td id="td_car_no"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td id="td-clientname"></td>
+                                                    <td colspan="5">==================杂费信息==================</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td_miscellaneous_items1"></td>
                                                     <td></td>
-                                                    <td id="td-port"></td>
+                                                    <td id="td_miscellaneous_items2"></td>
+                                                    <td id="td_miscellaneous_items3"></td>
+                                                </tr>
 
-                                                    <td id="td-tradetype"></td>
-
-                                                    <td id="td-billcycle"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><br></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="5">==================提货信息==================</td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-pickaddr" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-pickdate" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-pickperson" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-picktel" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><br></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4">==================收货信息==================</td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recaddr" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recdate" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-recperson" colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="td-rectel" colspan="5"></td>
-                                                </tr>
 
                                             </table>
                                         </div>
@@ -450,28 +409,12 @@
                                             <button type="button" data-dismiss="modal" class="btn" id="btn-return">
                                                 返回修改
                                             </button>
-                                            <button class="btn green" data-toggle="modal" href="#static2"
-                                                    id="btn-submit" onclick="checkAll()">继续提交
+                                            <button class="btn green" data-toggle="modal" href=""
+                                                    id="btn-submit" >继续提交
                                             </button>
                                         </div>
 
-                                    </div>
-                                    <div id="static2" class="modal hide fade" tabindex="-1">
 
-                                        <div class="modal-body">
-
-                                            <h3 id="info-attention" style="text-align: center"></h3>
-
-                                        </div>
-
-                                        <div class="modal-footer">
-
-                                            <button type="button" data-dismiss="modal" class="btn green">确认</button>
-
-                                        </div>
-
-                                    </div>
-                                </div>
                                 <!--</form>-->
                             </form>
                             <!-- 箱号信息 FORM 结束-->
@@ -490,7 +433,8 @@
                 <div class="span12">
 
                     <!-- 业务列表开始　-->
-
+                    <form action="#" class="form-horizontal" style="background-color: aliceblue"
+                          onSubmit="return checkAll()">
                     <div class="portlet box green">
                         <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
                         <div class="portlet-title">
@@ -517,6 +461,8 @@
                                     <th style="display: none">id</th>
 
                                     <th style="display: none">timestamp</th>
+
+                                    <th>操作</th>
 
                                     <th>日期</th>
 
@@ -564,10 +510,11 @@
                                 <tr >
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
+                                    <td> <a href="#" class="btn red mini icn-only">删除</a></td>
                                     <td class="">2017/10/22</td>
                                     <td class="">某某</td>
                                     <td class="">接单人</td>
-                                    <td class="">某公司</td>
+                                    <td class="">aaa</td>
                                     <td class="">G20</td>
                                     <td class="">大箱</td>
                                     <td class="">xxxxx</td>
@@ -586,10 +533,11 @@
                                 <tr >
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
+                                    <td> <a href="#" class="btn red mini icn-only">删除</a></td>
                                     <td class="">2017/10/22</td>
                                     <td class="">某某</td>
                                     <td class="">接单人</td>
-                                    <td class="">某公司</td>
+                                    <td class="">ccc</td>
                                     <td class="">G20</td>
                                     <td class="">大箱</td>
                                     <td class="">xxxxx</td>
@@ -614,6 +562,17 @@
                         </div>
 
                     </div>
+                        <div class="form-actions">
+
+                            <button type="submit" class="btn blue" id="btn-modal" data-toggle="modal"
+                                     style="float: right">确认提交
+                            </button>
+                            <!--<a class=" btn yellow" data-toggle="modal" href="#static" onclick="modalConfirm()">View Demo</a>-->
+                            <button type="reset" class="btn" id="btn-reset" style="float: right">取消重置</button>
+
+                        </div>
+                        <!--</form>-->
+                    </form>
 
                     <div class="portlet box green">
                         <!--<div class="portlet box green" style="width:1240px;overflow-x:auto;overflow-y:hidden;">-->
@@ -628,6 +587,7 @@
                             </div>
 
                         </div>
+                        <div>
 
                         <div style="position:absolute;top:408px;">
                             <label style="font-size: 16px; margin-left:300px;">车号: <input type="text" placeholder="请输入以查找" style="height: 20px;padding: 6px;"/>
@@ -642,10 +602,12 @@
 
                                 <thead>
 
-                                <tr>
+                                <tr >
                                     <th style="display: none">id</th>
 
                                     <th style="display: none">timestamp</th>
+
+                                    <th>操作</th>
 
                                     <th>日期</th>
 
@@ -690,13 +652,16 @@
                                 </thead>
 
                                 <tbody style="background-color:#ffffff;" id="tbody1">
-                                <tr >
+                                <tr id="abc">
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini ">提交</a>
+                                    </td>
                                     <td class="">2017/10/22</td>
                                     <td class="">某某</td>
                                     <td class="">接单人</td>
-                                    <td class="">某公司</td>
+                                    <td class="">abc</td>
                                     <td class="">G20</td>
                                     <td class="">大箱</td>
                                     <td class="">xxxxx</td>
@@ -715,13 +680,17 @@
 
                                 </tr>
 
-                                <tr id="" >
+                                <tr id="abd" >
+
                                     <td style="display: none">1</td>
                                     <td style="display: none">1</td>
+                                    <td class="">
+                                        <a href="#" class="btn blue mini ">提交</a>
+                                    </td>
                                     <td class="">2017/10/22</td>
                                     <td class="">某某</td>
                                     <td class="">接单人</td>
-                                    <td class="">某公司</td>
+                                    <td class="">abd</td>
                                     <td class="">G20</td>
                                     <td class="">大箱</td>
                                     <td class="">xxxxx</td>
@@ -738,6 +707,53 @@
                                     <td class="">--</td>
 
 
+                                </tr>
+                                <tr id="ccc" style="display: none">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td> <a href="#" class="btn blue mini ">提交</a></td>
+                                    <td class="">2017/10/22</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">ccc</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">abc</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">abc</td>
+                                    <td class="">--</td>
+                                    <td class="">xx</td>
+                                </tr>
+
+                                <tr id="aaa" style="display: none">
+                                    <td style="display: none">1</td>
+                                    <td style="display: none">1</td>
+                                    <td> <a href="#" class="btn blue mini ">提交</a></td>
+                                    <td class="">2017/10/22</td>
+                                    <td class="">某某</td>
+                                    <td class="">接单人</td>
+                                    <td class="">aaa</td>
+                                    <td class="">G20</td>
+                                    <td class="">大箱</td>
+                                    <td class="">xxxxx</td>
+                                    <td class="">H123456</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">abc</td>
+                                    <td class="">--</td>
+                                    <td class="">--</td>
+                                    <td class="">123456</td>
+                                    <td class="">某某承运商</td>
+                                    <td class="">abc</td>
+                                    <td class="">--</td>
+                                    <td class="">xx</td>
                                 </tr>
 
 
@@ -849,7 +865,7 @@
 
 <script src="media/js/app.js"></script>
 
-<script src="media/js/chengbaochetaizhang.js"></script>
+<script src="media/js/function.js"></script>
 
 <script src="media/js/form-validation.js"></script>
 <script src="media/js/form-components.js"></script>
@@ -872,73 +888,24 @@
         $("#info-pickdate").datepicker('setDate', nowTime);
         $("#info-recdate").datepicker('setDate', nowTime);
     });
-
-    var info_order;
-    var info_boxnum;
-    var info_boxtype;
-    var info_goodsname;
-
-    var info_clientname;
-    var info_port;
-    var info_tradetype;
-    var info_billcycle;
-
-    var info_pickdate;
-    var info_pickaddr;
-    var info_pickperson;
-    var info_picktel;
-
-    var info_recdate;
-    var info_recaddr;
-    var info_recperson;
-    var info_rectel;
-
-    /*获得客户信息*/
-    function getInfoData() {
-        info_order = $("#info-order").val();
-        info_boxnum = $("#info-boxnum").val();
-        info_boxtype = $("#info-boxtype").find("option:selected").text();
-        info_goodsname = $("#info-goodsname").find("option:selected").text();
-
-        info_clientname = $("#info-clientname").val();
-        info_port = $("#info-port").find("option:selected").text();
-        info_tradetype = $("#info-tradetype").find("option:selected").text();
-        info_billcycle = $("#info-billcycle").find("option:selected").text();
-
-        info_pickdate = $("#info-pickdate").val();
-        info_pickaddr = $("#info-pickaddr").find("option:selected").text();
-        info_pickperson = $("#info-pickperson").find("option:selected").text();
-        info_picktel = $("#info-picktel").find("option:selected").text();
-
-        info_recdate = $("#info-recdate").val();
-        info_recaddr = $("#info-recaddr").find("option:selected").text();
-        info_recperson = $("#info-recperson").find("option:selected").text();
-        info_rectel = $("#info-rectel").find("option:selected").text();
-    }
-
     /*客户信息模态框初始化信息*/
     function modalConfirm() {
-        getInfoData();
-        $("#td-order").text("指令号: " + info_order);
-        $("#td-boxnum").text("   箱量: " + info_boxnum);
-        $("#td-boxtype").text("   箱型: " + info_boxtype);
-        $("#td-goodsname").text("   品名: " + info_goodsname);
-
-        $("#td-clientname").text("   客户名称: " + info_clientname);
-        $("#td-port").text("   目的港: " + info_port);
-        $("#td-tradetype").text("   贸易方式: " + info_tradetype);
-        $("#td-billcycle").text("   结算周期: " + info_billcycle);
-
-        $("#td-pickdate").text("   提货时间:  " + info_pickdate);
-        $("#td-pickaddr").text("   提货地址:  " + info_pickaddr);
-        $("#td-pickperson").text("   提货联系人:  " + info_pickperson);
-        $("#td-picktel").text("   提货联系人电话:  " + info_picktel);
-
-        $("#td-recdate").text("   收货时间:  " + info_recdate);
-        $("#td-recaddr").text("   收货地址:  " + info_recaddr);
-        $("#td-recperson").text("   收货联系人:  " + info_recperson);
-        $("#td-rectel").text("   收货联系人电话:  " + info_rectel);
-
+        /*获得客户信息*/
+        var order_no = $("#order_no").val();
+        var car_no = $("#car_no").val();
+        var box_no = $("#box_no").val();
+        var fees_amount1=$("#fees_amount1").val();
+        var fees_amount2=$("#fees_amount2").val();
+        var fees_amount3=$("#fees_amount3").val();
+        var miscellaneous_items1=$("#miscellaneous_items1").val();
+        var miscellaneous_items2=$("#miscellaneous_items2").val();
+        var miscellaneous_items3=$("#miscellaneous_items3").val();
+        $("#td_order_no").text("指令号: " + order_no);
+        $("#td_car_no").text("   车号: " + car_no);
+        $("#td_box_no").text("   箱量: " + box_no);
+        if(miscellaneous_items1){$("#td_miscellaneous_items1").text(miscellaneous_items1+" : " + fees_amount1+"元");}
+        if(miscellaneous_items2){$("#td_miscellaneous_items2").text(miscellaneous_items2+" : " + fees_amount2+"元");}
+        if(miscellaneous_items3){ $("#td_miscellaneous_items3").text(miscellaneous_items3+" : " + fees_amount3+"元");}
     }
 
     //    数字输入检查
@@ -1289,5 +1256,5 @@
 </body>
 
 <!-- BODY 结束-->
-
+<script src="media/js/chengbaochetaizhang.js"></script>
 </html>

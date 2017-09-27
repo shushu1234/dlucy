@@ -272,11 +272,13 @@ var TableAdvanced = function () {
 
 
 //单独js
+//两个数组后面搭桥的用的
 var aa=new Array();
+var bb=new Array();
 var i=0;
 $(document).ready(function(){
 	//对提交按钮添加事件
-	$('.btn.blue.mini').click(function(){
+    $(document).on("click", ".btn.blue.mini", function(e){
 		var Ttr=$(this).parent().parent();//该按钮的tr
 		aa=Th_T(Ttr);
 		Ttr.attr('id',aa[2]);
@@ -290,6 +292,41 @@ $(document).ready(function(){
 		$('#'+aa[2]).attr('style','');
 		Ttr.remove();
 	})
+    //给大提交按钮添加事件
+    $(document).on("click", "#btn-modal", function(e){
+        var datatime=$('#info-pickdate').val();//交货日期
+        var time_begin=time_change($('#info-boxnum1').val());//开始时间
+        var time_end=time_change($('#info-boxnum2').val());//结束时间
+        if(datatime==''){alert('请输入日期');return 0;}
+        if(time_begin==''){alert('请输入开始时间');return 0;}
+        if(time_end==''){alert('请输入结束时间');return 0;}
+        var table1=$('#tablelist0');
+        table1.each(function(){//获取二维数组，主要使提交上去的表格的内容
+            var i=0;
+            $(this).find('tr').each(function(){
+                aa[i]=Th_T($(this));
+                i++;
+            })
+        });
+        var cc=$(".btn.red.mini").length;
+        for(i=0;i<cc;i++){
+            var list=$('#'+aa[i][2]).html();
+            var tr_1=$("<tr></tr>");//创建一个一样的tr
+            tr_1=tr_1.append(list);
+            bb=Th_T(tr_1);//找出需要替换的数据
+            list=list.replace(bb[10],datatime);
+            list=list.replace(bb[11],time_begin);
+            list=list.replace(bb[12],time_end);
+            var tr_2=$("<tr class='muted'></tr>");//创建真实需要的tr
+            tr_2=tr_2.append(list);
+            $('.muted:first').prepend(tr_2);
+            $('#'+aa[i][2]).remove();
+            $('.btn.red.mini:first-child').parent().parent().remove();
+        }
+
+
+    })
+
 });
 //创建业务处理的tr
 //aa为传入的数组
